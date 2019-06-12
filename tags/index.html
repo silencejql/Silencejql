@@ -383,9 +383,6 @@
 
   
     <div class="comments" id="comments">
-      <div id="disqus_thread">
-        <noscript>Please enable JavaScript to view the comments powered by Disqus.</noscript>
-      </div>
     </div>
 
   
@@ -639,35 +636,33 @@
 
   
   
-<script>
-  function loadCount() {
-    var d = document, s = d.createElement('script');
-    s.src = 'https://silencejql-hexo.disqus.com/count.js';
-    s.id = 'dsq-count-scr';
-    (d.head || d.body).appendChild(s);
-  }
-  // defer loading until the whole page loading is completed
-  window.addEventListener('load', loadCount, false);
-</script>
 
+<script src="//cdn1.lncld.net/static/js/3.11.1/av-min.js"></script>
+
+
+
+<script src="//unpkg.com/valine/dist/Valine.min.js"></script>
 
 <script>
-  var disqus_config = function() {
-    this.page.url = "http://yoursite.com/tags/index.html";
-    this.page.identifier = "tags/index.html";
-    this.page.title = 'tags';
-    };
-  function loadComments() {
-    var d = document, s = d.createElement('script');
-    s.src = 'https://silencejql-hexo.disqus.com/embed.js';
-    s.setAttribute('data-timestamp', '' + +new Date());
-    (d.head || d.body).appendChild(s);
-  }
-  
-    window.addEventListener('load', loadComments, false);
-  
+  var GUEST = ['nick', 'mail', 'link'];
+  var guest = 'nick,mail,link';
+  guest = guest.split(',').filter(function(item) {
+    return GUEST.indexOf(item) > -1;
+  });
+  new Valine({
+    el: '#comments',
+    verify: false,
+    notify: false,
+    appId: 'ovfevtcy52n2YVDDX8dYdihy-gzGzoHsz',
+    appKey: '9macHJzShTUIodVhYlP8pNP',
+    placeholder: 'Just go go',
+    avatar: 'mm',
+    meta: guest,
+    pageSize: '10' || 10,
+    visitor: false,
+    lang: '' || 'zh-cn'
+  });
 </script>
-
 
 
 
