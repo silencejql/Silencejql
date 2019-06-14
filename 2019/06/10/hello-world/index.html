@@ -1036,7 +1036,7 @@
     avatar: 'mm',
     meta: guest,
     pageSize: '10' || 10,
-    visitor: false,
+    visitor: true,
     lang: '' || 'zh-cn'
   });
 </script>
@@ -1373,66 +1373,6 @@
 
 
   
-  
-  <script>
-    
-    function addCount(Counter) {
-      var $visitors = $('.leancloud_visitors');
-      var url = $visitors.attr('id').trim();
-      var title = $visitors.attr('data-flag-title').trim();
-
-      Counter('get', '/classes/Counter', { where: JSON.stringify({ url }) })
-        .done(function({ results }) {
-          if (results.length > 0) {
-            var counter = results[0];
-            
-            Counter('put', '/classes/Counter/' + counter.objectId, JSON.stringify({ time: { '__op': 'Increment', 'amount': 1 } }))
-            
-              .done(function() {
-                var $element = $(document.getElementById(url));
-                $element.find('.leancloud-visitors-count').text(counter.time + 1);
-              })
-            
-              .fail(function ({ responseJSON }) {
-                console.log('Failed to save Visitor num, with error message: ' + responseJSON.error);
-              })
-          } else {
-            
-              var $element = $(document.getElementById(url));
-              $element.find('.leancloud-visitors-count').text('Counter not initialized! More info at console err msg.');
-              console.error('ATTENTION! LeanCloud counter has security bug, see how to solve it here: https://github.com/theme-next/hexo-leancloud-counter-security. \n However, you can still use LeanCloud without security, by setting `security` option to `false`.');
-            
-          }
-        })
-        .fail(function ({ responseJSON }) {
-          console.log('LeanCloud Counter Error: ' + responseJSON.code + ' ' + responseJSON.error);
-        });
-    }
-    
-
-    $(function() {
-      $.get('https://app-router.leancloud.cn/2/route?appId=' + '')
-        .done(function({ api_server }) {
-          var Counter = function(method, url, data) {
-            return $.ajax({
-              method: method,
-              url: 'https://' + api_server + '/1.1' + url,
-              headers: {
-                'X-LC-Id': '',
-                'X-LC-Key': '',
-                'Content-Type': 'application/json',
-              },
-              data: data
-            });
-          };
-          
-            addCount(Counter);
-          
-        });
-    });
-  </script>
-
-
 
   
 
@@ -1627,7 +1567,7 @@ $(function() {
   <script type="text/javascript" src="/js/love.js"></script>
   <script src="/live2d-widget/autoload.js"></script>
   <!--动态线条背景-->
-  <script type="text/javascript" color="20,20,20" opacity="0.7" zindex="-2" count="200" src="//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js">
+  <script type="text/javascript" color="120,120,120" opacity="0.7" zindex="-2" count="200" src="//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js">
   </script>
   <!--人体时钟背景透明-->
   <script charset="Shift_JIS" src="http://chabudai.sakura.ne.jp/blogparts/honehoneclock/honehone_clock_tr.js"></script>
