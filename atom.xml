@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://silencejql.github.io/"/>
-  <updated>2019-06-12T12:46:16.889Z</updated>
+  <updated>2019-06-14T14:31:32.440Z</updated>
   <id>http://silencejql.github.io/</id>
   
   <author>
@@ -15,6 +15,32 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Blog支持的Front-matter</title>
+    <link href="http://silencejql.github.io/2019/06/14/Blog%E6%94%AF%E6%8C%81%E7%9A%84Front-matter/"/>
+    <id>http://silencejql.github.io/2019/06/14/Blog支持的Front-matter/</id>
+    <published>2019-06-14T14:05:22.000Z</published>
+    <updated>2019-06-14T14:31:32.440Z</updated>
+    
+    <content type="html"><![CDATA[<p>###三级标题</p><figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">layout      #布局</span><br><span class="line">title       #标题</span><br><span class="line">date        #建立时间，默认为文件生成的日期与时间</span><br><span class="line">updated     #更新时间，默认为文件更新的日期与时间</span><br><span class="line">comments    #开启文章评论功能，默认为true</span><br><span class="line">toc         #显示文章目录，默认为true</span><br><span class="line">tags        #标签，使用-tag或/tag均可，多个可并列</span><br><span class="line"><span class="code">            #注意：- tag最好另起一行；</span></span><br><span class="line"><span class="code">            # -后面必须加一个空格再写tag；</span></span><br><span class="line"><span class="code">            #一个tag后最好加两个空格，否则所有tag可能会被识别为一个</span></span><br><span class="line">categories  #分类，使用-cat或/cat均可，多个并列会分父子</span><br><span class="line"></span><br><span class="line">permalink       #覆盖文章网址</span><br><span class="line">top: 0          #文章置顶优先级，越大优先级越高</span><br><span class="line">password: 123   #文章密码</span><br><span class="line">copyright: true #文章底部显示版权信息</span><br></pre></td></tr></table></figure>]]></content>
+    
+    <summary type="html">
+    
+      测试description
+    
+    </summary>
+    
+      <category term="测试1" scheme="http://silencejql.github.io/categories/%E6%B5%8B%E8%AF%951/"/>
+    
+      <category term="测试2" scheme="http://silencejql.github.io/categories/%E6%B5%8B%E8%AF%951/%E6%B5%8B%E8%AF%952/"/>
+    
+    
+      <category term="测试1" scheme="http://silencejql.github.io/tags/%E6%B5%8B%E8%AF%951/"/>
+    
+      <category term="测试2" scheme="http://silencejql.github.io/tags/%E6%B5%8B%E8%AF%952/"/>
+    
+  </entry>
   
   <entry>
     <title>Test Project</title>
