@@ -1,6 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[碎碎念]]></title>
+    <url>%2F2019%2F06%2F15%2F%E7%A2%8E%E7%A2%8E%E5%BF%B5%2F</url>
+    <content type="text"><![CDATA[##此文无标题之—二级标题 勿以当下认知评判人与事]]></content>
+      <categories>
+        <category>碎碎念</category>
+      </categories>
+      <tags>
+        <tag>碎碎念</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[Blog支持的Front-matter]]></title>
     <url>%2F2019%2F06%2F14%2FBlog%E6%94%AF%E6%8C%81%E7%9A%84Front-matter%2F</url>
     <content type="text"><![CDATA[###三级标题 12345678910111213141516layout #布局title #标题date #建立时间，默认为文件生成的日期与时间updated #更新时间，默认为文件更新的日期与时间comments #开启文章评论功能，默认为truetoc #显示文章目录，默认为truetags #标签，使用-tag或/tag均可，多个可并列 #注意：- tag最好另起一行； # -后面必须加一个空格再写tag； #一个tag后最好加两个空格，否则所有tag可能会被识别为一个categories #分类，使用-cat或/cat均可，多个并列会分父子permalink #覆盖文章网址top: 0 #文章置顶优先级，越大优先级越高password: 123 #文章密码copyright: true #文章底部显示版权信息]]></content>

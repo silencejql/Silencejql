@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://silencejql.github.io/"/>
-  <updated>2019-06-14T14:31:32.440Z</updated>
+  <updated>2019-06-15T11:59:22.809Z</updated>
   <id>http://silencejql.github.io/</id>
   
   <author>
@@ -15,6 +15,28 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>碎碎念</title>
+    <link href="http://silencejql.github.io/2019/06/15/%E7%A2%8E%E7%A2%8E%E5%BF%B5/"/>
+    <id>http://silencejql.github.io/2019/06/15/碎碎念/</id>
+    <published>2019-06-15T11:55:54.000Z</published>
+    <updated>2019-06-15T11:59:22.809Z</updated>
+    
+    <content type="html"><![CDATA[<p>##此文无标题之—二级标题</p><p>  勿以当下认知评判人与事</p><hr>]]></content>
+    
+    <summary type="html">
+    
+      生活中难免会有碎碎念
+    
+    </summary>
+    
+      <category term="碎碎念" scheme="http://silencejql.github.io/categories/%E7%A2%8E%E7%A2%8E%E5%BF%B5/"/>
+    
+    
+      <category term="碎碎念" scheme="http://silencejql.github.io/tags/%E7%A2%8E%E7%A2%8E%E5%BF%B5/"/>
+    
+  </entry>
   
   <entry>
     <title>Blog支持的Front-matter</title>
