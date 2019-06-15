@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://silencejql.github.io/"/>
-  <updated>2019-06-15T13:50:16.645Z</updated>
+  <updated>2019-06-15T14:15:29.429Z</updated>
   <id>http://silencejql.github.io/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="http://silencejql.github.io/2019/06/15/Hexo-Markdown/"/>
     <id>http://silencejql.github.io/2019/06/15/Hexo-Markdown/</id>
     <published>2019-06-15T12:15:05.000Z</published>
-    <updated>2019-06-15T13:50:16.645Z</updated>
+    <updated>2019-06-15T14:15:29.429Z</updated>
     
     <content type="html"><![CDATA[<h2 id="Hexo指令"><a href="#Hexo指令" class="headerlink" title="Hexo指令"></a>Hexo指令</h2><h3 id="新建文章"><a href="#新建文章" class="headerlink" title="新建文章"></a>新建文章</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new 布局 &quot;文章名&quot;</span><br><span class="line">$ hexo clean //清除静态页面缓存（清除 public 文件夹)         </span><br><span class="line">$ hexo g     //在本地生成静态页面（生成 public 文件夹）        </span><br><span class="line">$ hexo s     //启动本地服务 http://localhost:4000，进行预览调试           </span><br><span class="line">$ hexo d     //远程部署，同步到 GitHub         </span><br><span class="line"></span><br><span class="line">$ npm install hexo-deployer-git --save    //自动部署</span><br><span class="line">$ hexo clean &amp;&amp; hexo g &amp;&amp; hexo d          //发布</span><br></pre></td></tr></table></figure><h2 id="Markdown格式"><a href="#Markdown格式" class="headerlink" title="Markdown格式"></a>Markdown格式</h2><h3 id="首行缩进"><a href="#首行缩进" class="headerlink" title="首行缩进"></a>首行缩进</h3><pre><code>&amp;ensp; //相当于1个中文，2字节  </code></pre><p>分段: 两个回车<br>换行: 两个空格 + 回车<br>标题: # ~ ######，#号的个数表示几级标题，即表示一级标题到六级标题</p><h3 id="强调"><a href="#强调" class="headerlink" title="强调"></a>强调</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">*斜体* | **加粗** | ***斜体加粗***  </span><br><span class="line">_斜体_ | __加粗__ | ___斜体加粗___  </span><br><span class="line">~~删除线~~</span><br></pre></td></tr></table></figure><p>引用: &gt; 注意后面紧跟个空格</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&gt; 一下为引用效果</span><br><span class="line">继续引用</span><br><span class="line">&gt; &gt;二级引用</span><br></pre></td></tr></table></figure><blockquote><p>一下为引用效果<br>继续引用</p><blockquote><p>二级引用</p></blockquote></blockquote><p>表格: - 和 | 分割行和列 ， : 控制对齐方式</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">| 0 | 1 | 2|</span><br><span class="line">| :- | -: | :-: |</span><br><span class="line">| 0 | 1 | 2 |</span><br><span class="line">| 0 | 1 | 2 |</span><br><span class="line">| 0 | 1 | 2 |</span><br></pre></td></tr></table></figure><table><thead><tr><th align="left">0</th><th align="right">1</th><th align="center">2</th></tr></thead><tbody><tr><td align="left">0</td><td align="right">1</td><td align="center">2</td></tr><tr><td align="left">0</td><td align="right">1</td><td align="center">2</td></tr><tr><td align="left">0</td><td align="right">1</td><td align="center">2</td></tr></tbody></table><p>代码块: 四个空格开头或三个`链接: [文字](链接地址)<br>图片: ![图片说明](图片地址)，地址可以是本地路径，也可以是网络地址<br>列表: * ， + ， - ， 1. ，选其中之一，注意后面紧跟个空格</p><h3 id="设置字体段落格式"><a href="#设置字体段落格式" class="headerlink" title="设置字体段落格式"></a>设置字体段落格式</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&lt;center&gt;居中&lt;/center&gt;</span><br><span class="line">&lt;font color=&quot;#FF0000&quot;&gt; 设置颜色 &lt;/font&gt;  </span><br><span class="line">&lt;font size=6&gt; 设置大小 &lt;/font&gt;</span><br><span class="line">&lt;font size=5 color=&quot;#FF0000&quot;&gt; 设置颜色和大小&lt;/font&gt;</span><br></pre></td></tr></table></figure><center>居中</center><p><font color="#FF0000"> 设置颜色 </font><br><font size="6"> 设置大小 </font><br><font size="5" color="#FF0000"> 设置颜色和大小</font></p>]]></content>
     
@@ -63,50 +63,28 @@
   </entry>
   
   <entry>
-    <title>Blog支持的Front-matter</title>
-    <link href="http://silencejql.github.io/2019/06/14/Blog%E6%94%AF%E6%8C%81%E7%9A%84Front-matter/"/>
-    <id>http://silencejql.github.io/2019/06/14/Blog支持的Front-matter/</id>
-    <published>2019-06-14T14:05:22.000Z</published>
-    <updated>2019-06-14T14:31:32.440Z</updated>
-    
-    <content type="html"><![CDATA[<p>###三级标题</p><figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">layout      #布局</span><br><span class="line">title       #标题</span><br><span class="line">date        #建立时间，默认为文件生成的日期与时间</span><br><span class="line">updated     #更新时间，默认为文件更新的日期与时间</span><br><span class="line">comments    #开启文章评论功能，默认为true</span><br><span class="line">toc         #显示文章目录，默认为true</span><br><span class="line">tags        #标签，使用-tag或/tag均可，多个可并列</span><br><span class="line"><span class="code">            #注意：- tag最好另起一行；</span></span><br><span class="line"><span class="code">            # -后面必须加一个空格再写tag；</span></span><br><span class="line"><span class="code">            #一个tag后最好加两个空格，否则所有tag可能会被识别为一个</span></span><br><span class="line">categories  #分类，使用-cat或/cat均可，多个并列会分父子</span><br><span class="line"></span><br><span class="line">permalink       #覆盖文章网址</span><br><span class="line">top: 0          #文章置顶优先级，越大优先级越高</span><br><span class="line">password: 123   #文章密码</span><br><span class="line">copyright: true #文章底部显示版权信息</span><br></pre></td></tr></table></figure>]]></content>
-    
-    <summary type="html">
-    
-      测试description
-    
-    </summary>
-    
-      <category term="测试1" scheme="http://silencejql.github.io/categories/%E6%B5%8B%E8%AF%951/"/>
-    
-      <category term="测试2" scheme="http://silencejql.github.io/categories/%E6%B5%8B%E8%AF%951/%E6%B5%8B%E8%AF%952/"/>
-    
-    
-      <category term="测试1" scheme="http://silencejql.github.io/tags/%E6%B5%8B%E8%AF%951/"/>
-    
-      <category term="测试2" scheme="http://silencejql.github.io/tags/%E6%B5%8B%E8%AF%952/"/>
-    
-  </entry>
-  
-  <entry>
     <title>Test Project</title>
     <link href="http://silencejql.github.io/2019/06/11/Test-Project/"/>
     <id>http://silencejql.github.io/2019/06/11/Test-Project/</id>
     <published>2019-06-11T02:51:25.000Z</published>
-    <updated>2019-06-12T12:46:16.889Z</updated>
+    <updated>2019-06-15T14:14:25.398Z</updated>
     
-    <content type="html"><![CDATA[<p>this is my first Hexo text file</p>]]></content>
+    <content type="html"><![CDATA[<h3 id="Test-File"><a href="#Test-File" class="headerlink" title="Test File"></a>Test File</h3><p>this is my first Hexo text file</p>]]></content>
     
     <summary type="html">
     
       
       
-        &lt;p&gt;this is my first Hexo text file&lt;/p&gt;
+        &lt;h3 id=&quot;Test-File&quot;&gt;&lt;a href=&quot;#Test-File&quot; class=&quot;headerlink&quot; title=&quot;Test File&quot;&gt;&lt;/a&gt;Test File&lt;/h3&gt;&lt;p&gt;this is my first Hexo text file&lt;/p&gt;
 
       
     
     </summary>
     
+      <category term="Test" scheme="http://silencejql.github.io/categories/Test/"/>
+    
+    
+      <category term="Test" scheme="http://silencejql.github.io/tags/Test/"/>
     
   </entry>
   
