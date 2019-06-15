@@ -1,9 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[Hexo Markdown]]></title>
+    <url>%2F2019%2F06%2F15%2FHexo-Markdown%2F</url>
+    <content type="text"><![CDATA[Hexo指令新建文章12345678$ hexo new 布局 &quot;文章名&quot;$ hexo clean //清除静态页面缓存（清除 public 文件夹) $ hexo g //在本地生成静态页面（生成 public 文件夹） $ hexo s //启动本地服务 http://localhost:4000，进行预览调试 $ hexo d //远程部署，同步到 GitHub $ npm install hexo-deployer-git --save //自动部署$ hexo clean &amp;&amp; hexo g &amp;&amp; hexo d //发布 Markdown格式首行缩进&amp;ensp; //相当于1个中文，2字节 分段: 两个回车换行: 两个空格 + 回车标题: # ~ ######，#号的个数表示几级标题，即表示一级标题到六级标题 强调斜体 | 加粗 | 斜体加粗斜体 | 加粗 | 斜体加粗删除线引用: &gt; 注意后面紧跟个空格 123&gt; 一下为引用效果继续引用&gt; &gt;二级引用 一下为引用效果继续引用 二级引用 表格: - 和 | 分割行和列 ， : 控制对齐方式 12340,0 | 1,0 | 2,0:---| ---:|:----:0,1 | 1，1 | 2，1 0，2 | 1，2 | 2，2 0,0 1,0 2,0 0,1 1，1 2，1 0，2 1，2 2，2 代码块: 四个空格 开头或， 使用代码内容 链接: 文字 图片: ，地址可以是本地路劲，也可以是网络地址 列表: * ， + ， - ， 1. ，选其中之一，注意后面紧跟个空格]]></content>
+      <categories>
+        <category>Hexo</category>
+      </categories>
+      <tags>
+        <tag>Hexo</tag>
+        <tag>Markdo</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[碎碎念]]></title>
     <url>%2F2019%2F06%2F15%2F%E7%A2%8E%E7%A2%8E%E5%BF%B5%2F</url>
-    <content type="text"><![CDATA[##此文无标题之—二级标题 勿以当下认知评判人与事]]></content>
+    <content type="text"><![CDATA[测试一级标题此文无标题之二级标题 勿以当下认知评判人与事]]></content>
       <categories>
         <category>碎碎念</category>
       </categories>

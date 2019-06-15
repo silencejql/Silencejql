@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://silencejql.github.io/"/>
-  <updated>2019-06-15T11:59:22.809Z</updated>
+  <updated>2019-06-15T12:54:48.383Z</updated>
   <id>http://silencejql.github.io/</id>
   
   <author>
@@ -17,13 +17,37 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>Hexo Markdown</title>
+    <link href="http://silencejql.github.io/2019/06/15/Hexo-Markdown/"/>
+    <id>http://silencejql.github.io/2019/06/15/Hexo-Markdown/</id>
+    <published>2019-06-15T12:15:05.000Z</published>
+    <updated>2019-06-15T12:54:48.383Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="Hexo指令"><a href="#Hexo指令" class="headerlink" title="Hexo指令"></a>Hexo指令</h2><h5 id="新建文章"><a href="#新建文章" class="headerlink" title="新建文章"></a>新建文章</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new 布局 &quot;文章名&quot;</span><br><span class="line">$ hexo clean //清除静态页面缓存（清除 public 文件夹)         </span><br><span class="line">$ hexo g     //在本地生成静态页面（生成 public 文件夹）        </span><br><span class="line">$ hexo s     //启动本地服务 http://localhost:4000，进行预览调试           </span><br><span class="line">$ hexo d     //远程部署，同步到 GitHub         </span><br><span class="line"></span><br><span class="line">$ npm install hexo-deployer-git --save    //自动部署</span><br><span class="line">$ hexo clean &amp;&amp; hexo g &amp;&amp; hexo d          //发布</span><br></pre></td></tr></table></figure><h2 id="Markdown格式"><a href="#Markdown格式" class="headerlink" title="Markdown格式"></a>Markdown格式</h2><h5 id="首行缩进"><a href="#首行缩进" class="headerlink" title="首行缩进"></a>首行缩进</h5><pre><code>&amp;ensp; //相当于1个中文，2字节  </code></pre><p>分段: 两个回车<br>换行: 两个空格 + 回车<br>标题: # ~ ######，#号的个数表示几级标题，即表示一级标题到六级标题</p><h5 id="强调"><a href="#强调" class="headerlink" title="强调"></a>强调</h5><p><em>斜体</em> | <strong>加粗</strong> | <strong><em>斜体加粗</em></strong><br><em>斜体</em> | <strong>加粗</strong> | <strong><em>斜体加粗</em></strong><br><del>删除线</del><br>引用: &gt; 注意后面紧跟个空格</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&gt; 一下为引用效果</span><br><span class="line">继续引用</span><br><span class="line">&gt; &gt;二级引用</span><br></pre></td></tr></table></figure><blockquote><p>一下为引用效果<br>继续引用</p><blockquote><p>二级引用</p></blockquote></blockquote><p>表格: - 和 | 分割行和列 ， : 控制对齐方式</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">0,0 | 1,0 | 2,0</span><br><span class="line">:---| ---:|:----:</span><br><span class="line">0,1 | 1，1 | 2，1  </span><br><span class="line">0，2 | 1，2 | 2，2</span><br></pre></td></tr></table></figure><table><thead><tr><th align="left">0,0</th><th align="right">1,0</th><th align="center">2,0</th></tr></thead><tbody><tr><td align="left">0,1</td><td align="right">1，1</td><td align="center">2，1</td></tr><tr><td align="left">0，2</td><td align="right">1，2</td><td align="center">2，2</td></tr><tr><td align="left">代码块: 四个空格 开头或， 使用<code>代码内容</code></td><td align="right"></td><td align="center"></td></tr><tr><td align="left">链接: <a href="链接地址">文字</a></td><td align="right"></td><td align="center"></td></tr><tr><td align="left">图片: <img src="%E5%9B%BE%E7%89%87%E5%9C%B0%E5%9D%80" alt="图片说明"> ，地址可以是本地路劲，也可以是网络地址</td><td align="right"></td><td align="center"></td></tr><tr><td align="left">列表: * ， + ， - ， 1. ，选其中之一，注意后面紧跟个空格</td><td align="right"></td><td align="center"></td></tr></tbody></table>]]></content>
+    
+    <summary type="html">
+    
+      常用Hexo指令和Markdown格式说明
+    
+    </summary>
+    
+      <category term="Hexo" scheme="http://silencejql.github.io/categories/Hexo/"/>
+    
+    
+      <category term="Hexo" scheme="http://silencejql.github.io/tags/Hexo/"/>
+    
+      <category term="Markdo" scheme="http://silencejql.github.io/tags/Markdo/"/>
+    
+  </entry>
+  
+  <entry>
     <title>碎碎念</title>
     <link href="http://silencejql.github.io/2019/06/15/%E7%A2%8E%E7%A2%8E%E5%BF%B5/"/>
     <id>http://silencejql.github.io/2019/06/15/碎碎念/</id>
     <published>2019-06-15T11:55:54.000Z</published>
-    <updated>2019-06-15T11:59:22.809Z</updated>
+    <updated>2019-06-15T12:13:16.015Z</updated>
     
-    <content type="html"><![CDATA[<p>##此文无标题之—二级标题</p><p>  勿以当下认知评判人与事</p><hr>]]></content>
+    <content type="html"><![CDATA[<h1 id="测试一级标题"><a href="#测试一级标题" class="headerlink" title="测试一级标题"></a>测试一级标题</h1><h2 id="此文无标题之二级标题"><a href="#此文无标题之二级标题" class="headerlink" title="此文无标题之二级标题"></a>此文无标题之二级标题</h2><p>  勿以当下认知评判人与事</p><hr>]]></content>
     
     <summary type="html">
     
