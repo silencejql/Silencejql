@@ -107,7 +107,16 @@
     }
   };
 </script>
-
+<script>
+    (function(){
+        if(''){
+            if (prompt('请输入文章密码') !== ''){
+                alert('密码错误,交钱还是跑路？');
+                history.back();
+            }
+        }
+    })();
+</script>
 
   
 
@@ -509,7 +518,7 @@
             <span class="busuanzi-value" id="busuanzi_value_page_pv"></span>
             </span>
             <span class="post-meta-divider">|</span>
-            <span title="post.wordcount"><span class="post-meta-item-icon"><i class="fa fa-file-word-o"></i></span>字数： 27</span>
+            <span title="post.wordcount"><span class="post-meta-item-icon"><i class="fa fa-file-word-o"></i></span>字数： 51</span>
           
 
           
@@ -531,9 +540,20 @@
       
 
       
-        <h1 id="测试一级标题"><a href="#测试一级标题" class="headerlink" title="测试一级标题"></a>测试一级标题</h1><h2 id="此文无标题之二级标题"><a href="#此文无标题之二级标题" class="headerlink" title="此文无标题之二级标题"></a>此文无标题之二级标题</h2><p>  勿以当下认知评判人与事</p>
-<hr>
-
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<div id="hbe-security">
+  <div class="hbe-input-container">
+  <input type="password" class="hbe-form-control" id="pass" placeholder="Please enter the password to read the blog.">
+    <label for="pass">Please enter the password to read the blog.</label>
+    <div class="bottom-line"></div>
+  </div>
+</div>
+<div id="decryptionError" style="display: none;">Incorrect Password!</div>
+<div id="noContentError" style="display: none;">No content to display!</div>
+<div id="encrypt-blog" style="display:none">
+U2FsdGVkX1+wucPIyOSv6JB1oQfZ1gwubmIdgwRnJmr6d28i+5SINJfB0CrANdZfOXPfI9ck8QD00tawfU8r6s3grxlFlhIwJYpMCiAiSKP07w8B24welayPycuPwziNmNOr/2//kuFtOGHkXqAAwdlIEkbfUczfn5+OCBx8VumCbyF7ow06fBPqL9YB/z/3fIupag+B3ZG27YQ/y/EsDEt6rvzfptmREepJsdcskigCpEifFs0waXH6wY3Zs9u9Ze66E4knUm3L19w8+vaKPJSCw42rt68P5a2Nz7sNWp2SYzcoJY6JPl0/blqAmeGo+RD59fX+wzQR1Ln2q7Y2uAdeUMrEVpoWjZmgOEPx3Z8s5yo3o7HIHB1JeMQgOZcDaFp7/qwmPWfrVqpa3E7CU3wK1j7RXt7vf70tqzic4Q+wAiyDbWclsJHNCZ1EC70DX3tpO6qZNziYwCuf18rjB3f71mgk4zVuj74rFocepseaMz6SEdOjcUCHnoNltsVu8qyQjEXy9L3yt2354n2sEtJScbMcYMkNtdqRMfYWLvaytpS0PQojjfaKoVFKERumEj6qQc0pmnpODE7KQW013ZAvS/GJRNswj5mCMTdZWqkIKc2hIDLh2vBUHhdej3yaOxMBi/ouSQhpNRwFvEvyS6bJkmCJlSOe+sA/ujnvhbR3jS7Y8b/nkSCR6GElrsoYdKGOxIwOj7v0J5Km0NTLEnn9XN8E9IULKult31eZE8ARMc0MsHv5ua3OQucVsXKfEy6g1t5bC9S1pybzP7YhRtKUPzoZfo0FD2q5A55wazANcXbZuIsdTgpDlAClhunBkHduiklMiadwZfxKY00JorCxPHwTKngmWKakiX/exjFA/IeKyeWBJaV6aJpLQ+zYC1oMvSKpHXwMaiw6cGanczY/NQdKBgt1KtWRhQbrF1kL5NZ9Qvwv2MPB7GbPESqrISIknAjKZzy8S4k00fo8FMt+PLQyapRdBN207+Gz0UiAUtR+ot9Aum/4jpRBzjmknwA3NSZaCqFHmhpxjgc49hIe6xy9eVK5nrxvBmggGMdETddb5vg/UktUA445VPFIE21HMJBNaIkDlKQng5WccX/xBZ0/rzptfr/r1v7PmfvQW2cAYPGAjzKnNOvWonOyDkB0PoJAnrxSt/BiTM8cl4v2tbz3JEvtYBAzD6QbA+zhJXNZiSPObybu/cI5uvCKHIJTtCTlguYripBLAK1zEGySkMo32EWvHOnq0DebKPShG7Om7MpVmYoKeeO5Arj6
+</div>
+<script src="/lib/crypto-js.js"></script><script src="/lib/blog-encrypt.js"></script><link href="/css/blog-encrypt.css" rel="stylesheet" type="text/css">
       
     </div>
 
@@ -667,17 +687,8 @@
       
 
       
-        <ul class="sidebar-nav motion-element">
-          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
-            文章目录
-          </li>
-          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
-            站点概览
-          </li>
-        </ul>
-      
 
-      <div class="site-overview-wrap sidebar-panel">
+      <div class="site-overview-wrap sidebar-panel sidebar-panel-active">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -782,7 +793,7 @@
                   
                     
                   
-                  <span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL3NpbGVuY2VqcWw=" title="GitHub &rarr; https://github.com/silencejql"><i class="fa fa-fw fa-github"></i>GitHub</span>
+                  <a href="https://github.com/silencejql" title="GitHub &rarr; https://github.com/silencejql" rel="noopener" target="_blank"><i class="fa fa-fw fa-github"></i>GitHub</a>
                 </span>
               
                 <span class="links-of-author-item">
@@ -793,7 +804,7 @@
                   
                     
                   
-                  <span class="exturl" data-url="aHR0cHM6Ly9zaWxlbmNlanFsQDE2My5jb20=" title="E-Mail &rarr; https://silencejql@163.com"><i class="fa fa-fw fa-envelope"></i>E-Mail</span>
+                  <a href="https://silencejql@163.com" title="E-Mail &rarr; https://silencejql@163.com" rel="noopener" target="_blank"><i class="fa fa-fw fa-envelope"></i>E-Mail</a>
                 </span>
               
                 <span class="links-of-author-item">
@@ -804,7 +815,7 @@
                   
                     
                   
-                  <span class="exturl" data-url="aHR0cHM6Ly9tdXNpYy4xNjMuY29tLyMvdXNlci9ob21lP2lkPTEwMzE5NTgzOQ==" title="NetEaet &rarr; https://music.163.com/#/user/home?id=103195839"><i class="fa fa-fw fa-headphones"></i>NetEaet</span>
+                  <a href="https://music.163.com/#/user/home?id=103195839" title="NetEaet &rarr; https://music.163.com/#/user/home?id=103195839" rel="noopener" target="_blank"><i class="fa fa-fw fa-headphones"></i>NetEaet</a>
                 </span>
               
                 <span class="links-of-author-item">
@@ -815,7 +826,7 @@
                   
                     
                   
-                  <span class="exturl" data-url="aHR0cHM6Ly93ZWliby5jb20vMjgwODEwMjY3NS9wcm9maWxlP3RvcG5hdj0xJnd2cj02" title="Weibo &rarr; https://weibo.com/2808102675/profile?topnav=1&wvr=6"><i class="fa fa-fw fa-weibo"></i>Weibo</span>
+                  <a href="https://weibo.com/2808102675/profile?topnav=1&wvr=6" title="Weibo &rarr; https://weibo.com/2808102675/profile?topnav=1&wvr=6" rel="noopener" target="_blank"><i class="fa fa-fw fa-weibo"></i>Weibo</a>
                 </span>
               
             </div>
@@ -834,23 +845,6 @@
         </div>
       </div>
 
-      
-      <!--noindex-->
-        <div class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
-          <div class="post-toc">
-
-            
-            
-            
-            
-
-            
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#测试一级标题"><span class="nav-number">1.</span> <span class="nav-text">测试一级标题</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#此文无标题之二级标题"><span class="nav-number">1.1.</span> <span class="nav-text">此文无标题之二级标题</span></a></li></ol></li></ol></div>
-            
-
-          </div>
-        </div>
-      <!--/noindex-->
       
 
       
@@ -890,7 +884,7 @@
 
 
 
-  <div class="theme-info">主题 – <span class="exturl theme-link" data-url="aHR0cHM6Ly90aGVtZS1uZXh0Lm9yZw==">NexT.Pisces</span> v7.1.2</div>
+  <div class="theme-info">主题 – <a href="https://theme-next.org" class="theme-link" rel="noopener" target="_blank">NexT.Pisces</a> v7.1.2</div>
 
 
 
@@ -899,7 +893,7 @@
 -->
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">博客全站共499字</span>
+  <span class="post-count">博客全站共620字</span>
 </div>
 
         
@@ -1033,8 +1027,6 @@
   
 
   
-  <script src="/js/exturl.js?v=7.1.2"></script>
-
 
   
 
