@@ -1,42 +1,97 @@
 <?xml version="1.0" encoding="utf-8"?>
-<search>
-  <entry>
-    <title><![CDATA[Hexo Markdown]]></title>
-    <url>%2F2019%2F06%2F15%2FHexo-Markdown%2F</url>
-    <content type="text"><![CDATA[Hexo指令新建文章12345678$ hexo new 布局 &quot;文章名&quot;$ hexo clean //清除静态页面缓存（清除 public 文件夹) $ hexo g //在本地生成静态页面（生成 public 文件夹） $ hexo s //启动本地服务 http://localhost:4000，进行预览调试 $ hexo d //远程部署，同步到 GitHub $ npm install hexo-deployer-git --save //自动部署$ hexo clean &amp;&amp; hexo g &amp;&amp; hexo d //发布 Markdown格式首行缩进&amp;ensp; //相当于1个中文，2字节 分段: 两个回车换行: 两个空格 + 回车标题: # ~ ######，#号的个数表示几级标题，即表示一级标题到六级标题 强调123*斜体* | **加粗** | ***斜体加粗*** _斜体_ | __加粗__ | ___斜体加粗___ ~~删除线~~ 引用: &gt; 注意后面紧跟个空格 123&gt; 一下为引用效果继续引用&gt; &gt;二级引用 一下为引用效果继续引用 二级引用 表格: - 和 | 分割行和列 ， : 控制对齐方式 12345| 0 | 1 | 2|| :- | -: | :-: || 0 | 1 | 2 || 0 | 1 | 2 || 0 | 1 | 2 | 0 1 2 0 1 2 0 1 2 0 1 2 代码块: 四个空格开头或三个` 链接: [文字](链接地址)图片: ![图片说明](图片地址)，地址可以是本地路径，也可以是网络地址列表: * ， + ， - ， 1. ，选其中之一，注意后面紧跟个空格 设置字体段落格式1234&lt;center&gt;居中&lt;/center&gt;&lt;font color=&quot;#FF0000&quot;&gt; 设置颜色 &lt;/font&gt; &lt;font size=6&gt; 设置大小 &lt;/font&gt;&lt;font size=5 color=&quot;#FF0000&quot;&gt; 设置颜色和大小&lt;/font&gt; 居中 设置颜色 设置大小 设置颜色和大小 添加文章密码方法一安装hexo-blog-encrypt根目录的package.json文件夹中添加： 1&quot;hexo-blog-encrypt&quot;: &quot;2.0.*&quot; 然后在命令行输入： 1npm install 根目录下的_config.yml文件中添加： 123# Securityencrypt: enable: true 使用要加密的文章头部写入password： 123password: abc123abstract: Welcome to my blog, enter password to read.message: Welcome to my blog, enter password to read. 方法二在 themes-&gt;next-&gt;layout-&gt;_partials-&gt;head.swig 中添加下面内容 12345678910&lt;script&gt; (function()&#123; if(&apos;&#123;&#123; page.password &#125;&#125;&apos;)&#123; if (prompt(&apos;请输入文章密码&apos;) !== &apos;&#123;&#123; page.password &#125;&#125;&apos;)&#123; alert(&apos;密码错误,交钱还是跑路？&apos;); history.back(); &#125; &#125; &#125;)();&lt;/script&gt; 然后在文章头部加入password。]]></content>
+<search> 
+  
+  
+    
+    <entry>
+      <title>Hexo Markdown</title>
+      <link href="/2019/06/15/Hexo-Markdown/"/>
+      <url>/2019/06/15/Hexo-Markdown/</url>
+      
+        <content type="html"><![CDATA[<h2 id="Hexo指令"><a href="#Hexo指令" class="headerlink" title="Hexo指令"></a>Hexo指令</h2><h3 id="新建文章"><a href="#新建文章" class="headerlink" title="新建文章"></a>新建文章</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new 布局 &quot;文章名&quot;</span><br><span class="line">$ hexo clean //清除静态页面缓存（清除 public 文件夹)         </span><br><span class="line">$ hexo g     //在本地生成静态页面（生成 public 文件夹）        </span><br><span class="line">$ hexo s     //启动本地服务 http://localhost:4000，进行预览调试           </span><br><span class="line">$ hexo d     //远程部署，同步到 GitHub         </span><br><span class="line"></span><br><span class="line">$ npm install hexo-deployer-git --save    //自动部署</span><br><span class="line">$ hexo clean &amp;&amp; hexo g &amp;&amp; hexo d          //发布</span><br></pre></td></tr></table></figure><h2 id="Markdown格式"><a href="#Markdown格式" class="headerlink" title="Markdown格式"></a>Markdown格式</h2><h3 id="首行缩进"><a href="#首行缩进" class="headerlink" title="首行缩进"></a>首行缩进</h3><pre><code>&amp;ensp; //相当于1个中文，2字节  </code></pre><p>分段: 两个回车<br>换行: 两个空格 + 回车<br>标题: # ~ ######，#号的个数表示几级标题，即表示一级标题到六级标题</p><h3 id="强调"><a href="#强调" class="headerlink" title="强调"></a>强调</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">*斜体* | **加粗** | ***斜体加粗***  </span><br><span class="line">_斜体_ | __加粗__ | ___斜体加粗___  </span><br><span class="line">~~删除线~~</span><br></pre></td></tr></table></figure><p>引用: &gt; 注意后面紧跟个空格</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&gt; 一下为引用效果</span><br><span class="line">继续引用</span><br><span class="line">&gt; &gt;二级引用</span><br></pre></td></tr></table></figure><blockquote><p>一下为引用效果<br>继续引用</p><blockquote><p>二级引用</p></blockquote></blockquote><p>表格: - 和 | 分割行和列 ， : 控制对齐方式</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">| 0 | 1 | 2|</span><br><span class="line">| :- | -: | :-: |</span><br><span class="line">| 0 | 1 | 2 |</span><br><span class="line">| 0 | 1 | 2 |</span><br><span class="line">| 0 | 1 | 2 |</span><br></pre></td></tr></table></figure><table><thead><tr><th align="left">0</th><th align="right">1</th><th align="center">2</th></tr></thead><tbody><tr><td align="left">0</td><td align="right">1</td><td align="center">2</td></tr><tr><td align="left">0</td><td align="right">1</td><td align="center">2</td></tr><tr><td align="left">0</td><td align="right">1</td><td align="center">2</td></tr></tbody></table><p>代码块: 四个空格开头或三个`链接: [文字](链接地址)<br>图片: ![图片说明](图片地址)，地址可以是本地路径，也可以是网络地址<br>列表: * ， + ， - ， 1. ，选其中之一，注意后面紧跟个空格</p><h3 id="设置字体段落格式"><a href="#设置字体段落格式" class="headerlink" title="设置字体段落格式"></a>设置字体段落格式</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&lt;center&gt;居中&lt;/center&gt;</span><br><span class="line">&lt;font color=&quot;#FF0000&quot;&gt; 设置颜色 &lt;/font&gt;  </span><br><span class="line">&lt;font size=6&gt; 设置大小 &lt;/font&gt;</span><br><span class="line">&lt;font size=5 color=&quot;#FF0000&quot;&gt; 设置颜色和大小&lt;/font&gt;</span><br></pre></td></tr></table></figure><center>居中</center><p><font color="#FF0000"> 设置颜色 </font><br><font size="6"> 设置大小 </font><br><font size="5" color="#FF0000"> 设置颜色和大小</font></p><h3 id="添加文章密码"><a href="#添加文章密码" class="headerlink" title="添加文章密码"></a>添加文章密码</h3><h4 id="方法一"><a href="#方法一" class="headerlink" title="方法一"></a>方法一</h4><h5 id="安装hexo-blog-encrypt"><a href="#安装hexo-blog-encrypt" class="headerlink" title="安装hexo-blog-encrypt"></a>安装hexo-blog-encrypt</h5><p>根目录的package.json文件夹中添加：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&quot;hexo-blog-encrypt&quot;: &quot;2.0.*&quot;</span><br></pre></td></tr></table></figure><p>然后在命令行输入：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install</span><br></pre></td></tr></table></figure><p>根目录下的_config.yml文件中添加：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"># Security</span><br><span class="line">encrypt:</span><br><span class="line">    enable: true</span><br></pre></td></tr></table></figure><h5 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h5><p>要加密的文章头部写入password：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">password: abc123</span><br><span class="line">abstract: Welcome to my blog, enter password to read.</span><br><span class="line">message: Welcome to my blog, enter password to read.</span><br></pre></td></tr></table></figure><h4 id="方法二"><a href="#方法二" class="headerlink" title="方法二"></a>方法二</h4><p>在 themes-&gt;next-&gt;layout-&gt;_partials-&gt;head.swig 中添加下面内容</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">&lt;script&gt;</span><br><span class="line">    (function()&#123;</span><br><span class="line">        if(&apos;&#123;&#123; page.password &#125;&#125;&apos;)&#123;</span><br><span class="line">            if (prompt(&apos;请输入文章密码&apos;) !== &apos;&#123;&#123; page.password &#125;&#125;&apos;)&#123;</span><br><span class="line">                alert(&apos;密码错误,交钱还是跑路？&apos;);</span><br><span class="line">                history.back();</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;)();</span><br><span class="line">&lt;/script&gt;</span><br></pre></td></tr></table></figure><p>然后在文章头部加入password。</p>]]></content>
+      
+      
       <categories>
-        <category>Hexo</category>
+          
+          <category> Hexo </category>
+          
       </categories>
-      <tags>
-        <tag>Hexo</tag>
-        <tag>Markdown</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title><![CDATA[碎碎念]]></title>
-    <url>%2F2019%2F06%2F15%2F%E7%A2%8E%E7%A2%8E%E5%BF%B5%2F</url>
-    <content type="text"><![CDATA[Enter password to read！ Incorrect Password! No content to display! U2FsdGVkX18vItfGvePAeDqsk3/aDmb7WY3kfNS+1oi9FUcsM8O21Octg1sJ3b6k41FG609W0Jhmxr9VXHw9OBV9SIhEbVwOuzK61fJQaAl/3bbG6iYA+fBYIL2rmHdsiUEm6I12nuZtBjPUt0ex/ryEp7r7rkVgTY0+/YxExt0fFOm/RyUTNpPKP1KJZfsLjM9TrDxuJZjldQSwS7PtkZYeS54YE1/lR41OKIuau9CzJ33XhQRprRWxiW5K+5zxN7uAc9qkn0GWYrd/9VVBiv3X/4PkWkOCJtBeZIzKzv33eTawwh6VwQ9kGwKAjNp+IUMkN46ebdC6VJazhEdMow+sWYCgZflvxBKSErBJdKZW7Kl/mVDZWYIwXfgxJXNyG1BtpzbS8VBGG4ZxK+dogr9Zr+BOJF+ZEpRYsoOALo05ApC6XLueCrcJtAhS/aV554Py3fkgPikkl0BO+iwWEp/NouWuPzu7956pwXZhpel21MgDaiV+LOaEwNA4gvMjT+PmzeFgkwOFDWk169157rc92VePOVB629LhbfQjUXJ8qqeXQFrtTxiwCYG4gmgWyuEMRw7Kwree7jrzuQ4y469HPv+Ftl+gdBHjd1ys6ZZtVCBmNMSt2bK9JwbyvjBkIq/mGhB6BvYyVK508AWUi7TEWu8N9eu1+fG/tFN7jGkujxcXwOyyfgavu/O1dCN+/nQ5T/AC5iQ9T79glRMHkfh1iNs+mTYwITco7OagLBa4/tIf6WaYu4bJ5GeIMSo4vRLTR0MYTC4Xtuh6/HV4icv0R0OKf0DPFYqA31pG23cY09nah/0QA0z3NAU4vkzyBTz/MCGsgBd49gAv0fQsOq1F+PhDU7+G8hXKhHJmj4PKwEek14W/48wwOPgAW7dD8p8EH+iMZBgILB3UZ0WGrvhvNi7w7L/5PK/7T+VN00KQAnGkkuVkuZ7T13HK2VD1D6Y8BXO3BgAZd6itfEzfJIYFCplHuNOwzZrv1xSoS6j1cT7G9vAAiZvYL5ur5uKzEd9+1SlSoAjyVoS29PacoN9vSyZW2jG/G3cHXeno93CArErTJXZcIzKU2w58XdZ/TFiuJJy1Fy/Pni5L8kuaxc4b2vRS5khQDvFLfCAyev2NLFKioGoliYfDva1s9KOyAQtWFr7CfGiT6KbneX3rZ7HBX8rImI1fVU+iLS9iyRv9cjCTTn82iu3Bp145dSUdTUPykTQ9L0hyKZsZ3MegJkjsMT9AEm7YTUuaRbedP3+Ej0iM9aoBe0WXfn52wXGo]]></content>
+      
+      
+        <tags>
+            
+            <tag> Hexo </tag>
+            
+            <tag> Markdown </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>碎碎念</title>
+      <link href="/2019/06/15/%E7%A2%8E%E7%A2%8E%E5%BF%B5/"/>
+      <url>/2019/06/15/%E7%A2%8E%E7%A2%8E%E5%BF%B5/</url>
+      
+        <content type="html"><![CDATA[<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script><div id="hbe-security">  <div class="hbe-input-container">  <input type="password" class="hbe-form-control" id="pass" placeholder="Enter password to read！" />    <label for="pass">Enter password to read！</label>    <div class="bottom-line"></div>  </div></div><div id="decryptionError" style="display: none;">Incorrect Password!</div><div id="noContentError" style="display: none;">No content to display!</div><div id="encrypt-blog" style="display:none">U2FsdGVkX19ru0drz3H13e7ZrdExMgZB7h6o0x4lJ6uUCPJWMoXUW+wmbzbffQVZuE82YVMbnPxBdVkhYCYt1x9fI9UJXM7xcGh0lri+pRPjKakK606MHMqKyXWzhxGfoRbN9Z08F9q1Y3dt/jT2W/rv1kLDIjwguvukjGjgUHYshSJItGqCPZdEbmj2vATHabs28B7ATIwQlcTfQhTLH8wHHS36TH1maXKwtISOLKqm4Kx0P5xVlRu2w1HqQqxMxrQoyOJRik8EnjfouLPij0RzKx7Sb4teUAJfSfmkNZ8e32D882u4kOw6RC5dmPMUQ/Gg+p1NqWQlKPu9ih1aZyzdDm/ePioOe1MKvHnCLYUyIuUpPUBfgPzHd8YTaP9Ng82Dl1yw8IV7LWHIxBv9mWbqrWDuxoqFCqXIqYt0bsrpQ61IGI3jted9qP+9l3QH+ftIwnd+5t2ObYdkZbbpLmLwHjOuyg7Vdce5Ou41K0I2OnmJnS2er4VqJrAH/Fq88S9ODKqIomzYlobrAntNspm05PStINnxygAJXTpvA/WeB/TEFbMLRjRDukiWsE/sOtejuCYRqDGdKT0MR6fh3HVQxzkiIjfv5LZK7HhCXJCFxQY7kcEa+wjR/Dwp3fdZ8M6ToKSc8du6fmDOmt9f2YBnYYWE2/UbKrT5VVD/ulQLqyqCwFc2DmvfFtnQekylPcO7zwKb9Rlki8b2895CksnkL5Jbp2Isy7y6e0RTLdAFU8aUrbi0FUdgq16+FYT6bMUXaJ9ihDZpi2/N+deKnLUOOrzFf0q77iSsctKKnHxfryyxhfOGyEaBw+zge9numNw2IMgwAdrdE4q5W2DEp6iF9YbLwRQ6luXPEohiZRBwpqiZmlJJn/Hhu1C28uy3oRt97wlC6wA1EX28iXRgECBiT4KvBkLnSQQOcacDNMQhhacBaNyp2XdMSQEenkCvyaky0kCGm8tpMUNr4UuP3xEZjMMGAvqO6Dd4c/3ao4WVK9In0vZKSTKx5hFasiOHxtQBtOKdYfd7Q/W3GB+SxNB3RnBJpaWdwKHBIfmy3ZGfFGfnLP/wjn/GHLj88qW1ik4kC8A+gCUuqQ9lnrMcM4hoTlTRnj6iv6Ftf8nhXdKLO19zHkLe2ddetf+iN02NkHLrNYLqFpVH8iT35n73aT8J6rnDuOUYbXFeLEFOGTAQUe4CIp/eyL0LzFM2IP3ZLfbQDyn7UoxNBaR74xN9qehHu9zQ1f/nQwgVr+h1vOcfUFVSJ50NGeB0aP1SRlmw</div><script src="/lib/crypto-js.js"></script><script src="/lib/blog-encrypt.js"></script><link href="/css/blog-encrypt.css" rel="stylesheet" type="text/css">]]></content>
+      
+      
       <categories>
-        <category>碎碎念</category>
+          
+          <category> 碎碎念 </category>
+          
       </categories>
-      <tags>
-        <tag>碎碎念</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title><![CDATA[Test Project]]></title>
-    <url>%2F2019%2F06%2F11%2FTest-Project%2F</url>
-    <content type="text"><![CDATA[Test Filethis is my first Hexo text file]]></content>
+      
+      
+        <tags>
+            
+            <tag> 碎碎念 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Test Project</title>
+      <link href="/2019/06/11/Test-Project/"/>
+      <url>/2019/06/11/Test-Project/</url>
+      
+        <content type="html"><![CDATA[<h3 id="Test-File"><a href="#Test-File" class="headerlink" title="Test File"></a>Test File</h3><p>this is my first Hexo text file</p>]]></content>
+      
+      
       <categories>
-        <category>Test</category>
+          
+          <category> Test </category>
+          
       </categories>
-      <tags>
-        <tag>Test</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title><![CDATA[Hello World]]></title>
-    <url>%2F2019%2F06%2F10%2Fhello-world%2F</url>
-    <content type="text"><![CDATA[Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick StartCreate a new post1$ hexo new "My New Post" More info: Writing Run server1$ hexo server More info: Server Generate static files1$ hexo generate More info: Generating Deploy to remote sites1$ hexo deploy More info: Deployment]]></content>
-  </entry>
+      
+      
+        <tags>
+            
+            <tag> Test </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Hello World</title>
+      <link href="/2019/06/10/hello-world/"/>
+      <url>/2019/06/10/hello-world/</url>
+      
+        <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+  
+  
 </search>
