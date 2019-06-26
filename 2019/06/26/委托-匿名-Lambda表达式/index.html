@@ -113,14 +113,18 @@
 
 
 
-  <meta property="og:type" content="website">
-<meta property="og:title" content="文章分类">
-<meta property="og:url" content="http://silencejql.github.io/categories/index.html">
+  <meta name="description" content="C# Lambda表达式(转载)">
+<meta name="keywords" content="委托,匿名方法,Lambda,Func&lt;T&gt;委托">
+<meta property="og:type" content="article">
+<meta property="og:title" content="委托-匿名-Lambda表达式">
+<meta property="og:url" content="http://silencejql.github.io/2019/06/26/委托-匿名-Lambda表达式/index.html">
 <meta property="og:site_name" content="Silencejql">
+<meta property="og:description" content="C# Lambda表达式(转载)">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-06-16T03:02:41.365Z">
+<meta property="og:updated_time" content="2019-06-26T07:22:36.285Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="文章分类">
+<meta name="twitter:title" content="委托-匿名-Lambda表达式">
+<meta name="twitter:description" content="C# Lambda表达式(转载)">
 
 
 
@@ -130,7 +134,7 @@
 
   
   
-  <link rel="canonical" href="http://silencejql.github.io/categories/">
+  <link rel="canonical" href="http://silencejql.github.io/2019/06/26/委托-匿名-Lambda表达式/">
 
 
 
@@ -140,7 +144,7 @@
   };
 </script>
 
-  <title>文章分类 | Silencejql</title>
+  <title>委托-匿名-Lambda表达式 | Silencejql</title>
   <script src="https://cdn.jsdelivr.net/npm/jquery/dist/jquery.min.js"></script>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome/css/font-awesome.min.css">
   <script src="/live2d-widget/autoload.js"></script>
@@ -263,7 +267,7 @@
         
         
           
-          <li class="menu-item menu-item-categories menu-item-active">
+          <li class="menu-item menu-item-categories">
 
     
     
@@ -368,103 +372,289 @@
           
             
 
-    
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-    
-
-  
-
-
           
           <div id="content" class="content">
             
 
   <div id="posts" class="posts-expand">
     
+
+  
+
+  
+  
+  
+
+  
+    <div class="reading-progress-bar"></div>
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://silencejql.github.io/2019/06/26/委托-匿名-Lambda表达式/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Justin">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/headim.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Silencejql">
+    </span>
+
     
-    
-    <div class="post-block page">
       <header class="post-header">
 
-<h1 class="post-title" itemprop="name headline">文章分类
-
-</h1>
-
-<div class="post-meta">
-  
-  
-
-
-
-</div>
-
-</header>
-
-      
-      
-      
-      <div class="post-body">
         
         
-          <div class="category-all-page">
-            <div class="category-all-title">
+          <h1 class="post-title" itemprop="name headline">委托-匿名-Lambda表达式
+
               
-              
-                
-                  
-                
-              
-                
-                  
-                
-              
-                
-                  
-                
-              
-                
-                  
-                
-              
-              目前共计 4 个分类
-            </div>
-            <div class="category-all">
-              <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/C/">C#</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Hexo/">Hexo</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Test/">Test</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/碎碎念/">碎碎念</a><span class="category-list-count">1</span></li></ul>
-            </div>
-          </div>
+            
+          </h1>
         
-      </div>
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2019-06-26 15:05:21 / 修改时间：15:22:36" itemprop="dateCreated datePublished" datetime="2019-06-26T15:05:21+08:00">2019-06-26</time>
+            
+
+            
+              
+
+              
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/C/" itemprop="url" rel="index"><span itemprop="name">C#</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+            
+              
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+            
+                <span class="post-meta-item-text">评论数：</span>
+                <a href="/2019/06/26/委托-匿名-Lambda表达式/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/2019/06/26/委托-匿名-Lambda表达式/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+            <span id="/2019/06/26/委托-匿名-Lambda表达式/" class="leancloud_visitors" data-flag-title="委托-匿名-Lambda表达式">
+              <span class="post-meta-divider">|</span>
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              
+                <span class="post-meta-item-text">热度：</span>
+              
+                <span class="leancloud-visitors-count"></span>
+                <span>℃</span>
+            </span>
+          
+
+          
+            <span class="post-meta-divider">|</span>
+            <span class="post-meta-item-icon">
+            <i class="fa fa-eye"></i>
+             阅读次数： 
+            <span class="busuanzi-value" id="busuanzi_value_page_pv"></span>
+            </span>
+            <span class="post-meta-divider">|</span>
+            <span title="post.wordcount"><span class="post-meta-item-icon"><i class="fa fa-file-word-o"></i></span>字数： 554</span>
+          
+
+          
+
+          
+            <div class="post-description">C# Lambda表达式(转载)</div>
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
       
       
+
+      
+        <h3 id="委托"><a href="#委托" class="headerlink" title="委托"></a>委托</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line">delegate int calculator(int x, int y); //委托类型</span><br><span class="line">static void Main()</span><br><span class="line">&#123;</span><br><span class="line">    calculator add = new calculator(Addition);</span><br><span class="line">    int AddResult = add(1, 1);</span><br><span class="line">    Console.Write(AddResult);</span><br><span class="line"></span><br><span class="line">    calculator dec = new calculator(Subtraction);</span><br><span class="line">    int SubResult = dec(2,1);</span><br><span class="line">    Console.write(SubResult);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">/// &lt;summary&gt;</span><br><span class="line">/// 加法</span><br><span class="line">/// &lt;/summary&gt;</span><br><span class="line">/// &lt;param name=&quot;x&quot;&gt;&lt;/param&gt;</span><br><span class="line">/// &lt;param name=&quot;y&quot;&gt;&lt;/param&gt;</span><br><span class="line">/// &lt;returns&gt;x+y&lt;/returns&gt;</span><br><span class="line">public static int Addition(int x, int y)</span><br><span class="line">&#123;</span><br><span class="line">    return x + y;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">/// &lt;summary&gt;</span><br><span class="line">/// 减法</span><br><span class="line">/// &lt;/summary&gt;</span><br><span class="line">/// &lt;param name=&quot;x&quot;&gt;&lt;/param&gt;</span><br><span class="line">/// &lt;param name=&quot;y&quot;&gt;&lt;/param&gt;</span><br><span class="line">/// &lt;returns&gt;x-y&lt;/returns&gt;</span><br><span class="line">public static int Subtraction(int x, int y)</span><br><span class="line">&#123;</span><br><span class="line">    return x - y;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="匿名方法"><a href="#匿名方法" class="headerlink" title="匿名方法"></a>匿名方法</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">delegate int calculator(int x, int y); //委托</span><br><span class="line">static void Main()</span><br><span class="line">&#123;</span><br><span class="line">   calculator add = delegate(int num1,int num2)</span><br><span class="line">   &#123;</span><br><span class="line">       return num1 + num2;</span><br><span class="line">   &#125;;</span><br><span class="line">   calculator dec = delegate(int num1,int num2)</span><br><span class="line">   &#123;</span><br><span class="line">       return num1 - num2;</span><br><span class="line">   &#125;;</span><br><span class="line">   int AddResult = dec(1, 1);</span><br><span class="line">   int SubResult = dec(2, 1);</span><br><span class="line">   Console.Write(AddResult);</span><br><span class="line">   Console.Write(SubResult);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="Lambda表达式"><a href="#Lambda表达式" class="headerlink" title="Lambda表达式"></a>Lambda表达式</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br></pre></td><td class="code"><pre><span class="line">delegate bool MyBol(int x, int y);</span><br><span class="line">delegate bool MyBol_2(int x, string y);</span><br><span class="line">delegate int calculator(int x, int y); //委托类型</span><br><span class="line">delegate void VS();</span><br><span class="line">static void Main()</span><br><span class="line">&#123;</span><br><span class="line">    MyBol Bol = (x, y) =&gt; x == y;</span><br><span class="line">    MyBol_2 Bol_2 = (x, s) =&gt; s.Length &gt; x;</span><br><span class="line">    calculator C = (X, Y) =&gt; X * Y;</span><br><span class="line">    VS S = () =&gt; Console.Write(&quot;我是无参数Labada表达式&quot;);</span><br><span class="line">    int[] numbers = &#123; 5, 4, 1, 3, 9, 8, 6, 7, 2, 0 &#125;;</span><br><span class="line">    int oddNumbers = numbers.Count(n =&gt; n % 2 == 1);</span><br><span class="line">    List&lt;People&gt; people = LoadData();//初始化</span><br><span class="line">    IEnumerable&lt;People&gt; results = people.Where(delegate(People p) &#123; return p.age &gt; 20; &#125;);</span><br><span class="line">&#125;</span><br><span class="line">private static List&lt;People&gt; LoadData()</span><br><span class="line">&#123;</span><br><span class="line">    List&lt;People&gt; people = new List&lt;People&gt;();   //创建泛型对象  </span><br><span class="line">    People p1 = new People(21, &quot;guojing&quot;);      //创建一个对象  </span><br><span class="line">    People p2 = new People(21, &quot;wujunmin&quot;);     //创建一个对象  </span><br><span class="line">    People p3 = new People(20, &quot;muqing&quot;);       //创建一个对象  </span><br><span class="line">    People p4 = new People(23, &quot;lupan&quot;);        //创建一个对象  </span><br><span class="line">    people.Add(p1);                     //添加一个对象  </span><br><span class="line">    people.Add(p2);                     //添加一个对象  </span><br><span class="line">    people.Add(p3);                     //添加一个对象  </span><br><span class="line">    people.Add(p4);</span><br><span class="line">    return people;</span><br><span class="line">&#125;</span><br><span class="line">public class People</span><br><span class="line">&#123;</span><br><span class="line">  public int age &#123; get; set; &#125;             //设置属性  </span><br><span class="line">  public string name &#123; get; set; &#125;         //设置属性  </span><br><span class="line">  public People(int age, string name)      //设置属性(构造函数构造)  </span><br><span class="line">  &#123;</span><br><span class="line">      this.age = age;                 //初始化属性值age  </span><br><span class="line">      this.name = name;               //初始化属性值name  </span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="Func委托"><a href="#Func委托" class="headerlink" title="Func委托"></a>Func<t>委托</t></h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">//最后一个参数为返回值类型</span><br><span class="line">static void Main(string[] args)</span><br><span class="line">&#123;</span><br><span class="line">    Func&lt;int, int, bool&gt; gwl = (p, j) =&gt;</span><br><span class="line">        &#123;</span><br><span class="line">            if (p + j == 10)</span><br><span class="line">            &#123;</span><br><span class="line">                return true;</span><br><span class="line">            &#125;</span><br><span class="line">            return false;</span><br><span class="line">        &#125;;</span><br><span class="line">    Console.WriteLine(gwl(5,5) + &quot;&quot;);   //打印‘True’</span><br><span class="line">    Console.ReadKey();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+      
+    </div>
+
+    
+
+    
+    
+    
+    <div>
+      
+        
+
       
     </div>
     
 
+    
+      
+    
+    
+
+    
+    <div>
+      
+        <div>
+    
+        <div style="text-align:center;color: #ccc;font-size:14px;">-------------本文结束<i class="fa fa-paw"></i>感谢您的阅读-------------</div>
+    
+</div>
+
+      
+    </div>
+    <footer class="post-footer">
+      
+        
+          
+        
+        <div class="post-tags">
+          
+            <a href="/tags/委托/" rel="tag"># 委托</a>
+          
+            <a href="/tags/匿名方法/" rel="tag"># 匿名方法</a>
+          
+            <a href="/tags/Lambda/" rel="tag"># Lambda</a>
+          
+            <a href="/tags/Func-T-委托/" rel="tag"># Func<t>委托</t></a>
+          
+        </div>
+      
+
+      
+      
+        <div class="post-widgets">
+        
+
+        
+
+        
+          
+          <div class="social_share">
+            
+            
+              <div id="needsharebutton-postbottom">
+                <span class="btn">
+                  <i class="fa fa-share-alt" aria-hidden="true"></i>
+                </span>
+              </div>
+            
+            
+          </div>
+        
+        </div>
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2019/06/15/Hexo-Markdown/" rel="next" title="Hexo Markdown">
+                <i class="fa fa-chevron-left"></i> Hexo Markdown
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
 
 
-    
-    
-    
   </div>
 
 
           </div>
           
+
+  
+    <div class="comments" id="comments">
+    </div>
+
+  
+
+
 
         </div>
         
@@ -484,8 +674,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <div class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <div class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -656,6 +855,23 @@
         </div>
       </div>
 
+      
+      <!--noindex-->
+        <div class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+            
+            
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#委托"><span class="nav-number">1.</span> <span class="nav-text">委托</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#匿名方法"><span class="nav-number">2.</span> <span class="nav-text">匿名方法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Lambda表达式"><span class="nav-number">3.</span> <span class="nav-text">Lambda表达式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Func委托"><span class="nav-number">4.</span> <span class="nav-text">Func委托</span></a></li></ol></div>
+            
+
+          </div>
+        </div>
+      <!--/noindex-->
       
 
       
@@ -873,6 +1089,8 @@
 
 
 
+
+  
 
 
   
@@ -1258,7 +1476,7 @@
   <script src="/lib/bookmark/bookmark.min.js?v=1.0"></script>
   <script>
   
-    bookmark.loadBookmark();
+    bookmark.scrollToMark('auto', "#更多");
   
   </script>
 
