@@ -31,7 +31,7 @@ function initWidget(waifuPath = "/waifu-tips.json", apiPath = "") {
 	sessionStorage.removeItem("waifu-text");
 	$("body").append(`<div id="waifu">
 			<div id="waifu-tips"></div>
-			<canvas id="live2d" width="300" height="300"></canvas>
+			<canvas id="live2d" width="250" height="250"></canvas>
 			<div id="waifu-tool">
 				<span class="fa fa-lg fa-comment"></span>
 				<span class="fa fa-lg fa-paper-plane"></span>

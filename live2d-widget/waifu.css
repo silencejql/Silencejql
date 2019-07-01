@@ -16,8 +16,8 @@
 }
 #waifu-tips {
 	opacity: 0;
-	width: 250px;
-	min-height: 70px;
+	width: 200px;
+	min-height: 25px;
 	margin: -30px 20px;
 	padding: 5px 10px;
 	border: 1px solid rgba(224, 186, 140, 0.62);
