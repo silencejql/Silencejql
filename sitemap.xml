@@ -2,9 +2,23 @@
 <urlset xmlns="https://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://silencejql.github.io/search/index.html</loc>
+    
+    <lastmod>2019-07-03T03:40:01.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://silencejql.github.io/2019/07/03/%E6%89%98%E7%AE%A1DLL%E4%B8%8E%E9%9D%9E%E6%89%98%E7%AE%A1DLL/</loc>
+    
+    <lastmod>2019-07-03T02:42:08.068Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://silencejql.github.io/2019/06/15/Hexo-Markdown/</loc>
     
-    <lastmod>2019-07-02T09:58:46.729Z</lastmod>
+    <lastmod>2019-07-03T01:22:47.937Z</lastmod>
     
   </url>
   
