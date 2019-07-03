@@ -1,0 +1,38 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta name="generator" content="Hexo 3.8.0"><meta charset="utf-8"><meta name="X-UA-Compatible" content="IE=edge"><title> 托管DLL与非托管DLL · Silencejql</title><meta name="description" content="托管DLL与非托管DLL - Justin"><meta name="viewport" content="width=device-width, initial-scale=1"><link rel="icon" href="/favicon.png"><link rel="stylesheet" href="/css/apollo.css"><link rel="search" type="application/opensearchdescription+xml" href="http://silencejql.github.io/atom.xml" title="Silencejql"></head><body><div class="wrap"><header><a href="/" class="logo-link"><img src="/img/headim.png" alt="logo"></a><ul class="nav nav-list"><li class="nav-list-item"><a href="/" target="_self" class="nav-list-link">BLOG</a></li><li class="nav-list-item"><a href="/archives/" target="_self" class="nav-list-link">ARCHIVE</a></li><li class="nav-list-item"><a href="https://weibo.com/2808102675/profile?topnav=1&amp;wvr=6" target="_blank" class="nav-list-link">WEIBO</a></li><li class="nav-list-item"><a href="https://github.com/silencejql" target="_blank" class="nav-list-link">GITHUB</a></li><li class="nav-list-item"><a href="/atom.xml" target="_self" class="nav-list-link">RSS</a></li></ul></header><main class="container"><div class="post"><article class="post-block"><h1 class="post-title">托管DLL与非托管DLL</h1><div class="post-info">2019年7月3日</div><div class="post-content"><p>&emsp;&emsp;托管DLL和非托管DLL的区别：狭义解释讲，托管DLL就在Dotnet环境生成的DLL文件；非托管DLL不是在Dotnet环境生成的DLL文件。<br>&emsp;&emsp;托管DLL文件，可以在Dotnet环境通过 “添加引用” 的方式，直接把托管DLL文件添加到项目中，然后通过 Using DLL命名空间，来调用相应的DLL对象；非托管DLL文件，在Dotnet环境应用时，通过DllImport 调用。</p>
+<a id="more"></a>
+
+<h3 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h3><p>&emsp;&emsp;托管dll虽然符合windows的PE格式规范，但是代码是以IL的形式保存在.Text 区的，而不是机器码，CLR会在运行时JIT编译成机器码再交给操作系统执行，这也就为什么托管代码称之为”托管”的意义。<br>&emsp;&emsp;所以，要想注入托管dll，首先需要在目标进程中启动CLR，然后让CLR来加载managed dll。<br>&emsp;&emsp;托管DLL，指完全由.NET托管代码实现的DLL，完全依赖于 .NET 平台的 CLR 运行。托管DLL，受.NET CLR管控，支持内存自动回收等的，对于.NET平台是安全DLL<br>&emsp;&emsp;非托管DLL，是指完全或者部分 不是用.NET代码实现，不依赖于.NET平台即可运行，例如 COM方式 的DLL，不支持自动回收内存，对于.NET平台而言，也是非安全可控的。</p>
+<hr>
+<p>&emsp;&emsp;正常编程所用的高级语言，是无法被计算机识别的。需要先将高级语言翻译为机器语言，才能被机器理解和运行。<br>在标准C/C++中，编译过程是这样的：<br><img src="Ccompile.jpg" alt><br>&emsp;&emsp;源代码首先经过预处理器，对头文件以及宏进行解析，然后经过编译器，生成汇编代码，接着，经过汇编，生成机器指令，最后将所有文件连接起来。这种编译方式的优点在于，最终直接生成了机器码，可以直接被计算机识别和运行，无需任何中间运行环境，但缺点也在于，由于不同平台能够识别的机器码不同，因此程序的跨平台能力较差。<br>&emsp;&emsp;而在Java语言中，源代码并没有被直接翻译成机器码，而是编译成了一种中间代码（字节码Bytecode）。因此，运行Java程序需要一个额外的JRE（Java Runtime Enviromental）运行环境，在JRE中存在着JVM（Java Virtual Mechinal，Java虚拟机），在程序运行的时候，会将中间代码进一步解释为机器码，并在机器上运行。<br>&emsp;&emsp;使用中间代码的好处在于，程序的跨平台性比较好，一次编译，可以在不同的设备上运行。<br>&emsp;&emsp;托管/非托管是微软的.net framework中特有的概念，其中，非托管代码也叫本地（native）代码。与Java中的机制类似，也是先将源代码编译成中间代码（MSIL，Microsoft Intermediate Language），然后再由.net中的CLR将中间代码编译成机器代码。<br>&emsp;&emsp;而C#与Java的区别在于，Java是先编译后解释，C#是两次编译。</p>
+<hr>
+<h3 id="调用DLL中的非托管函数一般方法"><a href="#调用DLL中的非托管函数一般方法" class="headerlink" title="调用DLL中的非托管函数一般方法"></a>调用DLL中的非托管函数一般方法</h3><p>首先，应该在C#语言源程序中声明外部方法，其基本形式是：<br>    [DLLImport(“DLL文件”)]<br>修饰符 extern 返回变量类型 方法名称 （参数列表）<br>其中：</p>
+<blockquote>
+<p>DLL文件：包含定义外部方法的库文件。<br>修饰符： 访问修饰符，除了abstract以外在声明方法时可以使用的修饰符。<br>返回变量类型：在DLL文件中你需调用方法的返回变量类型。<br>方法名称：在DLL文件中你需调用方法的名称。<br>参数列表：在DLL文件中你需调用方法的列表。</p>
+</blockquote>
+<p>注意：需要在程序声明中使用System.Runtime.InteropServices命名空间。<br>DllImport只能放置在方法声明上。<br>DLL文件必须位于程序当前目录或系统定义的查询路径中（即：系统环境变量中Path所设置的路径）。<br><font color="#FF0000"><strong>返回变量类型、方法名称、参数列表一定要与DLL文件中的定义相一致。</strong></font><br>若要使用其它函数名，可以使用EntryPoint属性设置，如：</p>
+<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">[<span class="meta">DllImport(<span class="meta-string">"user32.dll"</span>, EntryPoint=<span class="meta-string">"MessageBoxA"</span>)</span>]</span><br><span class="line"><span class="function"><span class="keyword">static</span> <span class="keyword">extern</span> <span class="keyword">int</span> <span class="title">MsgBox</span>(<span class="params"><span class="keyword">int</span> hWnd, <span class="keyword">string</span> msg, <span class="keyword">string</span> caption, <span class="keyword">int</span> type</span>)</span>;</span><br><span class="line"></span><br><span class="line">[<span class="meta">DllImportAttribute(<span class="meta-string">"CN210S_CSM_LV1.dll"</span>, EntryPoint = <span class="meta-string">"uds_calc_key"</span>, CharSet = CharSet.Ansi)</span>]</span><br><span class="line"><span class="function"><span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">extern</span> <span class="keyword">void</span> <span class="title">uds_calc_key_ldw</span>(<span class="params"><span class="keyword">string</span> seed, StringBuilder key</span>)</span>;</span><br></pre></td></tr></table></figure>
+
+<p>其它可选的 DllImportAttribute 属性：</p>
+<blockquote>
+<p>CharSet： 指示用在入口点中的字符集，如：CharSet=CharSet.Ansi；<br>SetLastError： 指示方法是否保留 Win32”上一错误”，如：SetLastError=true；<br>ExactSpelling： 指示 EntryPoint 是否必须与指示的入口点的拼写完全匹配，如：ExactSpelling=false；<br>PreserveSig： 指示方法的签名应当被保留还是被转换， 如：PreserveSig=true；<br>CallingConvention： 指示入口点的调用约定， 如：CallingConvention=CallingConvention.Winapi；</p>
+</blockquote>
+</div></article></div></main><footer><div class="paginator"><a href="/2019/06/26/委托-匿名-Lambda表达式/" class="next">下一篇</a></div><div id="container"><link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css?v=undefined"><script type="text/javascript" src="https://unpkg.com/gitalk/dist/gitalk.min.js?v=undefined"></script><script type="text/javascript" src="//cdn.jsdelivr.net/npm/js-md5@0.7.3/src/md5.min.js?v=undefined"></script><script>var gitalk = new Gitalk({
+  clientID: 'bb165d6d9cab9525fd59',
+  clientSecret: '6f0a2afc8b59fec4c3d040dbaea26bafd11d30f8',
+  repo: 'BlogComment',
+  owner: 'silencejql',
+  admin: ['silencejql'],
+  id: md5(window.location.pathname),
+  distractionFreeMode: false,
+  language: 'zh-CN',
+  pagerDirection: 'last'
+})
+gitalk.render('container')
+</script></div><div id="lv-container" data-id="city" data-uid="MTAyMC80NTA4MC8yMTU5Nw=="></div><script>(function(d, s) {
+  var j, e = d.getElementsByTagName('body')[0];
+  if (typeof LivereTower === 'function') { return; }
+  j = d.createElement(s);
+  j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+  j.async = true;
+  e.appendChild(j);
+})(document, 'script');</script><div class="copyright"><p>© 2015 - 2019 <a href="http://silencejql.github.io">Justin</a>, powered by <a href="https://hexo.io/" target="_blank">Hexo</a> and <a href="https://github.com/pinggod/hexo-theme-apollo" target="_blank">hexo-theme-apollo</a>.</p></div></footer></div><script async src="//cdn.bootcss.com/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML" integrity="sha384-crwIf/BuaWM9rM65iM+dWFldgQ1Un8jWZMuh3puxb8TOY9+linwLoI7ZHZT+aekW" crossorigin="anonymous"></script></body></html>
