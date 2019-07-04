@@ -1,6 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[Hexo博客部署到Coding和github]]></title>
+    <url>%2F2019%2F07%2F04%2FHexo%E5%8D%9A%E5%AE%A2%E9%83%A8%E7%BD%B2%E5%88%B0Coding%E5%92%8Cgithub%2F</url>
+    <content type="text"><![CDATA[部署到Github和Coding新建仓库 Github：新建Repository：name.github.io Coding：新建Repository：name.coding.me 添加SSH key若无SSHkey ssh-keygen -t rsa -C “your e-mail”Enter passphrase (empty for no passphrase):&lt;输入加密串&gt;Enter same passphrase again:&lt;再次输入加密串&gt; 打开生成的id_rsa.pub文件并复制其中的内容添加到Github或Coding项目中然后在git中执行 Github： ssh -T git@github.com Coding： ssh -T git@git.coding.net //coding ssh -T git@git.dev.tencent.com //腾讯云 添加到腾讯云后需要开启Pages服务才可通过name.coding.me登录 更改博客配置文件123456deploy: type: git repository: github: git@github.com:silencejql/silencejql.github.io.git coding: git@git.dev.tencent.com:silencejql/silencejql.coding.me.git branch: master 不同格式相应作出调整即可]]></content>
+      <categories>
+        <category>Hexo</category>
+      </categories>
+      <tags>
+        <tag>Coding</tag>
+        <tag>github</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[托管DLL与非托管DLL]]></title>
     <url>%2F2019%2F07%2F03%2F%E6%89%98%E7%AE%A1DLL%E4%B8%8E%E9%9D%9E%E6%89%98%E7%AE%A1DLL%2F</url>
     <content type="text"><![CDATA[&emsp;&emsp;托管DLL和非托管DLL的区别：狭义解释讲，托管DLL就在Dotnet环境生成的DLL文件；非托管DLL不是在Dotnet环境生成的DLL文件。&emsp;&emsp;托管DLL文件，可以在Dotnet环境通过 “添加引用” 的方式，直接把托管DLL文件添加到项目中，然后通过 Using DLL命名空间，来调用相应的DLL对象；非托管DLL文件，在Dotnet环境应用时，通过DllImport 调用。 概述&emsp;&emsp;托管dll虽然符合windows的PE格式规范，但是代码是以IL的形式保存在.Text 区的，而不是机器码，CLR会在运行时JIT编译成机器码再交给操作系统执行，这也就为什么托管代码称之为”托管”的意义。&emsp;&emsp;所以，要想注入托管dll，首先需要在目标进程中启动CLR，然后让CLR来加载managed dll。&emsp;&emsp;托管DLL，指完全由.NET托管代码实现的DLL，完全依赖于 .NET 平台的 CLR 运行。托管DLL，受.NET CLR管控，支持内存自动回收等的，对于.NET平台是安全DLL&emsp;&emsp;非托管DLL，是指完全或者部分 不是用.NET代码实现，不依赖于.NET平台即可运行，例如 COM方式 的DLL，不支持自动回收内存，对于.NET平台而言，也是非安全可控的。 &emsp;&emsp;正常编程所用的高级语言，是无法被计算机识别的。需要先将高级语言翻译为机器语言，才能被机器理解和运行。在标准C/C++中，编译过程是这样的：&emsp;&emsp;源代码首先经过预处理器，对头文件以及宏进行解析，然后经过编译器，生成汇编代码，接着，经过汇编，生成机器指令，最后将所有文件连接起来。这种编译方式的优点在于，最终直接生成了机器码，可以直接被计算机识别和运行，无需任何中间运行环境，但缺点也在于，由于不同平台能够识别的机器码不同，因此程序的跨平台能力较差。&emsp;&emsp;而在Java语言中，源代码并没有被直接翻译成机器码，而是编译成了一种中间代码（字节码Bytecode）。因此，运行Java程序需要一个额外的JRE（Java Runtime Enviromental）运行环境，在JRE中存在着JVM（Java Virtual Mechinal，Java虚拟机），在程序运行的时候，会将中间代码进一步解释为机器码，并在机器上运行。&emsp;&emsp;使用中间代码的好处在于，程序的跨平台性比较好，一次编译，可以在不同的设备上运行。&emsp;&emsp;托管/非托管是微软的.net framework中特有的概念，其中，非托管代码也叫本地（native）代码。与Java中的机制类似，也是先将源代码编译成中间代码（MSIL，Microsoft Intermediate Language），然后再由.net中的CLR将中间代码编译成机器代码。&emsp;&emsp;而C#与Java的区别在于，Java是先编译后解释，C#是两次编译。 调用DLL中的非托管函数一般方法首先，应该在C#语言源程序中声明外部方法，其基本形式是： [DLLImport(“DLL文件”)]修饰符 extern 返回变量类型 方法名称 （参数列表）其中： DLL文件：包含定义外部方法的库文件。修饰符： 访问修饰符，除了abstract以外在声明方法时可以使用的修饰符。返回变量类型：在DLL文件中你需调用方法的返回变量类型。方法名称：在DLL文件中你需调用方法的名称。参数列表：在DLL文件中你需调用方法的列表。 注意：需要在程序声明中使用System.Runtime.InteropServices命名空间。DllImport只能放置在方法声明上。DLL文件必须位于程序当前目录或系统定义的查询路径中（即：系统环境变量中Path所设置的路径）。返回变量类型、方法名称、参数列表一定要与DLL文件中的定义相一致。若要使用其它函数名，可以使用EntryPoint属性设置，如： 12345[DllImport("user32.dll", EntryPoint="MessageBoxA")]static extern int MsgBox(int hWnd, string msg, string caption, int type);[DllImportAttribute("CN210S_CSM_LV1.dll", EntryPoint = "uds_calc_key", CharSet = CharSet.Ansi)]private static extern void uds_calc_key_ldw(string seed, StringBuilder key); 其它可选的 DllImportAttribute 属性： CharSet： 指示用在入口点中的字符集，如：CharSet=CharSet.Ansi；SetLastError： 指示方法是否保留 Win32”上一错误”，如：SetLastError=true；ExactSpelling： 指示 EntryPoint 是否必须与指示的入口点的拼写完全匹配，如：ExactSpelling=false；PreserveSig： 指示方法的签名应当被保留还是被转换， 如：PreserveSig=true；CallingConvention： 指示入口点的调用约定， 如：CallingConvention=CallingConvention.Winapi；]]></content>
@@ -43,7 +55,7 @@
   <entry>
     <title><![CDATA[碎碎念]]></title>
     <url>%2F2019%2F06%2F15%2F%E7%A2%8E%E7%A2%8E%E5%BF%B5%2F</url>
-    <content type="text"><![CDATA[Enter password to read！ Incorrect Password! No content to display! U2FsdGVkX19KDZsiU8RQMAbMTb9XLL3nAXgjAkXJmzg9pJC/CJ12SM7FWGERfrhS7kbDKJlQAvjih7Dw8bfjjVl23fmcKWod/0QrSxcibl92zivV95CD8ZYJrPltrUwmQHZ5PjStc1oJ3Q5M//LjgN5EPLrjnNy7rW0eHePvrH2v+uK38indjLXgnuTc4yBrWC7M77QjGwQUKiaMqogujOQIj4oTPn9+VM+ipAj0NDoy7PElznKtodIoHRRn7/9pUlP4ySIz2DnyHA8td9/1hbQZJzGh0tT9sqo/iM8wfXQbDZUtCLV2XK79rTQi8S/RsWL1zHuR/kL3smsxdW8aVLWXSIe1LXnu7OxtVn2jDOdqDwe270UE/Ggv6yh9UmbKNqMC14irZGtu6V6hldrevnbk43SqBYYHm5x08U5+NrUJHjX9XRO07NdDXODcwH2xBASBSvcGG9z0U6vc9SN1cIiCYWFabKsmCsF10jEElykVelf5J0yQyaxJFCAJ0S76XRU0EWSZriVOm1b7gv8pi8SfH2Kbj2QDZimQAVfHOUpeXUvkI9h1sAGIr1Nr547C1RgM+MkUXpPGJQc9DxFjEgeDqnE2xohtqcuyNv1cuaUjAdTpHvlHulKViuARZy7EF6KHK8dD0JOsPt7Tcj6P1bYx7RZhqN1TMeATyiOOCwFpBQoBkf23KYjn+XwYa79L]]></content>
+    <content type="text"><![CDATA[Enter password to read！ Incorrect Password! No content to display! U2FsdGVkX1+sYi2VlgQfZea54Pc5J29b4qnBV6CoPXiMKElnFsLYNSG4oiyljn8SzsDxMS1lyhtz5Vg61X3oSb/paW2D4W7DKMoSzycMvtWzr4Hf1ikos22TpWltmuT5kPbLampdfenpaALvRr6MV1xBU+/YYQNZfKwmCROnXla1+nWYnwQG2sVpbY8q/NHhtl7TLA3jJWXiH9TqalOVeZPqe3/ffAE/bCVEsXpjqSpyNzXb2FkGAZKiIQApOFS8rvuo5mjLL4lPDm/SBgMxFbKTbvGYK16IpkLQ08Dj+qbvCztZ4oJQ4rSq6YT/fpDx1hlxkkkeY8KtF3qEpUXIMFoipUOcV0J3bWfMl/NJ28qXxHhQk/u0X5Ztmtyo3fK9SpRmJRJAadyPHOZ51MEVDH3UEzHT8QlZtX37llCznuqLfLWx0FedkTqNUvcN189ZkqmvmKsKBX8kTuKdtIJPFlMCCeUm6y86E6NdoxjHXJ4C/d0TYEyJywqCuyi2vOqOtSzg6neVNTtcdIuiVl/xiMdMbpBn2cj7UEAwVNznAGZBz9mqfYpHj42MLVHAkbzp/2C+r8EUeb7IpkQlQpsFYBiB38SkDdt2/2F2r9U9ZLTxItiYGVAwCBaddowMdu1xE5SG+uXFdA3CEvZUyf3malCiE3btalhi7k6yuCNi0HLQuRUHFfF4vxGM4YJHtwKa]]></content>
       <categories>
         <category>碎碎念</category>
       </categories>

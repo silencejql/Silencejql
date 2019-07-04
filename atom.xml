@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://silencejql.github.io/"/>
-  <updated>2019-07-03T02:42:08.068Z</updated>
+  <updated>2019-07-04T07:11:26.581Z</updated>
   <id>http://silencejql.github.io/</id>
   
   <author>
@@ -15,6 +15,30 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Hexo博客部署到Coding和github</title>
+    <link href="http://silencejql.github.io/2019/07/04/Hexo%E5%8D%9A%E5%AE%A2%E9%83%A8%E7%BD%B2%E5%88%B0Coding%E5%92%8Cgithub/"/>
+    <id>http://silencejql.github.io/2019/07/04/Hexo博客部署到Coding和github/</id>
+    <published>2019-07-04T06:48:17.000Z</published>
+    <updated>2019-07-04T07:11:26.581Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="部署到Github和Coding"><a href="#部署到Github和Coding" class="headerlink" title="部署到Github和Coding"></a>部署到Github和Coding</h3><h4 id="新建仓库"><a href="#新建仓库" class="headerlink" title="新建仓库"></a>新建仓库</h4><blockquote><p>Github：<br>新建Repository：name.github.io</p></blockquote><blockquote><p>Coding：<br>新建Repository：name.coding.me</p></blockquote><h4 id="添加SSH-key"><a href="#添加SSH-key" class="headerlink" title="添加SSH key"></a>添加SSH key</h4><p>若无SSHkey</p><blockquote><p>ssh-keygen -t rsa -C “your e-mail”<br>Enter passphrase (empty for no passphrase):&lt;输入加密串&gt;<br>Enter same passphrase again:&lt;再次输入加密串&gt;</p></blockquote><p>打开生成的id_rsa.pub文件并复制其中的内容添加到Github或Coding项目中然后在git中执行</p><blockquote><p>Github：<br>    ssh -T <a href="mailto:git@github.com" target="_blank" rel="noopener">git@github.com</a></p></blockquote><blockquote><p>Coding：<br>    ssh -T <a href="mailto:git@git.coding.net" target="_blank" rel="noopener">git@git.coding.net</a> //coding<br>    ssh -T <a href="mailto:git@git.dev.tencent.com" target="_blank" rel="noopener">git@git.dev.tencent.com</a> //腾讯云</p></blockquote><p>添加到腾讯云后需要开启Pages服务才可通过name.coding.me登录</p><h4 id="更改博客配置文件"><a href="#更改博客配置文件" class="headerlink" title="更改博客配置文件"></a>更改博客配置文件</h4><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">deploy:</span><br><span class="line">  type: git</span><br><span class="line">  repository:</span><br><span class="line">    github: git@github.com:silencejql/silencejql.github.io.git</span><br><span class="line">    coding: git@git.dev.tencent.com:silencejql/silencejql.coding.me.git</span><br><span class="line">  branch: master</span><br></pre></td></tr></table></figure><p>不同格式相应作出调整即可</p>]]></content>
+    
+    <summary type="html">
+    
+      将Hexo部署或迁移到Github或Coding
+    
+    </summary>
+    
+      <category term="Hexo" scheme="http://silencejql.github.io/categories/Hexo/"/>
+    
+    
+      <category term="Coding" scheme="http://silencejql.github.io/tags/Coding/"/>
+    
+      <category term="github" scheme="http://silencejql.github.io/tags/github/"/>
+    
+  </entry>
   
   <entry>
     <title>托管DLL与非托管DLL</title>
@@ -103,7 +127,7 @@
     <published>2019-06-15T11:55:54.000Z</published>
     <updated>2019-06-18T05:14:31.967Z</updated>
     
-    <content type="html"><![CDATA[<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script><div id="hbe-security">  <div class="hbe-input-container">  <input type="password" class="hbe-form-control" id="pass" placeholder="Enter password to read！" />    <label for="pass">Enter password to read！</label>    <div class="bottom-line"></div>  </div></div><div id="decryptionError" style="display: none;">Incorrect Password!</div><div id="noContentError" style="display: none;">No content to display!</div><div id="encrypt-blog" style="display:none">U2FsdGVkX19KDZsiU8RQMAbMTb9XLL3nAXgjAkXJmzg9pJC/CJ12SM7FWGERfrhS7kbDKJlQAvjih7Dw8bfjjVl23fmcKWod/0QrSxcibl92zivV95CD8ZYJrPltrUwmQHZ5PjStc1oJ3Q5M//LjgN5EPLrjnNy7rW0eHePvrH2v+uK38indjLXgnuTc4yBrWC7M77QjGwQUKiaMqogujOQIj4oTPn9+VM+ipAj0NDoy7PElznKtodIoHRRn7/9pUlP4ySIz2DnyHA8td9/1hbQZJzGh0tT9sqo/iM8wfXQbDZUtCLV2XK79rTQi8S/RsWL1zHuR/kL3smsxdW8aVLWXSIe1LXnu7OxtVn2jDOdqDwe270UE/Ggv6yh9UmbKNqMC14irZGtu6V6hldrevnbk43SqBYYHm5x08U5+NrUJHjX9XRO07NdDXODcwH2xBASBSvcGG9z0U6vc9SN1cIiCYWFabKsmCsF10jEElykVelf5J0yQyaxJFCAJ0S76XRU0EWSZriVOm1b7gv8pi8SfH2Kbj2QDZimQAVfHOUpeXUvkI9h1sAGIr1Nr547C1RgM+MkUXpPGJQc9DxFjEgeDqnE2xohtqcuyNv1cuaUjAdTpHvlHulKViuARZy7EF6KHK8dD0JOsPt7Tcj6P1bYx7RZhqN1TMeATyiOOCwFpBQoBkf23KYjn+XwYa79L</div><script src="/lib/crypto-js.js"></script><script src="/lib/blog-encrypt.js"></script><link href="/css/blog-encrypt.css" rel="stylesheet" type="text/css">]]></content>
+    <content type="html"><![CDATA[<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script><div id="hbe-security">  <div class="hbe-input-container">  <input type="password" class="hbe-form-control" id="pass" placeholder="Enter password to read！" />    <label for="pass">Enter password to read！</label>    <div class="bottom-line"></div>  </div></div><div id="decryptionError" style="display: none;">Incorrect Password!</div><div id="noContentError" style="display: none;">No content to display!</div><div id="encrypt-blog" style="display:none">U2FsdGVkX1+sYi2VlgQfZea54Pc5J29b4qnBV6CoPXiMKElnFsLYNSG4oiyljn8SzsDxMS1lyhtz5Vg61X3oSb/paW2D4W7DKMoSzycMvtWzr4Hf1ikos22TpWltmuT5kPbLampdfenpaALvRr6MV1xBU+/YYQNZfKwmCROnXla1+nWYnwQG2sVpbY8q/NHhtl7TLA3jJWXiH9TqalOVeZPqe3/ffAE/bCVEsXpjqSpyNzXb2FkGAZKiIQApOFS8rvuo5mjLL4lPDm/SBgMxFbKTbvGYK16IpkLQ08Dj+qbvCztZ4oJQ4rSq6YT/fpDx1hlxkkkeY8KtF3qEpUXIMFoipUOcV0J3bWfMl/NJ28qXxHhQk/u0X5Ztmtyo3fK9SpRmJRJAadyPHOZ51MEVDH3UEzHT8QlZtX37llCznuqLfLWx0FedkTqNUvcN189ZkqmvmKsKBX8kTuKdtIJPFlMCCeUm6y86E6NdoxjHXJ4C/d0TYEyJywqCuyi2vOqOtSzg6neVNTtcdIuiVl/xiMdMbpBn2cj7UEAwVNznAGZBz9mqfYpHj42MLVHAkbzp/2C+r8EUeb7IpkQlQpsFYBiB38SkDdt2/2F2r9U9ZLTxItiYGVAwCBaddowMdu1xE5SG+uXFdA3CEvZUyf3malCiE3btalhi7k6yuCNi0HLQuRUHFfF4vxGM4YJHtwKa</div><script src="/lib/crypto-js.js"></script><script src="/lib/blog-encrypt.js"></script><link href="/css/blog-encrypt.css" rel="stylesheet" type="text/css">]]></content>
     
     <summary type="html">
     
