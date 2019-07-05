@@ -5,9 +5,9 @@
   
   <link href="/atom.xml" rel="self"/>
   
-  <link href="http://silencejql.github.io/"/>
+  <link href="http://silencejql.coding.me/"/>
   <updated>2019-07-05T06:59:33.748Z</updated>
-  <id>http://silencejql.github.io/</id>
+  <id>http://silencejql.coding.me/</id>
   
   <author>
     <name>Justin</name>
@@ -18,8 +18,8 @@
   
   <entry>
     <title>RGB颜色</title>
-    <link href="http://silencejql.github.io/2019/07/05/RGB%E9%A2%9C%E8%89%B2/"/>
-    <id>http://silencejql.github.io/2019/07/05/RGB颜色/</id>
+    <link href="http://silencejql.coding.me/2019/07/05/RGB%E9%A2%9C%E8%89%B2/"/>
+    <id>http://silencejql.coding.me/2019/07/05/RGB颜色/</id>
     <published>2019-07-05T06:20:25.000Z</published>
     <updated>2019-07-05T06:59:33.748Z</updated>
     
@@ -31,17 +31,17 @@
     
     </summary>
     
-      <category term="RGB" scheme="http://silencejql.github.io/categories/RGB/"/>
+      <category term="RGB" scheme="http://silencejql.coding.me/categories/RGB/"/>
     
     
-      <category term="RGB颜色表" scheme="http://silencejql.github.io/tags/RGB%E9%A2%9C%E8%89%B2%E8%A1%A8/"/>
+      <category term="RGB颜色表" scheme="http://silencejql.coding.me/tags/RGB%E9%A2%9C%E8%89%B2%E8%A1%A8/"/>
     
   </entry>
   
   <entry>
     <title>css常用属性</title>
-    <link href="http://silencejql.github.io/2019/07/05/css%E5%B8%B8%E7%94%A8%E5%B1%9E%E6%80%A7/"/>
-    <id>http://silencejql.github.io/2019/07/05/css常用属性/</id>
+    <link href="http://silencejql.coding.me/2019/07/05/css%E5%B8%B8%E7%94%A8%E5%B1%9E%E6%80%A7/"/>
+    <id>http://silencejql.coding.me/2019/07/05/css常用属性/</id>
     <published>2019-07-05T05:54:12.000Z</published>
     <updated>2019-07-05T06:15:54.434Z</updated>
     
@@ -53,17 +53,17 @@
     
     </summary>
     
-      <category term="css" scheme="http://silencejql.github.io/categories/css/"/>
+      <category term="css" scheme="http://silencejql.coding.me/categories/css/"/>
     
     
-      <category term="css属性" scheme="http://silencejql.github.io/tags/css%E5%B1%9E%E6%80%A7/"/>
+      <category term="css属性" scheme="http://silencejql.coding.me/tags/css%E5%B1%9E%E6%80%A7/"/>
     
   </entry>
   
   <entry>
     <title>泛型的特点</title>
-    <link href="http://silencejql.github.io/2019/07/05/%E6%B3%9B%E5%9E%8B%E7%9A%84%E7%89%B9%E7%82%B9/"/>
-    <id>http://silencejql.github.io/2019/07/05/泛型的特点/</id>
+    <link href="http://silencejql.coding.me/2019/07/05/%E6%B3%9B%E5%9E%8B%E7%9A%84%E7%89%B9%E7%82%B9/"/>
+    <id>http://silencejql.coding.me/2019/07/05/泛型的特点/</id>
     <published>2019-07-05T05:36:31.000Z</published>
     <updated>2019-07-05T06:16:20.240Z</updated>
     
@@ -75,17 +75,17 @@
     
     </summary>
     
-      <category term="C#" scheme="http://silencejql.github.io/categories/C/"/>
+      <category term="C#" scheme="http://silencejql.coding.me/categories/C/"/>
     
     
-      <category term="泛型" scheme="http://silencejql.github.io/tags/%E6%B3%9B%E5%9E%8B/"/>
+      <category term="泛型" scheme="http://silencejql.coding.me/tags/%E6%B3%9B%E5%9E%8B/"/>
     
   </entry>
   
   <entry>
     <title>C# Static</title>
-    <link href="http://silencejql.github.io/2019/07/05/C-Static/"/>
-    <id>http://silencejql.github.io/2019/07/05/C-Static/</id>
+    <link href="http://silencejql.coding.me/2019/07/05/C-Static/"/>
+    <id>http://silencejql.coding.me/2019/07/05/C-Static/</id>
     <published>2019-07-05T02:59:00.000Z</published>
     <updated>2019-07-05T04:28:04.406Z</updated>
     
@@ -97,17 +97,17 @@
     
     </summary>
     
-      <category term="C#" scheme="http://silencejql.github.io/categories/C/"/>
+      <category term="C#" scheme="http://silencejql.coding.me/categories/C/"/>
     
     
-      <category term="static" scheme="http://silencejql.github.io/tags/static/"/>
+      <category term="static" scheme="http://silencejql.coding.me/tags/static/"/>
     
   </entry>
   
   <entry>
     <title>C# 常识</title>
-    <link href="http://silencejql.github.io/2019/07/05/C-%E5%B8%B8%E8%AF%86/"/>
-    <id>http://silencejql.github.io/2019/07/05/C-常识/</id>
+    <link href="http://silencejql.coding.me/2019/07/05/C-%E5%B8%B8%E8%AF%86/"/>
+    <id>http://silencejql.coding.me/2019/07/05/C-常识/</id>
     <published>2019-07-05T02:59:00.000Z</published>
     <updated>2019-07-05T06:16:32.828Z</updated>
     
@@ -119,17 +119,17 @@
     
     </summary>
     
-      <category term="C#" scheme="http://silencejql.github.io/categories/C/"/>
+      <category term="C#" scheme="http://silencejql.coding.me/categories/C/"/>
     
     
-      <category term="C#" scheme="http://silencejql.github.io/tags/C/"/>
+      <category term="C#" scheme="http://silencejql.coding.me/tags/C/"/>
     
   </entry>
   
   <entry>
     <title>Hexo博客部署到Coding和github</title>
-    <link href="http://silencejql.github.io/2019/07/04/Hexo%E5%8D%9A%E5%AE%A2%E9%83%A8%E7%BD%B2%E5%88%B0Coding%E5%92%8Cgithub/"/>
-    <id>http://silencejql.github.io/2019/07/04/Hexo博客部署到Coding和github/</id>
+    <link href="http://silencejql.coding.me/2019/07/04/Hexo%E5%8D%9A%E5%AE%A2%E9%83%A8%E7%BD%B2%E5%88%B0Coding%E5%92%8Cgithub/"/>
+    <id>http://silencejql.coding.me/2019/07/04/Hexo博客部署到Coding和github/</id>
     <published>2019-07-04T06:48:17.000Z</published>
     <updated>2019-07-04T08:57:22.027Z</updated>
     
@@ -141,19 +141,19 @@
     
     </summary>
     
-      <category term="Hexo" scheme="http://silencejql.github.io/categories/Hexo/"/>
+      <category term="Hexo" scheme="http://silencejql.coding.me/categories/Hexo/"/>
     
     
-      <category term="Coding" scheme="http://silencejql.github.io/tags/Coding/"/>
+      <category term="Coding" scheme="http://silencejql.coding.me/tags/Coding/"/>
     
-      <category term="github" scheme="http://silencejql.github.io/tags/github/"/>
+      <category term="github" scheme="http://silencejql.coding.me/tags/github/"/>
     
   </entry>
   
   <entry>
     <title>托管DLL与非托管DLL</title>
-    <link href="http://silencejql.github.io/2019/07/03/%E6%89%98%E7%AE%A1DLL%E4%B8%8E%E9%9D%9E%E6%89%98%E7%AE%A1DLL/"/>
-    <id>http://silencejql.github.io/2019/07/03/托管DLL与非托管DLL/</id>
+    <link href="http://silencejql.coding.me/2019/07/03/%E6%89%98%E7%AE%A1DLL%E4%B8%8E%E9%9D%9E%E6%89%98%E7%AE%A1DLL/"/>
+    <id>http://silencejql.coding.me/2019/07/03/托管DLL与非托管DLL/</id>
     <published>2019-07-03T01:03:34.000Z</published>
     <updated>2019-07-03T02:42:08.068Z</updated>
     
@@ -165,19 +165,19 @@
     
     </summary>
     
-      <category term="C#基础" scheme="http://silencejql.github.io/categories/C-%E5%9F%BA%E7%A1%80/"/>
+      <category term="C#基础" scheme="http://silencejql.coding.me/categories/C-%E5%9F%BA%E7%A1%80/"/>
     
     
-      <category term="C#" scheme="http://silencejql.github.io/tags/C/"/>
+      <category term="C#" scheme="http://silencejql.coding.me/tags/C/"/>
     
-      <category term="托管DLL" scheme="http://silencejql.github.io/tags/%E6%89%98%E7%AE%A1DLL/"/>
+      <category term="托管DLL" scheme="http://silencejql.coding.me/tags/%E6%89%98%E7%AE%A1DLL/"/>
     
   </entry>
   
   <entry>
     <title>委托-匿名-Lambda表达式</title>
-    <link href="http://silencejql.github.io/2019/06/26/%E5%A7%94%E6%89%98-%E5%8C%BF%E5%90%8D-Lambda%E8%A1%A8%E8%BE%BE%E5%BC%8F/"/>
-    <id>http://silencejql.github.io/2019/06/26/委托-匿名-Lambda表达式/</id>
+    <link href="http://silencejql.coding.me/2019/06/26/%E5%A7%94%E6%89%98-%E5%8C%BF%E5%90%8D-Lambda%E8%A1%A8%E8%BE%BE%E5%BC%8F/"/>
+    <id>http://silencejql.coding.me/2019/06/26/委托-匿名-Lambda表达式/</id>
     <published>2019-06-26T07:05:21.000Z</published>
     <updated>2019-06-26T07:51:50.273Z</updated>
     
@@ -189,23 +189,23 @@
     
     </summary>
     
-      <category term="C#" scheme="http://silencejql.github.io/categories/C/"/>
+      <category term="C#" scheme="http://silencejql.coding.me/categories/C/"/>
     
     
-      <category term="委托" scheme="http://silencejql.github.io/tags/%E5%A7%94%E6%89%98/"/>
+      <category term="委托" scheme="http://silencejql.coding.me/tags/%E5%A7%94%E6%89%98/"/>
     
-      <category term="匿名方法" scheme="http://silencejql.github.io/tags/%E5%8C%BF%E5%90%8D%E6%96%B9%E6%B3%95/"/>
+      <category term="匿名方法" scheme="http://silencejql.coding.me/tags/%E5%8C%BF%E5%90%8D%E6%96%B9%E6%B3%95/"/>
     
-      <category term="Lambda" scheme="http://silencejql.github.io/tags/Lambda/"/>
+      <category term="Lambda" scheme="http://silencejql.coding.me/tags/Lambda/"/>
     
-      <category term="Func&lt;T&gt;委托" scheme="http://silencejql.github.io/tags/Func-T-%E5%A7%94%E6%89%98/"/>
+      <category term="Func&lt;T&gt;委托" scheme="http://silencejql.coding.me/tags/Func-T-%E5%A7%94%E6%89%98/"/>
     
   </entry>
   
   <entry>
     <title>Hexo Markdown</title>
-    <link href="http://silencejql.github.io/2019/06/15/Hexo-Markdown/"/>
-    <id>http://silencejql.github.io/2019/06/15/Hexo-Markdown/</id>
+    <link href="http://silencejql.coding.me/2019/06/15/Hexo-Markdown/"/>
+    <id>http://silencejql.coding.me/2019/06/15/Hexo-Markdown/</id>
     <published>2019-06-15T12:15:05.000Z</published>
     <updated>2019-07-05T05:46:57.527Z</updated>
     
@@ -217,27 +217,27 @@
     
     </summary>
     
-      <category term="Hexo" scheme="http://silencejql.github.io/categories/Hexo/"/>
+      <category term="Hexo" scheme="http://silencejql.coding.me/categories/Hexo/"/>
     
     
-      <category term="Hexo" scheme="http://silencejql.github.io/tags/Hexo/"/>
+      <category term="Hexo" scheme="http://silencejql.coding.me/tags/Hexo/"/>
     
-      <category term="主题" scheme="http://silencejql.github.io/tags/%E4%B8%BB%E9%A2%98/"/>
+      <category term="主题" scheme="http://silencejql.coding.me/tags/%E4%B8%BB%E9%A2%98/"/>
     
-      <category term="文章密码" scheme="http://silencejql.github.io/tags/%E6%96%87%E7%AB%A0%E5%AF%86%E7%A0%81/"/>
+      <category term="文章密码" scheme="http://silencejql.coding.me/tags/%E6%96%87%E7%AB%A0%E5%AF%86%E7%A0%81/"/>
     
-      <category term="Markdown" scheme="http://silencejql.github.io/tags/Markdown/"/>
+      <category term="Markdown" scheme="http://silencejql.coding.me/tags/Markdown/"/>
     
   </entry>
   
   <entry>
     <title>碎碎念</title>
-    <link href="http://silencejql.github.io/2019/06/15/%E7%A2%8E%E7%A2%8E%E5%BF%B5/"/>
-    <id>http://silencejql.github.io/2019/06/15/碎碎念/</id>
+    <link href="http://silencejql.coding.me/2019/06/15/%E7%A2%8E%E7%A2%8E%E5%BF%B5/"/>
+    <id>http://silencejql.coding.me/2019/06/15/碎碎念/</id>
     <published>2019-06-15T11:55:54.000Z</published>
     <updated>2019-06-18T05:14:31.967Z</updated>
     
-    <content type="html"><![CDATA[<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script><div id="hbe-security">  <div class="hbe-input-container">  <input type="password" class="hbe-form-control" id="pass" placeholder="Enter password to read！" />    <label for="pass">Enter password to read！</label>    <div class="bottom-line"></div>  </div></div><div id="decryptionError" style="display: none;">Incorrect Password!</div><div id="noContentError" style="display: none;">No content to display!</div><div id="encrypt-blog" style="display:none">U2FsdGVkX1837+KmtU11nzfJ/fCdsvOONsq3mKvI4GX0qTTa6m3UITZ7Y9gZOh7iJEnP5lZMyuv0FSyC2MBopipK+K5et9exZWgWIxc26AgW7b7CnyL5gWk/qXMfCcwwFKv4K05Zh88FmpLc+6G28UsdTL7rUkhjOgmq9ehVr2j2kOCMYPG609TMVHj/OTogYMMQ5o5wkl5CFqSQ8KXnvUbtsiu+eZiiJUHqnPLYtvEx4u06dI+JcIx4tZJ+VmJ8vuxVZXc1spFZUQPczRBxMRommZ5RU0UiaoaikkeoQJZQ92qfjrT3iDl+aUfMJ5SyBrodU523V2k3RSvn0FQR1B1kLZtE1Q/yTs22QCo+gtRdB7dP6fNbEcgNPa+aJQ1mOeIf9XFAwOsh2GmV9l96LZNuDmgKFglw2UsqwspEmj/GF4KzCha1bugaiXAZrOGyKWkruneZmJQtOTW4M8wUC1MEXZEBNFViOq7TGJahitXyyu4eIf1PsOmoafguJklvp37HZmvNF/UOD7Q588TI0EWsnSPnXZ9Vyb8lsh5At8tKYXWi/nPoPh3G8Brd0CTJMAd8O7nh8AOOM9+byDTeM4PrxyJJ6RPzdgtO64qfZbdvzUON6bzFmwesOSr9UdsDR6xGdNtdfG+Apc+2XoA3YGi53eXBUUCC8GDM/ejWsJxrCfnefD5VtPemA+xK8fn8</div><script src="/lib/crypto-js.js"></script><script src="/lib/blog-encrypt.js"></script><link href="/css/blog-encrypt.css" rel="stylesheet" type="text/css">]]></content>
+    <content type="html"><![CDATA[<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script><div id="hbe-security">  <div class="hbe-input-container">  <input type="password" class="hbe-form-control" id="pass" placeholder="Enter password to read！" />    <label for="pass">Enter password to read！</label>    <div class="bottom-line"></div>  </div></div><div id="decryptionError" style="display: none;">Incorrect Password!</div><div id="noContentError" style="display: none;">No content to display!</div><div id="encrypt-blog" style="display:none">U2FsdGVkX1+iFu+/SQajoDM3SL6vUoovjcYM0U1lAhw2z+SPTRJQLoh20ccmIzV5quL+okmzlSfAchFB3FCfUepLS0gYOcUDEvJgJEPEssnalrBNHcC8yxCPmFQ2EgCNVKWEj6u8qwxE+DY5aJUY0Jrr2OgbF/I/jdsvtOv51RxMxO3ev9cOVzjcs3uFNpQ3+Ec3tjFDIs/dR7OL+wUamqfzktmZeKS7rZ9if6DdbDsiLo6gP9Vr616+8u1ACvuXie6ZsXob0HftlrGvkCsrCBsCL0xgg8GcG8zhcFDt96Sv5qfJOvIpPNgLXd8PJxEo0F7L/fqILZsX3YMpBgUVJpukzMyw9YWyrYk080AYHNoC3Wu+8ed+rrkbV4n2s0g269dWulcWXfkAK2l96n1FZtgMo8FA4r5pcjBDA/3iSAbvjauvZnb+Xv5/T0aqHszEKk1fsvEJTY4vT3lKEkbC/BoAFbegWY6JuT9Lt0Na64ANwXPB3aWJqGvd5PueDqoC/Fe0QG4aFCkM+13IBmba+OcZBn2QzicdHN+Lm7f2M6cOppDp/MIGDB20eJvA2elrNMX6DhpEOJauIz4lDAHqx9lIt5ZfD+wHoYalsnYAeryl2vDRhUFgFPhY/kaGrYFGoRWFilbZIbRF+9Szj/b8gWZEHC1q7RFXPDsH0Bqmv82B0Z9HNnTbmpvhq9SFh2N/</div><script src="/lib/crypto-js.js"></script><script src="/lib/blog-encrypt.js"></script><link href="/css/blog-encrypt.css" rel="stylesheet" type="text/css">]]></content>
     
     <summary type="html">
     
@@ -245,17 +245,17 @@
     
     </summary>
     
-      <category term="碎碎念" scheme="http://silencejql.github.io/categories/%E7%A2%8E%E7%A2%8E%E5%BF%B5/"/>
+      <category term="碎碎念" scheme="http://silencejql.coding.me/categories/%E7%A2%8E%E7%A2%8E%E5%BF%B5/"/>
     
     
-      <category term="碎碎念" scheme="http://silencejql.github.io/tags/%E7%A2%8E%E7%A2%8E%E5%BF%B5/"/>
+      <category term="碎碎念" scheme="http://silencejql.coding.me/tags/%E7%A2%8E%E7%A2%8E%E5%BF%B5/"/>
     
   </entry>
   
   <entry>
     <title>Test Project</title>
-    <link href="http://silencejql.github.io/2019/06/11/Test-Project/"/>
-    <id>http://silencejql.github.io/2019/06/11/Test-Project/</id>
+    <link href="http://silencejql.coding.me/2019/06/11/Test-Project/"/>
+    <id>http://silencejql.coding.me/2019/06/11/Test-Project/</id>
     <published>2019-06-11T02:51:25.000Z</published>
     <updated>2019-06-15T14:14:25.398Z</updated>
     
@@ -271,17 +271,17 @@
     
     </summary>
     
-      <category term="Test" scheme="http://silencejql.github.io/categories/Test/"/>
+      <category term="Test" scheme="http://silencejql.coding.me/categories/Test/"/>
     
     
-      <category term="Test" scheme="http://silencejql.github.io/tags/Test/"/>
+      <category term="Test" scheme="http://silencejql.coding.me/tags/Test/"/>
     
   </entry>
   
   <entry>
     <title>Hello World</title>
-    <link href="http://silencejql.github.io/2019/06/10/hello-world/"/>
-    <id>http://silencejql.github.io/2019/06/10/hello-world/</id>
+    <link href="http://silencejql.coding.me/2019/06/10/hello-world/"/>
+    <id>http://silencejql.coding.me/2019/06/10/hello-world/</id>
     <published>2019-06-10T10:42:29.684Z</published>
     <updated>2019-06-12T12:46:11.744Z</updated>
     
