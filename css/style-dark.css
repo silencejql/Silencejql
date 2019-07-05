@@ -32,6 +32,7 @@ h3,
 h4,
 h5,
 h6 {
+  color: #407570;
   font-weight: bold;
   overflow: hidden;
 }
@@ -590,7 +591,7 @@ body {
 }
 .post .post-content {
   clear: left;
-  font-size: 15px;
+  font-size: 14px;
   line-height: 1.77;
   color: #aaa;
   padding-top: 15px;
