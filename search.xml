@@ -3,7 +3,7 @@
   <entry>
     <title><![CDATA[Postgresql数据导入导出]]></title>
     <url>%2F2019%2F07%2F30%2FPostgresql%E6%95%B0%E6%8D%AE%E5%AF%BC%E5%85%A5%E5%AF%BC%E5%87%BA%2F</url>
-    <content type="text"><![CDATA[测试软件导出、Postgresql导入测试软件导出 连接数据库设置完筛选条件后点击导出到Excel重命名为：表名.csv 测试软件导入 1、打开导出表添加新的数据后，删除第一行表头以及第一列序号2、删除原数据库已有行后保存3、打开Postgres找到相应表右键导入4、文件名选择csv文件路径、格式选csv、字符编码可选5、点击导入即可 SQL shell(psql)导入 1、将excel处理好后，另存为csv（Comma Delimited）2、运行SQL shell(psql) 并登录3、运行’COPY mytable FROM ‘/myfile.csv’ WITH CSV HEADER SQL shell(psql)导出 COPY (select * from mytable) to ‘/myfile.csv’ with csv header;]]></content>
+    <content type="text"><![CDATA[测试软件导出、Postgresql导入测试软件导出 连接数据库设置完筛选条件后点击导出到Excel重命名为：表名.csv 测试软件导入 1、打开导出表添加新的数据后，删除第一行表头以及第一列序号2、删除原数据库已有行后保存3、打开Postgres找到相应表右键导入4、文件名选择csv文件路径、格式选csv、字符编码可选5、点击导入即可6、将相应表的序列创建脚本后删除7、更改脚本中的START大于新增数据的主键ID后执行脚本 SQL shell(psql)导入 1、将excel处理好后，另存为csv（Comma Delimited）2、运行SQL shell(psql) 并登录3、运行’COPY mytable FROM ‘/myfile.csv’ WITH CSV HEADER SQL shell(psql)导出 COPY (select * from mytable) to ‘/myfile.csv’ with csv header;]]></content>
       <categories>
         <category>数据库</category>
       </categories>
@@ -14,7 +14,7 @@
   <entry>
     <title><![CDATA[无处安放的矫情]]></title>
     <url>%2F2019%2F07%2F22%2F%E6%97%A0%E5%A4%84%E5%AE%89%E6%94%BE%E7%9A%84%E7%9F%AB%E6%83%85%2F</url>
-    <content type="text"><![CDATA[Enter password to read！ Incorrect Password! No content to display! U2FsdGVkX19B7Tk9xOPojdEyNg1/jCyAQe+aB1gj0dA=]]></content>
+    <content type="text"><![CDATA[Enter password to read！ Incorrect Password! No content to display! U2FsdGVkX1+ZW3VyVsC0iwabiwC5Vn0mRkJ9FDEk7hE=]]></content>
   </entry>
   <entry>
     <title><![CDATA[C# XML]]></title>
@@ -156,7 +156,7 @@
   <entry>
     <title><![CDATA[碎碎念]]></title>
     <url>%2F2019%2F06%2F15%2F%E7%A2%8E%E7%A2%8E%E5%BF%B5%2F</url>
-    <content type="text"><![CDATA[Enter password to read！ Incorrect Password! No content to display! U2FsdGVkX19Lg8mQWepvIsGvRkSIUx1c5CPynEUFwioTAN9W61iPbEe/3mxLVD9Wt05B27V0vpReIbqlSO3Br0EiIrqZl54D8z3QiheyipK/1ue2ah+3VcoeoXc2+7Yz85pmnUdz6UVv4XmONEXNwiINGmTuHLrERlCZ08Rqt/sXPwln5Z9zS1tH5L82vQNGdgh7J8l3dkHv7+RFH/lt3XYjAtKLEOt6si3CAKVbJohwAZPQFfdm6fh+zkciYvx3PyeZadrGDnXbZZ6mcCYqHJbbvifu9cmKsj++CmGfUQYrAzuZjpfOcqxLLF6COG3ON6pUGjUE4KbVkHlImrj4auJqfA81KrBjHrz1t6JzyNRx7EjpkBdQXnMuCn3FOaroEa73ThXlJqS8y7mrRICXPpYnk/paBAwgrshZzrr1HtPa6burBzcAPLh9a9uZQnCTa9hpppZ41SPGUqnBxvTFDV10iIL57xK7OBsey1XZFkCpDNL4afcaSM+tPduasGifEiVvKpnltXyYzsh/13Xck0DR4+lMAq14oaohJfbk21Ri6FgqNzTFV3ggCEuINsXoURlF93SRwQ8OQFqIkKivY0KIxEFYwyEYXSNCDj2uq8HD3g2Dq3td3C4x+YpKHRz2wnszZABBXoiMk32WBxZ7jxqplKJzg+kDM4cTk/TDnAMp0imkqEF5rSy1xdoh1Sfm]]></content>
+    <content type="text"><![CDATA[Enter password to read！ Incorrect Password! No content to display! U2FsdGVkX1+yLs0ana11O3/AqrQauvWa7oPe4xxNYpuVAVACsG3SrPik/wlPf2bjJ7o0o7p36/pts3TUIU5xZn6G6z3ViH6NA1E3PJ5xTBSUM6jPC/DbPQwJlGkB6OyMaW72MUQ5vas/27nUFbYewXXWvYWMJ1juco2MpOu+JeuxrmUAzvOnBlkJ9bspaUdrafD/OSD6bMqjwUk8WHP9xvIU7vuwbTKbD9F1kt77epATGCcJrWAKLz2gqrHTJJPvR6wYIKCsiqz2VtbI0DZacKxsVBA3UV8au5fF8ibVCHsD9k5bCJ2vJWLW5iqDyQOHInRhp7vd9ftdAyxYa8uPCCAaefQVS+d7lXjGfUf7QOBoejoDnu+JvVWmzpKEqzMcFn3QE42k8tvr+YJf4lg1xwKC1droRKE26zpV2p23tGQz52kM5VktD9kNkVgClCcsbdyvQtPx4otPyomizgeDE4LnS4G2TeZX4DNoa2AlnYl4yp2At2IhhijnXIQwzo6vTFXe+gpndCimNtiap6Y1u6G4vL5qDXQK85puDpqnr/AlZoP36X05seGLBWhoaw+3DkYRkq/vr2a+x55FJplHI+udjukTZ09xLTQLbGpHWlSHpldri89hsLBLMLBK6fmLog9nMNmzjbxAQ7JotZoNV7xxZarua4sJ8dX192NGQ6nu8XhTm9cA8mAyXRlx+/us]]></content>
       <categories>
         <category>碎碎念</category>
       </categories>
