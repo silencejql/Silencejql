@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://silencejql.coding.me/"/>
-  <updated>2019-07-11T05:25:16.624Z</updated>
+  <updated>2019-07-30T00:53:55.773Z</updated>
   <id>http://silencejql.coding.me/</id>
   
   <author>
@@ -15,6 +15,46 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Postgresql数据导入导出</title>
+    <link href="http://silencejql.coding.me/2019/07/30/Postgresql%E6%95%B0%E6%8D%AE%E5%AF%BC%E5%85%A5%E5%AF%BC%E5%87%BA/"/>
+    <id>http://silencejql.coding.me/2019/07/30/Postgresql数据导入导出/</id>
+    <published>2019-07-30T00:32:28.000Z</published>
+    <updated>2019-07-30T00:53:55.773Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="测试软件导出、Postgresql导入"><a href="#测试软件导出、Postgresql导入" class="headerlink" title="测试软件导出、Postgresql导入"></a>测试软件导出、Postgresql导入</h2><h3 id="测试软件导出"><a href="#测试软件导出" class="headerlink" title="测试软件导出"></a>测试软件导出</h3><blockquote><p>连接数据库设置完筛选条件后点击导出到Excel重命名为：表名.csv</p></blockquote><h3 id="测试软件导入"><a href="#测试软件导入" class="headerlink" title="测试软件导入"></a>测试软件导入</h3><blockquote><p>1、打开导出表添加新的数据后，删除第一行表头以及第一列序号<br>2、删除原数据库已有行后保存<br>3、打开Postgres找到相应表右键导入<br>4、文件名选择csv文件路径、格式选csv、字符编码可选<br>5、点击导入即可</p></blockquote><h2 id="SQL-shell-psql-导入"><a href="#SQL-shell-psql-导入" class="headerlink" title="SQL shell(psql)导入"></a>SQL shell(psql)导入</h2><blockquote><p>1、将excel处理好后，另存为csv（Comma Delimited）<br>2、运行SQL shell(psql) 并登录<br>3、运行’COPY mytable FROM ‘/myfile.csv’  WITH CSV  HEADER</p></blockquote><h2 id="SQL-shell-psql-导出"><a href="#SQL-shell-psql-导出" class="headerlink" title="SQL shell(psql)导出"></a>SQL shell(psql)导出</h2><blockquote><p>COPY (select * from mytable) to ‘/myfile.csv’ with csv header;</p></blockquote>]]></content>
+    
+    <summary type="html">
+    
+      Postgresql数据的导入导出
+    
+    </summary>
+    
+      <category term="数据库" scheme="http://silencejql.coding.me/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/"/>
+    
+    
+      <category term="Postgresql" scheme="http://silencejql.coding.me/tags/Postgresql/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>无处安放的矫情</title>
+    <link href="http://silencejql.coding.me/2019/07/22/%E6%97%A0%E5%A4%84%E5%AE%89%E6%94%BE%E7%9A%84%E7%9F%AB%E6%83%85/"/>
+    <id>http://silencejql.coding.me/2019/07/22/无处安放的矫情/</id>
+    <published>2019-07-22T06:38:12.000Z</published>
+    <updated>2019-07-22T06:39:30.503Z</updated>
+    
+    <content type="html"><![CDATA[<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script><div id="hbe-security">  <div class="hbe-input-container">  <input type="password" class="hbe-form-control" id="pass" placeholder="Enter password to read！" />    <label for="pass">Enter password to read！</label>    <div class="bottom-line"></div>  </div></div><div id="decryptionError" style="display: none;">Incorrect Password!</div><div id="noContentError" style="display: none;">No content to display!</div><div id="encrypt-blog" style="display:none">U2FsdGVkX19B7Tk9xOPojdEyNg1/jCyAQe+aB1gj0dA=</div><script src="/lib/crypto-js.js"></script><script src="/lib/blog-encrypt.js"></script><link href="/css/blog-encrypt.css" rel="stylesheet" type="text/css">]]></content>
+    
+    <summary type="html">
+    
+      交钱！
+    
+    </summary>
+    
+    
+  </entry>
   
   <entry>
     <title>C# XML</title>
@@ -143,28 +183,6 @@
   </entry>
   
   <entry>
-    <title>C# 常识</title>
-    <link href="http://silencejql.coding.me/2019/07/05/C-%E5%B8%B8%E8%AF%86/"/>
-    <id>http://silencejql.coding.me/2019/07/05/C-常识/</id>
-    <published>2019-07-05T02:59:00.000Z</published>
-    <updated>2019-07-08T01:44:00.585Z</updated>
-    
-    <content type="html"><![CDATA[<p>记录写bug过程中遇到的一些疑问</p><a id="more"></a><h2 id="数据类型"><a href="#数据类型" class="headerlink" title="数据类型"></a>数据类型</h2><p>值类型存储在堆栈上，引用类型存储在堆上。<br>C#类为引用类型，结构为值类型。<br>从值类型转化为引用类型称为装箱，如果方法需要把一个对象作为参数，而且传送一个值类型，装箱操作会自动进行；装箱的值类型可以使用拆箱操作转换为值类型，在拆箱时，<strong>需要使用类型转换运算符</strong>。</p><h2 id="装箱和拆箱"><a href="#装箱和拆箱" class="headerlink" title="装箱和拆箱"></a>装箱和拆箱</h2><p>装箱是一种通过将变量存储到System.Object中来显式地将值类型转换为引用类型的机制。当您装入值时，CLR会将新对象分配到堆中，并将值类型的值复制到该实例中。例如：</p><figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> a = <span class="number">20</span>;  </span><br><span class="line"><span class="keyword">object</span> b = a; <span class="comment">//装箱</span></span><br></pre></td></tr></table></figure><p>相反的操作是拆箱，它是将引用类型转换回值类型的过程。此过程验证接收数据类型是否与装箱类型一致;<br><code>int c = (int)b; // 拆箱</code></p><h2 id="泛型"><a href="#泛型" class="headerlink" title="泛型"></a>泛型</h2><blockquote><p>特征：</p><blockquote><p>类型安全<br>性能<br>二进制代码复用</p></blockquote></blockquote><p>详见： <a href="/2019/07/05/泛型的特点/" title="泛型的特点">泛型的特点</a></p><h3 id="为什么不用object代替泛型"><a href="#为什么不用object代替泛型" class="headerlink" title="为什么不用object代替泛型"></a>为什么不用object代替泛型</h3><p>由于Object为所有类型的基类，所以可以处理任何数据类型的数据，但是其中存在这拆箱和装箱，如果数据太多会影响到程序的性能。<br>在使用泛型的时候程序会在编译阶段根据我们提供的类型生成相应的二进制代码，无须进行装箱和拆箱操作。</p><h2 id="接口"><a href="#接口" class="headerlink" title="接口"></a>接口</h2><h3 id="为什么要用接口"><a href="#为什么要用接口" class="headerlink" title="为什么要用接口"></a>为什么要用接口</h3><p>接口一般由上层人员发起，下层人员实现。<br>写接口并不是为了扩展，而是为了扩展以后的模块仍然跟项目模块保持高度一致，为了扩展后的规范化。</p><h3 id="实例化接口对象"><a href="#实例化接口对象" class="headerlink" title="实例化接口对象"></a>实例化接口对象</h3><h4 id="接口回调"><a href="#接口回调" class="headerlink" title="接口回调"></a>接口回调</h4><p>接口不仅可以声明对象，而且可以把对象实例化，还可以当做参数被传入。<br>即继承中的向上转型，父类 FL=new 子类()，只不过这里的父类就是interface接口。</p><figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">interface</span> <span class="title">Itemp</span></span><br><span class="line">&#123;</span><br><span class="line">  <span class="function"><span class="keyword">double</span> <span class="title">plus</span>(<span class="params"></span>)</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title">num</span> : <span class="title">Itemp</span></span><br><span class="line">&#123;</span><br><span class="line">  <span class="keyword">double</span> aa, bb;</span><br><span class="line">  <span class="function"><span class="keyword">public</span> <span class="title">num</span>(<span class="params"><span class="keyword">double</span> a, <span class="keyword">double</span> b</span>)</span></span><br><span class="line"><span class="function"></span>  &#123;</span><br><span class="line">    <span class="keyword">this</span>.bb = b;</span><br><span class="line">    <span class="keyword">this</span>.aa = a;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="function"><span class="keyword">public</span> <span class="keyword">double</span> <span class="title">plus</span>(<span class="params"></span>)</span></span><br><span class="line"><span class="function"></span>  &#123;</span><br><span class="line">    <span class="keyword">return</span> (aa + bb);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">static</span> <span class="keyword">void</span> <span class="title">Main</span>(<span class="params"><span class="keyword">string</span>[] args</span>)</span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">  Itemp tm = <span class="literal">null</span>;<span class="comment">//声明接口对象引用</span></span><br><span class="line">  tm = <span class="keyword">new</span> num(<span class="number">1</span>, <span class="number">2</span>);<span class="comment">//接口回调(向上转型)</span></span><br><span class="line">  Console.WriteLine(tm.plus());</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><h2 id="类型参数约束"><a href="#类型参数约束" class="headerlink" title="类型参数约束"></a>类型参数约束</h2><p>&emsp;&emsp;在定义泛型类时，可以对客户端代码能够在实例化类时用于类型参数的类型种类施加限制。如果客户端代码尝试使用某个约束所不允许的类型来实例化类，则会产生编译时错误。这些限制称为约束。<br>类型参数约束.NET支持的类型参数约束有以下五种：</p><figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">where</span> T : <span class="keyword">struct</span>  类型参数必须是值类型；可以指定除 Nullable 以外的任何值类型</span><br><span class="line">where T : class   类型参数必须是引用类型；这一点也适用于任何类、接口、委托或数组类型</span><br><span class="line"><span class="keyword">where</span> T : <span class="keyword">new</span>()   类型参数必须具有无参数的公共构造函数。当与其他约束一起使用时，<span class="keyword">new</span>() 约束必须最后指定</span><br><span class="line"><span class="keyword">where</span> T : NameOfBaseClass   类型参数必须是指定的基类或派生自指定的基类</span><br><span class="line"><span class="keyword">where</span> T : NameOfInterface   类型参数必须是指定的接口或实现指定的接口。可以指定多个接口约束。约束接口也可以是泛型的</span><br><span class="line"><span class="keyword">where</span> T : U    为 T 提供的类型参数必须是为 U 提供的参数或派生自为 U 提供的参数</span><br></pre></td></tr></table></figure>]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;记录写bug过程中遇到的一些疑问&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="C#" scheme="http://silencejql.coding.me/categories/C/"/>
-    
-    
-      <category term="C#" scheme="http://silencejql.coding.me/tags/C/"/>
-    
-  </entry>
-  
-  <entry>
     <title>C# Static</title>
     <link href="http://silencejql.coding.me/2019/07/05/C-Static/"/>
     <id>http://silencejql.coding.me/2019/07/05/C-Static/</id>
@@ -183,6 +201,28 @@
     
     
       <category term="static" scheme="http://silencejql.coding.me/tags/static/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>C# 常识</title>
+    <link href="http://silencejql.coding.me/2019/07/05/C-%E5%B8%B8%E8%AF%86/"/>
+    <id>http://silencejql.coding.me/2019/07/05/C-常识/</id>
+    <published>2019-07-05T02:59:00.000Z</published>
+    <updated>2019-07-08T01:44:00.585Z</updated>
+    
+    <content type="html"><![CDATA[<p>记录写bug过程中遇到的一些疑问</p><a id="more"></a><h2 id="数据类型"><a href="#数据类型" class="headerlink" title="数据类型"></a>数据类型</h2><p>值类型存储在堆栈上，引用类型存储在堆上。<br>C#类为引用类型，结构为值类型。<br>从值类型转化为引用类型称为装箱，如果方法需要把一个对象作为参数，而且传送一个值类型，装箱操作会自动进行；装箱的值类型可以使用拆箱操作转换为值类型，在拆箱时，<strong>需要使用类型转换运算符</strong>。</p><h2 id="装箱和拆箱"><a href="#装箱和拆箱" class="headerlink" title="装箱和拆箱"></a>装箱和拆箱</h2><p>装箱是一种通过将变量存储到System.Object中来显式地将值类型转换为引用类型的机制。当您装入值时，CLR会将新对象分配到堆中，并将值类型的值复制到该实例中。例如：</p><figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> a = <span class="number">20</span>;  </span><br><span class="line"><span class="keyword">object</span> b = a; <span class="comment">//装箱</span></span><br></pre></td></tr></table></figure><p>相反的操作是拆箱，它是将引用类型转换回值类型的过程。此过程验证接收数据类型是否与装箱类型一致;<br><code>int c = (int)b; // 拆箱</code></p><h2 id="泛型"><a href="#泛型" class="headerlink" title="泛型"></a>泛型</h2><blockquote><p>特征：</p><blockquote><p>类型安全<br>性能<br>二进制代码复用</p></blockquote></blockquote><p>详见： <a href="/2019/07/05/泛型的特点/" title="泛型的特点">泛型的特点</a></p><h3 id="为什么不用object代替泛型"><a href="#为什么不用object代替泛型" class="headerlink" title="为什么不用object代替泛型"></a>为什么不用object代替泛型</h3><p>由于Object为所有类型的基类，所以可以处理任何数据类型的数据，但是其中存在这拆箱和装箱，如果数据太多会影响到程序的性能。<br>在使用泛型的时候程序会在编译阶段根据我们提供的类型生成相应的二进制代码，无须进行装箱和拆箱操作。</p><h2 id="接口"><a href="#接口" class="headerlink" title="接口"></a>接口</h2><h3 id="为什么要用接口"><a href="#为什么要用接口" class="headerlink" title="为什么要用接口"></a>为什么要用接口</h3><p>接口一般由上层人员发起，下层人员实现。<br>写接口并不是为了扩展，而是为了扩展以后的模块仍然跟项目模块保持高度一致，为了扩展后的规范化。</p><h3 id="实例化接口对象"><a href="#实例化接口对象" class="headerlink" title="实例化接口对象"></a>实例化接口对象</h3><h4 id="接口回调"><a href="#接口回调" class="headerlink" title="接口回调"></a>接口回调</h4><p>接口不仅可以声明对象，而且可以把对象实例化，还可以当做参数被传入。<br>即继承中的向上转型，父类 FL=new 子类()，只不过这里的父类就是interface接口。</p><figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">interface</span> <span class="title">Itemp</span></span><br><span class="line">&#123;</span><br><span class="line">  <span class="function"><span class="keyword">double</span> <span class="title">plus</span>(<span class="params"></span>)</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title">num</span> : <span class="title">Itemp</span></span><br><span class="line">&#123;</span><br><span class="line">  <span class="keyword">double</span> aa, bb;</span><br><span class="line">  <span class="function"><span class="keyword">public</span> <span class="title">num</span>(<span class="params"><span class="keyword">double</span> a, <span class="keyword">double</span> b</span>)</span></span><br><span class="line"><span class="function"></span>  &#123;</span><br><span class="line">    <span class="keyword">this</span>.bb = b;</span><br><span class="line">    <span class="keyword">this</span>.aa = a;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="function"><span class="keyword">public</span> <span class="keyword">double</span> <span class="title">plus</span>(<span class="params"></span>)</span></span><br><span class="line"><span class="function"></span>  &#123;</span><br><span class="line">    <span class="keyword">return</span> (aa + bb);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">static</span> <span class="keyword">void</span> <span class="title">Main</span>(<span class="params"><span class="keyword">string</span>[] args</span>)</span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">  Itemp tm = <span class="literal">null</span>;<span class="comment">//声明接口对象引用</span></span><br><span class="line">  tm = <span class="keyword">new</span> num(<span class="number">1</span>, <span class="number">2</span>);<span class="comment">//接口回调(向上转型)</span></span><br><span class="line">  Console.WriteLine(tm.plus());</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><h2 id="类型参数约束"><a href="#类型参数约束" class="headerlink" title="类型参数约束"></a>类型参数约束</h2><p>&emsp;&emsp;在定义泛型类时，可以对客户端代码能够在实例化类时用于类型参数的类型种类施加限制。如果客户端代码尝试使用某个约束所不允许的类型来实例化类，则会产生编译时错误。这些限制称为约束。<br>类型参数约束.NET支持的类型参数约束有以下五种：</p><figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">where</span> T : <span class="keyword">struct</span>  类型参数必须是值类型；可以指定除 Nullable 以外的任何值类型</span><br><span class="line">where T : class   类型参数必须是引用类型；这一点也适用于任何类、接口、委托或数组类型</span><br><span class="line"><span class="keyword">where</span> T : <span class="keyword">new</span>()   类型参数必须具有无参数的公共构造函数。当与其他约束一起使用时，<span class="keyword">new</span>() 约束必须最后指定</span><br><span class="line"><span class="keyword">where</span> T : NameOfBaseClass   类型参数必须是指定的基类或派生自指定的基类</span><br><span class="line"><span class="keyword">where</span> T : NameOfInterface   类型参数必须是指定的接口或实现指定的接口。可以指定多个接口约束。约束接口也可以是泛型的</span><br><span class="line"><span class="keyword">where</span> T : U    为 T 提供的类型参数必须是为 U 提供的参数或派生自为 U 提供的参数</span><br></pre></td></tr></table></figure>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;记录写bug过程中遇到的一些疑问&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="C#" scheme="http://silencejql.coding.me/categories/C/"/>
+    
+    
+      <category term="C#" scheme="http://silencejql.coding.me/tags/C/"/>
     
   </entry>
   
@@ -297,7 +337,7 @@
     <published>2019-06-15T11:55:54.000Z</published>
     <updated>2019-06-18T05:14:31.967Z</updated>
     
-    <content type="html"><![CDATA[<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script><div id="hbe-security">  <div class="hbe-input-container">  <input type="password" class="hbe-form-control" id="pass" placeholder="Enter password to read！" />    <label for="pass">Enter password to read！</label>    <div class="bottom-line"></div>  </div></div><div id="decryptionError" style="display: none;">Incorrect Password!</div><div id="noContentError" style="display: none;">No content to display!</div><div id="encrypt-blog" style="display:none">U2FsdGVkX1+SoCNabHw+wBuNNXtwlIY0F6pOtRKIWhsxUXImHV+40qZ/TNoHEg1SoxeBVM9tcGVl2j58hK7/pLLI1zzaiYAKwtV+/au8NwkSulorr9JhdoeewoBuAhA82vp7dNCgfxvjUiEb/khLH29O2rHu+wBXpF2X9pE7UDSvPxZMt7ByWzQnILEPL5XrSInxwtNfm2hrGKme3GQ19cG3uk/2qQ0AcvRajTuBkuybB6XCi9NEsdUdZcM0tslx/U4YYSvK0grT5/kOdh3SVv/UnPTQQlodmT9qkEHr5SaWb5h2bY4q2ObIt+4cMi7jkxrNBRFoF/hkGkbdA7WbC3cKrSOWaD74KvnLZ+XUhTEWpjDyMj36undx478zOew1RrTSphpLQEwtXy/d9zoJGBq8HSW6rVrdrgacPgkTWQoHItHq5ZdjUYtMV6Q7VoE6bdWbDRS1k7GUux0JFHrHb5PVnpatz1jeTUiU6Ur6POYsTXdMbF1mnztYwPKZX49GZU/piYqgNSTCRhpKjLoXDr8xg3377fNFEJLAQ7zC43N9L1ke5nfmE9dny0vkeynYbQZGfI9UKpFeH/tbNoLOrL6njlOgQ+d7E7NfY+xbPy2ZuIvoUI69rUFjgeV3VZbXTKgxL7gbHBtwDS8GJy/e48mZ6W6Hrx0cJzd0KsCvVweV1drzwczkZ1u3BfQ4RT6Z</div><script src="/lib/crypto-js.js"></script><script src="/lib/blog-encrypt.js"></script><link href="/css/blog-encrypt.css" rel="stylesheet" type="text/css">]]></content>
+    <content type="html"><![CDATA[<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script><div id="hbe-security">  <div class="hbe-input-container">  <input type="password" class="hbe-form-control" id="pass" placeholder="Enter password to read！" />    <label for="pass">Enter password to read！</label>    <div class="bottom-line"></div>  </div></div><div id="decryptionError" style="display: none;">Incorrect Password!</div><div id="noContentError" style="display: none;">No content to display!</div><div id="encrypt-blog" style="display:none">U2FsdGVkX19Lg8mQWepvIsGvRkSIUx1c5CPynEUFwioTAN9W61iPbEe/3mxLVD9Wt05B27V0vpReIbqlSO3Br0EiIrqZl54D8z3QiheyipK/1ue2ah+3VcoeoXc2+7Yz85pmnUdz6UVv4XmONEXNwiINGmTuHLrERlCZ08Rqt/sXPwln5Z9zS1tH5L82vQNGdgh7J8l3dkHv7+RFH/lt3XYjAtKLEOt6si3CAKVbJohwAZPQFfdm6fh+zkciYvx3PyeZadrGDnXbZZ6mcCYqHJbbvifu9cmKsj++CmGfUQYrAzuZjpfOcqxLLF6COG3ON6pUGjUE4KbVkHlImrj4auJqfA81KrBjHrz1t6JzyNRx7EjpkBdQXnMuCn3FOaroEa73ThXlJqS8y7mrRICXPpYnk/paBAwgrshZzrr1HtPa6burBzcAPLh9a9uZQnCTa9hpppZ41SPGUqnBxvTFDV10iIL57xK7OBsey1XZFkCpDNL4afcaSM+tPduasGifEiVvKpnltXyYzsh/13Xck0DR4+lMAq14oaohJfbk21Ri6FgqNzTFV3ggCEuINsXoURlF93SRwQ8OQFqIkKivY0KIxEFYwyEYXSNCDj2uq8HD3g2Dq3td3C4x+YpKHRz2wnszZABBXoiMk32WBxZ7jxqplKJzg+kDM4cTk/TDnAMp0imkqEF5rSy1xdoh1Sfm</div><script src="/lib/crypto-js.js"></script><script src="/lib/blog-encrypt.js"></script><link href="/css/blog-encrypt.css" rel="stylesheet" type="text/css">]]></content>
     
     <summary type="html">
     
