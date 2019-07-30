@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://silencejql.coding.me/"/>
-  <updated>2019-07-30T02:45:22.713Z</updated>
+  <updated>2019-07-30T07:17:44.742Z</updated>
   <id>http://silencejql.coding.me/</id>
   
   <author>
@@ -21,9 +21,9 @@
     <link href="http://silencejql.coding.me/2019/07/30/Postgresql%E6%95%B0%E6%8D%AE%E5%AF%BC%E5%85%A5%E5%AF%BC%E5%87%BA/"/>
     <id>http://silencejql.coding.me/2019/07/30/Postgresql数据导入导出/</id>
     <published>2019-07-30T00:32:28.000Z</published>
-    <updated>2019-07-30T02:45:22.713Z</updated>
+    <updated>2019-07-30T07:17:44.742Z</updated>
     
-    <content type="html"><![CDATA[<h2 id="测试软件导出、Postgresql导入"><a href="#测试软件导出、Postgresql导入" class="headerlink" title="测试软件导出、Postgresql导入"></a>测试软件导出、Postgresql导入</h2><h3 id="测试软件导出"><a href="#测试软件导出" class="headerlink" title="测试软件导出"></a>测试软件导出</h3><blockquote><p>连接数据库设置完筛选条件后点击导出到Excel重命名为：表名.csv</p></blockquote><h3 id="测试软件导入"><a href="#测试软件导入" class="headerlink" title="测试软件导入"></a>测试软件导入</h3><blockquote><p>1、打开导出表添加新的数据后，删除第一行表头以及第一列序号<br>2、删除原数据库已有行后保存<br>3、打开Postgres找到相应表右键导入<br>4、文件名选择csv文件路径、格式选csv、字符编码可选<br>5、点击导入即可<br>6、将相应表的序列创建脚本后删除<br>7、更改脚本中的START大于新增数据的主键ID后执行脚本</p></blockquote><h2 id="SQL-shell-psql-导入"><a href="#SQL-shell-psql-导入" class="headerlink" title="SQL shell(psql)导入"></a>SQL shell(psql)导入</h2><blockquote><p>1、将excel处理好后，另存为csv（Comma Delimited）<br>2、运行SQL shell(psql) 并登录<br>3、运行’COPY mytable FROM ‘/myfile.csv’  WITH CSV  HEADER</p></blockquote><h2 id="SQL-shell-psql-导出"><a href="#SQL-shell-psql-导出" class="headerlink" title="SQL shell(psql)导出"></a>SQL shell(psql)导出</h2><blockquote><p>COPY (select * from mytable) to ‘/myfile.csv’ with csv header;</p></blockquote>]]></content>
+    <content type="html"><![CDATA[<h2 id="测试软件导出、Postgresql导入"><a href="#测试软件导出、Postgresql导入" class="headerlink" title="测试软件导出、Postgresql导入"></a>测试软件导出、Postgresql导入</h2><h3 id="测试软件导出"><a href="#测试软件导出" class="headerlink" title="测试软件导出"></a>测试软件导出</h3><blockquote><p>连接数据库设置完筛选条件后点击导出到Excel重命名为：表名.csv</p></blockquote><h3 id="测试软件导入"><a href="#测试软件导入" class="headerlink" title="测试软件导入"></a>测试软件导入</h3><blockquote><p>1、打开导出表添加新的数据后，删除第一行表头以及第一列序号<br>2、删除原数据库已有行后保存<br>3、打开Postgres找到相应表右键导入<br>4、文件名选择csv文件路径、格式选csv、字符编码可选<br>5、点击导入即可</p><blockquote><p>6、如果主键为自增序列，将相应表的序列创建脚本后删除<br>7、更改脚本中的START大于新增数据的主键ID后执行脚本</p></blockquote></blockquote><h2 id="SQL-shell-psql-导入"><a href="#SQL-shell-psql-导入" class="headerlink" title="SQL shell(psql)导入"></a>SQL shell(psql)导入</h2><blockquote><p>1、将excel处理好后，另存为csv（Comma Delimited）<br>2、运行SQL shell(psql) 并登录<br>3、运行’COPY mytable FROM ‘/myfile.csv’  WITH CSV  HEADER</p></blockquote><h2 id="SQL-shell-psql-导出"><a href="#SQL-shell-psql-导出" class="headerlink" title="SQL shell(psql)导出"></a>SQL shell(psql)导出</h2><blockquote><p>COPY (select * from mytable) to ‘/myfile.csv’ with csv header;</p></blockquote>]]></content>
     
     <summary type="html">
     
@@ -45,7 +45,7 @@
     <published>2019-07-22T06:38:12.000Z</published>
     <updated>2019-07-22T06:39:30.503Z</updated>
     
-    <content type="html"><![CDATA[<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script><div id="hbe-security">  <div class="hbe-input-container">  <input type="password" class="hbe-form-control" id="pass" placeholder="Enter password to read！" />    <label for="pass">Enter password to read！</label>    <div class="bottom-line"></div>  </div></div><div id="decryptionError" style="display: none;">Incorrect Password!</div><div id="noContentError" style="display: none;">No content to display!</div><div id="encrypt-blog" style="display:none">U2FsdGVkX1+ZW3VyVsC0iwabiwC5Vn0mRkJ9FDEk7hE=</div><script src="/lib/crypto-js.js"></script><script src="/lib/blog-encrypt.js"></script><link href="/css/blog-encrypt.css" rel="stylesheet" type="text/css">]]></content>
+    <content type="html"><![CDATA[<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script><div id="hbe-security">  <div class="hbe-input-container">  <input type="password" class="hbe-form-control" id="pass" placeholder="Enter password to read！" />    <label for="pass">Enter password to read！</label>    <div class="bottom-line"></div>  </div></div><div id="decryptionError" style="display: none;">Incorrect Password!</div><div id="noContentError" style="display: none;">No content to display!</div><div id="encrypt-blog" style="display:none">U2FsdGVkX1+sTaajXkj/mFDMwWNOAuk4WoIJmEQwB50=</div><script src="/lib/crypto-js.js"></script><script src="/lib/blog-encrypt.js"></script><link href="/css/blog-encrypt.css" rel="stylesheet" type="text/css">]]></content>
     
     <summary type="html">
     
@@ -337,7 +337,7 @@
     <published>2019-06-15T11:55:54.000Z</published>
     <updated>2019-06-18T05:14:31.967Z</updated>
     
-    <content type="html"><![CDATA[<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script><div id="hbe-security">  <div class="hbe-input-container">  <input type="password" class="hbe-form-control" id="pass" placeholder="Enter password to read！" />    <label for="pass">Enter password to read！</label>    <div class="bottom-line"></div>  </div></div><div id="decryptionError" style="display: none;">Incorrect Password!</div><div id="noContentError" style="display: none;">No content to display!</div><div id="encrypt-blog" style="display:none">U2FsdGVkX1+yLs0ana11O3/AqrQauvWa7oPe4xxNYpuVAVACsG3SrPik/wlPf2bjJ7o0o7p36/pts3TUIU5xZn6G6z3ViH6NA1E3PJ5xTBSUM6jPC/DbPQwJlGkB6OyMaW72MUQ5vas/27nUFbYewXXWvYWMJ1juco2MpOu+JeuxrmUAzvOnBlkJ9bspaUdrafD/OSD6bMqjwUk8WHP9xvIU7vuwbTKbD9F1kt77epATGCcJrWAKLz2gqrHTJJPvR6wYIKCsiqz2VtbI0DZacKxsVBA3UV8au5fF8ibVCHsD9k5bCJ2vJWLW5iqDyQOHInRhp7vd9ftdAyxYa8uPCCAaefQVS+d7lXjGfUf7QOBoejoDnu+JvVWmzpKEqzMcFn3QE42k8tvr+YJf4lg1xwKC1droRKE26zpV2p23tGQz52kM5VktD9kNkVgClCcsbdyvQtPx4otPyomizgeDE4LnS4G2TeZX4DNoa2AlnYl4yp2At2IhhijnXIQwzo6vTFXe+gpndCimNtiap6Y1u6G4vL5qDXQK85puDpqnr/AlZoP36X05seGLBWhoaw+3DkYRkq/vr2a+x55FJplHI+udjukTZ09xLTQLbGpHWlSHpldri89hsLBLMLBK6fmLog9nMNmzjbxAQ7JotZoNV7xxZarua4sJ8dX192NGQ6nu8XhTm9cA8mAyXRlx+/us</div><script src="/lib/crypto-js.js"></script><script src="/lib/blog-encrypt.js"></script><link href="/css/blog-encrypt.css" rel="stylesheet" type="text/css">]]></content>
+    <content type="html"><![CDATA[<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script><div id="hbe-security">  <div class="hbe-input-container">  <input type="password" class="hbe-form-control" id="pass" placeholder="Enter password to read！" />    <label for="pass">Enter password to read！</label>    <div class="bottom-line"></div>  </div></div><div id="decryptionError" style="display: none;">Incorrect Password!</div><div id="noContentError" style="display: none;">No content to display!</div><div id="encrypt-blog" style="display:none">U2FsdGVkX1+uSvylTATooipml+nrrXLGCyyCJamBA06cB/PdnuSrnysvbXoH5wzJ9G1SO9L7RxyhHjiqK0o50KgsjvBrVJlBvWOI8T5IjdlUIC7gcugCSJGMyXSlVxRrUSvL5Ipa/UViPJKtCppz0EpwpLRYB0ttg4MNFcetsfcszhIAfgVECn/9ZKQHAx6XnlnKg/6MDGYWqiVYtQNwnl0uuFTmQ+qffintSwoOVK8BIrO+Du8jAeL+OJ6O5yhycZ70IIJx48dAlqqLrDAEoc0YVUITe/9J0f2rrSOxav3rJ9pCc4gJw+I1z3F/2HxX0oPwOOd4W16GEkMgiPtmxkeORl5W/j0LoVWKZCdJ5apIIGUfLX5/PIvh9DmGPr+f2FPkLsYovZIYjdSxf/k/UYfLlzIkDjfCW9IPh7KbVeSJE7d7E6NeEzsGpeapVTNPqgUaE7N7Lx2TL1Y+CdKKyV/+TdNWjKJAuLW6bfMv1Qd2/KvdTd6kLej/uY4gdesCu+PqFjTeOoZqjGTyJD+2tJC0E6UfeDAquWVksmI1A499Tg55hwMG65giDyxE4oZao+JsfFwZAhVlooe1Ax6MZRfUYY/OG503HKBOnp0e6zWZO6zigWW/CxYFk5If+Fe8CDOo12QOGuwJx191FQ9RduRfFvX6hJhXqs3uwhxpwZ0tKRDvkUFwvnZNeR6ZkQmi</div><script src="/lib/crypto-js.js"></script><script src="/lib/blog-encrypt.js"></script><link href="/css/blog-encrypt.css" rel="stylesheet" type="text/css">]]></content>
     
     <summary type="html">
     
