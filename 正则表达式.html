@@ -115,18 +115,18 @@
 
 
 
-  <meta name="description" content="静态方法只能访问类的静态成员，不能访问类的非静态成员；非静态方法可以访问类的静态成员，也可以访问类的非静态成员；静态方法不能使用实例来调用，只能使用类名来调用。">
-<meta name="keywords" content="static">
+  <meta name="description" content="常用正则表达式">
+<meta name="keywords" content="正则表达式">
 <meta property="og:type" content="article">
-<meta property="og:title" content="C# Static">
-<meta property="og:url" content="http://silencejql.coding.me/C-Static.html">
+<meta property="og:title" content="正则表达式">
+<meta property="og:url" content="http://silencejql.coding.me/正则表达式.html">
 <meta property="og:site_name" content="Silencejql">
-<meta property="og:description" content="静态方法只能访问类的静态成员，不能访问类的非静态成员；非静态方法可以访问类的静态成员，也可以访问类的非静态成员；静态方法不能使用实例来调用，只能使用类名来调用。">
+<meta property="og:description" content="常用正则表达式">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-07-05T04:28:04.406Z">
+<meta property="og:updated_time" content="2019-08-06T10:01:05.592Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="C# Static">
-<meta name="twitter:description" content="静态方法只能访问类的静态成员，不能访问类的非静态成员；非静态方法可以访问类的静态成员，也可以访问类的非静态成员；静态方法不能使用实例来调用，只能使用类名来调用。">
+<meta name="twitter:title" content="正则表达式">
+<meta name="twitter:description" content="常用正则表达式">
 
 
 
@@ -136,7 +136,7 @@
 
   
   
-  <link rel="canonical" href="http://silencejql.coding.me/C-Static">
+  <link rel="canonical" href="http://silencejql.coding.me/正则表达式">
 
 
 
@@ -146,7 +146,7 @@
   };
 </script>
 
-  <title>C# Static | Silencejql</title>
+  <title>正则表达式 | Silencejql</title>
   <script src="https://cdn.jsdelivr.net/npm/jquery/dist/jquery.min.js"></script>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome/css/font-awesome.min.css">
   <script src="/live2d-widget/autoload.js"></script>
@@ -413,7 +413,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://silencejql.coding.me/C-Static.html">
+    <link itemprop="mainEntityOfPage" href="http://silencejql.coding.me/正则表达式.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Justin">
@@ -430,7 +430,7 @@
 
         
         
-          <h2 class="post-title" itemprop="name headline">C# Static
+          <h2 class="post-title" itemprop="name headline">正则表达式
 
               
             
@@ -456,7 +456,7 @@
                 
               
 
-              <time title="创建时间：2019-07-05 10:59:00 / 修改时间：12:28:04" itemprop="dateCreated datePublished" datetime="2019-07-05T10:59:00+08:00">2019-07-05</time>
+              <time title="创建时间：2019-08-06 17:46:21 / 修改时间：18:01:05" itemprop="dateCreated datePublished" datetime="2019-08-06T17:46:21+08:00">2019-08-06</time>
             
 
             
@@ -478,7 +478,7 @@
                 <span class="post-meta-item-text">分类于</span>
               
               
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/C/" itemprop="url" rel="index"><span itemprop="name">C#</span></a></span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/正则表达式/" itemprop="url" rel="index"><span itemprop="name">正则表达式</span></a></span>
 
                 
                 
@@ -497,8 +497,8 @@
                 </span>
             
                 <span class="post-meta-item-text">评论数：</span>
-                <a href="/C-Static.html#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count valine-comment-count" data-xid="/C-Static.html" itemprop="commentCount"></span>
+                <a href="/正则表达式.html#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/正则表达式.html" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -506,7 +506,7 @@
 
           
           
-            <span id="/C-Static.html" class="leancloud_visitors" data-flag-title="C# Static">
+            <span id="/正则表达式.html" class="leancloud_visitors" data-flag-title="正则表达式">
               <span class="post-meta-divider">|</span>
               <span class="post-meta-item-icon">
                 <i class="fa fa-eye"></i>
@@ -530,7 +530,7 @@
                 
                   <span class="post-meta-item-text">本文字数：</span>
                 
-                <span title="本文字数">2.4k</span>
+                <span title="本文字数">2.2k</span>
               
               
                 <span class="post-meta-divider">|</span>
@@ -549,6 +549,8 @@
           
 
           
+            <div class="post-description">常用正则表达式</div>
+          
 
         </div>
       </header>
@@ -563,92 +565,62 @@
       
 
       
-        <p>静态方法只能访问类的静态成员，不能访问类的非静态成员；<br>非静态方法可以访问类的静态成员，也可以访问类的非静态成员；<br>静态方法不能使用实例来调用，只能使用类名来调用。</p>
-<a id="more"></a>
-<h4 id="static"><a href="#static" class="headerlink" title="static"></a>static</h4><h5 id="静态全局变量"><a href="#静态全局变量" class="headerlink" title="静态全局变量"></a>静态全局变量</h5><blockquote>
-<p>特点：</p>
-<blockquote>
-<p>1、该变量在全局数据区分配内存。<br>2、初始化：如果不显式初始化，那么将被隐式初始化为0。</p>
-</blockquote>
-</blockquote>
-<h5 id="静态局部变量"><a href="#静态局部变量" class="headerlink" title="静态局部变量"></a>静态局部变量</h5><blockquote>
-<p>特点：</p>
-<blockquote>
-<p>1、该变量在全局数据区分配内存。<br>2、初始化：如果不显式初始化，那么将被隐式初始化为0。<br>3、<strong>它始终驻留在全局数据区，直到程序运行结束。但其作用域为局部作用域，当定义它的函数或语句块结束时，其作用域随之结束。</strong></p>
-</blockquote>
-</blockquote>
-<h5 id="静态数据成员"><a href="#静态数据成员" class="headerlink" title="静态数据成员"></a>静态数据成员</h5><blockquote>
-<p>内存分配：在程序的全局数据区分配。<br>初始化和定义：</p>
-<blockquote>
-<p>1、静态数据成员定义时要分配空间，所以不能在类声明中定义。<br>2、为了避免在多个使用该类的源文件中，对其重复定义，所以，不能在类的头文件中定义。<br>3、静态数据成员因为程序一开始运行就必需存在，所以其初始化的最佳位置在类的内部实现。</p>
-</blockquote>
-</blockquote>
-<blockquote>
-<p>特点</p>
-<blockquote>
-<p>对相于 public,protected,private 关键字的影响它和普通数据成员一样，因为其空间在全局数据区分配，属于所有本类的对象共享，所以，它不属于特定的类对象，在没产生类对象时其作用域就可见，即在没有产生类的实例时，我们就可以操作它。</p>
-</blockquote>
-</blockquote>
-<blockquote>
-<p>访问形式</p>
-<blockquote>
-<p>类对象名.静态数据成员名</p>
-</blockquote>
-</blockquote>
-<p>静态数据成员，主要用在类的所有实例都拥有的属性上。比如，对于一个存款类，帐号相对于每个实例都是不同的，但每个实例的利息是相同的。所以，应该把利息设为存款类的静态数据成员。这有两个好处，第一，不管定义多少个存款类对象，利息数据成员都共享分配在全局区的内存，所以节省存贮空间。第二，一旦利息需要改变时，只要改变一次，则所有存款类对象的利息全改变过来了，因为它们实际上是共用一个东西。</p>
-<h5 id="静态成员函数"><a href="#静态成员函数" class="headerlink" title="静态成员函数"></a>静态成员函数</h5><blockquote>
-<p>特点：</p>
-<blockquote>
-<p>1、静态成员函数与类相联系，不与类的对象相联系。<br>2、静态成员函数不能访问非静态数据成员。原因很简单，非静态数据成员属于特定的类实例。</p>
-</blockquote>
-</blockquote>
-<blockquote>
-<p>作用：</p>
-<blockquote>
-<p>主要用于对静态数据成员的操作。</p>
-</blockquote>
-</blockquote>
-<blockquote>
-<p>调用形式：</p>
-<blockquote>
-<p>类对象名.静态成员函数名（）</p>
-</blockquote>
-</blockquote>
-<h5 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h5><p>静态方法只能访问类的静态成员，不能访问类的非静态成员；<br>非静态方法可以访问类的静态成员，也可以访问类的非静态成员；<br>静态方法不能使用实例来调用，只能使用类名来调用。</p>
-<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">static</span> <span class="keyword">int</span> i = getNum();</span><br><span class="line"><span class="keyword">int</span> j = getNum();</span><br><span class="line"><span class="keyword">static</span> <span class="keyword">int</span> num = <span class="number">1</span>;</span><br><span class="line"><span class="function"><span class="keyword">static</span> <span class="keyword">int</span> <span class="title">getNum</span>(<span class="params"></span>)</span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">return</span> num;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">static</span> <span class="keyword">void</span> <span class="title">Main</span>(<span class="params"><span class="keyword">string</span>[] args</span>)</span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    Console.WriteLine(<span class="string">"i=&#123;0&#125;"</span>,i);</span><br><span class="line">    Console.WriteLine(<span class="string">"j=&#123;0&#125;"</span>, <span class="keyword">new</span> class1().j);</span><br><span class="line">    Console.Read();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>分析：<code>Console.WriteLine(&quot;i={0}&quot;,i);</code>这里<code>i</code>是<code>static</code>变量，而且类<code>class1</code>是第一次被引用，要先为<code>class1</code>里面所有的<code>static</code>变量分配内存。尽管现在有超线程技术，但是指令在逻辑还是一条一条的按顺序执行的，所以先为<code>static int i</code>分配内存，并且在该内存中保持<code>int</code>的缺省值<code>0</code>，接着再为<code>static</code> <code>int num</code> 变量分配内存，值当然也为<code>0</code>。</p>
-<p>然后执行第二步，为变量赋值：先为<code>static int i</code>变量赋值，<code>i＝getNum()</code>，看getNum里面的代码，就是<code>return num</code>，这个时候<code>num</code>的值是<code>0</code>，于是<code>i</code>就为<code>0</code>了。然后对变量<code>num</code>赋值，<code>num＝1；</code>这行代码执行后，<code>num</code>就为<code>1</code>了。</p>
-<h5 id="static的优点是什么？为什么要使用static-变量或函数？？"><a href="#static的优点是什么？为什么要使用static-变量或函数？？" class="headerlink" title="static的优点是什么？为什么要使用static 变量或函数？？"></a>static的优点是什么？为什么要使用static 变量或函数？？</h5><p>有一些频繁使用的东西，如果你每次使用都重新<code>new</code>一下，那么这个开销可能会很高，如果使用<code>static</code>，一直放在内存中，那么想用就直接用，而不需要重新<code>new</code>一块空间初始化数据。那么<code>static</code>就是为了实现一个系统的缓存作用的，其生命周期直到应用程序退出结束。</p>
-<p>静态成员包括静态字段和静态属性，静态成员和类相关联，不依赖于对象而存在，只能由类访问，而不能由对象访问；</p>
-<p>静态成员属于类所有，无认创建多少实例对象，静态成员在内存中只有一份；实例成员属于类的实例所有，每创建一个实例对象，实例成员都会在内存中分配一块内存区域。<br>所以静态成员一般用于存放共享的数据段，如数据库连接字符串等。</p>
-<p>一个类如果只包含静态成员和静态方法，则该类可以定义为静态类，给类加上<code>static</code>修饰符；</p>
-<h5 id="静态方法和非静态方法："><a href="#静态方法和非静态方法：" class="headerlink" title="静态方法和非静态方法："></a>静态方法和非静态方法：</h5><p>一、性能上：静态方法和实例方法差别不大。所有方法，不管是静态方法还是实例方法，都是在JIT加载类时分配内存，不同的是静态方法以类名引用，而实例方法对对象实例引用。创建实例时，不会再为类的方法分配内存，所有的实例对象共用一个类的方法代码。因此静态方法和实例方法的调用，在性能上的差别微乎其微。</p>
-<p>二、静态方法只能由类访问；实例方法只能由对象访问。</p>
-<blockquote>
-<p>优点：</p>
-<blockquote>
-<p>1、静态变量在类载入时，就装入内存<br>2、使用时不用 New 就意味的不必 创建类中 所有对象，就可以调用 某个方法</p>
-</blockquote>
-</blockquote>
-<blockquote>
-<p>缺点：</p>
-<blockquote>
-<p>垃圾回收机制 不能 回收 静态变量，静态类变量 会常驻内存</p>
-</blockquote>
-</blockquote>
-<h5 id="c-中静态类的优缺点"><a href="#c-中静态类的优缺点" class="headerlink" title="c#中静态类的优缺点"></a>c#中静态类的优缺点</h5><blockquote>
-<p>缺点：</p>
-<blockquote>
-<p>1、整个类型在程序运行期间只加载一次。 这样是对于那些经常使用的类型来说的，那就不用每次使用前都先加载。效率高些。但是对那些不常用的类型来说。<br>2、如果是静态类型，那就要一直占用相当的内存；一直到程序停止。或者应用程序域被卸载。所以应该只对那些常用的类型定义成静态类型。</p>
-</blockquote>
-</blockquote>
-<blockquote>
-<p>优点：</p>
-<blockquote>
-<p>1、它们仅包含静态成员。<br>2、它们不能被实例化。<br>3、它们是密封的。<br>4、它们不能包含实例构造函数（C# 编程指南）。</p>
-</blockquote>
-</blockquote>
+        <h3 id="非打印字符"><a href="#非打印字符" class="headerlink" title="非打印字符"></a>非打印字符</h3><p>非打印字符也可以是正则表达式的组成部分。下表列出了表示非打印字符的转义序列：<br>|字符    | 描述|<br>| :-: | :-: |<br>|\cx|    匹配由x指明的控制字符。例如， \cM 匹配一个 Control-M 或回车符。x 的值必须为 A-Z 或 a-z 之一。否则，将 c 视为一个原义的 ‘c’ 字符。|<br>|\f|    匹配一个换页符。等价于 \x0c 和 \cL。|<br>|\n|    匹配一个换行符。等价于 \x0a 和 \cJ。|<br>|\r|    匹配一个回车符。等价于 \x0d 和 \cM。|<br>|\s|    匹配任何空白字符，包括空格、制表符、换页符等等。等价于 [ \f\n\r\t\v]。注意 Unicode 正则表达式会匹配全角空格符。|<br>|\S|    匹配任何非空白字符。等价于 [^ \f\n\r\t\v]。|<br>|\t|  匹配一个制表符。等价于 \x09 和 \cI。|<br>|\v|    匹配一个垂直制表符。等价于 \x0b 和 \cK。|</p>
+<h3 id="特殊字符"><a href="#特殊字符" class="headerlink" title="特殊字符"></a>特殊字符</h3><table>
+<thead>
+<tr>
+<th align="center">特别字符</th>
+<th align="left">描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">$</td>
+<td align="left">匹配输入字符串的结尾位置。如果设置了 RegExp 对象的 Multiline 属性，则 $ 也匹配 ‘\n’ 或 ‘\r’。要匹配 $ 字符本身，请使用 $。</td>
+</tr>
+<tr>
+<td align="center">( )</td>
+<td align="left">标记一个子表达式的开始和结束位置。子表达式可以获取供以后使用。要匹配这些字符，请使用 ( 和 )。</td>
+</tr>
+<tr>
+<td align="center">*</td>
+<td align="left">匹配前面的子表达式零次或多次。要匹配 * 字符，请使用 *。</td>
+</tr>
+<tr>
+<td align="center">+</td>
+<td align="left">匹配前面的子表达式一次或多次。要匹配 + 字符，请使用 +。</td>
+</tr>
+<tr>
+<td align="center">.</td>
+<td align="left">匹配除换行符 \n 之外的任何单字符。要匹配 . ，请使用 . 。</td>
+</tr>
+<tr>
+<td align="center">[</td>
+<td align="left">标记一个中括号表达式的开始。要匹配 [，请使用 [。</td>
+</tr>
+<tr>
+<td align="center">?</td>
+<td align="left">匹配前面的子表达式零次或一次，或指明一个非贪婪限定符。要匹配 ? 字符，请使用 ?。</td>
+</tr>
+<tr>
+<td align="center">\</td>
+<td align="left">将下一个字符标记为或特殊字符、或原义字符、或向后引用、或八进制转义符。例如， ‘n’ 匹配字符 ‘n’。’\n’ 匹配换行符。序列 ‘\‘ 匹配 “&quot;，而 ‘(‘ 则匹配 “(“。</td>
+</tr>
+<tr>
+<td align="center">^</td>
+<td align="left">匹配输入字符串的开始位置，除非在方括号表达式中使用，此时它表示不接受该字符集合。要匹配 ^ 字符本身，请使用 ^。</td>
+</tr>
+<tr>
+<td align="center">{</td>
+<td align="left">标记限定符表达式的开始。要匹配 {，请使用 {。</td>
+</tr>
+<tr>
+<td align="center">|</td>
+<td align="left">指明两项之间的一个选择。要匹配 |，请使用 |。</td>
+</tr>
+</tbody></table>
+<h3 id="限定符"><a href="#限定符" class="headerlink" title="限定符"></a>限定符</h3><p>限定符用来指定正则表达式的一个给定组件必须要出现多少次才能满足匹配。有 * 或 + 或 ? 或 {n} 或 {n,} 或 {n,m} 共6种。<br>正则表达式的限定符有：<br>|字符    | 描述|<br>| :-: | :- |<br>|<em>|    匹配前面的子表达式零次或多次。例如，zo</em> 能匹配 “z” 以及 “zoo”。* 等价于{0,}。|<br>|+|    匹配前面的子表达式一次或多次。例如，’zo+’ 能匹配 “zo” 以及 “zoo”，但不能匹配 “z”。+ 等价于 {1,}。|<br>|?|    匹配前面的子表达式零次或一次。例如，”do(es)?” 可以匹配 “do” 、 “does” 中的 “does” 、 “doxy” 中的 “do” 。? 等价于 {0,1}。|<br>|{n}|    n 是一个非负整数。匹配确定的 n 次。例如，’o{2}’ 不能匹配 “Bob” 中的 ‘o’，但是能匹配 “food” 中的两个 o。|<br>|{n,}|    n 是一个非负整数。至少匹配n 次。例如，’o{2,}’ 不能匹配 “Bob” 中的 ‘o’，但能匹配 “foooood” 中的所有 o。’o{1,}’ 等价于 ‘o+’。’o{0,}’ 则等价于 ‘o*’。|<br>|{n,m}|    m 和 n 均为非负整数，其中n &lt;= m。最少匹配 n 次且最多匹配 m 次。例如，”o{1,3}” 将匹配 “fooooood” 中的前三个 o。’o{0,1}’ 等价于 ‘o?’。请注意在逗号和两个数之间不能有空格。|</p>
+<p><strong><em>\</em>、+限定符都是贪婪的，因为它们会尽可能多的匹配文字，只有在它们的后面加上一个?就可以实现非贪婪或最小匹配*</strong></p>
+<h3 id="定位符"><a href="#定位符" class="headerlink" title="定位符"></a>定位符</h3><p>定位符使您能够将正则表达式固定到行首或行尾。它们还使您能够创建这样的正则表达式，这些正则表达式出现在一个单词内、在一个单词的开头或者一个单词的结尾。<br>定位符用来描述字符串或单词的边界，^ 和 $ 分别指字符串的开始与结束，\b 描述单词的前或后边界，\B 表示非单词边界。<br>正则表达式的定位符有：<br>字符|    描述<br>| :-: | :- |<br>^    |匹配输入字符串开始的位置。如果设置了 RegExp 对象的 Multiline 属性，^ 还会与 \n 或 \r 之后的位置匹配。<br>$    |匹配输入字符串结尾的位置。如果设置了 RegExp 对象的 Multiline 属性，$ 还会与 \n 或 \r 之前的位置匹配。<br>\b|    匹配一个单词边界，即字与空格间的位置。<br>\B|    非单词边界匹配。<br><strong>注意</strong>：不能将限定符与定位符一起使用。由于在紧靠换行或者单词边界的前面或后面不能有一个以上位置，因此不允许诸如 ^* 之类的表达式。<br>若要匹配一行文本开始处的文本，请在正则表达式的开始使用 ^ 字符。不要将 ^ 的这种用法与中括号表达式内的用法混淆。<br>若要匹配一行文本的结束处的文本，请在正则表达式的结束处使用 $ 字符。</p>
 
       
     </div>
@@ -689,7 +661,7 @@
         
         <div class="post-tags">
           
-            <a href="/tags/static/" rel="tag"># static</a>
+            <a href="/tags/正则表达式/" rel="tag"># 正则表达式</a>
           
         </div>
       
@@ -723,8 +695,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/C-常识.html" rel="next" title="C# 常识">
-                <i class="fa fa-chevron-left"></i> C# 常识
+              <a href="/现场问题整理.html" rel="next" title="现场问题整理">
+                <i class="fa fa-chevron-left"></i> 现场问题整理
               </a>
             
           </div>
@@ -732,10 +704,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/泛型的特点.html" rel="prev" title="泛型的特点">
-                泛型的特点 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -1031,7 +999,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#static"><span class="nav-number">1.</span> <span class="nav-text">static</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#静态全局变量"><span class="nav-number">1.1.</span> <span class="nav-text">静态全局变量</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#静态局部变量"><span class="nav-number">1.2.</span> <span class="nav-text">静态局部变量</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#静态数据成员"><span class="nav-number">1.3.</span> <span class="nav-text">静态数据成员</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#静态成员函数"><span class="nav-number">1.4.</span> <span class="nav-text">静态成员函数</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#总结"><span class="nav-number">1.5.</span> <span class="nav-text">总结</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#static的优点是什么？为什么要使用static-变量或函数？？"><span class="nav-number">1.6.</span> <span class="nav-text">static的优点是什么？为什么要使用static 变量或函数？？</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#静态方法和非静态方法："><span class="nav-number">1.7.</span> <span class="nav-text">静态方法和非静态方法：</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#c-中静态类的优缺点"><span class="nav-number">1.8.</span> <span class="nav-text">c#中静态类的优缺点</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#非打印字符"><span class="nav-number">1.</span> <span class="nav-text">非打印字符</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#特殊字符"><span class="nav-number">2.</span> <span class="nav-text">特殊字符</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#限定符"><span class="nav-number">3.</span> <span class="nav-text">限定符</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#定位符"><span class="nav-number">4.</span> <span class="nav-text">定位符</span></a></li></ol></div>
             
 
           </div>
