@@ -1,11 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>http://silencejql.coding.me/2019/08/06/%E7%8E%B0%E5%9C%BA%E8%BD%AF%E4%BB%B6%E5%A4%87%E4%BB%BD%E8%B7%AF%E5%BE%84/</loc>
+    <loc>http://silencejql.coding.me/2019/08/06/%E7%8E%B0%E5%9C%BA%E9%97%AE%E9%A2%98%E6%95%B4%E7%90%86/</loc>
     <lastmod>2019-08-06</lastmod>
   </url>  <url>
     <loc>http://silencejql.coding.me/2019/07/30/Postgresql%E6%95%B0%E6%8D%AE%E5%AF%BC%E5%85%A5%E5%AF%BC%E5%87%BA/</loc>
-    <lastmod>2019-07-30</lastmod>
+    <lastmod>2019-08-06</lastmod>
+  </url>  <url>
+    <loc>http://silencejql.coding.me/2019/08/06/%E7%8E%B0%E5%9C%BA%E8%BD%AF%E4%BB%B6%E5%A4%87%E4%BB%BD%E8%B7%AF%E5%BE%84/</loc>
+    <lastmod>2019-08-06</lastmod>
   </url>  <url>
     <loc>http://silencejql.coding.me/2019/07/22/%E6%97%A0%E5%A4%84%E5%AE%89%E6%94%BE%E7%9A%84%E7%9F%AB%E6%83%85/</loc>
     <lastmod>2019-07-22</lastmod>
