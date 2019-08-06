@@ -18,12 +18,12 @@
   
   <entry>
     <title>现场问题整理</title>
-    <link href="http://silencejql.coding.me/title.html"/>
-    <id>http://silencejql.coding.me/title.html</id>
+    <link href="http://silencejql.coding.me/%E7%8E%B0%E5%9C%BA%E9%97%AE%E9%A2%98%E6%95%B4%E7%90%86/"/>
+    <id>http://silencejql.coding.me/现场问题整理/</id>
     <published>2019-08-06T03:31:16.000Z</published>
     <updated>2019-08-06T03:52:47.324Z</updated>
     
-    <content type="html"><![CDATA[<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script><div id="hbe-security">  <div class="hbe-input-container">  <input type="password" class="hbe-form-control" id="pass" placeholder="Enter password to read！" />    <label for="pass">Enter password to read！</label>    <div class="bottom-line"></div>  </div></div><div id="decryptionError" style="display: none;">Incorrect Password!</div><div id="noContentError" style="display: none;">No content to display!</div><div id="encrypt-blog" style="display:none">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</div><script src="/lib/crypto-js.js"></script><script src="/lib/blog-encrypt.js"></script><link href="/css/blog-encrypt.css" rel="stylesheet" type="text/css">]]></content>
+    <content type="html"><![CDATA[<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script><div id="hbe-security">  <div class="hbe-input-container">  <input type="password" class="hbe-form-control" id="pass" placeholder="Enter password to read！" />    <label for="pass">Enter password to read！</label>    <div class="bottom-line"></div>  </div></div><div id="decryptionError" style="display: none;">Incorrect Password!</div><div id="noContentError" style="display: none;">No content to display!</div><div id="encrypt-blog" style="display:none">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</div><script src="/lib/crypto-js.js"></script><script src="/lib/blog-encrypt.js"></script><link href="/css/blog-encrypt.css" rel="stylesheet" type="text/css">]]></content>
     
     <summary type="html">
     
@@ -40,12 +40,12 @@
   
   <entry>
     <title>现场软件备份路径</title>
-    <link href="http://silencejql.coding.me/title.html"/>
-    <id>http://silencejql.coding.me/title.html</id>
+    <link href="http://silencejql.coding.me/%E7%8E%B0%E5%9C%BA%E8%BD%AF%E4%BB%B6%E5%A4%87%E4%BB%BD%E8%B7%AF%E5%BE%84/"/>
+    <id>http://silencejql.coding.me/现场软件备份路径/</id>
     <published>2019-08-06T02:54:24.000Z</published>
     <updated>2019-08-06T03:26:45.047Z</updated>
     
-    <content type="html"><![CDATA[<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script><div id="hbe-security">  <div class="hbe-input-container">  <input type="password" class="hbe-form-control" id="pass" placeholder="Enter password to read！" />    <label for="pass">Enter password to read！</label>    <div class="bottom-line"></div>  </div></div><div id="decryptionError" style="display: none;">Incorrect Password!</div><div id="noContentError" style="display: none;">No content to display!</div><div id="encrypt-blog" style="display:none">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</div><script src="/lib/crypto-js.js"></script><script src="/lib/blog-encrypt.js"></script><link href="/css/blog-encrypt.css" rel="stylesheet" type="text/css">]]></content>
+    <content type="html"><![CDATA[<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script><div id="hbe-security">  <div class="hbe-input-container">  <input type="password" class="hbe-form-control" id="pass" placeholder="Enter password to read！" />    <label for="pass">Enter password to read！</label>    <div class="bottom-line"></div>  </div></div><div id="decryptionError" style="display: none;">Incorrect Password!</div><div id="noContentError" style="display: none;">No content to display!</div><div id="encrypt-blog" style="display:none">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</div><script src="/lib/crypto-js.js"></script><script src="/lib/blog-encrypt.js"></script><link href="/css/blog-encrypt.css" rel="stylesheet" type="text/css">]]></content>
     
     <summary type="html">
     
@@ -62,8 +62,8 @@
   
   <entry>
     <title>Postgresql数据导入导出</title>
-    <link href="http://silencejql.coding.me/title.html"/>
-    <id>http://silencejql.coding.me/title.html</id>
+    <link href="http://silencejql.coding.me/Postgresql%E6%95%B0%E6%8D%AE%E5%AF%BC%E5%85%A5%E5%AF%BC%E5%87%BA/"/>
+    <id>http://silencejql.coding.me/Postgresql数据导入导出/</id>
     <published>2019-07-30T00:32:28.000Z</published>
     <updated>2019-08-06T03:33:04.165Z</updated>
     
@@ -84,12 +84,12 @@
   
   <entry>
     <title>无处安放的矫情</title>
-    <link href="http://silencejql.coding.me/title.html"/>
-    <id>http://silencejql.coding.me/title.html</id>
+    <link href="http://silencejql.coding.me/%E6%97%A0%E5%A4%84%E5%AE%89%E6%94%BE%E7%9A%84%E7%9F%AB%E6%83%85/"/>
+    <id>http://silencejql.coding.me/无处安放的矫情/</id>
     <published>2019-07-22T06:38:12.000Z</published>
     <updated>2019-07-22T06:39:30.503Z</updated>
     
-    <content type="html"><![CDATA[<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script><div id="hbe-security">  <div class="hbe-input-container">  <input type="password" class="hbe-form-control" id="pass" placeholder="Enter password to read！" />    <label for="pass">Enter password to read！</label>    <div class="bottom-line"></div>  </div></div><div id="decryptionError" style="display: none;">Incorrect Password!</div><div id="noContentError" style="display: none;">No content to display!</div><div id="encrypt-blog" style="display:none">U2FsdGVkX1+R27QykwwYE7Y4VhnU/oXpNL4bEhUUEMg=</div><script src="/lib/crypto-js.js"></script><script src="/lib/blog-encrypt.js"></script><link href="/css/blog-encrypt.css" rel="stylesheet" type="text/css">]]></content>
+    <content type="html"><![CDATA[<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script><div id="hbe-security">  <div class="hbe-input-container">  <input type="password" class="hbe-form-control" id="pass" placeholder="Enter password to read！" />    <label for="pass">Enter password to read！</label>    <div class="bottom-line"></div>  </div></div><div id="decryptionError" style="display: none;">Incorrect Password!</div><div id="noContentError" style="display: none;">No content to display!</div><div id="encrypt-blog" style="display:none">U2FsdGVkX1+QO+xZkW0PS6SsJRQ79sVn8m2Fixez0EE=</div><script src="/lib/crypto-js.js"></script><script src="/lib/blog-encrypt.js"></script><link href="/css/blog-encrypt.css" rel="stylesheet" type="text/css">]]></content>
     
     <summary type="html">
     
@@ -102,8 +102,8 @@
   
   <entry>
     <title>C# XML</title>
-    <link href="http://silencejql.coding.me/title.html"/>
-    <id>http://silencejql.coding.me/title.html</id>
+    <link href="http://silencejql.coding.me/C-XML/"/>
+    <id>http://silencejql.coding.me/C-XML/</id>
     <published>2019-07-11T04:56:29.000Z</published>
     <updated>2019-07-11T05:25:16.624Z</updated>
     
@@ -126,8 +126,8 @@
   
   <entry>
     <title>数据转换</title>
-    <link href="http://silencejql.coding.me/title.html"/>
-    <id>http://silencejql.coding.me/title.html</id>
+    <link href="http://silencejql.coding.me/%E6%95%B0%E6%8D%AE%E8%BD%AC%E6%8D%A2/"/>
+    <id>http://silencejql.coding.me/数据转换/</id>
     <published>2019-07-11T03:13:39.000Z</published>
     <updated>2019-07-11T04:52:07.175Z</updated>
     
@@ -162,8 +162,8 @@
   
   <entry>
     <title>RGB颜色</title>
-    <link href="http://silencejql.coding.me/title.html"/>
-    <id>http://silencejql.coding.me/title.html</id>
+    <link href="http://silencejql.coding.me/RGB%E9%A2%9C%E8%89%B2/"/>
+    <id>http://silencejql.coding.me/RGB颜色/</id>
     <published>2019-07-05T06:20:25.000Z</published>
     <updated>2019-07-05T06:59:33.748Z</updated>
     
@@ -184,8 +184,8 @@
   
   <entry>
     <title>css常用属性</title>
-    <link href="http://silencejql.coding.me/title.html"/>
-    <id>http://silencejql.coding.me/title.html</id>
+    <link href="http://silencejql.coding.me/css%E5%B8%B8%E7%94%A8%E5%B1%9E%E6%80%A7/"/>
+    <id>http://silencejql.coding.me/css常用属性/</id>
     <published>2019-07-05T05:54:12.000Z</published>
     <updated>2019-07-05T06:15:54.434Z</updated>
     
@@ -206,8 +206,8 @@
   
   <entry>
     <title>泛型的特点</title>
-    <link href="http://silencejql.coding.me/title.html"/>
-    <id>http://silencejql.coding.me/title.html</id>
+    <link href="http://silencejql.coding.me/%E6%B3%9B%E5%9E%8B%E7%9A%84%E7%89%B9%E7%82%B9/"/>
+    <id>http://silencejql.coding.me/泛型的特点/</id>
     <published>2019-07-05T05:36:31.000Z</published>
     <updated>2019-07-05T06:16:20.240Z</updated>
     
@@ -227,31 +227,9 @@
   </entry>
   
   <entry>
-    <title>C# 常识</title>
-    <link href="http://silencejql.coding.me/title.html"/>
-    <id>http://silencejql.coding.me/title.html</id>
-    <published>2019-07-05T02:59:00.000Z</published>
-    <updated>2019-07-08T01:44:00.585Z</updated>
-    
-    <content type="html"><![CDATA[<p>记录写bug过程中遇到的一些疑问</p><a id="more"></a><h2 id="数据类型"><a href="#数据类型" class="headerlink" title="数据类型"></a>数据类型</h2><p>值类型存储在堆栈上，引用类型存储在堆上。<br>C#类为引用类型，结构为值类型。<br>从值类型转化为引用类型称为装箱，如果方法需要把一个对象作为参数，而且传送一个值类型，装箱操作会自动进行；装箱的值类型可以使用拆箱操作转换为值类型，在拆箱时，<strong>需要使用类型转换运算符</strong>。</p><h2 id="装箱和拆箱"><a href="#装箱和拆箱" class="headerlink" title="装箱和拆箱"></a>装箱和拆箱</h2><p>装箱是一种通过将变量存储到System.Object中来显式地将值类型转换为引用类型的机制。当您装入值时，CLR会将新对象分配到堆中，并将值类型的值复制到该实例中。例如：</p><figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> a = <span class="number">20</span>;  </span><br><span class="line"><span class="keyword">object</span> b = a; <span class="comment">//装箱</span></span><br></pre></td></tr></table></figure><p>相反的操作是拆箱，它是将引用类型转换回值类型的过程。此过程验证接收数据类型是否与装箱类型一致;<br><code>int c = (int)b; // 拆箱</code></p><h2 id="泛型"><a href="#泛型" class="headerlink" title="泛型"></a>泛型</h2><blockquote><p>特征：</p><blockquote><p>类型安全<br>性能<br>二进制代码复用</p></blockquote></blockquote><p>详见： <a href="/title.html" title="泛型的特点">泛型的特点</a></p><h3 id="为什么不用object代替泛型"><a href="#为什么不用object代替泛型" class="headerlink" title="为什么不用object代替泛型"></a>为什么不用object代替泛型</h3><p>由于Object为所有类型的基类，所以可以处理任何数据类型的数据，但是其中存在这拆箱和装箱，如果数据太多会影响到程序的性能。<br>在使用泛型的时候程序会在编译阶段根据我们提供的类型生成相应的二进制代码，无须进行装箱和拆箱操作。</p><h2 id="接口"><a href="#接口" class="headerlink" title="接口"></a>接口</h2><h3 id="为什么要用接口"><a href="#为什么要用接口" class="headerlink" title="为什么要用接口"></a>为什么要用接口</h3><p>接口一般由上层人员发起，下层人员实现。<br>写接口并不是为了扩展，而是为了扩展以后的模块仍然跟项目模块保持高度一致，为了扩展后的规范化。</p><h3 id="实例化接口对象"><a href="#实例化接口对象" class="headerlink" title="实例化接口对象"></a>实例化接口对象</h3><h4 id="接口回调"><a href="#接口回调" class="headerlink" title="接口回调"></a>接口回调</h4><p>接口不仅可以声明对象，而且可以把对象实例化，还可以当做参数被传入。<br>即继承中的向上转型，父类 FL=new 子类()，只不过这里的父类就是interface接口。</p><figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">interface</span> <span class="title">Itemp</span></span><br><span class="line">&#123;</span><br><span class="line">  <span class="function"><span class="keyword">double</span> <span class="title">plus</span>(<span class="params"></span>)</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title">num</span> : <span class="title">Itemp</span></span><br><span class="line">&#123;</span><br><span class="line">  <span class="keyword">double</span> aa, bb;</span><br><span class="line">  <span class="function"><span class="keyword">public</span> <span class="title">num</span>(<span class="params"><span class="keyword">double</span> a, <span class="keyword">double</span> b</span>)</span></span><br><span class="line"><span class="function"></span>  &#123;</span><br><span class="line">    <span class="keyword">this</span>.bb = b;</span><br><span class="line">    <span class="keyword">this</span>.aa = a;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="function"><span class="keyword">public</span> <span class="keyword">double</span> <span class="title">plus</span>(<span class="params"></span>)</span></span><br><span class="line"><span class="function"></span>  &#123;</span><br><span class="line">    <span class="keyword">return</span> (aa + bb);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">static</span> <span class="keyword">void</span> <span class="title">Main</span>(<span class="params"><span class="keyword">string</span>[] args</span>)</span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">  Itemp tm = <span class="literal">null</span>;<span class="comment">//声明接口对象引用</span></span><br><span class="line">  tm = <span class="keyword">new</span> num(<span class="number">1</span>, <span class="number">2</span>);<span class="comment">//接口回调(向上转型)</span></span><br><span class="line">  Console.WriteLine(tm.plus());</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><h2 id="类型参数约束"><a href="#类型参数约束" class="headerlink" title="类型参数约束"></a>类型参数约束</h2><p>&emsp;&emsp;在定义泛型类时，可以对客户端代码能够在实例化类时用于类型参数的类型种类施加限制。如果客户端代码尝试使用某个约束所不允许的类型来实例化类，则会产生编译时错误。这些限制称为约束。<br>类型参数约束.NET支持的类型参数约束有以下五种：</p><figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">where</span> T : <span class="keyword">struct</span>  类型参数必须是值类型；可以指定除 Nullable 以外的任何值类型</span><br><span class="line">where T : class   类型参数必须是引用类型；这一点也适用于任何类、接口、委托或数组类型</span><br><span class="line"><span class="keyword">where</span> T : <span class="keyword">new</span>()   类型参数必须具有无参数的公共构造函数。当与其他约束一起使用时，<span class="keyword">new</span>() 约束必须最后指定</span><br><span class="line"><span class="keyword">where</span> T : NameOfBaseClass   类型参数必须是指定的基类或派生自指定的基类</span><br><span class="line"><span class="keyword">where</span> T : NameOfInterface   类型参数必须是指定的接口或实现指定的接口。可以指定多个接口约束。约束接口也可以是泛型的</span><br><span class="line"><span class="keyword">where</span> T : U    为 T 提供的类型参数必须是为 U 提供的参数或派生自为 U 提供的参数</span><br></pre></td></tr></table></figure>]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;记录写bug过程中遇到的一些疑问&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="C#" scheme="http://silencejql.coding.me/categories/C/"/>
-    
-    
-      <category term="C#" scheme="http://silencejql.coding.me/tags/C/"/>
-    
-  </entry>
-  
-  <entry>
     <title>C# Static</title>
-    <link href="http://silencejql.coding.me/title.html"/>
-    <id>http://silencejql.coding.me/title.html</id>
+    <link href="http://silencejql.coding.me/C-Static/"/>
+    <id>http://silencejql.coding.me/C-Static/</id>
     <published>2019-07-05T02:59:00.000Z</published>
     <updated>2019-07-05T04:28:04.406Z</updated>
     
@@ -271,9 +249,31 @@
   </entry>
   
   <entry>
+    <title>C# 常识</title>
+    <link href="http://silencejql.coding.me/C-%E5%B8%B8%E8%AF%86/"/>
+    <id>http://silencejql.coding.me/C-常识/</id>
+    <published>2019-07-05T02:59:00.000Z</published>
+    <updated>2019-07-08T01:44:00.585Z</updated>
+    
+    <content type="html"><![CDATA[<p>记录写bug过程中遇到的一些疑问</p><a id="more"></a><h2 id="数据类型"><a href="#数据类型" class="headerlink" title="数据类型"></a>数据类型</h2><p>值类型存储在堆栈上，引用类型存储在堆上。<br>C#类为引用类型，结构为值类型。<br>从值类型转化为引用类型称为装箱，如果方法需要把一个对象作为参数，而且传送一个值类型，装箱操作会自动进行；装箱的值类型可以使用拆箱操作转换为值类型，在拆箱时，<strong>需要使用类型转换运算符</strong>。</p><h2 id="装箱和拆箱"><a href="#装箱和拆箱" class="headerlink" title="装箱和拆箱"></a>装箱和拆箱</h2><p>装箱是一种通过将变量存储到System.Object中来显式地将值类型转换为引用类型的机制。当您装入值时，CLR会将新对象分配到堆中，并将值类型的值复制到该实例中。例如：</p><figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> a = <span class="number">20</span>;  </span><br><span class="line"><span class="keyword">object</span> b = a; <span class="comment">//装箱</span></span><br></pre></td></tr></table></figure><p>相反的操作是拆箱，它是将引用类型转换回值类型的过程。此过程验证接收数据类型是否与装箱类型一致;<br><code>int c = (int)b; // 拆箱</code></p><h2 id="泛型"><a href="#泛型" class="headerlink" title="泛型"></a>泛型</h2><blockquote><p>特征：</p><blockquote><p>类型安全<br>性能<br>二进制代码复用</p></blockquote></blockquote><p>详见： <a href="/泛型的特点/" title="泛型的特点">泛型的特点</a></p><h3 id="为什么不用object代替泛型"><a href="#为什么不用object代替泛型" class="headerlink" title="为什么不用object代替泛型"></a>为什么不用object代替泛型</h3><p>由于Object为所有类型的基类，所以可以处理任何数据类型的数据，但是其中存在这拆箱和装箱，如果数据太多会影响到程序的性能。<br>在使用泛型的时候程序会在编译阶段根据我们提供的类型生成相应的二进制代码，无须进行装箱和拆箱操作。</p><h2 id="接口"><a href="#接口" class="headerlink" title="接口"></a>接口</h2><h3 id="为什么要用接口"><a href="#为什么要用接口" class="headerlink" title="为什么要用接口"></a>为什么要用接口</h3><p>接口一般由上层人员发起，下层人员实现。<br>写接口并不是为了扩展，而是为了扩展以后的模块仍然跟项目模块保持高度一致，为了扩展后的规范化。</p><h3 id="实例化接口对象"><a href="#实例化接口对象" class="headerlink" title="实例化接口对象"></a>实例化接口对象</h3><h4 id="接口回调"><a href="#接口回调" class="headerlink" title="接口回调"></a>接口回调</h4><p>接口不仅可以声明对象，而且可以把对象实例化，还可以当做参数被传入。<br>即继承中的向上转型，父类 FL=new 子类()，只不过这里的父类就是interface接口。</p><figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">interface</span> <span class="title">Itemp</span></span><br><span class="line">&#123;</span><br><span class="line">  <span class="function"><span class="keyword">double</span> <span class="title">plus</span>(<span class="params"></span>)</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title">num</span> : <span class="title">Itemp</span></span><br><span class="line">&#123;</span><br><span class="line">  <span class="keyword">double</span> aa, bb;</span><br><span class="line">  <span class="function"><span class="keyword">public</span> <span class="title">num</span>(<span class="params"><span class="keyword">double</span> a, <span class="keyword">double</span> b</span>)</span></span><br><span class="line"><span class="function"></span>  &#123;</span><br><span class="line">    <span class="keyword">this</span>.bb = b;</span><br><span class="line">    <span class="keyword">this</span>.aa = a;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="function"><span class="keyword">public</span> <span class="keyword">double</span> <span class="title">plus</span>(<span class="params"></span>)</span></span><br><span class="line"><span class="function"></span>  &#123;</span><br><span class="line">    <span class="keyword">return</span> (aa + bb);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">static</span> <span class="keyword">void</span> <span class="title">Main</span>(<span class="params"><span class="keyword">string</span>[] args</span>)</span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">  Itemp tm = <span class="literal">null</span>;<span class="comment">//声明接口对象引用</span></span><br><span class="line">  tm = <span class="keyword">new</span> num(<span class="number">1</span>, <span class="number">2</span>);<span class="comment">//接口回调(向上转型)</span></span><br><span class="line">  Console.WriteLine(tm.plus());</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><h2 id="类型参数约束"><a href="#类型参数约束" class="headerlink" title="类型参数约束"></a>类型参数约束</h2><p>&emsp;&emsp;在定义泛型类时，可以对客户端代码能够在实例化类时用于类型参数的类型种类施加限制。如果客户端代码尝试使用某个约束所不允许的类型来实例化类，则会产生编译时错误。这些限制称为约束。<br>类型参数约束.NET支持的类型参数约束有以下五种：</p><figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">where</span> T : <span class="keyword">struct</span>  类型参数必须是值类型；可以指定除 Nullable 以外的任何值类型</span><br><span class="line">where T : class   类型参数必须是引用类型；这一点也适用于任何类、接口、委托或数组类型</span><br><span class="line"><span class="keyword">where</span> T : <span class="keyword">new</span>()   类型参数必须具有无参数的公共构造函数。当与其他约束一起使用时，<span class="keyword">new</span>() 约束必须最后指定</span><br><span class="line"><span class="keyword">where</span> T : NameOfBaseClass   类型参数必须是指定的基类或派生自指定的基类</span><br><span class="line"><span class="keyword">where</span> T : NameOfInterface   类型参数必须是指定的接口或实现指定的接口。可以指定多个接口约束。约束接口也可以是泛型的</span><br><span class="line"><span class="keyword">where</span> T : U    为 T 提供的类型参数必须是为 U 提供的参数或派生自为 U 提供的参数</span><br></pre></td></tr></table></figure>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;记录写bug过程中遇到的一些疑问&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="C#" scheme="http://silencejql.coding.me/categories/C/"/>
+    
+    
+      <category term="C#" scheme="http://silencejql.coding.me/tags/C/"/>
+    
+  </entry>
+  
+  <entry>
     <title>Hexo博客部署到Coding和github</title>
-    <link href="http://silencejql.coding.me/title.html"/>
-    <id>http://silencejql.coding.me/title.html</id>
+    <link href="http://silencejql.coding.me/Hexo%E5%8D%9A%E5%AE%A2%E9%83%A8%E7%BD%B2%E5%88%B0Coding%E5%92%8Cgithub/"/>
+    <id>http://silencejql.coding.me/Hexo博客部署到Coding和github/</id>
     <published>2019-07-04T06:48:17.000Z</published>
     <updated>2019-07-04T08:57:22.027Z</updated>
     
@@ -296,8 +296,8 @@
   
   <entry>
     <title>托管DLL与非托管DLL</title>
-    <link href="http://silencejql.coding.me/title.html"/>
-    <id>http://silencejql.coding.me/title.html</id>
+    <link href="http://silencejql.coding.me/%E6%89%98%E7%AE%A1DLL%E4%B8%8E%E9%9D%9E%E6%89%98%E7%AE%A1DLL/"/>
+    <id>http://silencejql.coding.me/托管DLL与非托管DLL/</id>
     <published>2019-07-03T01:03:34.000Z</published>
     <updated>2019-07-03T02:42:08.068Z</updated>
     
@@ -320,8 +320,8 @@
   
   <entry>
     <title>委托-匿名-Lambda表达式</title>
-    <link href="http://silencejql.coding.me/title.html"/>
-    <id>http://silencejql.coding.me/title.html</id>
+    <link href="http://silencejql.coding.me/%E5%A7%94%E6%89%98-%E5%8C%BF%E5%90%8D-Lambda%E8%A1%A8%E8%BE%BE%E5%BC%8F/"/>
+    <id>http://silencejql.coding.me/委托-匿名-Lambda表达式/</id>
     <published>2019-06-26T07:05:21.000Z</published>
     <updated>2019-06-26T07:51:50.273Z</updated>
     
@@ -348,8 +348,8 @@
   
   <entry>
     <title>Hexo Markdown</title>
-    <link href="http://silencejql.coding.me/title.html"/>
-    <id>http://silencejql.coding.me/title.html</id>
+    <link href="http://silencejql.coding.me/Hexo-Markdown/"/>
+    <id>http://silencejql.coding.me/Hexo-Markdown/</id>
     <published>2019-06-15T12:15:05.000Z</published>
     <updated>2019-08-06T03:55:54.083Z</updated>
     
@@ -376,12 +376,12 @@
   
   <entry>
     <title>碎碎念</title>
-    <link href="http://silencejql.coding.me/title.html"/>
-    <id>http://silencejql.coding.me/title.html</id>
+    <link href="http://silencejql.coding.me/%E7%A2%8E%E7%A2%8E%E5%BF%B5/"/>
+    <id>http://silencejql.coding.me/碎碎念/</id>
     <published>2019-06-15T11:55:54.000Z</published>
     <updated>2019-06-18T05:14:31.967Z</updated>
     
-    <content type="html"><![CDATA[<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script><div id="hbe-security">  <div class="hbe-input-container">  <input type="password" class="hbe-form-control" id="pass" placeholder="Enter password to read！" />    <label for="pass">Enter password to read！</label>    <div class="bottom-line"></div>  </div></div><div id="decryptionError" style="display: none;">Incorrect Password!</div><div id="noContentError" style="display: none;">No content to display!</div><div id="encrypt-blog" style="display:none">U2FsdGVkX19NPQFrSjA05m79fLDPjVDSrBzMJT74jHb8YU4gRRPWabNb6mUO/8FU0coVc+zD0mSJWFDpVj1l0rjNjqq0rhyHM8iCcbnp/h3M6mOiW8MFVoTSfoVD0+/AvHutGblTylMTXKYOEf9lUUKslZppkxFBPLCwadgAUnOnD+a7tI5AKiUF+9jUPy7/UnA/QDPaaZ/aIKtiH8CTRfrQeYBz9R3I6tMMk7QUtdKI5U3ycaLT/6JoZG29q17OAXYO16kniDDLIjUgmHHgj8Rq6QJ3878WWCSh+zztrYR9XjwxIoSZaMi992kBlRU7ZV5yZ41+O8wN2lQb0BP7jywWKQPMNaaSlAjhIgxunk1W/ILRsShHtxSfb9bcvZ9UeWl8GIkfyUQGJv2pL/08Y9ONZru/POh0EEVWxhpka8ZcHHmzo2+gZ38EB2wnz+5YSnZMoF6sfosRMubO2dsiiQi/LXhJTq1BqjyTLRyhkKPJGAKElmNs1BVmCuk33XVxlTYOZegc6ENI8fdM5ZMG5U8utpVkBuJlD/WCo1x6ggMmAztBtNBTsNrI0YeIDZ9n+YmZGdEMPXcj9jIptifJ3TP8CDUNDnBO4i3zpS+GGnd84OLuSvx2Di+jqPzdaa3DIuiHXt3NEegyPZ9EDMYySjAgDX4DIgAAo8Q4o9iyUhZt82WDnxxs253aEGmzqIIs</div><script src="/lib/crypto-js.js"></script><script src="/lib/blog-encrypt.js"></script><link href="/css/blog-encrypt.css" rel="stylesheet" type="text/css">]]></content>
+    <content type="html"><![CDATA[<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script><div id="hbe-security">  <div class="hbe-input-container">  <input type="password" class="hbe-form-control" id="pass" placeholder="Enter password to read！" />    <label for="pass">Enter password to read！</label>    <div class="bottom-line"></div>  </div></div><div id="decryptionError" style="display: none;">Incorrect Password!</div><div id="noContentError" style="display: none;">No content to display!</div><div id="encrypt-blog" style="display:none">U2FsdGVkX1/GT5LHXXWc7Qf9qR1PhDBe9fP82r3o+9hFmTluPluEH/BdMawkdER4kOQipRm+bM+no0cPHOXeCiY2hO1kqPu21YMyOFyKZuQ9mf5BPUKFFLVYhSqhwRdtuesbl10j7jzCNy2zgom8UHSey5oPW3Y4dVeEZB4W4DgPuGSgPGnuE5sdTTiP/4sn/LpPY7uWKfK1ftwOpX1C2+RH3OCXRbRI7lsjWe5EOgzkzy+xNKpbxf6hNRyCGMHw3TFTxxbnojqSAMCqCTKsM35yM1dBz2TFcYRsJrPIJuo23n9pxDIGSnh7V4VVbRSokpIip5JbnLuocCcafhb6AHA4/dkz+zGGKR1s3inhWAwgS/dMoYCVKIr5gg4PMD+AVJeTilZzFG5r6dE3z+xuf3DFxNS7qfDDXaFcKuN/o5poAtN4TEhk/iTtrl7wtbEj1qYYZYy8/nmn6WUomuNwZPUk+aegUN+TpsvOMfx9Bepe1CXy1Z2xvEIN6kvJrJ89qvx48o5ZVVqKW56PTKZTfRXa55J/jtfpUg2RcYcpU7qlhKLkx789GiDgb35kBrygbK37dEMTANG9bFrVM4eRtFMCxnEjTQDhe/QKrkrtiXQ5ufoI0HiWkAaCW6pq8B29zlzlsOxbGqPqQvao3nFAqGBYL/Oc1f00eSOtq/APHO7otrG8yfd/78h2fZmTfQ7d</div><script src="/lib/crypto-js.js"></script><script src="/lib/blog-encrypt.js"></script><link href="/css/blog-encrypt.css" rel="stylesheet" type="text/css">]]></content>
     
     <summary type="html">
     
@@ -398,8 +398,8 @@
   
   <entry>
     <title>Test Project</title>
-    <link href="http://silencejql.coding.me/title.html"/>
-    <id>http://silencejql.coding.me/title.html</id>
+    <link href="http://silencejql.coding.me/Test-Project/"/>
+    <id>http://silencejql.coding.me/Test-Project/</id>
     <published>2019-06-11T02:51:25.000Z</published>
     <updated>2019-06-15T14:14:25.398Z</updated>
     
@@ -424,8 +424,8 @@
   
   <entry>
     <title>Hello World</title>
-    <link href="http://silencejql.coding.me/title.html"/>
-    <id>http://silencejql.coding.me/title.html</id>
+    <link href="http://silencejql.coding.me/hello-world/"/>
+    <id>http://silencejql.coding.me/hello-world/</id>
     <published>2019-06-10T10:42:29.684Z</published>
     <updated>2019-06-12T12:46:11.744Z</updated>
     
