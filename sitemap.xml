@@ -2,6 +2,27 @@
 <urlset xmlns="https://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://silencejql.github.io/%E5%B7%A5%E4%BD%9C-BBK.html</loc>
+    
+    <lastmod>2019-08-07T09:12:59.713Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://silencejql.github.io/%E7%8E%B0%E5%9C%BA%E8%BD%AF%E4%BB%B6%E5%A4%87%E4%BB%BD%E8%B7%AF%E5%BE%84.html</loc>
+    
+    <lastmod>2019-08-07T09:12:59.711Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://silencejql.github.io/%E7%8E%B0%E5%9C%BA%E9%97%AE%E9%A2%98%E6%95%B4%E7%90%86.html</loc>
+    
+    <lastmod>2019-08-07T09:12:46.742Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://silencejql.github.io/about/index.html</loc>
     
     <lastmod>2019-08-07T07:06:09.684Z</lastmod>
@@ -37,23 +58,9 @@
   </url>
   
   <url>
-    <loc>https://silencejql.github.io/%E7%8E%B0%E5%9C%BA%E9%97%AE%E9%A2%98%E6%95%B4%E7%90%86.html</loc>
-    
-    <lastmod>2019-08-06T03:52:47.324Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://silencejql.github.io/Postgresql%E6%95%B0%E6%8D%AE%E5%AF%BC%E5%85%A5%E5%AF%BC%E5%87%BA.html</loc>
     
     <lastmod>2019-08-06T03:33:04.165Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://silencejql.github.io/%E7%8E%B0%E5%9C%BA%E8%BD%AF%E4%BB%B6%E5%A4%87%E4%BB%BD%E8%B7%AF%E5%BE%84.html</loc>
-    
-    <lastmod>2019-08-06T03:26:45.047Z</lastmod>
     
   </url>
   
