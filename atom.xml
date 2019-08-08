@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://silencejql.coding.me/"/>
-  <updated>2019-08-07T09:12:59.713Z</updated>
+  <updated>2019-08-08T01:42:38.632Z</updated>
   <id>http://silencejql.coding.me/</id>
   
   <author>
@@ -17,23 +17,48 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>诊断指令说明--OBD模块</title>
+    <link href="http://silencejql.coding.me/%E8%AF%8A%E6%96%AD%E6%8C%87%E4%BB%A4%E8%AF%B4%E6%98%8E-OBD%E6%A8%A1%E5%9D%97.html"/>
+    <id>http://silencejql.coding.me/诊断指令说明-OBD模块.html</id>
+    <published>2019-08-08T01:22:46.000Z</published>
+    <updated>2019-08-08T01:42:38.632Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="通讯测试"><a href="#通讯测试" class="headerlink" title="通讯测试"></a>通讯测试</h2><p>串口测试车辆通讯问题<br>SendID：<code>0730</code>；RecvID：<code>0738</code><br><code>33 33 07 38 FF FF 88 88</code> 设置滤波 只接收ID为<code>0738</code>的指令<br><code>55 55 07 30 02 10 03 00 00 00 00 00 88 88</code> 发送指令 发送ID为<code>0730</code><br>其中：<font color="#FF0000"> 02 10 03 00 00 00 00 00 </font> 为CAN指令，第一位为长度位。<br>为什么用55指令测试通讯：</p><blockquote><p>55指令中不包含CAN通讯等待的时间参数，不会出现第三版协议因超时时间较短而导致收不到车辆回复。</p></blockquote><h2 id="第三版协议指令说明"><a href="#第三版协议指令说明" class="headerlink" title="第三版协议指令说明"></a>第三版协议指令说明</h2><h3 id="发送数据"><a href="#发送数据" class="headerlink" title="发送数据"></a>发送数据</h3><p>F0 F0<br>XX XX// 数据长度<br>XX //指令类型10: CAN数据（针对ISO15765协议而定）<br>            13: 设置CAN通信滤波ID<br>14: 只发送指定长度(小于等于8)CAN数据<br>            15:设置CAN通信波特率及标准帧拓展帧<br>            20 :K线数据<br>            25: 设置K线初始化波特率及通信波特率<br>            05: 设置超时时间 CAN通讯短等待回复时间，默认100ms，长等待时间，默认5000ms<br>XX XX XX XX //本机ID<br>XX XX XX XX //目标ID<br>XX n…//数据<br>FF//结尾</p><h3 id="接收数据"><a href="#接收数据" class="headerlink" title="接收数据"></a>接收数据</h3><p>0F 0F<br>XX XX// 数据长度<br>XX //指令类型10: CAN数据（针对ISO15765协议而定）<br>            13: 设置CAN通信滤波ID<br>14: 接收到已设置了CAN通信滤波ID的CAN数据<br>            15:设置CAN通信波特率及标准帧拓展帧<br>            20: K线数据<br>            25: 设置K线初始化波特率及通信波特率<br>            05: 设置通信响应超时时间成功的响应指令<br>            7F: 收到错误回复，比如超时、数据格式错误等<br>XX XX XX XX //本机ID<br>XX XX XX XX //目标ID<br>XX n…//数据<br>FF//结尾</p><p>示例：<br>发送：<code>F0 F0 00 0C 10 00 00 07 20 00 00 07 30 10 03 FF</code><br>接收：<code>0F 0F 00 10 10 00 00 07 20 00 00 07 30 50 03 00 32 01 F4 FF</code></p><h3 id="设置指定滤波ID及读取超时时间-0x12"><a href="#设置指定滤波ID及读取超时时间-0x12" class="headerlink" title="设置指定滤波ID及读取超时时间(0x12)"></a>设置指定滤波ID及读取超时时间(0x12)</h3><p>发送：<code>F0 F0 00 07 12 00 00 07 30 14 FF</code><br>接收：若CAN总线上指定滤波ID(<code>00 00 07 20</code>)对应的数据及超时时间（20*10=200ms），则返回：<br><code>0F 0F 00 0E 12 00 00 07 30 00 01 02 03 04 05 06 07 FF</code> //(<code>00 00 07 30</code> 目标ID)<br>否则返回超时提示；</p><h3 id="设置滤波ID-0x13"><a href="#设置滤波ID-0x13" class="headerlink" title="设置滤波ID(0x13)"></a>设置滤波ID(0x13)</h3><p>发送：<code>F0 F0 00 0A 13 00 00 07 20 FF FF FF FF FF</code><br>接收：若CAN总线上有设置的ID对应的数据，则返回：<br><code>0F 0F 00 0E 14 00 00 07 30 50 03 00 32 01 F4 FF</code>//(<code>00 00 07 30</code> 目标ID)<br>否则无返回；</p><h3 id="只发送单帧数据-0x14"><a href="#只发送单帧数据-0x14" class="headerlink" title="只发送单帧数据(0x14)"></a>只发送单帧数据(0x14)</h3><p>发送：<code>F0 F0 00 0E 14 00 00 07 20 00 00 00 00 12 34 56 78 FF</code><br>//发送的目标ID: <code>00 00 07 20</code>  发送的CAN数据: <code>12 34 56 78</code></p><h3 id="设置波特率及标准帧拓展帧（0x15）"><a href="#设置波特率及标准帧拓展帧（0x15）" class="headerlink" title="设置波特率及标准帧拓展帧（0x15）"></a>设置波特率及标准帧拓展帧（0x15）</h3><p>第6字节及第7字节表示设置波特率大小，单位kbps<br>第8字节及第9字节表示设置标准帧或拓展帧：00 00 标准帧 00 01 拓展帧<br>接收数据01代表设置成功，无返回或者返回其他字节数目则设置失败，请注意检测数据格式。<br>比如<br>发送：<code>F0 F0 00 06 15 01 F4 00 01 FF</code>//设置波特率500K，拓展帧<br>接收：<code>0F 0F 00 03 15 01 FF</code>//设置成功</p><h3 id="设置波特率及标准帧拓展帧，无返回确认指令（针对0x15）-0x16"><a href="#设置波特率及标准帧拓展帧，无返回确认指令（针对0x15）-0x16" class="headerlink" title="设置波特率及标准帧拓展帧，无返回确认指令（针对0x15）(0x16)"></a>设置波特率及标准帧拓展帧，无返回确认指令（针对0x15）(0x16)</h3><p>第6字节及第7字节表示设置波特率大小，单位kbps<br>第8字节及第9字节表示设置标准帧或拓展帧：00 00 标准帧 00 01 拓展帧<br>设置成功与否，都不返回数据<br>发送：<code>F0 F0 00 06 16 01 F4 00 01 FF</code>//设置波特率500K，拓展帧<br>接收：无</p><h3 id="K-Line设置初始波特率及正常通讯波特率（0x25）"><a href="#K-Line设置初始波特率及正常通讯波特率（0x25）" class="headerlink" title="K-Line设置初始波特率及正常通讯波特率（0x25）"></a>K-Line设置初始波特率及正常通讯波特率（0x25）</h3><p>第6字节及第7字节表示设置初始波特率（单位：bps），默认200bps<br>第8字节及第9字节表示设置正常通讯波特率（单位：bps），默认10400bps<br>接收数据01代表设置成功，无返回或者返回其他字节数目则设置失败，请注意检测数据格式。</p><blockquote><p>发送：<code>F0 F0 00 06 25 00 C8 28 A0 FF</code>//设置波初始波特率200bps及正常通讯波特率10400bps<br>接收：<code>0F 0F 00 03 25 01 FF</code>//设置成功</p></blockquote><h3 id="K线指令（0x20）"><a href="#K线指令（0x20）" class="headerlink" title="K线指令（0x20）"></a>K线指令（0x20）</h3><p>发送：<code>F0 F0 00 08 20 80 28 F1 01 81 1b FF</code><br>接收：<code>0F 0F 00 0A 20 80 F1 28 03 C1 6B 8F 57 FF</code></p><h3 id="通讯错误的回复指令（0x7F）"><a href="#通讯错误的回复指令（0x7F）" class="headerlink" title="通讯错误的回复指令（0x7F）"></a>通讯错误的回复指令（0x7F）</h3><p><code>0F 0F 00 03 7F XX FF</code></p><h4 id="故障码说明"><a href="#故障码说明" class="headerlink" title="故障码说明"></a>故障码说明</h4><table><thead><tr><th align="center"><code>XX</code>故障码(Hex)</th><th align="center">说明</th></tr></thead><tbody><tr><td align="center"><code>00</code></td><td align="center">等待接收或延时发送</td></tr><tr><td align="center"><code>02</code></td><td align="center">发送单帧100ms超时未收到CAN数据</td></tr><tr><td align="center"><code>03</code></td><td align="center">5000ms超时提示</td></tr><tr><td align="center"><code>04</code></td><td align="center">接收多帧时，未收到数据100ms超时提示</td></tr><tr><td align="center"><code>05</code></td><td align="center">读取指定ID数据，超时提示</td></tr><tr><td align="center"><code>11</code></td><td align="center">接收多帧时未收到流控帧提示</td></tr><tr><td align="center"><code>12</code></td><td align="center">接收到的CAN数据长度大于7错误提示</td></tr><tr><td align="center"><code>13</code></td><td align="center">接收到未符合要求的数据类型</td></tr><tr><td align="center"><code>21</code></td><td align="center">发送Kline数据500ms超时未收到CAN数据</td></tr><tr><td align="center"><code>F2</code></td><td align="center">接收到PC数据不是以0xFF结尾</td></tr><tr><td align="center"><code>F1</code></td><td align="center">CAN数据超过4096个字节</td></tr><tr><td align="center"><code>2A</code></td><td align="center">K线初始化后未接收到”格式”字节</td></tr><tr><td align="center"><code>2B</code></td><td align="center">K线初始化后自反馈是未接收到指定长度K线数据</td></tr><tr><td align="center"><code>2C</code></td><td align="center">K线未接收到0x80字节</td></tr></tbody></table>]]></content>
+    
+    <summary type="html">
+    
+      上位机通过OBD模块与车辆通讯指令说明
+    
+    </summary>
+    
+      <category term="工作" scheme="http://silencejql.coding.me/categories/%E5%B7%A5%E4%BD%9C/"/>
+    
+    
+      <category term="诊断指令" scheme="http://silencejql.coding.me/tags/%E8%AF%8A%E6%96%AD%E6%8C%87%E4%BB%A4/"/>
+    
+      <category term="CAN" scheme="http://silencejql.coding.me/tags/CAN/"/>
+    
+  </entry>
+  
+  <entry>
     <title>工作-BBK</title>
     <link href="http://silencejql.coding.me/%E5%B7%A5%E4%BD%9C-BBK.html"/>
     <id>http://silencejql.coding.me/工作-BBK.html</id>
     <published>2019-08-07T08:28:57.000Z</published>
-    <updated>2019-08-07T09:12:59.713Z</updated>
+    <updated>2019-08-08T01:43:43.620Z</updated>
     
-    <content type="html"><![CDATA[<a href="/现场软件备份路径.html" title="现场软件备份路径">现场软件备份路径</a><br><a href="/现场问题整理.html" title="现场问题整理">现场问题整理</a><br><a href="/Postgresql数据导入导出.html" title="Postgresql数据导入导出">Postgresql数据导入导出</a>]]></content>
+    <content type="html"><![CDATA[<br><a href="/现场软件备份路径.html" title="现场软件备份路径">现场软件备份路径</a><br><a href="/现场问题整理.html" title="现场问题整理">现场问题整理</a><br><a href="/Postgresql数据导入导出.html" title="Postgresql数据导入导出">Postgresql数据导入导出</a>]]></content>
     
     <summary type="html">
     
       
       
-        &lt;a href=&quot;/现场软件备份路径.html&quot; title=&quot;现场软件备份路径&quot;&gt;现场软件备份路径&lt;/a&gt;
+        &lt;br&gt;
+&lt;a href=&quot;/现场软件备份路径.html&quot; title=&quot;现场软件备份路径&quot;&gt;现场软件备份路径&lt;/a&gt;
 &lt;br&gt;
 &lt;a href=&quot;/现场问题整理.html&quot; title=&quot;现场问题整理&quot;&gt;现场问题整理&lt;/a&gt;
 &lt;br&gt;
-&lt;a href=&quot;/Postgresql数据导入导出
+&lt;a href=&quot;/Postgresql数
       
     
     </summary>
@@ -90,9 +115,9 @@
     <link href="http://silencejql.coding.me/%E7%8E%B0%E5%9C%BA%E9%97%AE%E9%A2%98%E6%95%B4%E7%90%86.html"/>
     <id>http://silencejql.coding.me/现场问题整理.html</id>
     <published>2019-08-06T03:31:16.000Z</published>
-    <updated>2019-08-07T09:12:46.742Z</updated>
+    <updated>2019-08-08T01:41:40.269Z</updated>
     
-    <content type="html"><![CDATA[<h2 id="四轮大灯"><a href="#四轮大灯" class="headerlink" title="四轮大灯"></a>四轮大灯</h2><h3 id="四轮设备中文乱码导致数据上传失败"><a href="#四轮设备中文乱码导致数据上传失败" class="headerlink" title="四轮设备中文乱码导致数据上传失败"></a>四轮设备中文乱码导致数据上传失败</h3><h4 id="解决方法"><a href="#解决方法" class="headerlink" title="解决方法"></a>解决方法</h4><blockquote><p>更改时间、区域为China 详情请咨询 <a href="mailto:coulson@bbkco.com.cn" target="_blank" rel="noopener">Coulsonxia</a></p></blockquote><h3 id="宝骏现场大灯数据单独上传"><a href="#宝骏现场大灯数据单独上传" class="headerlink" title="宝骏现场大灯数据单独上传"></a>宝骏现场大灯数据单独上传</h3><h4 id="实现方法"><a href="#实现方法" class="headerlink" title="实现方法"></a>实现方法</h4><blockquote><p>流程中新建TCPClient用于接收大灯通讯<br>启动大灯需要发送车型信息，格式为：{0x02}{车辆信息_ToHLA_ZTS};{车辆信息_ToHLA_VIN}{0x0D}{0x0A}<br>接收解析并保存大灯数据</p></blockquote>]]></content>
+    <content type="html"><![CDATA[<h2 id="通讯测试"><a href="#通讯测试" class="headerlink" title="通讯测试"></a>通讯测试</h2><p>串口测试车辆通讯问题<br>SendID：<code>0730</code>；RecvID：<code>0738</code><br><code>33 33 07 38 FF FF 88 88</code> 设置滤波 只接收ID为<code>0738</code>的指令<br><code>55 55 07 30 02 10 03 00 00 00 00 00 88 88</code> 发送指令 发送ID为<code>0730</code><br>其中：<font color="#FF0000"> 02 10 03 00 00 00 00 00 </font> 为CAN指令，第一位为长度位。</p><h2 id="四轮大灯"><a href="#四轮大灯" class="headerlink" title="四轮大灯"></a>四轮大灯</h2><h3 id="四轮设备中文乱码导致数据上传失败"><a href="#四轮设备中文乱码导致数据上传失败" class="headerlink" title="四轮设备中文乱码导致数据上传失败"></a>四轮设备中文乱码导致数据上传失败</h3><h4 id="解决方法"><a href="#解决方法" class="headerlink" title="解决方法"></a>解决方法</h4><blockquote><p>更改时间、区域为China 详情请咨询 <a href="mailto:coulson@bbkco.com.cn" target="_blank" rel="noopener">Coulsonxia</a></p></blockquote><h3 id="宝骏现场大灯数据单独上传"><a href="#宝骏现场大灯数据单独上传" class="headerlink" title="宝骏现场大灯数据单独上传"></a>宝骏现场大灯数据单独上传</h3><h4 id="实现方法"><a href="#实现方法" class="headerlink" title="实现方法"></a>实现方法</h4><blockquote><p>流程中新建TCPClient用于接收大灯通讯<br>启动大灯需要发送车型信息，格式为：{0x02}{车辆信息_ToHLA_ZTS};{车辆信息_ToHLA_VIN}{0x0D}{0x0A}<br>接收解析并保存大灯数据</p></blockquote>]]></content>
     
     <summary type="html">
     
@@ -158,7 +183,7 @@
     <published>2019-07-22T06:38:12.000Z</published>
     <updated>2019-07-22T06:39:30.503Z</updated>
     
-    <content type="html"><![CDATA[<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script><div id="hbe-security">  <div class="hbe-input-container">  <input type="password" class="hbe-form-control" id="pass" placeholder="Enter password to read！" />    <label for="pass">Enter password to read！</label>    <div class="bottom-line"></div>  </div></div><div id="decryptionError" style="display: none;">Incorrect Password!</div><div id="noContentError" style="display: none;">No content to display!</div><div id="encrypt-blog" style="display:none">U2FsdGVkX1/TgMECZJ7VjUaEa+rOAha+mHHetJWvC0o=</div><script src="/lib/crypto-js.js"></script><script src="/lib/blog-encrypt.js"></script><link href="/css/blog-encrypt.css" rel="stylesheet" type="text/css">]]></content>
+    <content type="html"><![CDATA[<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script><div id="hbe-security">  <div class="hbe-input-container">  <input type="password" class="hbe-form-control" id="pass" placeholder="Enter password to read！" />    <label for="pass">Enter password to read！</label>    <div class="bottom-line"></div>  </div></div><div id="decryptionError" style="display: none;">Incorrect Password!</div><div id="noContentError" style="display: none;">No content to display!</div><div id="encrypt-blog" style="display:none">U2FsdGVkX19trXo8PR0kUIcwFhK2q3k0OKIMeKccyK8=</div><script src="/lib/crypto-js.js"></script><script src="/lib/blog-encrypt.js"></script><link href="/css/blog-encrypt.css" rel="stylesheet" type="text/css">]]></content>
     
     <summary type="html">
     
@@ -450,7 +475,7 @@
     <published>2019-06-15T11:55:54.000Z</published>
     <updated>2019-06-18T05:14:31.967Z</updated>
     
-    <content type="html"><![CDATA[<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script><div id="hbe-security">  <div class="hbe-input-container">  <input type="password" class="hbe-form-control" id="pass" placeholder="Enter password to read！" />    <label for="pass">Enter password to read！</label>    <div class="bottom-line"></div>  </div></div><div id="decryptionError" style="display: none;">Incorrect Password!</div><div id="noContentError" style="display: none;">No content to display!</div><div id="encrypt-blog" style="display:none">U2FsdGVkX19q+hynQsIbONbNDJY0J0q52gd9VYolYmfq5HH/0kU89qyY0itmXc3KzQPCycToKS6Vk5vvaYIdxhH1nTJlve7Pj1wHKV3YHPp6OF1viOzFgOtzsF4TCt2AiK/EV1C/oDTYZh9g9UKgNgkuxqDyvA47XqpPvkYo5klCeV9ptwxd0MRJRvdA5kCz9Mi1y2txhqKf7tTYOBreI7dj7rotmaxI/uRTRe4SGPUojEXNXCTe4PM4fwmFLy7CwgUGMycTvFFxl7Ddouzw7Q/xnlbYO2o8BGjeiIn9eW+OUWsk83QiNm794dqIjOVNKRrcG2eKpQm+n6rRS6kckcwzfr0so3vnek+5PB4iAE3j018pB/v/xjHd1WU6Vc+N0vy+vfwszk/0aXJf+KLCmUKK1AV/d4OaTCpL0cSz9UG9DacYjKOu/I4YfttLsHtuc9/VbkQrQSGHqouVqgEeYCNv/T4CSWhsu1qNhg3Ch4IFQ+cf7IaVX4b+bKZndeT9hg/TtJA5yW3mGCEbYjRK7ZSzwqIWQpDpiAwfMpS/rlnXVXv+Mnze+3ctCJ3HZZsi7lcE1ddAs8K8R/4ChOdWR9bA+aTdl7qJLHmICeLO4/+9xWq5WyGSWsCsu8CFa0O81rIk3cA8ytZgarz1t9Prq5pl3QTTdfqTwg89kyucWN1pNcBymQShg0Fd9hCDTRdu</div><script src="/lib/crypto-js.js"></script><script src="/lib/blog-encrypt.js"></script><link href="/css/blog-encrypt.css" rel="stylesheet" type="text/css">]]></content>
+    <content type="html"><![CDATA[<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script><div id="hbe-security">  <div class="hbe-input-container">  <input type="password" class="hbe-form-control" id="pass" placeholder="Enter password to read！" />    <label for="pass">Enter password to read！</label>    <div class="bottom-line"></div>  </div></div><div id="decryptionError" style="display: none;">Incorrect Password!</div><div id="noContentError" style="display: none;">No content to display!</div><div id="encrypt-blog" style="display:none">U2FsdGVkX19lLIRXquNrw27fItgYW7CBdbg0pszb1iTIsDUPTdnw/w9tQWamP8pd7aDuItiB6+BxXoNhTbrxW/6REBnG8Iw9M0sE1+BJBHEVXpSY4KeDawH/++/FZpH9wExbY9Y0loHc5SYMRtUbWKRza0PC/XDEwN40SVr4Df91ELJyXMkYALvHW+h79hee1ZhL3VGRiXcn3STsae8HOZByUyk8At8g7dLkwJgNUh7mfPVdg2zdXkoOOVccPDFKtaAnbW8cvGic6epLSNFUCFz9JR4N9YDOWjtkNi+ydl9vkAKI78A9aEE6wcRdArrC3Z30Tblov6TgjtrxCFXgAC6hiZwpD23EDv7SvIUYz4kH66boYX2QCIDzyUUaeuWJELYddQMeaZoBLl3rNzW394oG+qWeFzGU5vKNkaI1I660R57pP+Brwy81dFbc9N45+x98S1s6pj1nvKYbI2AjO7m6MlOXSDD2B5gcSRpnXiXm04PSW3bUnNlWQqRulCD8FTQ+CZe3LXMZZf9V/QkZ23B1ICc49N3zUahxZFio1HYMSRwZa5qWsYZtwWR/L20BntEnCxe1U6c8i2QnLiZEZf/maPmBtPaZzbCK+2XJt0zx4wdXLyPRdmdfFw1PorFcb3MOBDa/Hyj17z7n8sDZJAVQlzrn8Q6LzWlOk+NrGUSYfx+BNiJdejkzOyevuO08</div><script src="/lib/crypto-js.js"></script><script src="/lib/blog-encrypt.js"></script><link href="/css/blog-encrypt.css" rel="stylesheet" type="text/css">]]></content>
     
     <summary type="html">
     
@@ -462,32 +487,6 @@
     
     
       <category term="碎碎念" scheme="http://silencejql.coding.me/tags/%E7%A2%8E%E7%A2%8E%E5%BF%B5/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Test Project</title>
-    <link href="http://silencejql.coding.me/Test-Project.html"/>
-    <id>http://silencejql.coding.me/Test-Project.html</id>
-    <published>2019-06-11T02:51:25.000Z</published>
-    <updated>2019-06-15T14:14:25.398Z</updated>
-    
-    <content type="html"><![CDATA[<h3 id="Test-File"><a href="#Test-File" class="headerlink" title="Test File"></a>Test File</h3><p>this is my first Hexo text file</p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h3 id=&quot;Test-File&quot;&gt;&lt;a href=&quot;#Test-File&quot; class=&quot;headerlink&quot; title=&quot;Test File&quot;&gt;&lt;/a&gt;Test File&lt;/h3&gt;&lt;p&gt;this is my first Hexo text file&lt;/p&gt;
-
-      
-    
-    </summary>
-    
-      <category term="Test" scheme="http://silencejql.coding.me/categories/Test/"/>
-    
-    
-      <category term="Test" scheme="http://silencejql.coding.me/tags/Test/"/>
     
   </entry>
   
