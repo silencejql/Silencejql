@@ -555,7 +555,7 @@
 <div id="decryptionError" style="display: none;">Incorrect Password!</div>
 <div id="noContentError" style="display: none;">No content to display!</div>
 <div id="encrypt-blog" style="display:none">
-U2FsdGVkX19ItbB1bXrVxPhSehomO7R5PafYDRSDhdE=
+U2FsdGVkX19QpA6qYLLAof/g4KQjb2OlnzKa7Pid+KU=
 </div>
 <script src="/lib/crypto-js.js"></script><script src="/lib/blog-encrypt.js"></script><link href="/css/blog-encrypt.css" rel="stylesheet" type="text/css">
       
@@ -597,10 +597,16 @@ U2FsdGVkX19ItbB1bXrVxPhSehomO7R5PafYDRSDhdE=
       
         <div class="post-widgets">
         
-
+          <div class="wp_rating">
+            <div id="wpac-rating"></div>
+          </div>
         
 
         
+
+        
+          
+            <span class="post-meta-divider">|</span>
           
           <div class="social_share">
             
@@ -1559,6 +1565,25 @@ U2FsdGVkX19ItbB1bXrVxPhSehomO7R5PafYDRSDhdE=
 
 
   
+  <script>
+    wpac_init = window.wpac_init || [];
+    wpac_init.push({
+      widget: 'Rating',
+      id: 20236,
+      el: 'wpac-rating',
+      color: 'fc6423'
+    });
+    (function() {
+      if ('WIDGETPACK_LOADED' in window) return;
+      WIDGETPACK_LOADED = true;
+      var mc = document.createElement('script');
+      mc.type = 'text/javascript';
+      mc.async = true;
+      mc.src = '//embed.widgetpack.com/widget.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(mc, s.nextSibling);
+    })();
+  </script>
+
 
   
 
