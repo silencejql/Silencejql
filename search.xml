@@ -1,6 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[现场软件安装包下载]]></title>
+    <url>%2F%E7%8E%B0%E5%9C%BA%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85%E5%8C%85%E4%B8%8B%E8%BD%BD.html</url>
+    <content type="text"><![CDATA[串口调试助手链接：https://pan.baidu.com/s/1KAisgybEesC8fMTwJ-oK3w提取码：au8d Socktools链接：https://pan.baidu.com/s/1lXWZWLjt9LE4xxCjK873-Q提取码：v5qn .NetFramework4.0链接：https://pan.baidu.com/s/1Hwdt4rEToEK4Ao4ljvmURA提取码：wlfc 虚拟串口链接：https://pan.baidu.com/s/1FrqtaKrp74EPmyvVqNOu6g提取码：wkv3 VisualStudio2010链接：https://pan.baidu.com/s/1Z-EUIWWsJmUN22KS8QNKcg提取码：rwpn SQLServer2008链接：https://pan.baidu.com/s/15hGavjba8ewaFxlyd_K-dw提取码：xdxa KepServer5.2链接：https://pan.baidu.com/s/1zmX5Myqts5zzG3DTjairdg提取码：7dwx Postgresql9.5.3链接：https://pan.baidu.com/s/1NA4aNTu9CGmAEYd9aeo-Gg提取码：l9h6 Setup_Npgsql-2.2.3.0-r2-net40链接：https://pan.baidu.com/s/1wLBTi8vgJUCvlqO8HvorOQ提取码：yv4h Orical 10g Client链接：https://pan.baidu.com/s/1btHhUl-ataDjq6J7KAWfuA提取码：ks71 psqlodbc_x86链接：https://pan.baidu.com/s/19FKNrVT4CxO5yHyvhVayOw提取码：9yud]]></content>
+      <categories>
+        <category>工作</category>
+      </categories>
+      <tags>
+        <tag>安装包</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[诊断指令说明--OBD模块]]></title>
     <url>%2F%E8%AF%8A%E6%96%AD%E6%8C%87%E4%BB%A4%E8%AF%B4%E6%98%8E-OBD%E6%A8%A1%E5%9D%97.html</url>
     <content type="text"><![CDATA[通讯测试串口测试车辆通讯问题SendID：0730；RecvID：073833 33 07 38 FF FF 88 88 设置滤波 只接收ID为0738的指令55 55 07 30 02 10 03 00 00 00 00 00 88 88 发送指令 发送ID为0730其中： 02 10 03 00 00 00 00 00 为CAN指令，第一位为长度位。为什么用55指令测试通讯： 55指令中不包含CAN通讯等待的时间参数，不会出现第三版协议因超时时间较短而导致收不到车辆回复。 第三版协议指令说明发送数据F0 F0XX XX// 数据长度XX //指令类型10: CAN数据（针对ISO15765协议而定） 13: 设置CAN通信滤波ID14: 只发送指定长度(小于等于8)CAN数据 15:设置CAN通信波特率及标准帧拓展帧 20 :K线数据 25: 设置K线初始化波特率及通信波特率 05: 设置超时时间 CAN通讯短等待回复时间，默认100ms，长等待时间，默认5000msXX XX XX XX //本机IDXX XX XX XX //目标IDXX n…//数据FF//结尾 接收数据0F 0FXX XX// 数据长度XX //指令类型10: CAN数据（针对ISO15765协议而定） 13: 设置CAN通信滤波ID14: 接收到已设置了CAN通信滤波ID的CAN数据 15:设置CAN通信波特率及标准帧拓展帧 20: K线数据 25: 设置K线初始化波特率及通信波特率 05: 设置通信响应超时时间成功的响应指令 7F: 收到错误回复，比如超时、数据格式错误等XX XX XX XX //本机IDXX XX XX XX //目标IDXX n…//数据FF//结尾 示例：发送：F0 F0 00 0C 10 00 00 07 20 00 00 07 30 10 03 FF接收：0F 0F 00 10 10 00 00 07 20 00 00 07 30 50 03 00 32 01 F4 FF 设置指定滤波ID及读取超时时间(0x12)发送：F0 F0 00 07 12 00 00 07 30 14 FF接收：若CAN总线上指定滤波ID(00 00 07 20)对应的数据及超时时间（20*10=200ms），则返回：0F 0F 00 0E 12 00 00 07 30 00 01 02 03 04 05 06 07 FF //(00 00 07 30 目标ID)否则返回超时提示； 设置滤波ID(0x13)发送：F0 F0 00 0A 13 00 00 07 20 FF FF FF FF FF接收：若CAN总线上有设置的ID对应的数据，则返回：0F 0F 00 0E 14 00 00 07 30 50 03 00 32 01 F4 FF//(00 00 07 30 目标ID)否则无返回； 只发送单帧数据(0x14)发送：F0 F0 00 0E 14 00 00 07 20 00 00 00 00 12 34 56 78 FF//发送的目标ID: 00 00 07 20 发送的CAN数据: 12 34 56 78 设置波特率及标准帧拓展帧（0x15）第6字节及第7字节表示设置波特率大小，单位kbps第8字节及第9字节表示设置标准帧或拓展帧：00 00 标准帧 00 01 拓展帧接收数据01代表设置成功，无返回或者返回其他字节数目则设置失败，请注意检测数据格式。比如发送：F0 F0 00 06 15 01 F4 00 01 FF//设置波特率500K，拓展帧接收：0F 0F 00 03 15 01 FF//设置成功 设置波特率及标准帧拓展帧，无返回确认指令（针对0x15）(0x16)第6字节及第7字节表示设置波特率大小，单位kbps第8字节及第9字节表示设置标准帧或拓展帧：00 00 标准帧 00 01 拓展帧设置成功与否，都不返回数据发送：F0 F0 00 06 16 01 F4 00 01 FF//设置波特率500K，拓展帧接收：无 K-Line设置初始波特率及正常通讯波特率（0x25）第6字节及第7字节表示设置初始波特率（单位：bps），默认200bps第8字节及第9字节表示设置正常通讯波特率（单位：bps），默认10400bps接收数据01代表设置成功，无返回或者返回其他字节数目则设置失败，请注意检测数据格式。 发送：F0 F0 00 06 25 00 C8 28 A0 FF//设置波初始波特率200bps及正常通讯波特率10400bps接收：0F 0F 00 03 25 01 FF//设置成功 K线指令（0x20）发送：F0 F0 00 08 20 80 28 F1 01 81 1b FF接收：0F 0F 00 0A 20 80 F1 28 03 C1 6B 8F 57 FF 通讯错误的回复指令（0x7F）0F 0F 00 03 7F XX FF 故障码说明 XX故障码(Hex) 说明 00 等待接收或延时发送 02 发送单帧100ms超时未收到CAN数据 03 5000ms超时提示 04 接收多帧时，未收到数据100ms超时提示 05 读取指定ID数据，超时提示 11 接收多帧时未收到流控帧提示 12 接收到的CAN数据长度大于7错误提示 13 接收到未符合要求的数据类型 21 发送Kline数据500ms超时未收到CAN数据 F2 接收到PC数据不是以0xFF结尾 F1 CAN数据超过4096个字节 2A K线初始化后未接收到”格式”字节 2B K线初始化后自反馈是未接收到指定长度K线数据 2C K线未接收到0x80字节]]></content>
@@ -15,7 +26,7 @@
   <entry>
     <title><![CDATA[工作-BBK]]></title>
     <url>%2F%E5%B7%A5%E4%BD%9C-BBK.html</url>
-    <content type="text"><![CDATA[诊断指令说明--OBD模块 现场软件备份路径 现场问题整理 Postgresql数据导入导出]]></content>
+    <content type="text"><![CDATA[诊断指令说明--OBD模块 现场软件备份路径 现场问题整理 Postgresql数据导入导出 现场软件安装包下载]]></content>
   </entry>
   <entry>
     <title><![CDATA[HTML常用标签]]></title>
@@ -75,7 +86,7 @@
   <entry>
     <title><![CDATA[无处安放的矫情]]></title>
     <url>%2F%E6%97%A0%E5%A4%84%E5%AE%89%E6%94%BE%E7%9A%84%E7%9F%AB%E6%83%85.html</url>
-    <content type="text"><![CDATA[Enter password to read！ Incorrect Password! No content to display! U2FsdGVkX1+u/7Usw+Tnymg9KQrU3xpM0YBiUKdaeGA=]]></content>
+    <content type="text"><![CDATA[Enter password to read！ Incorrect Password! No content to display! U2FsdGVkX19ItbB1bXrVxPhSehomO7R5PafYDRSDhdE=]]></content>
   </entry>
   <entry>
     <title><![CDATA[C# XML]]></title>
@@ -217,7 +228,7 @@
   <entry>
     <title><![CDATA[碎碎念]]></title>
     <url>%2F%E7%A2%8E%E7%A2%8E%E5%BF%B5.html</url>
-    <content type="text"><![CDATA[Enter password to read！ Incorrect Password! No content to display! U2FsdGVkX1+z/b5xnESnDXR4GoxBTZ+GGnI3TJSVWKKvrSNYpeRnDStChKA61aZRnSGEJrnOzu4YQiSJuaOr0uHFmPR8dBSiMBEY4NPfFqrzV4vcDFxwWfmzQ8ChVqGTjfARi4TuJT/FQOSWCu98bug4OQRwaLJ03k2qAw7/3C5igniToJbs7UMz9ObsslgLFyi8CtAnQrCOvWrX4FMO+C56vysnBJT21c3gevg1Ibbhkd09GOc5E8liCZOrXW2hF0WUoPCK8CUV2f8HkERRKXO4B2j7RzFBbZumS194q6Srp71eS3CRnbwqa4F7V+Ck+6Pw6sD+Q1mjMYjMb+yCBLIEMokCp1FO6jYJImn+A9pHVLENEN9g3xltA54GufSCxhTFY0NC0BCjjPR5VikQCbfqpvJNV0zuhUig/I90bTJv9Q+dre/955f2eUZQ8bD+zNss58EZRhLzAxB30BvtiQGkZNiy65aAKVKjAPxlBt/yxGNNzqGu4Imr2ygdJakBLDrlNGiNZSdZ99D47G4+joEIZU3SsF4jwEiQ9YrCKABAIkZ0YO0v2T1sdcWmju68EWWRlWx/h6/AUD7qotQzY2zBwGUADToqmgPiddkFAe4e3Z9xeBBjjc7EGccJPxG3Q4bR5cFQKnuXcdnyamXe+4yO5MDKr7IIa80FxVW/ZBg6HFcG69FhRC/reerkzkwj]]></content>
+    <content type="text"><![CDATA[Enter password to read！ Incorrect Password! No content to display! U2FsdGVkX19WHr85sh/XrM7t6bg0J8GLDCEg4r+xolKeeJ0gE0qI9cyshPBLdUdaTgRwuqkJy26nAooQ9z8qwz9NGFZx6x2wLX3N6TGEO+6lN7/38ly+m+kCySRwKWDNna0RGnp2sltmShgrZERskV7qVCitBs/xp/Qc2F6qZf/1BHckpJ3WjPn5V0qbREo5Lepuvln3HBsL5dVDqu/nlHsb8EqH4UXRwmPpgqbL1E2UqV+QPTU6/UwDgWLS3MEqWRNPqSgkRaBm9GlxJSxl8LFtVGnM7J4OPYEVNFKr4Da/VYRk1iPacJhBvfrU4mjh/kgqSeLHWw7T3p1GBvVYqgpXZq08j8Hqx88NXa1+mGU1VoGVdPCmRjKS+nzH+Eclnz0dqRweeNdNQ9kU4bOFpvGV0ytBu/k82/gwSTfjFDxGRF63oNU4GvQZlJ4TSCkg9agc1e4gwUp+GKS21U8duP1YCaabrArmCR8b56uf8XxjrviW0TSLlfGRsZB/HuLrwqkgH00tBkV08Lyp/yVWJQZc8laaVvjARE/Lj+eb7JlbQay3Wtidt9jNOI18KGt5GlxMkBApAbC/n41PenH3ONyGckJHc4A3c6PObgCFia2ZcgulliUf9yukXYOs95UXUYehj9yzqScuDDlHs3niju4jF0UaU//tBhrSuW7jAJDOcYmxv+4BhGi15lYqF8qP]]></content>
       <categories>
         <category>碎碎念</category>
       </categories>
