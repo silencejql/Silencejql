@@ -123,12 +123,12 @@
 <meta property="og:site_name" content="Silencejql">
 <meta property="og:description" content="&amp;emsp;&amp;emsp;托管DLL和非托管DLL的区别：狭义解释讲，托管DLL就在Dotnet环境生成的DLL文件；非托管DLL不是在Dotnet环境生成的DLL文件。&amp;emsp;&amp;emsp;托管DLL文件，可以在Dotnet环境通过 “添加引用” 的方式，直接把托管DLL文件添加到项目中，然后通过 Using DLL命名空间，来调用相应的DLL对象；非托管DLL文件，在Dotnet环境应用时，通">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:image" content="http://silencejql.coding.me/Ccompile.jpg">
-<meta property="og:updated_time" content="2019-07-03T02:42:08.068Z">
+<meta property="og:image" content="http://silencejql.coding.me/%E6%89%98%E7%AE%A1DLL%E4%B8%8E%E9%9D%9E%E6%89%98%E7%AE%A1DLL/Ccompile.jpg">
+<meta property="og:updated_time" content="2019-08-08T02:41:47.794Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="托管DLL与非托管DLL">
 <meta name="twitter:description" content="&amp;emsp;&amp;emsp;托管DLL和非托管DLL的区别：狭义解释讲，托管DLL就在Dotnet环境生成的DLL文件；非托管DLL不是在Dotnet环境生成的DLL文件。&amp;emsp;&amp;emsp;托管DLL文件，可以在Dotnet环境通过 “添加引用” 的方式，直接把托管DLL文件添加到项目中，然后通过 Using DLL命名空间，来调用相应的DLL对象；非托管DLL文件，在Dotnet环境应用时，通">
-<meta name="twitter:image" content="http://silencejql.coding.me/Ccompile.jpg">
+<meta name="twitter:image" content="http://silencejql.coding.me/%E6%89%98%E7%AE%A1DLL%E4%B8%8E%E9%9D%9E%E6%89%98%E7%AE%A1DLL/Ccompile.jpg">
 
 
 
@@ -458,12 +458,23 @@
                 
               
 
-              <time title="创建时间：2019-07-03 09:03:34 / 修改时间：10:42:08" itemprop="dateCreated datePublished" datetime="2019-07-03T09:03:34+08:00">2019-07-03</time>
+              <time title="创建时间：2019-07-03 09:03:34" itemprop="dateCreated datePublished" datetime="2019-07-03T09:03:34+08:00">2019-07-03</time>
             
 
             
               
 
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2019-08-08 10:41:47" itemprop="dateModified" datetime="2019-08-08T10:41:47+08:00">2019-08-08</time>
               
             
           </span>
@@ -570,7 +581,7 @@
 
 <h3 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h3><p>&emsp;&emsp;托管dll虽然符合windows的PE格式规范，但是代码是以IL的形式保存在.Text 区的，而不是机器码，CLR会在运行时JIT编译成机器码再交给操作系统执行，这也就为什么托管代码称之为”托管”的意义。<br>&emsp;&emsp;所以，要想注入托管dll，首先需要在目标进程中启动CLR，然后让CLR来加载managed dll。<br>&emsp;&emsp;托管DLL，指完全由.NET托管代码实现的DLL，完全依赖于 .NET 平台的 CLR 运行。托管DLL，受.NET CLR管控，支持内存自动回收等的，对于.NET平台是安全DLL<br>&emsp;&emsp;非托管DLL，是指完全或者部分 不是用.NET代码实现，不依赖于.NET平台即可运行，例如 COM方式 的DLL，不支持自动回收内存，对于.NET平台而言，也是非安全可控的。</p>
 <hr>
-<p>&emsp;&emsp;正常编程所用的高级语言，是无法被计算机识别的。需要先将高级语言翻译为机器语言，才能被机器理解和运行。<br>在标准C/C++中，编译过程是这样的：<br><img src="Ccompile.jpg" alt><br>&emsp;&emsp;源代码首先经过预处理器，对头文件以及宏进行解析，然后经过编译器，生成汇编代码，接着，经过汇编，生成机器指令，最后将所有文件连接起来。这种编译方式的优点在于，最终直接生成了机器码，可以直接被计算机识别和运行，无需任何中间运行环境，但缺点也在于，由于不同平台能够识别的机器码不同，因此程序的跨平台能力较差。<br>&emsp;&emsp;而在Java语言中，源代码并没有被直接翻译成机器码，而是编译成了一种中间代码（字节码Bytecode）。因此，运行Java程序需要一个额外的JRE（Java Runtime Enviromental）运行环境，在JRE中存在着JVM（Java Virtual Mechinal，Java虚拟机），在程序运行的时候，会将中间代码进一步解释为机器码，并在机器上运行。<br>&emsp;&emsp;使用中间代码的好处在于，程序的跨平台性比较好，一次编译，可以在不同的设备上运行。<br>&emsp;&emsp;托管/非托管是微软的.net framework中特有的概念，其中，非托管代码也叫本地（native）代码。与Java中的机制类似，也是先将源代码编译成中间代码（MSIL，Microsoft Intermediate Language），然后再由.net中的CLR将中间代码编译成机器代码。<br>&emsp;&emsp;而C#与Java的区别在于，Java是先编译后解释，C#是两次编译。</p>
+<p>&emsp;&emsp;正常编程所用的高级语言，是无法被计算机识别的。需要先将高级语言翻译为机器语言，才能被机器理解和运行。<br>在标准C/C++中，编译过程是这样的：<br><img src="%E6%89%98%E7%AE%A1DLL%E4%B8%8E%E9%9D%9E%E6%89%98%E7%AE%A1DLL/Ccompile.jpg" alt><br>&emsp;&emsp;源代码首先经过预处理器，对头文件以及宏进行解析，然后经过编译器，生成汇编代码，接着，经过汇编，生成机器指令，最后将所有文件连接起来。这种编译方式的优点在于，最终直接生成了机器码，可以直接被计算机识别和运行，无需任何中间运行环境，但缺点也在于，由于不同平台能够识别的机器码不同，因此程序的跨平台能力较差。<br>&emsp;&emsp;而在Java语言中，源代码并没有被直接翻译成机器码，而是编译成了一种中间代码（字节码Bytecode）。因此，运行Java程序需要一个额外的JRE（Java Runtime Enviromental）运行环境，在JRE中存在着JVM（Java Virtual Mechinal，Java虚拟机），在程序运行的时候，会将中间代码进一步解释为机器码，并在机器上运行。<br>&emsp;&emsp;使用中间代码的好处在于，程序的跨平台性比较好，一次编译，可以在不同的设备上运行。<br>&emsp;&emsp;托管/非托管是微软的.net framework中特有的概念，其中，非托管代码也叫本地（native）代码。与Java中的机制类似，也是先将源代码编译成中间代码（MSIL，Microsoft Intermediate Language），然后再由.net中的CLR将中间代码编译成机器代码。<br>&emsp;&emsp;而C#与Java的区别在于，Java是先编译后解释，C#是两次编译。</p>
 <hr>
 <h3 id="调用DLL中的非托管函数一般方法"><a href="#调用DLL中的非托管函数一般方法" class="headerlink" title="调用DLL中的非托管函数一般方法"></a>调用DLL中的非托管函数一般方法</h3><p>首先，应该在C#语言源程序中声明外部方法，其基本形式是：<br>    [DLLImport(“DLL文件”)]<br>修饰符 extern 返回变量类型 方法名称 （参数列表）<br>其中：</p>
 <blockquote>
