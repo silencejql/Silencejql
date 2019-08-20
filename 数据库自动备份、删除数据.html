@@ -115,18 +115,18 @@
 
 
 
-  <meta name="description" content="Postgresql数据库备份脚本12345echo offset PRJDB=LocalDBset FileName=%PRJDB%_%date:~0,4%_%date:~5,2%_%date:~8,2%.backupif not exist &amp;quot;D:\BBK\DBbackup&amp;quot; (md D:\BBK\DBbackup)D:/&amp;quot;Program Files (x86)&amp;">
+  <meta name="description" content="文中指令可在windows命令行中执行测试">
 <meta name="keywords" content="Postgresql">
 <meta property="og:type" content="article">
 <meta property="og:title" content="数据库自动备份、删除数据">
 <meta property="og:url" content="http://silencejql.coding.me/数据库自动备份、删除数据.html">
 <meta property="og:site_name" content="Silencejql">
-<meta property="og:description" content="Postgresql数据库备份脚本12345echo offset PRJDB=LocalDBset FileName=%PRJDB%_%date:~0,4%_%date:~5,2%_%date:~8,2%.backupif not exist &amp;quot;D:\BBK\DBbackup&amp;quot; (md D:\BBK\DBbackup)D:/&amp;quot;Program Files (x86)&amp;">
+<meta property="og:description" content="文中指令可在windows命令行中执行测试">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-08-20T09:42:52.793Z">
+<meta property="og:updated_time" content="2019-08-20T09:49:44.070Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="数据库自动备份、删除数据">
-<meta name="twitter:description" content="Postgresql数据库备份脚本12345echo offset PRJDB=LocalDBset FileName=%PRJDB%_%date:~0,4%_%date:~5,2%_%date:~8,2%.backupif not exist &amp;quot;D:\BBK\DBbackup&amp;quot; (md D:\BBK\DBbackup)D:/&amp;quot;Program Files (x86)&amp;">
+<meta name="twitter:description" content="文中指令可在windows命令行中执行测试">
 
 
 
@@ -456,7 +456,7 @@
                 
               
 
-              <time title="创建时间：2019-08-20 17:28:08 / 修改时间：17:42:52" itemprop="dateCreated datePublished" datetime="2019-08-20T17:28:08+08:00">2019-08-20</time>
+              <time title="创建时间：2019-08-20 17:28:08 / 修改时间：17:49:44" itemprop="dateCreated datePublished" datetime="2019-08-20T17:28:08+08:00">2019-08-20</time>
             
 
             
@@ -530,7 +530,7 @@
                 
                   <span class="post-meta-item-text">本文字数：</span>
                 
-                <span title="本文字数">1.3k</span>
+                <span title="本文字数">1.4k</span>
               
               
                 <span class="post-meta-divider">|</span>
@@ -563,11 +563,13 @@
       
 
       
-        <h1 id="Postgresql"><a href="#Postgresql" class="headerlink" title="Postgresql"></a>Postgresql</h1><h2 id="数据库备份脚本"><a href="#数据库备份脚本" class="headerlink" title="数据库备份脚本"></a>数据库备份脚本</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">echo off</span><br><span class="line">set PRJDB=LocalDB</span><br><span class="line">set FileName=%PRJDB%_%date:~0,4%_%date:~5,2%_%date:~8,2%.backup</span><br><span class="line">if not exist &quot;D:\BBK\DBbackup&quot; (md D:\BBK\DBbackup)</span><br><span class="line">D:/&quot;Program Files (x86)&quot;/PostgreSQL/9.5/bin\pg_dump.exe --host localhost --port 5432 --username &quot;postgres&quot; --no-password  --format custom --verbose --file &quot;D:\BBK\DBbackup\%FileName%&quot; &quot;LocalDB&quot;</span><br></pre></td></tr></table></figure>
+        <p>文中指令可在windows命令行中执行测试</p>
+<a id="more"></a>
+<h1 id="Postgresql"><a href="#Postgresql" class="headerlink" title="Postgresql"></a>Postgresql</h1><h2 id="数据库备份脚本"><a href="#数据库备份脚本" class="headerlink" title="数据库备份脚本"></a>数据库备份脚本</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">echo off</span><br><span class="line">set PRJDB=LocalDB</span><br><span class="line">set FileName=%PRJDB%_%date:~0,4%_%date:~5,2%_%date:~8,2%.backup</span><br><span class="line">if not exist &quot;D:\BBK\DBbackup&quot; (md D:\BBK\DBbackup)</span><br><span class="line">D:/&quot;Program Files (x86)&quot;/PostgreSQL/9.5/bin\pg_dump.exe --host localhost --port 5432 --username &quot;postgres&quot; --no-password  --format custom --verbose --file &quot;D:\BBK\DBbackup\%FileName%&quot; &quot;LocalDB&quot;</span><br></pre></td></tr></table></figure>
 
 <p>说明：</p>
 <blockquote>
-<p>备份保存路径为<code>D:\BBK\DBbackup</code><br><code>D:/&quot;Program Files (x86)&quot;/PostgreSQL/9.5/bin\pg_dump.exe</code>为Postgresql数据库程序所在路径</p>
+<p>备份保存路径为<code>D:\BBK\DBbackup</code><br>命名为：LocalDB_年<em>月</em>日.backup<br><code>D:/&quot;Program Files (x86)&quot;/PostgreSQL/9.5/bin\pg_dump.exe</code>为Postgresql数据库程序所在路径</p>
 </blockquote>
 <h2 id="删除表中数据"><a href="#删除表中数据" class="headerlink" title="删除表中数据"></a>删除表中数据</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">// 删除7天以前的数据</span><br><span class="line">D:/&quot;Program Files (x86)&quot;/PostgreSQL/9.5/bin/psql -h 127.0.0.1 -p 5432 -d LocalDB -U postgres --command &quot;delete from 侧滑表 where 测试时间 &lt; (now() - interval &apos;7 day&apos;)&quot;</span><br></pre></td></tr></table></figure>
 
