@@ -48,7 +48,7 @@
   <entry>
     <title><![CDATA[工作-BBK]]></title>
     <url>%2F%E5%B7%A5%E4%BD%9C-BBK.html</url>
-    <content type="text"><![CDATA[诊断指令说明--OBD模块 现场软件备份路径 现场问题整理 Postgresql数据导入导出 现场软件安装包下载]]></content>
+    <content type="text"><![CDATA[诊断指令说明--OBD模块 现场软件备份路径 现场问题整理 现场软件安装包下载]]></content>
   </entry>
   <entry>
     <title><![CDATA[HTML常用标签]]></title>
@@ -95,9 +95,9 @@
       </tags>
   </entry>
   <entry>
-    <title><![CDATA[Postgresql数据导入导出]]></title>
-    <url>%2FPostgresql%E6%95%B0%E6%8D%AE%E5%AF%BC%E5%85%A5%E5%AF%BC%E5%87%BA.html</url>
-    <content type="text"><![CDATA[测试软件导出、Postgresql导入测试软件导出 连接数据库设置完筛选条件后点击导出到Excel重命名为：表名.csv 测试软件导入 1、打开导出表添加新的数据后，删除第一行表头以及第一列序号2、删除原数据库已有行后保存3、打开Postgres找到相应表右键导入4、文件名选择csv文件路径、格式选csv、字符编码可选5、点击导入即可 如果主键为自增序列执行6、76、将相应表的序列创建脚本后删除7、更改脚本中的START大于新增数据的主键ID后执行脚本 SQL shell(psql)导入 1、将excel处理好后，另存为csv（Comma Delimited）2、运行SQL shell(psql) 并登录3、运行’COPY mytable FROM ‘/myfile.csv’ WITH CSV HEADER SQL shell(psql)导出 COPY (select * from mytable) to ‘/myfile.csv’ with csv header;]]></content>
+    <title><![CDATA[数据库导入导出]]></title>
+    <url>%2F%E6%95%B0%E6%8D%AE%E5%BA%93%E5%AF%BC%E5%85%A5%E5%AF%BC%E5%87%BA.html</url>
+    <content type="text"><![CDATA[Postgresql测试软件导出、Postgresql导入测试软件导出 连接数据库设置完筛选条件后点击导出到Excel重命名为：表名.csv 测试软件导入 1、打开导出表添加新的数据后，删除第一行表头以及第一列序号2、删除原数据库已有行后保存3、打开Postgres找到相应表右键导入4、文件名选择csv文件路径、格式选csv、字符编码可选5、点击导入即可 如果主键为自增序列执行6、76、将相应表的序列创建脚本后删除7、更改脚本中的START大于新增数据的主键ID后执行脚本 SQL shell(psql)导入 1、将excel处理好后，另存为csv（Comma Delimited）2、运行SQL shell(psql) 并登录3、运行’COPY mytable FROM ‘/myfile.csv’ WITH CSV HEADER SQL shell(psql)导出 COPY (select * from mytable) to ‘/myfile.csv’ with csv header;]]></content>
       <categories>
         <category>数据库</category>
       </categories>
@@ -108,7 +108,7 @@
   <entry>
     <title><![CDATA[无处安放的矫情]]></title>
     <url>%2F%E6%97%A0%E5%A4%84%E5%AE%89%E6%94%BE%E7%9A%84%E7%9F%AB%E6%83%85.html</url>
-    <content type="text"><![CDATA[Enter password to read！ Incorrect Password! No content to display! U2FsdGVkX19jIHkJOO0I1McClOJRBXgTZINQ+6EP43Q=]]></content>
+    <content type="text"><![CDATA[Enter password to read！ Incorrect Password! No content to display! U2FsdGVkX1+lpLjVqyr98HMB/PZIkftJd9INCWC4/Jc=]]></content>
   </entry>
   <entry>
     <title><![CDATA[C# XML]]></title>
@@ -250,7 +250,7 @@
   <entry>
     <title><![CDATA[碎碎念]]></title>
     <url>%2F%E7%A2%8E%E7%A2%8E%E5%BF%B5.html</url>
-    <content type="text"><![CDATA[Enter password to read！ Incorrect Password! No content to display! U2FsdGVkX19Dl61nqiaqDK8MiP2g2nglUovGj1q1sy+SEcdarXhGiR1f/z4Xx12Cdw+cU7Rqt0/vYcnk6/ttdmdxLCzuDRHihTX25WFfWp/LPBt6HbTYeAHf6DiPoKTEDITfdthvBn0f3nhnYrbVLc2dURZzima2+WOS0nHLgNRJjObfNRqREWVHE2xm4qzRE8i42DuezJaWHdQliDFz8v8zEnfZpL4V1dvaYUjnFjS3JrUfgr4tOPEZCvcWDsGL8SZXApsN9GERARy3wSfPiNaIBXTahZJ5HOqBgODy4FbGJ5Weow33A4WcGhTwfrrUtyH5sCLAo43u9AF768YdixXbf0R4yRelNEQC507lsfJ3EHXBgJE7EjLJR/eDSwOcShaDhRWJlV/KsPvSi9c4zsHptPG5vckLs/+U9Tr0S8bqLYA3qsDFpfbj3ohT/Ynp0Et45CmxQ4KzV364EscpBWTVZzA6WgJCa1OcZ6DE9vrXIRQRqTRz3/ityogB8zEHo+IxavGosiDX4O2gaLPQDyUE52eAISZ3lYfP82LHZUuxfAFuxdtz6PtL2RlO+oVhYIdA5a4sxELq4qrN22bspdlZ7imtW7YX0DciMT2G/i6+swJAw1Rw/MFVYPwv/5+ktEj+6saxfUkneqrq/OT65qxYX0qRlRkmULLan+pwfCqBZtZ9f8twwPRXMZpLKuHv]]></content>
+    <content type="text"><![CDATA[Enter password to read！ Incorrect Password! No content to display! U2FsdGVkX181DQXUW9CCaL2Une7Aki9M2u9wKyrX/wutOPfuUfsPyaCcvJJFrxfwntKc9vZpHJqboFfQ2vqPL4JZIwaRRu4bkJCeNLqixb2WeckzK9+SoOfBiW7nWkYFGPJsxrNVdm6MW5Z8PaEgbCfZx3J6PbM3dIlaJ4iIT+QPZAi7ilJ2RQUpCkJDVU1XUOGVnYwY3V+AWeBfE7s7mZ8R+niKpc3T4LOHrWjGCbR4ro3jGB9er22aqgGj9zs5G4PDt6TuK/rzW+ycHhBep8XjF9iIJTR0xj2mOND6iZDZvb0ZUjtQh93XNT5029S0eC0AyNM3FdkVLAylvamKggSM3wBjgpbYmb06fdVzed9uyETNn6+Zl/k8DLW1j91Dwg7/RKVQFlBVP497P4JpO3LYDSTCERVTFZD7afQJA4UzGXIcqcCWl05XXVnOFoqmhfhOWMdyKqt41KlPv6xDDHeVF0KTWThztY+uVS0ueNv2y3EJ/cPTc4iaD8P3e9OATdDjpyTXNBfjfjtKsxUnNRcxUXnxjZ/VRcx5fsj+VLDVumfNCSd+djAx5xlj8LiqIbqK+HQc7JlunoZB98hK4L+3q1dix7PWmXXTR7uq5+8ybTcgSZacl9HQQCt3UtOo4urMcTOHBZbZTQMT1Z5E3bPAa1LNPHzmPuD0iuEa1x6cor97KMcgKxKpdakCaoPS]]></content>
       <categories>
         <category>碎碎念</category>
       </categories>

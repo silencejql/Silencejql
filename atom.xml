@@ -113,7 +113,7 @@
     <published>2019-08-07T08:28:57.000Z</published>
     <updated>2019-08-08T03:33:00.083Z</updated>
     
-    <content type="html"><![CDATA[<a href="/诊断指令说明-OBD模块.html" title="诊断指令说明--OBD模块">诊断指令说明--OBD模块</a><br><a href="/现场软件备份路径.html" title="现场软件备份路径">现场软件备份路径</a><br><a href="/现场问题整理.html" title="现场问题整理">现场问题整理</a><br><a href="/Postgresql数据导入导出.html" title="Postgresql数据导入导出">Postgresql数据导入导出</a><br><a href="/现场软件安装包下载.html" title="现场软件安装包下载">现场软件安装包下载</a>]]></content>
+    <content type="html"><![CDATA[<a href="/诊断指令说明-OBD模块.html" title="诊断指令说明--OBD模块">诊断指令说明--OBD模块</a><br><a href="/现场软件备份路径.html" title="现场软件备份路径">现场软件备份路径</a><br><a href="/现场问题整理.html" title="现场问题整理">现场问题整理</a><br><br><a href="/现场软件安装包下载.html" title="现场软件安装包下载">现场软件安装包下载</a>]]></content>
     
     <summary type="html">
     
@@ -220,17 +220,17 @@
   </entry>
   
   <entry>
-    <title>Postgresql数据导入导出</title>
-    <link href="http://silencejql.coding.me/Postgresql%E6%95%B0%E6%8D%AE%E5%AF%BC%E5%85%A5%E5%AF%BC%E5%87%BA.html"/>
-    <id>http://silencejql.coding.me/Postgresql数据导入导出.html</id>
+    <title>数据库导入导出</title>
+    <link href="http://silencejql.coding.me/%E6%95%B0%E6%8D%AE%E5%BA%93%E5%AF%BC%E5%85%A5%E5%AF%BC%E5%87%BA.html"/>
+    <id>http://silencejql.coding.me/数据库导入导出.html</id>
     <published>2019-07-30T00:32:28.000Z</published>
-    <updated>2019-08-20T09:28:21.559Z</updated>
+    <updated>2019-08-20T09:59:39.306Z</updated>
     
-    <content type="html"><![CDATA[<h2 id="测试软件导出、Postgresql导入"><a href="#测试软件导出、Postgresql导入" class="headerlink" title="测试软件导出、Postgresql导入"></a>测试软件导出、Postgresql导入</h2><h3 id="测试软件导出"><a href="#测试软件导出" class="headerlink" title="测试软件导出"></a>测试软件导出</h3><blockquote><p>连接数据库设置完筛选条件后点击导出到Excel重命名为：表名.csv</p></blockquote><h3 id="测试软件导入"><a href="#测试软件导入" class="headerlink" title="测试软件导入"></a>测试软件导入</h3><blockquote><p>1、打开导出表添加新的数据后，删除第一行表头以及第一列序号<br>2、删除原数据库已有行后保存<br>3、打开Postgres找到相应表右键导入<br>4、文件名选择csv文件路径、格式选csv、字符编码可选<br>5、点击导入即可</p><blockquote><p>如果主键为自增序列执行6、7<br>6、将相应表的序列创建脚本后删除<br>7、更改脚本中的START大于新增数据的主键ID后执行脚本</p></blockquote></blockquote><h2 id="SQL-shell-psql-导入"><a href="#SQL-shell-psql-导入" class="headerlink" title="SQL shell(psql)导入"></a>SQL shell(psql)导入</h2><blockquote><p>1、将excel处理好后，另存为csv（Comma Delimited）<br>2、运行SQL shell(psql) 并登录<br>3、运行’COPY mytable FROM ‘/myfile.csv’  WITH CSV  HEADER</p></blockquote><h2 id="SQL-shell-psql-导出"><a href="#SQL-shell-psql-导出" class="headerlink" title="SQL shell(psql)导出"></a>SQL shell(psql)导出</h2><blockquote><p>COPY (select * from mytable) to ‘/myfile.csv’ with csv header;</p></blockquote>]]></content>
+    <content type="html"><![CDATA[<h1 id="Postgresql"><a href="#Postgresql" class="headerlink" title="Postgresql"></a>Postgresql</h1><h2 id="测试软件导出、Postgresql导入"><a href="#测试软件导出、Postgresql导入" class="headerlink" title="测试软件导出、Postgresql导入"></a>测试软件导出、Postgresql导入</h2><h3 id="测试软件导出"><a href="#测试软件导出" class="headerlink" title="测试软件导出"></a>测试软件导出</h3><blockquote><p>连接数据库设置完筛选条件后点击导出到Excel重命名为：表名.csv</p></blockquote><h3 id="测试软件导入"><a href="#测试软件导入" class="headerlink" title="测试软件导入"></a>测试软件导入</h3><blockquote><p>1、打开导出表添加新的数据后，删除第一行表头以及第一列序号<br>2、删除原数据库已有行后保存<br>3、打开Postgres找到相应表右键导入<br>4、文件名选择csv文件路径、格式选csv、字符编码可选<br>5、点击导入即可</p><blockquote><p>如果主键为自增序列执行6、7<br>6、将相应表的序列创建脚本后删除<br>7、更改脚本中的START大于新增数据的主键ID后执行脚本</p></blockquote></blockquote><h2 id="SQL-shell-psql-导入"><a href="#SQL-shell-psql-导入" class="headerlink" title="SQL shell(psql)导入"></a>SQL shell(psql)导入</h2><blockquote><p>1、将excel处理好后，另存为csv（Comma Delimited）<br>2、运行SQL shell(psql) 并登录<br>3、运行’COPY mytable FROM ‘/myfile.csv’  WITH CSV  HEADER</p></blockquote><h2 id="SQL-shell-psql-导出"><a href="#SQL-shell-psql-导出" class="headerlink" title="SQL shell(psql)导出"></a>SQL shell(psql)导出</h2><blockquote><p>COPY (select * from mytable) to ‘/myfile.csv’ with csv header;</p></blockquote>]]></content>
     
     <summary type="html">
     
-      Postgresql数据的导入导出
+      关于数据库的导入导出
     
     </summary>
     
@@ -248,7 +248,7 @@
     <published>2019-07-22T06:38:12.000Z</published>
     <updated>2019-07-22T06:39:30.503Z</updated>
     
-    <content type="html"><![CDATA[<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script><div id="hbe-security">  <div class="hbe-input-container">  <input type="password" class="hbe-form-control" id="pass" placeholder="Enter password to read！" />    <label for="pass">Enter password to read！</label>    <div class="bottom-line"></div>  </div></div><div id="decryptionError" style="display: none;">Incorrect Password!</div><div id="noContentError" style="display: none;">No content to display!</div><div id="encrypt-blog" style="display:none">U2FsdGVkX19jIHkJOO0I1McClOJRBXgTZINQ+6EP43Q=</div><script src="/lib/crypto-js.js"></script><script src="/lib/blog-encrypt.js"></script><link href="/css/blog-encrypt.css" rel="stylesheet" type="text/css">]]></content>
+    <content type="html"><![CDATA[<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script><div id="hbe-security">  <div class="hbe-input-container">  <input type="password" class="hbe-form-control" id="pass" placeholder="Enter password to read！" />    <label for="pass">Enter password to read！</label>    <div class="bottom-line"></div>  </div></div><div id="decryptionError" style="display: none;">Incorrect Password!</div><div id="noContentError" style="display: none;">No content to display!</div><div id="encrypt-blog" style="display:none">U2FsdGVkX1+lpLjVqyr98HMB/PZIkftJd9INCWC4/Jc=</div><script src="/lib/crypto-js.js"></script><script src="/lib/blog-encrypt.js"></script><link href="/css/blog-encrypt.css" rel="stylesheet" type="text/css">]]></content>
     
     <summary type="html">
     
