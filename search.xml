@@ -3,7 +3,7 @@
   <entry>
     <title><![CDATA[数据库自动备份、删除数据]]></title>
     <url>%2F%E6%95%B0%E6%8D%AE%E5%BA%93%E8%87%AA%E5%8A%A8%E5%A4%87%E4%BB%BD%E3%80%81%E5%88%A0%E9%99%A4%E6%95%B0%E6%8D%AE.html</url>
-    <content type="text"><![CDATA[Postgresql数据库备份脚本12345echo offset PRJDB=LocalDBset FileName=%PRJDB%_%date:~0,4%_%date:~5,2%_%date:~8,2%.backupif not exist &quot;D:\BBK\DBbackup&quot; (md D:\BBK\DBbackup)D:/&quot;Program Files (x86)&quot;/PostgreSQL/9.5/bin\pg_dump.exe --host localhost --port 5432 --username &quot;postgres&quot; --no-password --format custom --verbose --file &quot;D:\BBK\DBbackup\%FileName%&quot; &quot;LocalDB&quot; 说明： 备份保存路径为D:\BBK\DBbackupD:/&quot;Program Files (x86)&quot;/PostgreSQL/9.5/bin\pg_dump.exe为Postgresql数据库程序所在路径 删除表中数据12// 删除7天以前的数据D:/&quot;Program Files (x86)&quot;/PostgreSQL/9.5/bin/psql -h 127.0.0.1 -p 5432 -d LocalDB -U postgres --command &quot;delete from 侧滑表 where 测试时间 &lt; (now() - interval &apos;7 day&apos;)&quot; 说明： D:/&quot;Program Files (x86)&quot;/PostgreSQL/9.5/bin\pg_dump.exe为Postgresql数据库程序所在路径 时间扩展年interval &#39;2 years&#39;interval &#39;2 year&#39;interval &#39;2 y&#39;interval &#39;2 Y&#39;interval &#39;2Y&#39; 月interval &#39;1 month&#39;interval &#39;one month&#39; 周interval &#39;3 week&#39; 说明：interval 可以不写 运行时会提示数据用户名密码windows系统可在%APPDATA%\postgresql\pgpass.conf中添加服务器信息，实现免密操作参考：https://www.postgresql.org/docs/current/libpq-pgpass.html 自动运行将上述shell指令分别复制到文本文档中另存为 name.bat，然后创建任务计划自动调用windows运行compmgmt.msc 新建任务计划程序即可]]></content>
+    <content type="text"><![CDATA[Postgresql数据库备份脚本12345echo offset PRJDB=LocalDBset FileName=%PRJDB%_%date:~0,4%_%date:~5,2%_%date:~8,2%.backupif not exist &quot;D:\BBK\DBbackup&quot; (md D:\BBK\DBbackup)D:/&quot;Program Files (x86)&quot;/PostgreSQL/9.5/bin\pg_dump.exe --host localhost --port 5432 --username &quot;postgres&quot; --no-password --format custom --verbose --file &quot;D:\BBK\DBbackup\%FileName%&quot; &quot;LocalDB&quot; 说明： 备份保存路径为D:\BBK\DBbackupD:/&quot;Program Files (x86)&quot;/PostgreSQL/9.5/bin\pg_dump.exe为Postgresql数据库程序所在路径 删除表中数据12// 删除7天以前的数据D:/&quot;Program Files (x86)&quot;/PostgreSQL/9.5/bin/psql -h 127.0.0.1 -p 5432 -d LocalDB -U postgres --command &quot;delete from 侧滑表 where 测试时间 &lt; (now() - interval &apos;7 day&apos;)&quot; 说明： D:/&quot;Program Files (x86)&quot;/PostgreSQL/9.5/bin\pg_dump.exe为Postgresql数据库程序所在路径 时间扩展年interval &#39;2 years&#39;interval &#39;2 year&#39;interval &#39;2 y&#39;interval &#39;2 Y&#39;interval &#39;2Y&#39; 月interval &#39;1 month&#39;interval &#39;one month&#39; 周interval &#39;3 week&#39; 说明：interval 可以不写 运行时会提示数据用户名密码windows系统可在%APPDATA%\postgresql\pgpass.conf中添加服务器信息，实现免密操作格式：地址:端口:数据库:用户名:密码如：127.0.0.1:5432:LocalDB:postgres:123参考：https://www.postgresql.org/docs/current/libpq-pgpass.html 自动运行将上述shell指令分别复制到文本文档中另存为 name.bat，然后创建任务计划自动调用windows运行compmgmt.msc 新建任务计划程序即可]]></content>
       <categories>
         <category>数据库</category>
       </categories>
@@ -108,7 +108,7 @@
   <entry>
     <title><![CDATA[无处安放的矫情]]></title>
     <url>%2F%E6%97%A0%E5%A4%84%E5%AE%89%E6%94%BE%E7%9A%84%E7%9F%AB%E6%83%85.html</url>
-    <content type="text"><![CDATA[Enter password to read！ Incorrect Password! No content to display! U2FsdGVkX1+6WqOMopvriv76uzf0GXyvNJ/s3Xjw6NA=]]></content>
+    <content type="text"><![CDATA[Enter password to read！ Incorrect Password! No content to display! U2FsdGVkX1+s3OAepYYPI7n30kU3+mTBUM5ttpXgo70=]]></content>
   </entry>
   <entry>
     <title><![CDATA[C# XML]]></title>
@@ -250,7 +250,7 @@
   <entry>
     <title><![CDATA[碎碎念]]></title>
     <url>%2F%E7%A2%8E%E7%A2%8E%E5%BF%B5.html</url>
-    <content type="text"><![CDATA[Enter password to read！ Incorrect Password! No content to display! U2FsdGVkX19YqfePwCIV881tspqe5PX13EKB2AmdgEf+zvT+YVl92ijyLGqbyBQrMP3yKdKAs1x4zFZsDM8CwN+UjB20IFkPfui+J1MAi0ZQ2tZY1C41ePYoZ0kANQMRVS8cdyBiVQL238F1k0GbbApGDfvwAO41w3Ri5ZgUrUXEcH3ZH4eeMKu/C37q4moBMOSags0dKYK58kNqEPD1877XpnRTKHFML0/ha4aYZ1BsngnaYDlyjp4a7RG4J3DXl8VnLnhR02IuzjpfgZK1dUpc6/A18P1PXPIPJcjV9suxWvhB7WZ41ilO0ukiIr+qs7N2/oLrWwqjcr2SUrppFugELEsyFdk9wHHATqibgqhQ55pxmcFggoAL4xlk567aRldLSRweGVelvDLivGRwhKYJg1lIpTV0CWzrMb8KmZF+7CkWQx4J3zEm4Ge3f1kC5Id35i9g7CvnuuaGxZprOTweovw6FD3xMfh321fqWXm/7nfTnKJhOYckDHWO0Z/1nIzMrAjgwZLrEoARRCBR8A4AM0C9Tq11wE8lU/ZKE5arQ1wMZw7zs732KMY/UJzY1cB283eQ7LNZZo7D0CeVwtiadDM3RVOT8fz094eqow50pa25oc3x51Cyuo1CPBi62VchFZj/w+JIpSMz2+hHzK3umP08zraqpDcH4sUHhRft+PzMYGRPqSaJr1tPnfqn]]></content>
+    <content type="text"><![CDATA[Enter password to read！ Incorrect Password! No content to display! U2FsdGVkX1+3zCUDz3z+cyXD8QaTd6wmQIoglJbv74Wrb9xnV/4ochH13LreNmDnaBy6nVKcyjv/cuaGD8ix2tk+Yiss41TCPVzAtHzzTaEhgWuaKjgbX0Eex2DQTAtBvNvyE8xbXRCzR3fkPuaefIofZ/IvjOOCy5uJHLZHV2UTfKRkKzCa36sH9Kit1/enW5USjyKUbOKOYDmF+B7nA6i05tTyiaplrBQUgOMKGY1ni7WxplDCvu7waHbAP1oo7CeFH1BzHJrMly2BDK60JOmMDJNVmRYjd8UiWkxpggEJcB67ib6gvRdW/Vbl4yc8KXlCvpG7nptGlDtOuZ3tyclWUxckJmaObi+IprwWgOJu7gK6Y60xvrHKb1SEwZU7o+jmjc1cqajZpkHoUG/SEG2azTIeOVrTaKQTTSk++4fvgnnpMGfG3jV6dtJ/wyvmHbZiZGaleoNqalY0cSuEitzrn0nnK7Mw307jSVH7OwON/jCa34baitT9S9oAwLMAYyUVB2ObShNWSQDpoyTuBrzwdOsu2/vAo7q3m9I6YP18Rn341qCVneXmMpyXhjhy8mF8ik3zMNWQcTIHOQFv7qB2emHM5KMJzsrYRGByqBcjeYNyUIZZCJJYVlYAaZbQg4bm5VBaDRkcU/I1L4ZT+wY+/tWFJgksgFtAkPzCRTuIhfgrAoAtoQpHC2UoPsn4]]></content>
       <categories>
         <category>碎碎念</category>
       </categories>
