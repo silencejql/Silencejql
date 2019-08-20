@@ -116,14 +116,14 @@
 
 
   <meta name="description" content="文中指令可在windows命令行中执行测试">
-<meta name="keywords" content="Postgresql">
+<meta name="keywords" content="Postgresql,shell">
 <meta property="og:type" content="article">
 <meta property="og:title" content="数据库自动备份、删除数据">
 <meta property="og:url" content="http://silencejql.coding.me/数据库自动备份、删除数据.html">
 <meta property="og:site_name" content="Silencejql">
 <meta property="og:description" content="文中指令可在windows命令行中执行测试">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-08-20T09:57:19.783Z">
+<meta property="og:updated_time" content="2019-08-20T10:17:01.973Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="数据库自动备份、删除数据">
 <meta name="twitter:description" content="文中指令可在windows命令行中执行测试">
@@ -456,7 +456,7 @@
                 
               
 
-              <time title="创建时间：2019-08-20 17:28:08 / 修改时间：17:57:19" itemprop="dateCreated datePublished" datetime="2019-08-20T17:28:08+08:00">2019-08-20</time>
+              <time title="创建时间：2019-08-20 17:28:08 / 修改时间：18:17:01" itemprop="dateCreated datePublished" datetime="2019-08-20T17:28:08+08:00">2019-08-20</time>
             
 
             
@@ -530,7 +530,7 @@
                 
                   <span class="post-meta-item-text">本文字数：</span>
                 
-                <span title="本文字数">1.3k</span>
+                <span title="本文字数">1.4k</span>
               
               
                 <span class="post-meta-divider">|</span>
@@ -571,7 +571,7 @@
 <blockquote>
 <p>备份保存路径为<code>D:\BBK\DBbackup</code><br>命名为：LocalDB_年_月_日.backup<br><code>D:/&quot;Program Files (x86)&quot;/PostgreSQL/9.5/bin/pg_dump.exe</code>为Postgresql数据库程序所在路径</p>
 </blockquote>
-<h2 id="删除表中数据"><a href="#删除表中数据" class="headerlink" title="删除表中数据"></a>删除表中数据</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">// 删除7天以前的数据</span><br><span class="line">D:/&quot;Program Files (x86)&quot;/PostgreSQL/9.5/bin/psql -h 127.0.0.1 -p 5432 -d LocalDB -U postgres --command &quot;delete from 侧滑表 where 测试时间 &lt; (now() - interval &apos;7 day&apos;)&quot;</span><br></pre></td></tr></table></figure>
+<h2 id="删除表中数据"><a href="#删除表中数据" class="headerlink" title="删除表中数据"></a>删除表中数据</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">// 删除一个月以前的数据</span><br><span class="line">D:/&quot;Program Files (x86)&quot;/PostgreSQL/9.5/bin/psql -h 127.0.0.1 -p 5432 -d LocalDB -U postgres --command &quot;delete from 侧滑表 where 测试时间 &lt; (now() - interval &apos;1 month&apos;)&quot;</span><br></pre></td></tr></table></figure>
 
 <p>说明：</p>
 <blockquote>
@@ -582,7 +582,7 @@
 <h4 id="周"><a href="#周" class="headerlink" title="周"></a>周</h4><p><code>interval &#39;3 week&#39;</code></p>
 <p>说明：interval 可以不写</p>
 <p>运行时会提示数据用户名密码<br>windows系统可在<code>%APPDATA%\postgresql\pgpass.conf</code>中添加服务器信息，实现免密操作<br>格式：地址:端口:数据库:用户名:密码<br>如：<code>127.0.0.1:5432:LocalDB:postgres:123</code><br>参考：<a href="https://www.postgresql.org/docs/current/libpq-pgpass.html" target="_blank" rel="noopener">https://www.postgresql.org/docs/current/libpq-pgpass.html</a></p>
-<h2 id="自动运行"><a href="#自动运行" class="headerlink" title="自动运行"></a>自动运行</h2><p>将上述shell指令分别复制到文本文档中另存为 name.bat，然后创建任务计划自动调用<br>windows运行compmgmt.msc 新建任务计划程序即可</p>
+<h2 id="自动运行"><a href="#自动运行" class="headerlink" title="自动运行"></a>自动运行</h2><p>将上述shell指令分别复制到文本文档中另存为 name.bat，然后创建任务计划自动调用；<br>任务计划创建方法：windows运行compmgmt.msc 新建任务计划程序按提示操作即可</p>
 
       
     </div>
@@ -624,6 +624,8 @@
         <div class="post-tags">
           
             <a href="/tags/Postgresql/" rel="tag"># Postgresql</a>
+          
+            <a href="/tags/shell/" rel="tag"># shell</a>
           
         </div>
       
@@ -791,9 +793,7 @@
                     
                       
                     
-                      
-                    
-                    <span class="site-state-item-count">14</span>
+                    <span class="site-state-item-count">13</span>
                     <span class="site-state-item-name">分类</span>
                   </a>
                 </div>
@@ -878,7 +878,9 @@
                     
                       
                     
-                    <span class="site-state-item-count">34</span>
+                      
+                    
+                    <span class="site-state-item-count">35</span>
                     <span class="site-state-item-name">标签</span>
                   </a>
                 </div>

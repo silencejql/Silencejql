@@ -3,12 +3,13 @@
   <entry>
     <title><![CDATA[数据库自动备份、删除数据]]></title>
     <url>%2F%E6%95%B0%E6%8D%AE%E5%BA%93%E8%87%AA%E5%8A%A8%E5%A4%87%E4%BB%BD%E3%80%81%E5%88%A0%E9%99%A4%E6%95%B0%E6%8D%AE.html</url>
-    <content type="text"><![CDATA[文中指令可在windows命令行中执行测试 Postgresql数据库备份脚本12345echo offset PRJDB=LocalDBset FileName=%PRJDB%_%date:~0,4%_%date:~5,2%_%date:~8,2%.backupif not exist &quot;D:\BBK\DBbackup&quot; (md D:\BBK\DBbackup)D:/&quot;Program Files (x86)&quot;/PostgreSQL/9.5/bin/pg_dump.exe --host localhost --port 5432 --username &quot;postgres&quot; --no-password --format custom --verbose --file &quot;D:\BBK\DBbackup\%FileName%&quot; &quot;LocalDB&quot; 说明： 备份保存路径为D:\BBK\DBbackup命名为：LocalDB_年_月_日.backupD:/&quot;Program Files (x86)&quot;/PostgreSQL/9.5/bin/pg_dump.exe为Postgresql数据库程序所在路径 删除表中数据12// 删除7天以前的数据D:/&quot;Program Files (x86)&quot;/PostgreSQL/9.5/bin/psql -h 127.0.0.1 -p 5432 -d LocalDB -U postgres --command &quot;delete from 侧滑表 where 测试时间 &lt; (now() - interval &apos;7 day&apos;)&quot; 说明： D:/&quot;Program Files (x86)&quot;/PostgreSQL/9.5/bin为Postgresql数据库程序所在文件夹 时间扩展年interval &#39;2 years&#39;interval &#39;2 year&#39;interval &#39;2 y&#39;interval &#39;2 Y&#39;interval &#39;2Y&#39; 月interval &#39;1 month&#39;interval &#39;one month&#39; 周interval &#39;3 week&#39; 说明：interval 可以不写 运行时会提示数据用户名密码windows系统可在%APPDATA%\postgresql\pgpass.conf中添加服务器信息，实现免密操作格式：地址:端口:数据库:用户名:密码如：127.0.0.1:5432:LocalDB:postgres:123参考：https://www.postgresql.org/docs/current/libpq-pgpass.html 自动运行将上述shell指令分别复制到文本文档中另存为 name.bat，然后创建任务计划自动调用windows运行compmgmt.msc 新建任务计划程序即可]]></content>
+    <content type="text"><![CDATA[文中指令可在windows命令行中执行测试 Postgresql数据库备份脚本12345echo offset PRJDB=LocalDBset FileName=%PRJDB%_%date:~0,4%_%date:~5,2%_%date:~8,2%.backupif not exist &quot;D:\BBK\DBbackup&quot; (md D:\BBK\DBbackup)D:/&quot;Program Files (x86)&quot;/PostgreSQL/9.5/bin/pg_dump.exe --host localhost --port 5432 --username &quot;postgres&quot; --no-password --format custom --verbose --file &quot;D:\BBK\DBbackup\%FileName%&quot; &quot;LocalDB&quot; 说明： 备份保存路径为D:\BBK\DBbackup命名为：LocalDB_年_月_日.backupD:/&quot;Program Files (x86)&quot;/PostgreSQL/9.5/bin/pg_dump.exe为Postgresql数据库程序所在路径 删除表中数据12// 删除一个月以前的数据D:/&quot;Program Files (x86)&quot;/PostgreSQL/9.5/bin/psql -h 127.0.0.1 -p 5432 -d LocalDB -U postgres --command &quot;delete from 侧滑表 where 测试时间 &lt; (now() - interval &apos;1 month&apos;)&quot; 说明： D:/&quot;Program Files (x86)&quot;/PostgreSQL/9.5/bin为Postgresql数据库程序所在文件夹 时间扩展年interval &#39;2 years&#39;interval &#39;2 year&#39;interval &#39;2 y&#39;interval &#39;2 Y&#39;interval &#39;2Y&#39; 月interval &#39;1 month&#39;interval &#39;one month&#39; 周interval &#39;3 week&#39; 说明：interval 可以不写 运行时会提示数据用户名密码windows系统可在%APPDATA%\postgresql\pgpass.conf中添加服务器信息，实现免密操作格式：地址:端口:数据库:用户名:密码如：127.0.0.1:5432:LocalDB:postgres:123参考：https://www.postgresql.org/docs/current/libpq-pgpass.html 自动运行将上述shell指令分别复制到文本文档中另存为 name.bat，然后创建任务计划自动调用；任务计划创建方法：windows运行compmgmt.msc 新建任务计划程序按提示操作即可]]></content>
       <categories>
         <category>数据库</category>
       </categories>
       <tags>
         <tag>Postgresql</tag>
+        <tag>shell</tag>
       </tags>
   </entry>
   <entry>
@@ -108,7 +109,7 @@
   <entry>
     <title><![CDATA[无处安放的矫情]]></title>
     <url>%2F%E6%97%A0%E5%A4%84%E5%AE%89%E6%94%BE%E7%9A%84%E7%9F%AB%E6%83%85.html</url>
-    <content type="text"><![CDATA[Enter password to read！ Incorrect Password! No content to display! U2FsdGVkX1+lpLjVqyr98HMB/PZIkftJd9INCWC4/Jc=]]></content>
+    <content type="text"><![CDATA[Enter password to read！ Incorrect Password! No content to display! U2FsdGVkX1+f+SWtOr15V19QD4HFs1F+lP+i8nKHlNg=]]></content>
   </entry>
   <entry>
     <title><![CDATA[C# XML]]></title>
@@ -116,7 +117,6 @@
     <content type="text"><![CDATA[XML创建、读取配置1234567891011121314151617181920212223242526272829303132333435363738394041424344454647484950515253545556575859606162636465666768697071static public void WirteConfig(string FileName, string KeyName, string Value)&#123; try &#123; string FilePath = OnlyOneStartUp.UseConfigPath; string AllFileName = FilePath + "\\" + FileName + ".xml"; if (!Directory.Exists(FilePath)) Directory.CreateDirectory(FilePath); DataSet ds = new DataSet(); if (File.Exists(AllFileName)) ds.ReadXml(AllFileName); if (ds.Tables.Count &lt; 1) ds.Tables.Add(); if (ds.Tables[0].Rows.Count &lt; 1) ds.Tables[0].Rows.Add(); if (!ds.Tables[0].Columns.Contains(KeyName)) ds.Tables[0].Columns.Add(KeyName); ds.Tables[0].Rows[0][KeyName] = Value; ds.WriteXml(AllFileName); &#125; catch (Exception e) &#123; string sError = string.Format("写入配置信息Error:&#123;0&#125;", e.Message); ErrorOut(MethodInfo.GetCurrentMethod().Name, sError); &#125;&#125;/// &lt;summary&gt;/// 读出配置文件/// &lt;/summary&gt;/// &lt;param name="FileName"&gt;配置文件名称&lt;/param&gt;/// &lt;param name="KeyName"&gt;键名&lt;/param&gt;/// &lt;param name="Value"&gt;返回的值&lt;/param&gt;static public bool ReadConfig(string FileName, string KeyName, ref string Value)&#123; try &#123; string FilePath = OnlyOneStartUp.UseConfigPath; string AllFileName = FilePath + "\\" + FileName + ".xml"; if (!Directory.Exists(FilePath)) return false; DataSet ds = new DataSet(); if (File.Exists(AllFileName)) ds.ReadXml(AllFileName); else return false; if (ds.Tables.Count &lt; 1) return false; if (ds.Tables[0].Rows.Count &lt; 1) return false; if (!ds.Tables[0].Columns.Contains(KeyName)) return false; Value = Convert.ToString(ds.Tables[0].Rows[0][KeyName]); return true; &#125; catch (Exception e) &#123; string sError = string.Format("读取配置信息Error:&#123;0&#125;", e.Message); ErrorOut(MethodInfo.GetCurrentMethod().Name, sError); return false; &#125;&#125;static public void ReadConfigEx(string FileName, string KeyName, ref string Value)&#123; if (!ReadConfig(FileName, KeyName, ref Value)) WirteConfig(FileName, KeyName, Value);&#125;]]></content>
       <categories>
         <category>C#</category>
-        <category>XML</category>
       </categories>
       <tags>
         <tag>XML</tag>
@@ -250,7 +250,7 @@
   <entry>
     <title><![CDATA[碎碎念]]></title>
     <url>%2F%E7%A2%8E%E7%A2%8E%E5%BF%B5.html</url>
-    <content type="text"><![CDATA[Enter password to read！ Incorrect Password! No content to display! U2FsdGVkX181DQXUW9CCaL2Une7Aki9M2u9wKyrX/wutOPfuUfsPyaCcvJJFrxfwntKc9vZpHJqboFfQ2vqPL4JZIwaRRu4bkJCeNLqixb2WeckzK9+SoOfBiW7nWkYFGPJsxrNVdm6MW5Z8PaEgbCfZx3J6PbM3dIlaJ4iIT+QPZAi7ilJ2RQUpCkJDVU1XUOGVnYwY3V+AWeBfE7s7mZ8R+niKpc3T4LOHrWjGCbR4ro3jGB9er22aqgGj9zs5G4PDt6TuK/rzW+ycHhBep8XjF9iIJTR0xj2mOND6iZDZvb0ZUjtQh93XNT5029S0eC0AyNM3FdkVLAylvamKggSM3wBjgpbYmb06fdVzed9uyETNn6+Zl/k8DLW1j91Dwg7/RKVQFlBVP497P4JpO3LYDSTCERVTFZD7afQJA4UzGXIcqcCWl05XXVnOFoqmhfhOWMdyKqt41KlPv6xDDHeVF0KTWThztY+uVS0ueNv2y3EJ/cPTc4iaD8P3e9OATdDjpyTXNBfjfjtKsxUnNRcxUXnxjZ/VRcx5fsj+VLDVumfNCSd+djAx5xlj8LiqIbqK+HQc7JlunoZB98hK4L+3q1dix7PWmXXTR7uq5+8ybTcgSZacl9HQQCt3UtOo4urMcTOHBZbZTQMT1Z5E3bPAa1LNPHzmPuD0iuEa1x6cor97KMcgKxKpdakCaoPS]]></content>
+    <content type="text"><![CDATA[Enter password to read！ Incorrect Password! No content to display! U2FsdGVkX1/CcRmtYBPLRe+2fxM5JuPDtgOOEXBJhbbJeGNww9dWzYjiedz0DnV8RREXzXaEORvvUPlPis4Sz/93wsscgKn374A4O3h6yMf3t7r2kGNk5RlehO5Lwi4WskevF+iumGDH21VbwChz62hOkDAgLnbvc/R9EuhuVtLJJPOn+FVa7WHYrNUC9ORGXEjmcT155sa5mJ0Ruih43+FJfwWHkDfmkg26dbVCQk8I1q8uWd7nwPQEvZprAuDBLv3I/V/djOO/8Y9eF/H4YQriqis42NT5XLKFmU8mgJEBsZHNzmp7Li2OCT2CYbbcvM+Gp5yEXL6flYOzALSqo5EcQI3HYrixRlcdejxx+jdEzrkjSzdA+WpwqshQq4uGvGtKzpjl+utdY89Wu67FCpxqmSK0QSlwcNzdMsV210Sbhx83/7wW0NIir+iULnsVTP4MwDizmDNS5weYJ4md0f8tll8FWn/06qfeR/c4Ps2V0cYxD9eT0PMNBeid81IiUlCoUo/ZQEMjhvMA4tNIxmlnjtZ3ry/K6NK2nKVXww3ZfidZ5zdtftJcVtcvkFUVrGPrEVwQ/EhffguDb0VIkPxHNNFHGEoNP3QUh/trPihlpJOIjRkiS+aQe3olyxR52HDJvLvXSo9gqi8ku+0V2gd0JnKJPtUzMHTjc6V4AIGq0qzEfXOhc9qPOn251PKu]]></content>
       <categories>
         <category>碎碎念</category>
       </categories>
