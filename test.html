@@ -115,18 +115,14 @@
 
 
 
-  <meta name="description" content="记录写bug过程中遇到的一些疑问">
-<meta name="keywords" content="C#">
-<meta property="og:type" content="article">
-<meta property="og:title" content="C# 常识">
-<meta property="og:url" content="http://silencejql.coding.me/C-常识.html">
+  <meta property="og:type" content="article">
+<meta property="og:title" content="test">
+<meta property="og:url" content="http://silencejql.coding.me/test.html">
 <meta property="og:site_name" content="Silencejql">
-<meta property="og:description" content="记录写bug过程中遇到的一些疑问">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-07-08T01:44:00.585Z">
+<meta property="og:updated_time" content="2019-08-21T08:05:13.282Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="C# 常识">
-<meta name="twitter:description" content="记录写bug过程中遇到的一些疑问">
+<meta name="twitter:title" content="test">
 
 
 
@@ -136,7 +132,7 @@
 
   
   
-  <link rel="canonical" href="http://silencejql.coding.me/C-常识">
+  <link rel="canonical" href="http://silencejql.coding.me/test">
 
 
 
@@ -146,7 +142,7 @@
   };
 </script>
 
-  <title>C# 常识 | Silencejql</title>
+  <title>test | Silencejql</title>
   <script src="https://cdn.jsdelivr.net/npm/jquery/dist/jquery.min.js"></script>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome/css/font-awesome.min.css">
   <script src="/live2d-widget/autoload.js"></script>
@@ -396,7 +392,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://silencejql.coding.me/C-常识.html">
+    <link itemprop="mainEntityOfPage" href="http://silencejql.coding.me/test.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Justin">
@@ -413,7 +409,7 @@
 
         
         
-          <h2 class="post-title" itemprop="name headline">C# 常识
+          <h2 class="post-title" itemprop="name headline">test
 
               
             
@@ -439,45 +435,12 @@
                 
               
 
-              <time title="创建时间：2019-07-05 10:59:00" itemprop="dateCreated datePublished" datetime="2019-07-05T10:59:00+08:00">2019-07-05</time>
+              <time title="创建时间：2019-08-21 16:05:13" itemprop="dateCreated datePublished" datetime="2019-08-21T16:05:13+08:00">2019-08-21</time>
             
 
-            
-              
-
-              
-                
-                <span class="post-meta-divider">|</span>
-                
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">更新于</span>
-                
-                <time title="修改时间：2019-07-08 09:44:00" itemprop="dateModified" datetime="2019-07-08T09:44:00+08:00">2019-07-08</time>
-              
             
           </span>
 
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/C/" itemprop="url" rel="index"><span itemprop="name">C#</span></a></span>
-
-                
-                
-              
-            </span>
           
 
           
@@ -491,8 +454,8 @@
                 </span>
             
                 <span class="post-meta-item-text">评论数：</span>
-                <a href="/C-常识.html#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count valine-comment-count" data-xid="/C-常识.html" itemprop="commentCount"></span>
+                <a href="/test.html#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/test.html" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -500,7 +463,7 @@
 
           
           
-            <span id="/C-常识.html" class="leancloud_visitors" data-flag-title="C# 常识">
+            <span id="/test.html" class="leancloud_visitors" data-flag-title="test">
               <span class="post-meta-divider">|</span>
               <span class="post-meta-item-icon">
                 <i class="fa fa-eye"></i>
@@ -524,7 +487,7 @@
                 
                   <span class="post-meta-item-text">本文字数：</span>
                 
-                <span title="本文字数">1.5k</span>
+                <span title="本文字数">0</span>
               
               
                 <span class="post-meta-divider">|</span>
@@ -557,30 +520,7 @@
       
 
       
-        <p>记录写bug过程中遇到的一些疑问</p>
-<a id="more"></a>
-
-<h2 id="数据类型"><a href="#数据类型" class="headerlink" title="数据类型"></a>数据类型</h2><p>值类型存储在堆栈上，引用类型存储在堆上。<br>C#类为引用类型，结构为值类型。<br>从值类型转化为引用类型称为装箱，如果方法需要把一个对象作为参数，而且传送一个值类型，装箱操作会自动进行；装箱的值类型可以使用拆箱操作转换为值类型，在拆箱时，<strong>需要使用类型转换运算符</strong>。</p>
-<h2 id="装箱和拆箱"><a href="#装箱和拆箱" class="headerlink" title="装箱和拆箱"></a>装箱和拆箱</h2><p>装箱是一种通过将变量存储到System.Object中来显式地将值类型转换为引用类型的机制。当您装入值时，CLR会将新对象分配到堆中，并将值类型的值复制到该实例中。例如：</p>
-<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> a = <span class="number">20</span>;  </span><br><span class="line"><span class="keyword">object</span> b = a; <span class="comment">//装箱</span></span><br></pre></td></tr></table></figure>
-
-<p>相反的操作是拆箱，它是将引用类型转换回值类型的过程。此过程验证接收数据类型是否与装箱类型一致;<br><code>int c = (int)b; // 拆箱</code></p>
-<h2 id="泛型"><a href="#泛型" class="headerlink" title="泛型"></a>泛型</h2><blockquote>
-<p>特征：</p>
-<blockquote>
-<p>类型安全<br>性能<br>二进制代码复用</p>
-</blockquote>
-</blockquote>
-<p>详见： <a href="/泛型的特点.html" title="泛型的特点">泛型的特点</a></p>
-<h3 id="为什么不用object代替泛型"><a href="#为什么不用object代替泛型" class="headerlink" title="为什么不用object代替泛型"></a>为什么不用object代替泛型</h3><p>由于Object为所有类型的基类，所以可以处理任何数据类型的数据，但是其中存在这拆箱和装箱，如果数据太多会影响到程序的性能。<br>在使用泛型的时候程序会在编译阶段根据我们提供的类型生成相应的二进制代码，无须进行装箱和拆箱操作。</p>
-<h2 id="接口"><a href="#接口" class="headerlink" title="接口"></a>接口</h2><h3 id="为什么要用接口"><a href="#为什么要用接口" class="headerlink" title="为什么要用接口"></a>为什么要用接口</h3><p>接口一般由上层人员发起，下层人员实现。<br>写接口并不是为了扩展，而是为了扩展以后的模块仍然跟项目模块保持高度一致，为了扩展后的规范化。</p>
-<h3 id="实例化接口对象"><a href="#实例化接口对象" class="headerlink" title="实例化接口对象"></a>实例化接口对象</h3><h4 id="接口回调"><a href="#接口回调" class="headerlink" title="接口回调"></a>接口回调</h4><p>接口不仅可以声明对象，而且可以把对象实例化，还可以当做参数被传入。<br>即继承中的向上转型，父类 FL=new 子类()，只不过这里的父类就是interface接口。</p>
-<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">interface</span> <span class="title">Itemp</span></span><br><span class="line">&#123;</span><br><span class="line">  <span class="function"><span class="keyword">double</span> <span class="title">plus</span>(<span class="params"></span>)</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title">num</span> : <span class="title">Itemp</span></span><br><span class="line">&#123;</span><br><span class="line">  <span class="keyword">double</span> aa, bb;</span><br><span class="line">  <span class="function"><span class="keyword">public</span> <span class="title">num</span>(<span class="params"><span class="keyword">double</span> a, <span class="keyword">double</span> b</span>)</span></span><br><span class="line"><span class="function"></span>  &#123;</span><br><span class="line">    <span class="keyword">this</span>.bb = b;</span><br><span class="line">    <span class="keyword">this</span>.aa = a;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="function"><span class="keyword">public</span> <span class="keyword">double</span> <span class="title">plus</span>(<span class="params"></span>)</span></span><br><span class="line"><span class="function"></span>  &#123;</span><br><span class="line">    <span class="keyword">return</span> (aa + bb);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">static</span> <span class="keyword">void</span> <span class="title">Main</span>(<span class="params"><span class="keyword">string</span>[] args</span>)</span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">  Itemp tm = <span class="literal">null</span>;<span class="comment">//声明接口对象引用</span></span><br><span class="line">  tm = <span class="keyword">new</span> num(<span class="number">1</span>, <span class="number">2</span>);<span class="comment">//接口回调(向上转型)</span></span><br><span class="line">  Console.WriteLine(tm.plus());</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h2 id="类型参数约束"><a href="#类型参数约束" class="headerlink" title="类型参数约束"></a>类型参数约束</h2><p>&emsp;&emsp;在定义泛型类时，可以对客户端代码能够在实例化类时用于类型参数的类型种类施加限制。如果客户端代码尝试使用某个约束所不允许的类型来实例化类，则会产生编译时错误。这些限制称为约束。<br>类型参数约束.NET支持的类型参数约束有以下五种：</p>
-<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">where</span> T : <span class="keyword">struct</span>  类型参数必须是值类型；可以指定除 Nullable 以外的任何值类型</span><br><span class="line">where T : class   类型参数必须是引用类型；这一点也适用于任何类、接口、委托或数组类型</span><br><span class="line"><span class="keyword">where</span> T : <span class="keyword">new</span>()   类型参数必须具有无参数的公共构造函数。当与其他约束一起使用时，<span class="keyword">new</span>() 约束必须最后指定</span><br><span class="line"><span class="keyword">where</span> T : NameOfBaseClass   类型参数必须是指定的基类或派生自指定的基类</span><br><span class="line"><span class="keyword">where</span> T : NameOfInterface   类型参数必须是指定的接口或实现指定的接口。可以指定多个接口约束。约束接口也可以是泛型的</span><br><span class="line"><span class="keyword">where</span> T : U    为 T 提供的类型参数必须是为 U 提供的参数或派生自为 U 提供的参数</span><br></pre></td></tr></table></figure>
-
-
+        
       
     </div>
 
@@ -614,15 +554,6 @@
       
     </div>
     <footer class="post-footer">
-      
-        
-          
-        
-        <div class="post-tags">
-          
-            <a href="/tags/C/" rel="tag"># C#</a>
-          
-        </div>
       
 
       
@@ -660,8 +591,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/C-Static.html" rel="next" title="C# Static">
-                <i class="fa fa-chevron-left"></i> C# Static
+              <a href="/数据库自动备份、删除数据.html" rel="next" title="数据库自动备份、删除数据">
+                <i class="fa fa-chevron-left"></i> 数据库自动备份、删除数据
               </a>
             
           </div>
@@ -669,10 +600,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/泛型的特点.html" rel="prev" title="泛型的特点">
-                泛型的特点 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -720,17 +647,8 @@
       
 
       
-        <ul class="sidebar-nav motion-element">
-          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
-            文章目录
-          </li>
-          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
-            站点概览
-          </li>
-        </ul>
-      
 
-      <div class="site-overview-wrap sidebar-panel">
+      <div class="site-overview-wrap sidebar-panel sidebar-panel-active">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -749,7 +667,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">25</span>
+                    <span class="site-state-item-count">26</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
@@ -966,23 +884,6 @@
       </div>
 
       
-      <!--noindex-->
-        <div class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
-          <div class="post-toc">
-
-            
-            
-            
-            
-
-            
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#数据类型"><span class="nav-number">1.</span> <span class="nav-text">数据类型</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#装箱和拆箱"><span class="nav-number">2.</span> <span class="nav-text">装箱和拆箱</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#泛型"><span class="nav-number">3.</span> <span class="nav-text">泛型</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#为什么不用object代替泛型"><span class="nav-number">3.1.</span> <span class="nav-text">为什么不用object代替泛型</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#接口"><span class="nav-number">4.</span> <span class="nav-text">接口</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#为什么要用接口"><span class="nav-number">4.1.</span> <span class="nav-text">为什么要用接口</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#实例化接口对象"><span class="nav-number">4.2.</span> <span class="nav-text">实例化接口对象</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#接口回调"><span class="nav-number">4.2.1.</span> <span class="nav-text">接口回调</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#类型参数约束"><span class="nav-number">5.</span> <span class="nav-text">类型参数约束</span></a></li></ol></div>
-            
-
-          </div>
-        </div>
-      <!--/noindex-->
-      
 
       
     </div>
@@ -1050,7 +951,7 @@
 
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">博客全站共14.2k字</span>
+  <span class="post-count">博客全站共14.3k字</span>
 </div>
 -->
 
