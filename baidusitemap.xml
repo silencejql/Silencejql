@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>http://silencejql.coding.me/%E8%AF%8A%E6%96%AD%E6%8C%87%E4%BB%A4%E8%AF%B4%E6%98%8E--OBD%E6%A8%A1%E5%9D%97.html</loc>
+    <lastmod>2019-08-31</lastmod>
+  </url>  <url>
     <loc>http://silencejql.coding.me/Hexo%20Markdown.html</loc>
     <lastmod>2019-08-21</lastmod>
   </url>  <url>
@@ -26,9 +29,6 @@
     <lastmod>2019-08-21</lastmod>
   </url>  <url>
     <loc>http://silencejql.coding.me/%E6%95%B0%E6%8D%AE%E5%BA%93%E8%87%AA%E5%8A%A8%E5%A4%87%E4%BB%BD%E3%80%81%E5%88%A0%E9%99%A4%E6%95%B0%E6%8D%AE.html</loc>
-    <lastmod>2019-08-21</lastmod>
-  </url>  <url>
-    <loc>http://silencejql.coding.me/%E8%AF%8A%E6%96%AD%E6%8C%87%E4%BB%A4%E8%AF%B4%E6%98%8E--OBD%E6%A8%A1%E5%9D%97.html</loc>
     <lastmod>2019-08-21</lastmod>
   </url>  <url>
     <loc>http://silencejql.coding.me/%E7%8E%B0%E5%9C%BA%E9%97%AE%E9%A2%98%E6%95%B4%E7%90%86.html</loc>
@@ -71,9 +71,6 @@
     <lastmod>2019-08-21</lastmod>
   </url>  <url>
     <loc>http://silencejql.coding.me/C#%20Static.html</loc>
-    <lastmod>2019-08-21</lastmod>
-  </url>  <url>
-    <loc>http://silencejql.coding.me/test.html</loc>
     <lastmod>2019-08-21</lastmod>
   </url>  <url>
     <loc>http://silencejql.coding.me/hello-world.html</loc>
