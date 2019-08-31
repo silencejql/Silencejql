@@ -3,7 +3,7 @@
 	bottom: -3px;
 	left: 0;
 	z-index: 1;
-	line-height: 0;
+	line-height: 2;
 	transition: bottom .3s ease-in-out;
 }
 #waifu:hover {
@@ -47,7 +47,7 @@
 }
 #waifu-tool {
 	color: #aaa;
-	top: 70px;
+	top: 45px;
 	right: -10px;
 	position: absolute;
 	opacity: 0;
