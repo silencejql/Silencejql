@@ -1,6 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[IBM MQ]]></title>
+    <url>%2FIBM%20MQ.html</url>
+    <content type="text"><![CDATA[写在前面 文中代码部分参考 https://blog.csdn.net/java_sparrow/article/details/80626705 网上关于IBMMQ相关资源实在太少，感谢前人的努力，站在前人的肩膀实在上太舒服了。 IBMMQ 客户端安装设置安装安装包已上传网盘，下载后直接安装即可。链接：https://pan.baidu.com/s/1_vQpzKl_FRln77IfQ9aNww提取码：9q0p 服务端配置下文中未提到的部分默认参数即可 创建队列管理器 设置侦听端口 创建通道 创建队列 添加用户组将当前用户添加到IBMMQ管理组其中对象名为下图所示安装IBMMQ后自动创建的组mqm至此，IBMMQ环境设置完毕 C# 连接MQ准备程序中引用：amqmdnet.dll和IBM.WMQ.WCF.dll两个库文件（IBMMQ客户端安装后生成）路径分别为：C:\Program Files\IBM\WebSphere MQ\bin\amqmdnet.dllC:\Program Files\IBM\WebSphere MQ\bin\IBM.WMQ.WCF.dll程序中添加using IBM.WMQ;程序安装完成后可能缺少mqdc.dll文件，可下载后放在安装路径C:\Program Files\IBM\WebSphere MQ\bin64 下链接：https://pan.baidu.com/s/1tlBzhposnCLjS-dXSalWrw提取码：hi00 C#代码初始化123456789static MQQueueManager qMgr;static int CCSID = 437;MQEnvironment.Hostname = "10.91.232.46";MQEnvironment.Channel = "CHANNEL1";MQEnvironment.Port = 8802;MQEnvironment.UserId = "mquser";MQEnvironment.Password = "Password1234";// 队列管理器qMgr = new MQQueueManager("LG_2IN1_QMGR"); 发送数据123456789101112131415161718192021222324252627282930public static void sendMsg(String msgStr)&#123; int openOptions = MQC.MQOO_INPUT_AS_Q_DEF | MQC.MQOO_OUTPUT | MQC.MQOO_INQUIRE; MQQueue queue = null; try &#123; // 建立通道的连接 queue = qMgr.AccessQueue(queueString, openOptions, null, null, null); MQMessage msg = new MQMessage();// 要写入队列的消息 msg.Format = MQC.MQFMT_STRING; msg.CharacterSet = CCSID; msg.Encoding = CCSID; // msg.writeObject(msgStr); msg.WriteString(msgStr); //将消息写入消息对象中 MQPutMessageOptions pmo = new MQPutMessageOptions(); msg.Expiry = -1; // 设置消息用不过期 queue.Put(msg, pmo);// 将消息放入队列 &#125; catch (Exception e) &#123; XmlFO.LogOut("IBMMQ",e.ToString()); &#125; finally &#123; if (queue != null) &#123; try &#123; queue.Close(); // qMgr.disconnect(); XmlFO.LogOut("IBMMQ","写入的消息为：" + msgStr); &#125; catch (MQException e) &#123; XmlFO.LogOut("IBMMQ", e.ToString()); &#125; &#125; &#125;&#125; 读取数据1234567891011121314151617181920212223242526272829303132public static void getMsg()&#123; int openOptions = MQC.MQOO_INPUT_AS_Q_DEF | MQC.MQOO_OUTPUT | MQC.MQOO_INQUIRE; MQQueue queue = null; try &#123; queue = qMgr.accessQueue(queueString, openOptions, null, null, null); System.out.println("==========================="); System.out.println("该队列当前的深度为:" + queue.getCurrentDepth()); System.out.println("==========================="); int depth = queue.getCurrentDepth(); // 将队列的里的消息读出来 while (depth-- &gt; 0) &#123; MQMessage msg = new MQMessage();// 要读的队列的消息 MQGetMessageOptions gmo = new MQGetMessageOptions(); queue.get(msg, gmo); System.out.println("消息的大小为：" + msg.getDataLength()); System.out.println("消息的内容：" + msg.readStringOfByteLength(msg.getDataLength())); System.out.println("---------------------------"); &#125; &#125; catch (Exception e) &#123; XmlFO.LogOut("IBMMQ", e.ToString()); &#125; finally &#123; if (queue != null) &#123; try &#123; queue.close(); qMgr.disconnect(); &#125; catch (MQException e) &#123; XmlFO.LogOut("IBMMQ", e.ToString()); &#125; &#125; &#125;&#125;]]></content>
+      <categories>
+        <category>MQ</category>
+      </categories>
+      <tags>
+        <tag>C#</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[数据库自动备份、删除数据]]></title>
     <url>%2F%E6%95%B0%E6%8D%AE%E5%BA%93%E8%87%AA%E5%8A%A8%E5%A4%87%E4%BB%BD%E3%80%81%E5%88%A0%E9%99%A4%E6%95%B0%E6%8D%AE.html</url>
     <content type="text"><![CDATA[文中指令可在windows命令行中执行测试本文介绍的是实用简单的方式实现所需功能，所有功能均可写在上位机软件中自动实现，但不同现场很难通用通过脚本的形式实现简单易改 Postgresql数据库备份脚本12345echo offset PRJDB=LocalDBset FileName=%PRJDB%_%date:~0,4%_%date:~5,2%_%date:~8,2%.backupif not exist &quot;D:\BBK\DBbackup&quot; (md D:\BBK\DBbackup)D:/&quot;Program Files (x86)&quot;/PostgreSQL/9.5/bin/pg_dump.exe --host localhost --port 5432 --username &quot;postgres&quot; --no-password --format custom --verbose --file &quot;D:\BBK\DBbackup\%FileName%&quot; &quot;LocalDB&quot; 说明： 备份保存路径为D:\BBK\DBbackup命名为：LocalDB_年_月_日.backupD:/&quot;Program Files (x86)&quot;/PostgreSQL/9.5/bin/pg_dump.exe为Postgresql数据库程序所在路径 删除表中数据12// 删除一个月以前的数据D:/&quot;Program Files (x86)&quot;/PostgreSQL/9.5/bin/psql -h 127.0.0.1 -p 5432 -d LocalDB -U postgres --command &quot;delete from 侧滑表 where 测试时间 &lt; (now() - interval &apos;1 month&apos;)&quot; 说明： D:/&quot;Program Files (x86)&quot;/PostgreSQL/9.5/bin为Postgresql数据库程序所在文件夹 时间扩展年interval &#39;2 years&#39;interval &#39;2 year&#39;interval &#39;2 y&#39;interval &#39;2 Y&#39;interval &#39;2Y&#39; 月interval &#39;1 month&#39;interval &#39;one month&#39; 周interval &#39;3 week&#39; 说明：interval 可以不写 运行时会提示数据用户名密码windows系统可在%APPDATA%\postgresql\pgpass.conf中添加服务器信息，实现免密操作格式：地址:端口:数据库:用户名:密码如：127.0.0.1:5432:LocalDB:postgres:123参考：https://www.postgresql.org/docs/current/libpq-pgpass.html 自动运行将上述shell指令分别复制到文本文档中另存为 name.bat，然后创建任务计划自动调用；任务计划创建方法：windows运行compmgmt.msc 新建任务计划程序按提示操作即可 SQLServer数据库自动备份打开数据库，依次进入：管理——维护计划，根据维护计划向导操作即可 删除数据启动SQL Server Agent服务，在步骤中新建作业，类型选择transact-SQL，命令中输入：declare @tm datetimedelete from tablename where tm&gt;=dateadd(month,-6,getdate())//删除表中6个月之前的数据然后打开计划自定义执行周期 Access直接用脚本复制重命名，新建任务计划自动执行 123set PRJDB=LocalDBset FileName=%PRJDB%_%date:~0,4%_%date:~5,2%_%date:~8,2%.backupcopy D:\BBK\LocalDB.mdb D:\BBK\DBbackup\%FileName%&quot;]]></content>
@@ -115,7 +126,7 @@
   <entry>
     <title><![CDATA[无处安放的矫情]]></title>
     <url>%2F%E6%97%A0%E5%A4%84%E5%AE%89%E6%94%BE%E7%9A%84%E7%9F%AB%E6%83%85.html</url>
-    <content type="text"><![CDATA[Enter password to read！ Incorrect Password! No content to display! U2FsdGVkX19h8ks9OFCTJcgEsHYxtSQp6IFxwPPavCY=]]></content>
+    <content type="text"><![CDATA[Enter password to read！ Incorrect Password! No content to display! U2FsdGVkX19Ofl8fY8xLukLbXeRCsBE90EBv96VW2P4=]]></content>
   </entry>
   <entry>
     <title><![CDATA[C# XML]]></title>
@@ -179,17 +190,6 @@
       </tags>
   </entry>
   <entry>
-    <title><![CDATA[C# 常识]]></title>
-    <url>%2FC%23%20%E5%B8%B8%E8%AF%86.html</url>
-    <content type="text"><![CDATA[记录写bug过程中遇到的一些疑问 数据类型值类型存储在堆栈上，引用类型存储在堆上。C#类为引用类型，结构为值类型。从值类型转化为引用类型称为装箱，如果方法需要把一个对象作为参数，而且传送一个值类型，装箱操作会自动进行；装箱的值类型可以使用拆箱操作转换为值类型，在拆箱时，需要使用类型转换运算符。 装箱和拆箱装箱是一种通过将变量存储到System.Object中来显式地将值类型转换为引用类型的机制。当您装入值时，CLR会将新对象分配到堆中，并将值类型的值复制到该实例中。例如： 12int a = 20; object b = a; //装箱 相反的操作是拆箱，它是将引用类型转换回值类型的过程。此过程验证接收数据类型是否与装箱类型一致;int c = (int)b; // 拆箱 泛型 特征： 类型安全性能二进制代码复用 详见： 泛型的特点 为什么不用object代替泛型由于Object为所有类型的基类，所以可以处理任何数据类型的数据，但是其中存在这拆箱和装箱，如果数据太多会影响到程序的性能。在使用泛型的时候程序会在编译阶段根据我们提供的类型生成相应的二进制代码，无须进行装箱和拆箱操作。 接口为什么要用接口接口一般由上层人员发起，下层人员实现。写接口并不是为了扩展，而是为了扩展以后的模块仍然跟项目模块保持高度一致，为了扩展后的规范化。 实例化接口对象接口回调接口不仅可以声明对象，而且可以把对象实例化，还可以当做参数被传入。即继承中的向上转型，父类 FL=new 子类()，只不过这里的父类就是interface接口。 12345678910111213141516171819202122232425interface Itemp&#123; double plus();&#125;public class num : Itemp&#123; double aa, bb; public num(double a, double b) &#123; this.bb = b; this.aa = a; &#125; public double plus() &#123; return (aa + bb); &#125;&#125;static void Main(string[] args)&#123; Itemp tm = null;//声明接口对象引用 tm = new num(1, 2);//接口回调(向上转型) Console.WriteLine(tm.plus());&#125; 类型参数约束&emsp;&emsp;在定义泛型类时，可以对客户端代码能够在实例化类时用于类型参数的类型种类施加限制。如果客户端代码尝试使用某个约束所不允许的类型来实例化类，则会产生编译时错误。这些限制称为约束。类型参数约束.NET支持的类型参数约束有以下五种： 123456where T : struct 类型参数必须是值类型；可以指定除 Nullable 以外的任何值类型where T : class 类型参数必须是引用类型；这一点也适用于任何类、接口、委托或数组类型where T : new() 类型参数必须具有无参数的公共构造函数。当与其他约束一起使用时，new() 约束必须最后指定where T : NameOfBaseClass 类型参数必须是指定的基类或派生自指定的基类where T : NameOfInterface 类型参数必须是指定的接口或实现指定的接口。可以指定多个接口约束。约束接口也可以是泛型的where T : U 为 T 提供的类型参数必须是为 U 提供的参数或派生自为 U 提供的参数]]></content>
-      <categories>
-        <category>C#</category>
-      </categories>
-      <tags>
-        <tag>C#</tag>
-      </tags>
-  </entry>
-  <entry>
     <title><![CDATA[C# Static]]></title>
     <url>%2FC%23%20Static.html</url>
     <content type="text"><![CDATA[静态方法只能访问类的静态成员，不能访问类的非静态成员；非静态方法可以访问类的静态成员，也可以访问类的非静态成员；静态方法不能使用实例来调用，只能使用类名来调用。 static静态全局变量 特点： 1、该变量在全局数据区分配内存。2、初始化：如果不显式初始化，那么将被隐式初始化为0。 静态局部变量 特点： 1、该变量在全局数据区分配内存。2、初始化：如果不显式初始化，那么将被隐式初始化为0。3、它始终驻留在全局数据区，直到程序运行结束。但其作用域为局部作用域，当定义它的函数或语句块结束时，其作用域随之结束。 静态数据成员 内存分配：在程序的全局数据区分配。初始化和定义： 1、静态数据成员定义时要分配空间，所以不能在类声明中定义。2、为了避免在多个使用该类的源文件中，对其重复定义，所以，不能在类的头文件中定义。3、静态数据成员因为程序一开始运行就必需存在，所以其初始化的最佳位置在类的内部实现。 特点 对相于 public,protected,private 关键字的影响它和普通数据成员一样，因为其空间在全局数据区分配，属于所有本类的对象共享，所以，它不属于特定的类对象，在没产生类对象时其作用域就可见，即在没有产生类的实例时，我们就可以操作它。 访问形式 类对象名.静态数据成员名 静态数据成员，主要用在类的所有实例都拥有的属性上。比如，对于一个存款类，帐号相对于每个实例都是不同的，但每个实例的利息是相同的。所以，应该把利息设为存款类的静态数据成员。这有两个好处，第一，不管定义多少个存款类对象，利息数据成员都共享分配在全局区的内存，所以节省存贮空间。第二，一旦利息需要改变时，只要改变一次，则所有存款类对象的利息全改变过来了，因为它们实际上是共用一个东西。 静态成员函数 特点： 1、静态成员函数与类相联系，不与类的对象相联系。2、静态成员函数不能访问非静态数据成员。原因很简单，非静态数据成员属于特定的类实例。 作用： 主要用于对静态数据成员的操作。 调用形式： 类对象名.静态成员函数名（） 总结静态方法只能访问类的静态成员，不能访问类的非静态成员；非静态方法可以访问类的静态成员，也可以访问类的非静态成员；静态方法不能使用实例来调用，只能使用类名来调用。 12345678910111213static int i = getNum();int j = getNum();static int num = 1;static int getNum()&#123; return num;&#125;static void Main(string[] args)&#123; Console.WriteLine("i=&#123;0&#125;",i); Console.WriteLine("j=&#123;0&#125;", new class1().j); Console.Read();&#125; 分析：Console.WriteLine(&quot;i={0}&quot;,i);这里i是static变量，而且类class1是第一次被引用，要先为class1里面所有的static变量分配内存。尽管现在有超线程技术，但是指令在逻辑还是一条一条的按顺序执行的，所以先为static int i分配内存，并且在该内存中保持int的缺省值0，接着再为static int num 变量分配内存，值当然也为0。 然后执行第二步，为变量赋值：先为static int i变量赋值，i＝getNum()，看getNum里面的代码，就是return num，这个时候num的值是0，于是i就为0了。然后对变量num赋值，num＝1；这行代码执行后，num就为1了。 static的优点是什么？为什么要使用static 变量或函数？？有一些频繁使用的东西，如果你每次使用都重新new一下，那么这个开销可能会很高，如果使用static，一直放在内存中，那么想用就直接用，而不需要重新new一块空间初始化数据。那么static就是为了实现一个系统的缓存作用的，其生命周期直到应用程序退出结束。 静态成员包括静态字段和静态属性，静态成员和类相关联，不依赖于对象而存在，只能由类访问，而不能由对象访问； 静态成员属于类所有，无认创建多少实例对象，静态成员在内存中只有一份；实例成员属于类的实例所有，每创建一个实例对象，实例成员都会在内存中分配一块内存区域。所以静态成员一般用于存放共享的数据段，如数据库连接字符串等。 一个类如果只包含静态成员和静态方法，则该类可以定义为静态类，给类加上static修饰符； 静态方法和非静态方法：一、性能上：静态方法和实例方法差别不大。所有方法，不管是静态方法还是实例方法，都是在JIT加载类时分配内存，不同的是静态方法以类名引用，而实例方法对对象实例引用。创建实例时，不会再为类的方法分配内存，所有的实例对象共用一个类的方法代码。因此静态方法和实例方法的调用，在性能上的差别微乎其微。 二、静态方法只能由类访问；实例方法只能由对象访问。 优点： 1、静态变量在类载入时，就装入内存2、使用时不用 New 就意味的不必 创建类中 所有对象，就可以调用 某个方法 缺点： 垃圾回收机制 不能 回收 静态变量，静态类变量 会常驻内存 c#中静态类的优缺点 缺点： 1、整个类型在程序运行期间只加载一次。 这样是对于那些经常使用的类型来说的，那就不用每次使用前都先加载。效率高些。但是对那些不常用的类型来说。2、如果是静态类型，那就要一直占用相当的内存；一直到程序停止。或者应用程序域被卸载。所以应该只对那些常用的类型定义成静态类型。 优点： 1、它们仅包含静态成员。2、它们不能被实例化。3、它们是密封的。4、它们不能包含实例构造函数（C# 编程指南）。]]></content>
@@ -198,6 +198,17 @@
       </categories>
       <tags>
         <tag>static</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[C# 常识]]></title>
+    <url>%2FC%23%20%E5%B8%B8%E8%AF%86.html</url>
+    <content type="text"><![CDATA[记录写bug过程中遇到的一些疑问 数据类型值类型存储在堆栈上，引用类型存储在堆上。C#类为引用类型，结构为值类型。从值类型转化为引用类型称为装箱，如果方法需要把一个对象作为参数，而且传送一个值类型，装箱操作会自动进行；装箱的值类型可以使用拆箱操作转换为值类型，在拆箱时，需要使用类型转换运算符。 装箱和拆箱装箱是一种通过将变量存储到System.Object中来显式地将值类型转换为引用类型的机制。当您装入值时，CLR会将新对象分配到堆中，并将值类型的值复制到该实例中。例如： 12int a = 20; object b = a; //装箱 相反的操作是拆箱，它是将引用类型转换回值类型的过程。此过程验证接收数据类型是否与装箱类型一致;int c = (int)b; // 拆箱 泛型 特征： 类型安全性能二进制代码复用 详见： 泛型的特点 为什么不用object代替泛型由于Object为所有类型的基类，所以可以处理任何数据类型的数据，但是其中存在这拆箱和装箱，如果数据太多会影响到程序的性能。在使用泛型的时候程序会在编译阶段根据我们提供的类型生成相应的二进制代码，无须进行装箱和拆箱操作。 接口为什么要用接口接口一般由上层人员发起，下层人员实现。写接口并不是为了扩展，而是为了扩展以后的模块仍然跟项目模块保持高度一致，为了扩展后的规范化。 实例化接口对象接口回调接口不仅可以声明对象，而且可以把对象实例化，还可以当做参数被传入。即继承中的向上转型，父类 FL=new 子类()，只不过这里的父类就是interface接口。 12345678910111213141516171819202122232425interface Itemp&#123; double plus();&#125;public class num : Itemp&#123; double aa, bb; public num(double a, double b) &#123; this.bb = b; this.aa = a; &#125; public double plus() &#123; return (aa + bb); &#125;&#125;static void Main(string[] args)&#123; Itemp tm = null;//声明接口对象引用 tm = new num(1, 2);//接口回调(向上转型) Console.WriteLine(tm.plus());&#125; 类型参数约束&emsp;&emsp;在定义泛型类时，可以对客户端代码能够在实例化类时用于类型参数的类型种类施加限制。如果客户端代码尝试使用某个约束所不允许的类型来实例化类，则会产生编译时错误。这些限制称为约束。类型参数约束.NET支持的类型参数约束有以下五种： 123456where T : struct 类型参数必须是值类型；可以指定除 Nullable 以外的任何值类型where T : class 类型参数必须是引用类型；这一点也适用于任何类、接口、委托或数组类型where T : new() 类型参数必须具有无参数的公共构造函数。当与其他约束一起使用时，new() 约束必须最后指定where T : NameOfBaseClass 类型参数必须是指定的基类或派生自指定的基类where T : NameOfInterface 类型参数必须是指定的接口或实现指定的接口。可以指定多个接口约束。约束接口也可以是泛型的where T : U 为 T 提供的类型参数必须是为 U 提供的参数或派生自为 U 提供的参数]]></content>
+      <categories>
+        <category>C#</category>
+      </categories>
+      <tags>
+        <tag>C#</tag>
       </tags>
   </entry>
   <entry>
@@ -254,7 +265,7 @@
   <entry>
     <title><![CDATA[碎碎念]]></title>
     <url>%2F%E7%A2%8E%E7%A2%8E%E5%BF%B5.html</url>
-    <content type="text"><![CDATA[Enter password to read！ Incorrect Password! No content to display! U2FsdGVkX19W7TVBtE/2wTLoSMDuo1AhxICxr3eYKJWY4KquZsYSHN16m/hDaDEbbHw4NqYK5LX6PXB51z09TxF40kb+YezjWn6bH9cb9prX7Y4vUPvKlBi3bG0xmCY5jaeTUluFs83+gg8rGhoXfoFbr2Mafxi2Gk9rxgHYP6BufTcZxYpQa/+oREu0/V2enB0Xu7Elacudag7umAvcxgiKa5cHCBsDulxB06wg6Wff7isJfEUvSSDWAXaTieLOqu8wztOeyH67I9TKRXaOZF5E3njOvq/X11u0TN206xcGDdtaxGcafODDYEHdO8FVK+YrV5BO1AbHqul061+GGE5YBRHrUSp5OCu7Vjv/5WR1pvbRYQgpoyFirJhrZuG4BivMvdeRX8kmrfIwobaMVHN5kqS+zzlAYRHGjOYovKWg77zob7UFSgxbe0+8puog3AiwQKG5/BVXtAjnngYcomxIt93+GHa69DSoj+do8SEDRmZIKZwOfrULt8AEjjdZW+eXNdbfEKK6KErV00b531amZUiaOoMrs/yf6rr6/r0LekiidNgk0MogvRIwrVPz8EKfDVGuJWK4RT5gJodNBshcLjPF//beSlqdk8dUIHqC3BVCiCagF4bQ9pT+N/gfIwtqe3Mms0Gm4VRQfQT3VvIPjxUOYhqtW1R+zg3lweP7CYMGuyUaNUYgwfiydGmw]]></content>
+    <content type="text"><![CDATA[Enter password to read！ Incorrect Password! No content to display! U2FsdGVkX1+Y0orhcHZihJcsuw9Jc42oKemreyk76fOV2iOc5iTwLbSb/ORCKjgmudb6YeK284ZbJAw/ry+4yDssW7xMl4aAmLJO6GPdeiAraXtIrFmsr/FMewyUX08RM3nCi7cMB52I4sv/u9EMC3eVuC0hxyScgTELV2QUuzdOnS23fF3GJqHzflzRV9OuGjJ46M+Ikh41vfbh+uoVHBCZFdNxvYEPzhv8/4rVjqM4ZCmIcnH8l0qSaZsrca3qIIGnXJMPB0Zy8VPmopUQPrPvV0XlG/uAYE8UUrtB8/MlufLr1WSP0rxQkxmiNeWLhF/xkQ0/GtBCBaMHtw+tDCIdRGL1JEo/8GD57YHutdmJ+5Lx0ojBkkfnmxWWoPsVjaboyOdfXDKKKuTHlJFXa7gNF6yPbgE1QomUTkiK2pT1lyWTkd6mmkYP3Wcyrdjh1FPWpUjxuMTsSEJWG5jbwn8bCjDYkkrwc1UbIuz5GbQ8o1KZkq8HPOfYiZXy8PMri+WIuat/nveY3Q46NNclncxsO1Bga1NYnXoFt2Re/fpRetuP/m/JvqiQmCsK2K7X/sMroNCgcuyk1Hyy0oljJAqyCW+AiMvPqKD7I1/HuvgKqp7bECjwqUUe6VzLbAtjPJBhmia1VRxLRBsxcEWPy1kWezEd3Dm4I+99mZmAwVJih54ti+TQE6cDJmf/KQpX]]></content>
       <categories>
         <category>碎碎念</category>
       </categories>
