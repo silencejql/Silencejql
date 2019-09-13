@@ -123,10 +123,17 @@
 <meta property="og:site_name" content="Silencejql">
 <meta property="og:description" content="C# IBMMQ">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-09-13T01:39:23.243Z">
+<meta property="og:image" content="http://silencejql.coding.me/IBM%20MQ/QM.PNG">
+<meta property="og:image" content="http://silencejql.coding.me/IBM%20MQ/QM3.png">
+<meta property="og:image" content="http://silencejql.coding.me/IBM%20MQ/CHANNEL.PNG">
+<meta property="og:image" content="http://silencejql.coding.me/IBM%20MQ/Q.PNG">
+<meta property="og:image" content="http://silencejql.coding.me/IBM%20MQ/USER.png">
+<meta property="og:image" content="http://silencejql.coding.me/IBM%20MQ/GROUP.png">
+<meta property="og:updated_time" content="2019-09-13T01:43:31.087Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="IBM MQ">
 <meta name="twitter:description" content="C# IBMMQ">
+<meta name="twitter:image" content="http://silencejql.coding.me/IBM%20MQ/QM.PNG">
 
 
 
@@ -455,7 +462,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2019-09-13 09:39:23" itemprop="dateModified" datetime="2019-09-13T09:39:23+08:00">2019-09-13</time>
+                <time title="修改时间：2019-09-13 09:43:31" itemprop="dateModified" datetime="2019-09-13T09:43:31+08:00">2019-09-13</time>
               
             
           </span>
@@ -524,7 +531,7 @@
                 
                   <span class="post-meta-item-text">本文字数：</span>
                 
-                <span title="本文字数">3.4k</span>
+                <span title="本文字数">3.3k</span>
               
               
                 <span class="post-meta-divider">|</span>
@@ -567,12 +574,12 @@ https://blog.csdn.net/java_sparrow/article/details/80626705
 <a id="more"></a>
 <h2 id="IBMMQ-客户端安装设置"><a href="#IBMMQ-客户端安装设置" class="headerlink" title="IBMMQ 客户端安装设置"></a>IBMMQ 客户端安装设置</h2><h3 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h3><p>安装包已上传网盘，下载后直接安装即可。<br>链接：<a href="https://pan.baidu.com/s/1_vQpzKl_FRln77IfQ9aNww" target="_blank" rel="noopener">https://pan.baidu.com/s/1_vQpzKl_FRln77IfQ9aNww</a><br>提取码：9q0p</p>
 <h3 id="服务端配置"><a href="#服务端配置" class="headerlink" title="服务端配置"></a>服务端配置</h3><p>下文中未提到的部分默认参数即可</p>
-<h4 id="创建队列管理器"><a href="#创建队列管理器" class="headerlink" title="创建队列管理器"></a>创建队列管理器</h4><p>![](IBM MQ/QM.PNG)</p>
-<h5 id="设置侦听端口"><a href="#设置侦听端口" class="headerlink" title="设置侦听端口"></a>设置侦听端口</h5><p>![](IBM MQ/QM3.png)</p>
-<h4 id="创建通道"><a href="#创建通道" class="headerlink" title="创建通道"></a>创建通道</h4><p>![](IBM MQ/CHANNEL.PNG)</p>
-<h4 id="创建队列"><a href="#创建队列" class="headerlink" title="创建队列"></a>创建队列</h4><p>![](IBM MQ/Q.PNG)</p>
-<h4 id="添加用户组"><a href="#添加用户组" class="headerlink" title="添加用户组"></a>添加用户组</h4><p>将当前用户添加到IBMMQ管理组<br>![](IBM MQ/USER.png)</p>
-<p>其中对象名为下图所示安装IBMMQ后自动创建的组mqm<br>![](IBM MQ/GROUP.png)</p>
+<h4 id="创建队列管理器"><a href="#创建队列管理器" class="headerlink" title="创建队列管理器"></a>创建队列管理器</h4><p><img src="IBM%20MQ/QM.PNG" alt></p>
+<h5 id="设置侦听端口"><a href="#设置侦听端口" class="headerlink" title="设置侦听端口"></a>设置侦听端口</h5><p><img src="IBM%20MQ/QM3.png" alt></p>
+<h4 id="创建通道"><a href="#创建通道" class="headerlink" title="创建通道"></a>创建通道</h4><p><img src="IBM%20MQ/CHANNEL.PNG" alt></p>
+<h4 id="创建队列"><a href="#创建队列" class="headerlink" title="创建队列"></a>创建队列</h4><p><img src="IBM%20MQ/Q.PNG" alt></p>
+<h4 id="添加用户组"><a href="#添加用户组" class="headerlink" title="添加用户组"></a>添加用户组</h4><p>将当前用户添加到IBMMQ管理组<br><img src="IBM%20MQ/USER.png" alt></p>
+<p>其中对象名为下图所示安装IBMMQ后自动创建的组mqm<br><img src="IBM%20MQ/GROUP.png" alt></p>
 <p>至此，IBMMQ环境设置完毕</p>
 <h2 id="C-连接MQ"><a href="#C-连接MQ" class="headerlink" title="C# 连接MQ"></a>C# 连接MQ</h2><h3 id="准备"><a href="#准备" class="headerlink" title="准备"></a>准备</h3><p>程序中引用：amqmdnet.dll和IBM.WMQ.WCF.dll两个库文件（IBMMQ客户端安装后生成）<br>路径分别为：<br>C:\Program Files\IBM\WebSphere MQ\bin\amqmdnet.dll<br>C:\Program Files\IBM\WebSphere MQ\bin\IBM.WMQ.WCF.dll<br>程序中添加using IBM.WMQ;<br>程序安装完成后可能缺少mqdc.dll文件，可下载后放在安装路径<br>C:\Program Files\IBM\WebSphere MQ\bin64 下<br>链接：<a href="https://pan.baidu.com/s/1tlBzhposnCLjS-dXSalWrw" target="_blank" rel="noopener">https://pan.baidu.com/s/1tlBzhposnCLjS-dXSalWrw</a><br>提取码：hi00</p>
 <h3 id="C-代码"><a href="#C-代码" class="headerlink" title="C#代码"></a>C#代码</h3><h4 id="初始化"><a href="#初始化" class="headerlink" title="初始化"></a>初始化</h4><figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">static</span> MQQueueManager qMgr;</span><br><span class="line"><span class="keyword">static</span> <span class="keyword">int</span> CCSID = <span class="number">437</span>;</span><br><span class="line">MQEnvironment.Hostname = <span class="string">"10.91.232.46"</span>;</span><br><span class="line">MQEnvironment.Channel = <span class="string">"CHANNEL1"</span>;</span><br><span class="line">MQEnvironment.Port = <span class="number">8802</span>;</span><br><span class="line">MQEnvironment.UserId = <span class="string">"mquser"</span>;</span><br><span class="line">MQEnvironment.Password = <span class="string">"Password1234"</span>;</span><br><span class="line"><span class="comment">// 队列管理器</span></span><br><span class="line">qMgr = <span class="keyword">new</span> MQQueueManager(<span class="string">"LG_2IN1_QMGR"</span>);</span><br></pre></td></tr></table></figure>
