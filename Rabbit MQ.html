@@ -123,10 +123,12 @@
 <meta property="og:site_name" content="Silencejql">
 <meta property="og:description" content="C# Rabbit MQ">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-09-19T14:32:50.366Z">
+<meta property="og:image" content="http://silencejql.coding.me/Rabbit%20MQ/%E5%AE%89%E8%A3%85%E6%88%90%E5%8A%9F.png">
+<meta property="og:updated_time" content="2019-09-23T11:49:17.680Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Rabbit MQ">
 <meta name="twitter:description" content="C# Rabbit MQ">
+<meta name="twitter:image" content="http://silencejql.coding.me/Rabbit%20MQ/%E5%AE%89%E8%A3%85%E6%88%90%E5%8A%9F.png">
 
 
 
@@ -439,12 +441,23 @@
                 
               
 
-              <time title="创建时间：2019-09-19 18:38:53 / 修改时间：22:32:50" itemprop="dateCreated datePublished" datetime="2019-09-19T18:38:53+08:00">2019-09-19</time>
+              <time title="创建时间：2019-09-19 18:38:53" itemprop="dateCreated datePublished" datetime="2019-09-19T18:38:53+08:00">2019-09-19</time>
             
 
             
               
 
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2019-09-23 19:49:17" itemprop="dateModified" datetime="2019-09-23T19:49:17+08:00">2019-09-23</time>
               
             
           </span>
@@ -553,8 +566,7 @@
 <a id="more"></a>
 <h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><h3 id="Erlang安装"><a href="#Erlang安装" class="headerlink" title="Erlang安装"></a>Erlang安装</h3><p>Rabbit MQ安装前需先安装Erlang语言环境安装包下载地址：<br>链接：<a href="https://pan.baidu.com/s/14_Z6JUdvQfY8PGQ4NBb73A" target="_blank" rel="noopener">https://pan.baidu.com/s/14_Z6JUdvQfY8PGQ4NBb73A</a><br>提取码：abtt</p>
 <h3 id="Rabbit-MQ服务端安装"><a href="#Rabbit-MQ服务端安装" class="headerlink" title="Rabbit MQ服务端安装"></a>Rabbit MQ服务端安装</h3><h4 id="安装-1"><a href="#安装-1" class="headerlink" title="安装"></a>安装</h4><p>软件安装在C盘(第一次安装到D盘后进入命令行程序不能执行，有兴趣可以研究研究)安装包下载地址：<br>链接：<a href="https://pan.baidu.com/s/1NbHfVoGyo_oVAXzaTnZuAw" target="_blank" rel="noopener">https://pan.baidu.com/s/1NbHfVoGyo_oVAXzaTnZuAw</a><br>提取码：9am0</p>
-<h4 id="启用管理工具"><a href="#启用管理工具" class="headerlink" title="启用管理工具"></a>启用管理工具</h4><p>在服务程序中确保RabbitMQ服务已启用<br>安装完成后打开所有程序中的RabbitMQ Command Prompt (sbin dir)<br>输入命令：’rabbitmq-plugins enable rabbitmq_management’</p>
-<p>打开浏览器输入<a href="http://localhost:15672" target="_blank" rel="noopener">http://localhost:15672</a><br>默认账号、密码均为guest</p>
+<h4 id="启用管理工具"><a href="#启用管理工具" class="headerlink" title="启用管理工具"></a>启用管理工具</h4><p>在服务程序中确保RabbitMQ服务已启用<br>安装完成后打开所有程序中的RabbitMQ Command Prompt (sbin dir)<br>输入命令：’rabbitmq-plugins enable rabbitmq_management’<br><img src="Rabbit%20MQ/%E5%AE%89%E8%A3%85%E6%88%90%E5%8A%9F.png" alt><br>打开浏览器输入<a href="http://localhost:15672" target="_blank" rel="noopener">http://localhost:15672</a><br>默认账号、密码均为guest</p>
 <h2 id="C-Producer"><a href="#C-Producer" class="headerlink" title="C# Producer"></a>C# Producer</h2><p>项目中需要引用RabbitMQ.Client.dll下载链接为：<br>链接：<a href="https://pan.baidu.com/s/1aJ-8RVJnJWibeqtPcTn9hw" target="_blank" rel="noopener">https://pan.baidu.com/s/1aJ-8RVJnJWibeqtPcTn9hw</a><br>提取码：9d8n<br>此版本支持.Net4.0，全版本请自行下载<br>下载地址：<a href="http://www.rabbitmq.com/releases/rabbitmq-dotnet-client/" target="_blank" rel="noopener">http://www.rabbitmq.com/releases/rabbitmq-dotnet-client/</a></p>
 <figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">using</span> RabbitMQ.Client;</span><br><span class="line"><span class="keyword">var</span> factory = <span class="keyword">new</span> ConnectionFactory();</span><br><span class="line">factory.HostName = <span class="string">"localhost"</span>;<span class="comment">//RabbitMQ服务在本地运行127.0.0.1</span></span><br><span class="line">factory.UserName = <span class="string">"guest"</span>;<span class="comment">//用户名</span></span><br><span class="line">factory.Password = <span class="string">"guest"</span>;<span class="comment">//密码</span></span><br><span class="line"><span class="keyword">using</span> (<span class="keyword">var</span> connection = factory.CreateConnection())</span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">using</span> (<span class="keyword">var</span> channel = connection.CreateModel())<span class="comment">//创建一个Channel</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="comment">/*在创建队列的时候，只有RabbitMQ上该队列不存在，才会去创建。</span></span><br><span class="line"><span class="comment">        消息是以二进制数组的形式传输的，所以如果消息是实体对象的话，需要序列化和然后转化为二进制数组。*/</span></span><br><span class="line">        channel.QueueDeclare(<span class="string">"hello"</span>, <span class="literal">false</span>, <span class="literal">false</span>, <span class="literal">false</span>, <span class="literal">null</span>);<span class="comment">//创建一个名称为hello的消息队列</span></span><br><span class="line">        <span class="keyword">string</span> message = <span class="string">"Hello World"</span>; <span class="comment">//传递的消息内容</span></span><br><span class="line">        <span class="keyword">var</span> body = Encoding.UTF8.GetBytes(message);</span><br><span class="line">        channel.BasicPublish(<span class="string">""</span>, <span class="string">"hello"</span>, <span class="literal">null</span>, body); <span class="comment">//开始传递</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
@@ -632,7 +644,7 @@
   <p><span>本文标题:</span><a href="/Rabbit MQ.html">Rabbit MQ</a></p>
   <p><span>文章作者:</span><a href="/" title="访问 Justin 的个人博客">Justin</a></p>
   <p><span>发布时间:</span>2019年09月19日 - 18:09</p>
-  <p><span>最后更新:</span>2019年09月19日 - 22:09</p>
+  <p><span>最后更新:</span>2019年09月23日 - 19:09</p>
   <p><span>原始链接:</span><a href="/Rabbit MQ.html" title="Rabbit MQ">http://silencejql.coding.me/Rabbit MQ.html</a>
     <span class="copy-path" title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="http://silencejql.coding.me/Rabbit MQ.html" aria-label="复制成功！"></i></span>
   </p>
@@ -937,7 +949,9 @@
                     
                       
                     
-                    <span class="site-state-item-count">36</span>
+                      
+                    
+                    <span class="site-state-item-count">37</span>
                     <span class="site-state-item-name">标签</span>
                   </a>
                 </div>
@@ -1087,7 +1101,7 @@
     
       <span class="post-meta-item-text">站点阅读时长 &asymp;</span>
     
-    <span title="站点阅读时长">50 分钟</span>
+    <span title="站点阅读时长">51 分钟</span>
   
 </div>
 <!--
@@ -1112,7 +1126,7 @@
 
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">博客全站共16.7k字</span>
+  <span class="post-count">博客全站共16.9k字</span>
 </div>
 -->
 

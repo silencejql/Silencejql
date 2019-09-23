@@ -116,7 +116,7 @@
 
 
   <meta name="description" content="C# IBMMQ">
-<meta name="keywords" content="C#">
+<meta name="keywords" content="C#,IBMMQ">
 <meta property="og:type" content="article">
 <meta property="og:title" content="IBM MQ">
 <meta property="og:url" content="http://silencejql.coding.me/IBM MQ.html">
@@ -129,7 +129,7 @@
 <meta property="og:image" content="http://silencejql.coding.me/IBM%20MQ/Q.PNG">
 <meta property="og:image" content="http://silencejql.coding.me/IBM%20MQ/USER.png">
 <meta property="og:image" content="http://silencejql.coding.me/IBM%20MQ/GROUP.png">
-<meta property="og:updated_time" content="2019-09-13T01:43:31.087Z">
+<meta property="og:updated_time" content="2019-09-23T11:46:58.674Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="IBM MQ">
 <meta name="twitter:description" content="C# IBMMQ">
@@ -462,7 +462,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2019-09-13 09:43:31" itemprop="dateModified" datetime="2019-09-13T09:43:31+08:00">2019-09-13</time>
+                <time title="修改时间：2019-09-23 19:46:58" itemprop="dateModified" datetime="2019-09-23T19:46:58+08:00">2019-09-23</time>
               
             
           </span>
@@ -531,7 +531,7 @@
                 
                   <span class="post-meta-item-text">本文字数：</span>
                 
-                <span title="本文字数">3.3k</span>
+                <span title="本文字数">3.9k</span>
               
               
                 <span class="post-meta-divider">|</span>
@@ -544,7 +544,7 @@
                 
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
-                <span title="阅读时长">3 分钟</span>
+                <span title="阅读时长">4 分钟</span>
               
             </div>
           
@@ -570,9 +570,10 @@
 文中代码部分参考
 https://blog.csdn.net/java_sparrow/article/details/80626705
 
-<p>网上关于IBMMQ相关资源实在太少，感谢前人的努力，站在前人的肩膀实在上太舒服了。</p>
+<p><strong>若只做客户端部分的设计不需要安装客户端</strong></p>
+<p>网上关于IBMMQ相关资源实在太少，感谢前人的努力，站在前人的肩膀实在上太舒服了</p>
 <a id="more"></a>
-<h2 id="IBMMQ-客户端安装设置"><a href="#IBMMQ-客户端安装设置" class="headerlink" title="IBMMQ 客户端安装设置"></a>IBMMQ 客户端安装设置</h2><h3 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h3><p>安装包已上传网盘，下载后直接安装即可。<br>链接：<a href="https://pan.baidu.com/s/1_vQpzKl_FRln77IfQ9aNww" target="_blank" rel="noopener">https://pan.baidu.com/s/1_vQpzKl_FRln77IfQ9aNww</a><br>提取码：9q0p</p>
+<h2 id="IBMMQ-软件安装设置"><a href="#IBMMQ-软件安装设置" class="headerlink" title="IBMMQ 软件安装设置"></a>IBMMQ 软件安装设置</h2><h3 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h3><p>安装包(WebSphereMQ8.0)已上传网盘，下载后直接安装即可。<br>链接：<a href="https://pan.baidu.com/s/1P9Dz74tvf8_SExH0Dl0hHA" target="_blank" rel="noopener">https://pan.baidu.com/s/1P9Dz74tvf8_SExH0Dl0hHA</a><br>提取码：0a87</p>
 <h3 id="服务端配置"><a href="#服务端配置" class="headerlink" title="服务端配置"></a>服务端配置</h3><p>下文中未提到的部分默认参数即可</p>
 <h4 id="创建队列管理器"><a href="#创建队列管理器" class="headerlink" title="创建队列管理器"></a>创建队列管理器</h4><p><img src="IBM%20MQ/QM.PNG" alt></p>
 <h5 id="设置侦听端口"><a href="#设置侦听端口" class="headerlink" title="设置侦听端口"></a>设置侦听端口</h5><p><img src="IBM%20MQ/QM3.png" alt></p>
@@ -581,8 +582,11 @@ https://blog.csdn.net/java_sparrow/article/details/80626705
 <h4 id="添加用户组"><a href="#添加用户组" class="headerlink" title="添加用户组"></a>添加用户组</h4><p>将当前用户添加到IBMMQ管理组<br><img src="IBM%20MQ/USER.png" alt></p>
 <p>其中对象名为下图所示安装IBMMQ后自动创建的组mqm<br><img src="IBM%20MQ/GROUP.png" alt></p>
 <p>至此，IBMMQ环境设置完毕</p>
-<h2 id="C-连接MQ"><a href="#C-连接MQ" class="headerlink" title="C# 连接MQ"></a>C# 连接MQ</h2><h3 id="准备"><a href="#准备" class="headerlink" title="准备"></a>准备</h3><p>程序中引用：amqmdnet.dll和IBM.WMQ.WCF.dll两个库文件（IBMMQ客户端安装后生成）<br>路径分别为：<br>C:\Program Files\IBM\WebSphere MQ\bin\amqmdnet.dll<br>C:\Program Files\IBM\WebSphere MQ\bin\IBM.WMQ.WCF.dll<br>程序中添加using IBM.WMQ;<br>程序安装完成后可能缺少mqdc.dll文件，可下载后放在安装路径<br>C:\Program Files\IBM\WebSphere MQ\bin64 下<br>链接：<a href="https://pan.baidu.com/s/1tlBzhposnCLjS-dXSalWrw" target="_blank" rel="noopener">https://pan.baidu.com/s/1tlBzhposnCLjS-dXSalWrw</a><br>提取码：hi00</p>
-<h3 id="C-代码"><a href="#C-代码" class="headerlink" title="C#代码"></a>C#代码</h3><h4 id="初始化"><a href="#初始化" class="headerlink" title="初始化"></a>初始化</h4><figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">static</span> MQQueueManager qMgr;</span><br><span class="line"><span class="keyword">static</span> <span class="keyword">int</span> CCSID = <span class="number">437</span>;</span><br><span class="line">MQEnvironment.Hostname = <span class="string">"10.91.232.46"</span>;</span><br><span class="line">MQEnvironment.Channel = <span class="string">"CHANNEL1"</span>;</span><br><span class="line">MQEnvironment.Port = <span class="number">8802</span>;</span><br><span class="line">MQEnvironment.UserId = <span class="string">"mquser"</span>;</span><br><span class="line">MQEnvironment.Password = <span class="string">"Password1234"</span>;</span><br><span class="line"><span class="comment">// 队列管理器</span></span><br><span class="line">qMgr = <span class="keyword">new</span> MQQueueManager(<span class="string">"LG_2IN1_QMGR"</span>);</span><br></pre></td></tr></table></figure>
+<h2 id="C-连接MQ"><a href="#C-连接MQ" class="headerlink" title="C# 连接MQ"></a>C# 连接MQ</h2><h3 id="准备"><a href="#准备" class="headerlink" title="准备"></a>准备</h3><h4 id="已安装IBMMQ软件"><a href="#已安装IBMMQ软件" class="headerlink" title="已安装IBMMQ软件"></a>已安装IBMMQ软件</h4><p>程序中引用：amqmdnet.dll库文件（IBMMQ客户端安装后生成）<br>路径分别为：<br>C:\Program Files\IBM\WebSphere MQ\bin\amqmdnet.dll<br>程序中添加using IBM.WMQ;<br>程序安装完成后可能缺少mqdc.dll文件，可下载后放在安装路径<br>C:\Program Files\IBM\WebSphere MQ\bin64 下<br>链接：<a href="https://pan.baidu.com/s/19XMuE1q46K1E3BfO8lPPIQ" target="_blank" rel="noopener">https://pan.baidu.com/s/19XMuE1q46K1E3BfO8lPPIQ</a><br>提取码：5qhq</p>
+<h4 id="免安装IBMMQ"><a href="#免安装IBMMQ" class="headerlink" title="免安装IBMMQ"></a>免安装IBMMQ</h4><p>准备好amqmdnet.dll在程序中直接引用即可下载地址：<br>链接：<a href="https://pan.baidu.com/s/1Qb4bdDpqXmyQO5_Jx4hmnA" target="_blank" rel="noopener">https://pan.baidu.com/s/1Qb4bdDpqXmyQO5_Jx4hmnA</a><br>提取码：soua<br>若缺少其他文件请自取：IBMMQ8.0安装路径Bin文件夹<br>链接：<a href="https://pan.baidu.com/s/1vdg4J2I1-1qLcHh_hnfXBA" target="_blank" rel="noopener">https://pan.baidu.com/s/1vdg4J2I1-1qLcHh_hnfXBA</a><br>提取码：kgi9</p>
+<h3 id="C-代码"><a href="#C-代码" class="headerlink" title="C#代码"></a>C#代码</h3><h4 id="初始化"><a href="#初始化" class="headerlink" title="初始化"></a>初始化</h4><h5 id="方式一"><a href="#方式一" class="headerlink" title="方式一"></a>方式一</h5><figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">static</span> MQQueueManager qMgr;</span><br><span class="line"><span class="keyword">static</span> <span class="keyword">int</span> CCSID = <span class="number">437</span>;</span><br><span class="line">MQEnvironment.Hostname = <span class="string">"10.91.232.46"</span>;</span><br><span class="line">MQEnvironment.Channel = <span class="string">"CHANNEL1"</span>;</span><br><span class="line">MQEnvironment.Port = <span class="number">8802</span>;</span><br><span class="line">MQEnvironment.UserId = <span class="string">"user"</span>;</span><br><span class="line">MQEnvironment.Password = <span class="string">"Password"</span>;</span><br><span class="line"><span class="comment">// 队列管理器</span></span><br><span class="line">qMgr = <span class="keyword">new</span> MQQueueManager(<span class="string">"LG_2IN1_QMGR"</span>);</span><br></pre></td></tr></table></figure>
+
+<h5 id="方式二"><a href="#方式二" class="headerlink" title="方式二"></a>方式二</h5><figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">static</span> MQQueueManager qMgr;</span><br><span class="line">Hashtable queueProperties = <span class="keyword">new</span> Hashtable();</span><br><span class="line">queueProperties[MQC.TRANSPORT_PROPERTY] = MQC.TRANSPORT_MQSERIES_MANAGED;</span><br><span class="line">queueProperties[MQC.HOST_NAME_PROPERTY] = <span class="string">"192.168.1.9"</span>;</span><br><span class="line">queueProperties[MQC.PORT_PROPERTY] = <span class="number">8802</span>;</span><br><span class="line">queueProperties[MQC.CHANNEL_PROPERTY] = <span class="string">"CHANNEL1"</span>;</span><br><span class="line">queueProperties[MQC.USER_ID_PROPERTY] = <span class="string">"user"</span>;</span><br><span class="line">queueProperties[MQC.PASSWORD_PROPERTY] = <span class="string">"Password"</span>;</span><br><span class="line">queueProperties[MQC.CCSID_PROPERTY] = <span class="string">"1381"</span>;</span><br><span class="line">qMgr = <span class="keyword">new</span> MQQueueManager(<span class="string">"LG_2IN1_QMGR"</span>, queueProperties);</span><br></pre></td></tr></table></figure>
 
 <h4 id="发送数据"><a href="#发送数据" class="headerlink" title="发送数据"></a>发送数据</h4><figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">sendMsg</span>(<span class="params">String msgStr</span>)</span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> openOptions = MQC.MQOO_INPUT_AS_Q_DEF | MQC.MQOO_OUTPUT | MQC.MQOO_INQUIRE;</span><br><span class="line">    MQQueue queue = <span class="literal">null</span>;</span><br><span class="line">    <span class="keyword">try</span> &#123;</span><br><span class="line">        <span class="comment">// 建立通道的连接</span></span><br><span class="line">        queue = qMgr.AccessQueue(queueString, openOptions, <span class="literal">null</span>, <span class="literal">null</span>, <span class="literal">null</span>);</span><br><span class="line">        MQMessage msg = <span class="keyword">new</span> MQMessage();<span class="comment">// 要写入队列的消息</span></span><br><span class="line">        msg.Format = MQC.MQFMT_STRING;</span><br><span class="line">        msg.CharacterSet = CCSID;</span><br><span class="line">        msg.Encoding = CCSID;</span><br><span class="line">        <span class="comment">// msg.writeObject(msgStr);</span></span><br><span class="line">        msg.WriteString(msgStr); <span class="comment">//将消息写入消息对象中</span></span><br><span class="line">        MQPutMessageOptions pmo = <span class="keyword">new</span> MQPutMessageOptions();</span><br><span class="line">        msg.Expiry = <span class="number">-1</span>; <span class="comment">// 设置消息用不过期</span></span><br><span class="line">        queue.Put(msg, pmo);<span class="comment">// 将消息放入队列</span></span><br><span class="line">    &#125; <span class="keyword">catch</span> (Exception e) &#123;</span><br><span class="line">        XmlFO.LogOut(<span class="string">"IBMMQ"</span>,e.ToString());</span><br><span class="line">    &#125; <span class="keyword">finally</span> &#123;</span><br><span class="line">        <span class="keyword">if</span> (queue != <span class="literal">null</span>) &#123;</span><br><span class="line">            <span class="keyword">try</span> &#123;</span><br><span class="line">                queue.Close();</span><br><span class="line">                <span class="comment">// qMgr.disconnect();</span></span><br><span class="line">                XmlFO.LogOut(<span class="string">"IBMMQ"</span>,<span class="string">"写入的消息为："</span> + msgStr);</span><br><span class="line">            &#125; <span class="keyword">catch</span> (MQException e) &#123;</span><br><span class="line">                XmlFO.LogOut(<span class="string">"IBMMQ"</span>, e.ToString());</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
@@ -609,7 +613,7 @@ https://blog.csdn.net/java_sparrow/article/details/80626705
   <p><span>本文标题:</span><a href="/IBM MQ.html">IBM MQ</a></p>
   <p><span>文章作者:</span><a href="/" title="访问 Justin 的个人博客">Justin</a></p>
   <p><span>发布时间:</span>2019年09月12日 - 19:09</p>
-  <p><span>最后更新:</span>2019年09月13日 - 09:09</p>
+  <p><span>最后更新:</span>2019年09月23日 - 19:09</p>
   <p><span>原始链接:</span><a href="/IBM MQ.html" title="IBM MQ">http://silencejql.coding.me/IBM MQ.html</a>
     <span class="copy-path" title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="http://silencejql.coding.me/IBM MQ.html" aria-label="复制成功！"></i></span>
   </p>
@@ -658,6 +662,8 @@ https://blog.csdn.net/java_sparrow/article/details/80626705
         <div class="post-tags">
           
             <a href="/tags/C/" rel="tag"># C#</a>
+          
+            <a href="/tags/IBMMQ/" rel="tag"># IBMMQ</a>
           
         </div>
       
@@ -916,7 +922,9 @@ https://blog.csdn.net/java_sparrow/article/details/80626705
                     
                       
                     
-                    <span class="site-state-item-count">36</span>
+                      
+                    
+                    <span class="site-state-item-count">37</span>
                     <span class="site-state-item-name">标签</span>
                   </a>
                 </div>
@@ -1017,7 +1025,7 @@ https://blog.csdn.net/java_sparrow/article/details/80626705
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#IBMMQ-客户端安装设置"><span class="nav-number">1.</span> <span class="nav-text">IBMMQ 客户端安装设置</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#安装"><span class="nav-number">1.1.</span> <span class="nav-text">安装</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#服务端配置"><span class="nav-number">1.2.</span> <span class="nav-text">服务端配置</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#创建队列管理器"><span class="nav-number">1.2.1.</span> <span class="nav-text">创建队列管理器</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#设置侦听端口"><span class="nav-number">1.2.1.1.</span> <span class="nav-text">设置侦听端口</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#创建通道"><span class="nav-number">1.2.2.</span> <span class="nav-text">创建通道</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#创建队列"><span class="nav-number">1.2.3.</span> <span class="nav-text">创建队列</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#添加用户组"><span class="nav-number">1.2.4.</span> <span class="nav-text">添加用户组</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#C-连接MQ"><span class="nav-number">2.</span> <span class="nav-text">C# 连接MQ</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#准备"><span class="nav-number">2.1.</span> <span class="nav-text">准备</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#C-代码"><span class="nav-number">2.2.</span> <span class="nav-text">C#代码</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#初始化"><span class="nav-number">2.2.1.</span> <span class="nav-text">初始化</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#发送数据"><span class="nav-number">2.2.2.</span> <span class="nav-text">发送数据</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#读取数据"><span class="nav-number">2.2.3.</span> <span class="nav-text">读取数据</span></a></li></ol></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#IBMMQ-软件安装设置"><span class="nav-number">1.</span> <span class="nav-text">IBMMQ 软件安装设置</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#安装"><span class="nav-number">1.1.</span> <span class="nav-text">安装</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#服务端配置"><span class="nav-number">1.2.</span> <span class="nav-text">服务端配置</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#创建队列管理器"><span class="nav-number">1.2.1.</span> <span class="nav-text">创建队列管理器</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#设置侦听端口"><span class="nav-number">1.2.1.1.</span> <span class="nav-text">设置侦听端口</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#创建通道"><span class="nav-number">1.2.2.</span> <span class="nav-text">创建通道</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#创建队列"><span class="nav-number">1.2.3.</span> <span class="nav-text">创建队列</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#添加用户组"><span class="nav-number">1.2.4.</span> <span class="nav-text">添加用户组</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#C-连接MQ"><span class="nav-number">2.</span> <span class="nav-text">C# 连接MQ</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#准备"><span class="nav-number">2.1.</span> <span class="nav-text">准备</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#已安装IBMMQ软件"><span class="nav-number">2.1.1.</span> <span class="nav-text">已安装IBMMQ软件</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#免安装IBMMQ"><span class="nav-number">2.1.2.</span> <span class="nav-text">免安装IBMMQ</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#C-代码"><span class="nav-number">2.2.</span> <span class="nav-text">C#代码</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#初始化"><span class="nav-number">2.2.1.</span> <span class="nav-text">初始化</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#方式一"><span class="nav-number">2.2.1.1.</span> <span class="nav-text">方式一</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#方式二"><span class="nav-number">2.2.1.2.</span> <span class="nav-text">方式二</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#发送数据"><span class="nav-number">2.2.2.</span> <span class="nav-text">发送数据</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#读取数据"><span class="nav-number">2.2.3.</span> <span class="nav-text">读取数据</span></a></li></ol></li></ol></li></ol></div>
             
 
           </div>
@@ -1066,7 +1074,7 @@ https://blog.csdn.net/java_sparrow/article/details/80626705
     
       <span class="post-meta-item-text">站点阅读时长 &asymp;</span>
     
-    <span title="站点阅读时长">50 分钟</span>
+    <span title="站点阅读时长">51 分钟</span>
   
 </div>
 <!--
@@ -1091,7 +1099,7 @@ https://blog.csdn.net/java_sparrow/article/details/80626705
 
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">博客全站共16.7k字</span>
+  <span class="post-count">博客全站共16.9k字</span>
 </div>
 -->
 
