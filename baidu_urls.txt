@@ -1,3 +1,4 @@
+http://silencejql.coding.me/hello-world.html
 http://silencejql.coding.me/Rabbit MQ.html
 http://silencejql.coding.me/IBM MQ.html
 http://silencejql.coding.me/数据库自动备份、删除数据.html
@@ -24,4 +25,3 @@ http://silencejql.coding.me/委托-匿名-Lambda表达式.html
 http://silencejql.coding.me/Hexo Markdown.html
 http://silencejql.coding.me/碎碎念.html
 http://silencejql.coding.me/Test Project.html
-http://silencejql.coding.me/hello-world.html
