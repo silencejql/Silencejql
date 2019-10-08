@@ -1,5 +1,4 @@
 http://silencejql.coding.me/retest.html
-http://silencejql.coding.me/hello-world.html
 http://silencejql.coding.me/Rabbit MQ.html
 http://silencejql.coding.me/IBM MQ.html
 http://silencejql.coding.me/数据库自动备份、删除数据.html
