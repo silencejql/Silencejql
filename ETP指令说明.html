@@ -117,14 +117,14 @@
 
   <meta name="description" content="写在前面">
 <meta property="og:type" content="article">
-<meta property="og:title" content="retest">
-<meta property="og:url" content="http://silencejql.coding.me/retest.html">
+<meta property="og:title" content="ETP指令说明">
+<meta property="og:url" content="http://silencejql.coding.me/ETP指令说明.html">
 <meta property="og:site_name" content="Silencejql">
 <meta property="og:description" content="写在前面">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-10-08T09:12:25.081Z">
+<meta property="og:updated_time" content="2019-10-25T10:59:35.538Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="retest">
+<meta name="twitter:title" content="ETP指令说明">
 <meta name="twitter:description" content="写在前面">
 
 
@@ -135,7 +135,7 @@
 
   
   
-  <link rel="canonical" href="http://silencejql.coding.me/retest">
+  <link rel="canonical" href="http://silencejql.coding.me/ETP指令说明">
 
 
 
@@ -145,7 +145,7 @@
   };
 </script>
 
-  <title>retest | Silencejql</title>
+  <title>ETP指令说明 | Silencejql</title>
   <script src="https://cdn.jsdelivr.net/npm/jquery/dist/jquery.min.js"></script>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome/css/font-awesome.min.css">
   <script src="/live2d-widget/autoload.js"></script>
@@ -395,7 +395,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://silencejql.coding.me/retest.html">
+    <link itemprop="mainEntityOfPage" href="http://silencejql.coding.me/ETP指令说明.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Justin">
@@ -412,7 +412,7 @@
 
         
         
-          <h2 class="post-title" itemprop="name headline">retest
+          <h2 class="post-title" itemprop="name headline">ETP指令说明
 
               
             
@@ -438,9 +438,13 @@
                 
               
 
-              <time title="创建时间：2019-10-08 17:12:25" itemprop="dateCreated datePublished" datetime="2019-10-08T17:12:25+08:00">2019-10-08</time>
+              <time title="创建时间：2019-10-25 18:14:02 / 修改时间：18:59:35" itemprop="dateCreated datePublished" datetime="2019-10-25T18:14:02+08:00">2019-10-25</time>
             
 
+            
+              
+
+              
             
           </span>
 
@@ -457,8 +461,8 @@
                 </span>
             
                 <span class="post-meta-item-text">评论数：</span>
-                <a href="/retest.html#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count valine-comment-count" data-xid="/retest.html" itemprop="commentCount"></span>
+                <a href="/ETP指令说明.html#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/ETP指令说明.html" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -466,7 +470,7 @@
 
           
           
-            <span id="/retest.html" class="leancloud_visitors" data-flag-title="retest">
+            <span id="/ETP指令说明.html" class="leancloud_visitors" data-flag-title="ETP指令说明">
               <span class="post-meta-divider">|</span>
               <span class="post-meta-item-icon">
                 <i class="fa fa-eye"></i>
@@ -490,7 +494,7 @@
                 
                   <span class="post-meta-item-text">本文字数：</span>
                 
-                <span title="本文字数">7</span>
+                <span title="本文字数">411</span>
               
               
                 <span class="post-meta-divider">|</span>
@@ -526,6 +530,72 @@
         <center>写在前面</center>
 
 <a id="more"></a>
+<h2 id="ISO15031-5"><a href="#ISO15031-5" class="headerlink" title="ISO15031-5"></a>ISO15031-5</h2><p>###15765-4</p>
+<h4 id="Service-01"><a href="#Service-01" class="headerlink" title="Service 01"></a>Service 01</h4><p>请求当前动力系统诊断数据<br>01后最多可以读取6个PID(Parameter Identification)<br>请求：01 PID PID PID PID PID PID<br>回复：41 PID Data PID Data PID Data PID Data PID Data PID Data</p>
+<h5 id="PID"><a href="#PID" class="headerlink" title="PID"></a>PID</h5><table>
+<thead>
+<tr>
+<th align="center">PID</th>
+<th align="center">说明</th>
+<th align="center">数据长度（byte）</th>
+<th align="center">计算</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">01</td>
+<td align="center">清除故障诊断码后的监视器状态</td>
+<td align="center">4</td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">04</td>
+<td align="center">负载值</td>
+<td align="center">1</td>
+<td align="center">y=x/255</td>
+</tr>
+<tr>
+<td align="center">05</td>
+<td align="center">冷却液温度</td>
+<td align="center">1</td>
+<td align="center">y=x-40</td>
+</tr>
+<tr>
+<td align="center">0B</td>
+<td align="center">进气歧管绝对压力</td>
+<td align="center">1</td>
+<td align="center">y=x</td>
+</tr>
+<tr>
+<td align="center">0C</td>
+<td align="center">发动机转速</td>
+<td align="center">2</td>
+<td align="center">y=x/4</td>
+</tr>
+<tr>
+<td align="center">0D</td>
+<td align="center">车速</td>
+<td align="center">1</td>
+<td align="center">y=x</td>
+</tr>
+<tr>
+<td align="center">10</td>
+<td align="center">空气流量</td>
+<td align="center">2</td>
+<td align="center">y=x/100</td>
+</tr>
+<tr>
+<td align="center">11</td>
+<td align="center">节气门位置</td>
+<td align="center">1</td>
+<td align="center">y=x/255</td>
+</tr>
+<tr>
+<td align="center">44</td>
+<td align="center">Commanded Equivalence Ratio</td>
+<td align="center">2</td>
+<td align="center">y=2x/65535</td>
+</tr>
+</tbody></table>
 
       
     </div>
@@ -544,12 +614,12 @@
   <!-- JS库 sweetalert 可修改路径 -->
   <script src="https://cdn.bootcss.com/jquery/2.0.0/jquery.min.js"></script>
   <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
-  <p><span>本文标题:</span><a href="/retest.html">retest</a></p>
+  <p><span>本文标题:</span><a href="/ETP指令说明.html">ETP指令说明</a></p>
   <p><span>文章作者:</span><a href="/" title="访问 Justin 的个人博客">Justin</a></p>
-  <p><span>发布时间:</span>2019年10月08日 - 17:10</p>
-  <p><span>最后更新:</span>2019年10月08日 - 17:10</p>
-  <p><span>原始链接:</span><a href="/retest.html" title="retest">http://silencejql.coding.me/retest.html</a>
-    <span class="copy-path" title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="http://silencejql.coding.me/retest.html" aria-label="复制成功！"></i></span>
+  <p><span>发布时间:</span>2019年10月25日 - 18:10</p>
+  <p><span>最后更新:</span>2019年10月25日 - 18:10</p>
+  <p><span>原始链接:</span><a href="/ETP指令说明.html" title="ETP指令说明">http://silencejql.coding.me/ETP指令说明.html</a>
+    <span class="copy-path" title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="http://silencejql.coding.me/ETP指令说明.html" aria-label="复制成功！"></i></span>
   </p>
   <p><span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank" title="Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0)">署名-非商业性使用-禁止演绎 4.0 国际</a> 转载请保留原文链接及作者。</p>
 </div>
@@ -682,8 +752,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <div class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <div class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -925,6 +1004,23 @@
       </div>
 
       
+      <!--noindex-->
+        <div class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+            
+            
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#ISO15031-5"><span class="nav-number">1.</span> <span class="nav-text">ISO15031-5</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Service-01"><span class="nav-number">1.0.1.</span> <span class="nav-text">Service 01</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#PID"><span class="nav-number">1.0.1.1.</span> <span class="nav-text">PID</span></a></li></ol></li></ol></li></ol></div>
+            
+
+          </div>
+        </div>
+      <!--/noindex-->
+      
 
       
     </div>
@@ -956,7 +1052,7 @@
     
       <span class="post-meta-item-text">站点总字数：</span>
     
-    <span title="站点总字数">56k</span>
+    <span title="站点总字数">57k</span>
   
 
   
@@ -967,7 +1063,7 @@
     
       <span class="post-meta-item-text">站点阅读时长 &asymp;</span>
     
-    <span title="站点阅读时长">51 分钟</span>
+    <span title="站点阅读时长">52 分钟</span>
   
 </div>
 <!--
@@ -992,7 +1088,7 @@
 
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">博客全站共16.8k字</span>
+  <span class="post-count">博客全站共17.0k字</span>
 </div>
 -->
 
