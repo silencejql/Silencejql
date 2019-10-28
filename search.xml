@@ -3,7 +3,7 @@
   <entry>
     <title><![CDATA[ETP指令说明]]></title>
     <url>%2FETP%E6%8C%87%E4%BB%A4%E8%AF%B4%E6%98%8E.html</url>
-    <content type="text"><![CDATA[写在前面 &emsp; 国六排放测试过程中常用通讯指令说明 详细资料请参考ISO15031-5或J1979-DA ISO15031-515765-4Service 01请求当前动力系统诊断数据01后最多可以读取6个PID(Parameter Identification)请求：01 PID PID PID PID PID PID回复：41 PID Data PID Data PID Data PID Data PID Data PID Data PID PID 说明 数据长度（byte） 计算 00 查看支持的PID 01 清除故障诊断码后的监视器状态 4 04 负载值 1 y=x/255 05 冷却液温度 1 y=x-40 0B 进气歧管绝对压力 1 y=x 0C 发动机转速 2 y=x/4 0D 车速 1 y=x 10 空气流量 2 y=x/100 11 节气门位置 1 y=x/255 44 Commanded Equivalence Ratio 2 y=2x/65535 5C 油温 1 y=x-40 6A 6E 78 尾气温度 7A 83 NOx传感器 85 NOx控制系统 PID 00请求：01 00回复： 41 00 A B C D //PID 01~2041 20 A B C D //PID 21~4041 40 A B C D //PID 41~6041 60 A B C D //PID 61~8041 80 A B C D //PID 81~A041 A0 A B C D //PID A1~C041 C0 A B C D //PID C1~E041 E0 A B C D //PID E1~FF 41 00 A B C DData A bit7 ~ Data D bit0 表示是否支持PID 01~20 如：41 00 90 39 00 00Data A = 90 = 1001 0000bit7 = 1; bit4 = 1表示支持 PID 01、PID 04Data B = 39 = 0011 1001bit5 = bit4 = bit3 = bit0 = 1表示支持 PID 0B、PID 0C、PID 0D、PID 10 Service 09PID PID 说明 数据长度（byte） 计算 02 VIN 17 04 Cal.ID 06 Cal.CVN 08 IPT]]></content>
+    <content type="text"><![CDATA[写在前面 &emsp; 国六排放测试过程中常用通讯指令说明 详细资料请参考ISO15031-5或J1979-DA ISO15031-515765-4Service 01请求当前动力系统诊断数据01后最多可以读取6个PID(Parameter Identification)请求：01 PID PID PID PID PID PID回复：41 PID Data PID Data PID Data PID Data PID Data PID Data PID PID 说明 数据长度（byte） 计算 00 查看支持的PID 01 清除故障诊断码后的监视器状态 4 04 负载值 1 y=x/255 05 冷却液温度 1 y=x-40 0B 进气歧管绝对压力 1 y=x 0C 发动机转速 2 y=x/4 0D 车速 1 y=x 10 空气流量 2 y=x/100 11 节气门位置 1 y=x/255 44 Commanded Equivalence Ratio 2 y=2x/65535 5C 油温 1 y=x-40 6A 6E 78 尾气温度 7A 83 NOx传感器 85 NOx控制系统 PID 00请求：01 00回复： 41 00 A B C D //PID 01~2041 20 A B C D //PID 21~4041 40 A B C D //PID 41~6041 60 A B C D //PID 61~8041 80 A B C D //PID 81~A041 A0 A B C D //PID A1~C041 C0 A B C D //PID C1~E041 E0 A B C D //PID E1~FF 41 00 A B C DData A bit7 ~ Data D bit0 表示是否支持PID 01~20 如：41 00 90 39 00 00Data A = 90 = 1001 0000bit7 = 1; bit4 = 1表示支持 PID 01、PID 04Data B = 39 = 0011 1001bit5 = bit4 = bit3 = bit0 = 1表示支持 PID 0B、PID 0C、PID 0D、PID 10 Service 09PID PID 说明 数据长度（byte） 计算 02 VIN 17 04 Cal.ID 06 Cal.CVN 08 IPT ISO27145Service 2222 F4 对应 ISO15031的01服务22 F8 对应 ISO15031的09服务]]></content>
       <categories>
         <category>工作</category>
       </categories>
@@ -151,7 +151,7 @@
   <entry>
     <title><![CDATA[无处安放的矫情]]></title>
     <url>%2F%E6%97%A0%E5%A4%84%E5%AE%89%E6%94%BE%E7%9A%84%E7%9F%AB%E6%83%85.html</url>
-    <content type="text"><![CDATA[Enter password to read！ Incorrect Password! No content to display! U2FsdGVkX1+hMItuzZ2E35Dij2LCuKKwSegIb73/wII=]]></content>
+    <content type="text"><![CDATA[Enter password to read！ Incorrect Password! No content to display! U2FsdGVkX1+ge6i1ug8Nucmla01R2uyt5WoqwVxnlUs=]]></content>
   </entry>
   <entry>
     <title><![CDATA[C# XML]]></title>
@@ -290,7 +290,7 @@
   <entry>
     <title><![CDATA[碎碎念]]></title>
     <url>%2F%E7%A2%8E%E7%A2%8E%E5%BF%B5.html</url>
-    <content type="text"><![CDATA[Enter password to read！ Incorrect Password! No content to display! U2FsdGVkX1+gBrARwnK4RsGhg4lhQE+cyp7kgQy8lP1X9f5/xd5cKT1NTLZGnUHnZk++xJ6bRbNtbqWkruJuky/HO/HVCxorqd+h85LPoVPUddTBuhssL6Vgx4+m3PeyCO8pGO+p1mug309FCP/QYhoHUHfinQ34h25ymbsm9lY34RHLOmM7qV2yKoEse5OxVRezWPudYhmPZsOuXOKrKxmichitkpI7OYmZXiHZi61FUUIVLAjA07GaQFhl6r+G9mmGyzHOpTotd0mueUymT9Ik/bMF1fnj7FFy7UxGMuBbmMFdrD21UYGxKPiPXKZ65ebeU4pDcKnVh36P2mixTBk4doqfEPbhnqivGid1PtfgaHfoe62teV6HtcmlBry4cCanCBWScP647GQSrZfKSlG15yi44lSUGfUUUOzUhmJ0OVHsZ91jfQnfltabCCYrUFOooH3th7vYqfNUwzSuvg92PeHC5UO2/G/aw6y52IaYF8Aau+eXuxK5i9KArlrxu0aUAseIBstcVabP2PPB2YcClZnu8ZdPo5YozTqWRITBVbVIRmp0wbUFGUhNNSxBT0YCPjSaNnS1lVQseZ9/vlgoqU/AGYSkwcL9iFia+zeKoykK2Whio86N9VSyZwpjFBQCA8NoPrUKzHn/dip9geRbXpWJPYnGhiQOWUoPwNyacQM4TP/AvNXNH94T0daf]]></content>
+    <content type="text"><![CDATA[Enter password to read！ Incorrect Password! No content to display! U2FsdGVkX19QbChDlWTYdjxPly9CDEOBqSdE3nhPNeyDPgJfRnuGXQcbHBL/Ec8UM8RiuXhrfe9zmLXQm5X7tmCPi+3CH4TlUjRC3J7v8WNK8eQSJOzv2szGC7GuMWkWxOsvao/VbZ7yOv/R7CQ4sWEQF5bHYsfXpuJOOdrJtusp/0rFrM5b2LSioQRj+F9DxzOvoZFyj3l3mYzmHRClYPHhiAsKICwaa1CjgcBEAHNJUtp/MOf8QRcB7taHR8vw3Fi9/CfQJoxQLGHo/cJuyx+do8M1q/8Vzly4+zoBWymCWcq0rG6VhoKIdltuPIGHNWxPnaarpajXMhJTGngDRLMqQ+n7AU1zxotVX8JPOe1G/wwFrjcew0D7OkO325bNRW9X158BbDVWLdc6o+0vjAEPycIKNhd5vKTJ37RcWggPrR4AUSxL5g3QO7cB8q2uzkEOLHcR/94ru2dnfBtyN1pYvnH7CD8Jv5pTaElBd/vwk+76G7t/pIkE3bkpHWLfQwsiIx/uN2ftSJpWvjr/4okj7QuJSMo3EDYcixGHKA9zGyKwKU48IWeTMhKtnGUKo4G3PD+78EezCfAKruVNLrrB069NRTsi1QEnJ3vjv7+UCxAwREbC1ui0NlVWrbPx3niB0R3pYGjVJHHH8npg60ntkKhjZjuGSdn8KYaPnPboIpEriASPUpha7Dn2rcCx]]></content>
       <categories>
         <category>碎碎念</category>
       </categories>
