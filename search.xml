@@ -3,7 +3,7 @@
   <entry>
     <title><![CDATA[现场工作代码路径说明]]></title>
     <url>%2F%E7%8E%B0%E5%9C%BA%E5%B7%A5%E4%BD%9C%E4%BB%A3%E7%A0%81%E8%B7%AF%E5%BE%84%E8%AF%B4%E6%98%8E.html</url>
-    <content type="text"><![CDATA[写在前面 程序版本更新后可能没有合入原有程序，本文作为各现场的程序在电脑中存放的路径进行说明 ## 国六排放 ### MES联网 `D:\\BaiduNetdiskDownload\\GX\\Platforms2\\PlatABS` 包含上汽临港、上汽南京、上汽宁德、上汽郑州、上汽无锡大通、长沙菲亚特、杭州福特、重庆福特、哈尔滨福特(继承杭州福特未测试) 上汽上汽检测线上汽DSA：D:\\工作\\software\\Platforms_Using\\Platforms2\\SocketOpraLib 其中包括上汽郑州FAS、360；上汽宁德现场程序。 五菱五菱ABS：D:\\工作\\software\\Platforms_Using\\PlatABS\\RBABS_SGMW 20191028新增宝骏现场更改保持在线3E 00为3E 80备份，目前调试未成功，采用备份程序 程序包含所有五菱现场最新的ABS程序 东风东风小康东风小康MES：D:\\工作\\现场工作文件整理\\东风小康\\319015-201905\\Platforms2-正在使用\\SpeciallNeed 程序为东风小康现场最新MES程序，新增64字节车型识别 东风乘用车(武汉)D:\\工作\\现场工作文件整理\武汉东风乘用车\\Platforms2-武汉东风乘用车 其中SpecialNeed中包含FAS工位AEB相关提示，CanCmdOpraLib包含FAS相关安全算法 合众D:\BaiduNetdiskDownload\GX\Platforms2\PlatABS201909新增EP30ESC 比亚迪D:\BaiduNetdiskDownload\GX\Platforms2\Platforms2\CanCmdOpraLib201904增加联电供应商的转速控制]]></content>
+    <content type="text"><![CDATA[写在前面 程序版本更新后可能没有合入原有程序，本文作为各现场的程序在电脑中存放的路径进行说明 国六排放MES联网D:\BaiduNetdiskDownload\GX\Platforms2\PlatABS 包含上汽临港、上汽南京、上汽宁德、上汽郑州、上汽无锡大通、长沙菲亚特、杭州福特、重庆福特、哈尔滨福特(继承杭州福特未测试) 上汽上汽检测线上汽DSA：D:\工作\software\Platforms_Using\Platforms2\SocketOpraLib 其中包括上汽郑州FAS、360；上汽宁德现场程序。 五菱五菱ABS：D:\工作\software\Platforms_Using\PlatABS\RBABS_SGMW 20191028新增宝骏现场更改保持在线3E 00为3E 80备份，目前调试未成功，采用备份程序 程序包含所有五菱现场最新的ABS程序 东风东风小康东风小康MES：D:\工作\现场工作文件整理\东风小康\319015-201905\Platforms2-正在使用\SpeciallNeed 程序为东风小康现场最新MES程序，新增64字节车型识别 东风乘用车(武汉)D:\工作\现场工作文件整理\武汉东风乘用车\Platforms2-武汉东风乘用车 其中SpecialNeed中包含FAS工位AEB相关提示，CanCmdOpraLib包含FAS相关安全算法 合众D:\BaiduNetdiskDownload\GX\Platforms2\PlatABS201909新增EP30ESC 比亚迪D:\BaiduNetdiskDownload\GX\Platforms2\Platforms2\CanCmdOpraLib201904增加联电供应商的转速控制]]></content>
       <categories>
         <category>工作</category>
       </categories>
@@ -159,7 +159,7 @@
   <entry>
     <title><![CDATA[无处安放的矫情]]></title>
     <url>%2F%E6%97%A0%E5%A4%84%E5%AE%89%E6%94%BE%E7%9A%84%E7%9F%AB%E6%83%85.html</url>
-    <content type="text"><![CDATA[Enter password to read！ Incorrect Password! No content to display! U2FsdGVkX1/HDUnm1ABrNK6yTsGnmDK1F5eFWI6Kd3A=]]></content>
+    <content type="text"><![CDATA[Enter password to read！ Incorrect Password! No content to display! U2FsdGVkX19rIOjsadoBX6Xu5B1vQPbKHXzyhkIsMp0=]]></content>
   </entry>
   <entry>
     <title><![CDATA[C# XML]]></title>
@@ -298,7 +298,7 @@
   <entry>
     <title><![CDATA[碎碎念]]></title>
     <url>%2F%E7%A2%8E%E7%A2%8E%E5%BF%B5.html</url>
-    <content type="text"><![CDATA[Enter password to read！ Incorrect Password! No content to display! U2FsdGVkX1+nzuytSEj0DvRdaReQVDsbR8BZ+pCEMngN8DKOh31DLySrNZ/9Mgi4UeEdPJLWJyC0CeXzpWrTSdTdHXIaCMbS+mPiPtxiMT0l4u3FqbKgtTD6WTzAkzt7Gge9DZem6JSTqoJ/kxrQEsyizDLzaOR5ZSdGNtV1AjfjK1qc5tMgHwYgiRjRMji0VKCT1x6ZKjMPS7l/6iPnaXm3lmAc6/mmFr3zB6CGoKByxHb7L2O7xgUQ3FJaHWqCdl0G3jJGE4gHbMsyyPDsi9oIOpSrvozMxVcEOS7kVy0uJKxg+sYOC4RLsVMaZUIHT5Jdi5lcHrRtZsu0XAerI887S9nqwkhHS0ABswNi8V29ZUbF+bkvSeNd74og5eio6A/o9GfjlMEXLDIizYqnZgdotF7pzY6UZH03x22Cb0mpTtOL9dD5ZD/nXBQeNASMQgrI70PyhF20LTlMqagSQTtVWYyWWgc+LUGJAPfNnJ7tscOeeDXJ70dLIHEUaXjh/1Zt6MsuqTawhFzvUtmi+JfJkgw/9OOpf18rgN7nvsh5eX/YinpCylNkSNOy9zWyTp7TgJQYQYUJ1aNf2imX3HvUPYXx1W6gaDGSqbiTf5NopGnK/lFzLTo3VmtxbeUXNeCvXsaAOqowjX6Iq940461wqzD9e1OQ3/v30THiU6aZc1sjCTnJvI+ebZS34LDG]]></content>
+    <content type="text"><![CDATA[Enter password to read！ Incorrect Password! No content to display! U2FsdGVkX1+U79N8MTmXb8kCk3a6PPiFi7OoauQny3lKua2zrtkNdjycsepJ5mksOakt1HwOqLryS90oEqPVOmw9ORRwdjnK9o6CrbWYZXSZZ48+Jk7vdQ3e0Yd2cCMawd3hDuNJH7NHblfqDD9gOiTMqFZhn3QqqHQj6Yjxmj2JKLS0MfIA4cM4z0PFdrme+AkfPB+tbY/AhgumKwkkc85veDtmr/yO8ManeNm+CtJFncM5y4MrJogp0KTsGhgwPaotbR4D+2DDy24MEOdIf2IYkCGJxtcUU7CHuJPWVehyE/IIcajVyUvoUpNeWPhsHjeM76Mw4UKlyREIVmK8HBDQrsfYdMiy10awJD8+Kqd80UkLcl5ePXZS93Q029cA26Rb1KZozX9ulpjo5tbSn6oQfE+zbAxUrGB67GHi1rOeGBkyMrWYZQq/67CMvH7ICjhdlz5gYmPjCMikWj3gIFJjzUztwkyHz7UBSq+HC8FgXQoSoGIyOh4KkHNtEjRVD/XeRqBb9ywgUYEwyDcepvKy6OippKnGeyXffVi1PVPnrQHePOVsmpz/jGqFf2j/facXlRe2CEAw7Eww44bs5wI0XYaHYKn9on/73vuUVvuD/7rkvDcNHSAXrWXm9P0gMWWtP5W8D+UspgL3i5frq56vvXKCBAdo/34BXZijUGYooQJtvjkM64+9n3DyBoD6]]></content>
       <categories>
         <category>碎碎念</category>
       </categories>
