@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://silencejql.coding.me/"/>
-  <updated>2019-11-14T05:08:58.815Z</updated>
+  <updated>2019-11-20T11:22:13.078Z</updated>
   <id>http://silencejql.coding.me/</id>
   
   <author>
@@ -15,6 +15,26 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>git command</title>
+    <link href="http://silencejql.coding.me/git%20command.html"/>
+    <id>http://silencejql.coding.me/git command.html</id>
+    <published>2019-11-20T10:10:47.000Z</published>
+    <updated>2019-11-20T11:22:13.078Z</updated>
+    
+    <content type="html"><![CDATA[<center>写在前面</center><a id="more"></a><p>git配置<br><code>git config --global user.name &quot;Your Name&quot;</code></p><p><code>git config --global user.email &quot;email@example.com&quot;</code></p><p>创建本地仓库</p><table><thead><tr><th align="left">command</th><th align="center">说明</th></tr></thead><tbody><tr><td align="left">git init</td><td align="center">在指定路径下执行</td></tr><tr><td align="left">git add</td><td align="center">提交文件到暂存区，多个文件空格分开</td></tr><tr><td align="left">git commit</td><td align="center">提交到仓库分支</td></tr><tr><td align="left">git commit -m “说明”</td><td align="center">添加本次提交的说明便于查看更改记录</td></tr><tr><td align="left">git log</td><td align="center">历史版本信息 Git中版本用HEAD做标识，当前版本为HEAD，上一个版本是HEAD^</td></tr><tr><td align="left">git reset –hard HEAD^</td><td align="center">退回到上个版本</td></tr><tr><td align="left">git reset –hard commit_id</td><td align="center">HEAD 可用commit id前几位</td></tr><tr><td align="left">git reflog</td><td align="center">查看之前所有版本信息</td></tr><tr><td align="left">git status</td><td align="center">查看状态</td></tr><tr><td align="left">git diff HEAD – file</td><td align="center">查看工作区与版本库中的区别</td></tr><tr><td align="left">git checkout – file</td><td align="center">将工作区恢复到暂存区或版本库中的内容</td></tr><tr><td align="left">git reset HEAD file</td><td align="center">将暂存区恢复到版本库的内容</td></tr><tr><td align="left">git rm file</td><td align="center">删除文件</td></tr><tr><td align="left">git remote add origin <a href="mailto:git@github.com" target="_blank" rel="noopener">git@github.com</a>:yourgithubname/Repositoryname.git</td><td align="center">关联远程库</td></tr><tr><td align="left">git push -u origin master</td><td align="center">将本地仓库推送到远程仓库master分支并关联本地master分支</td></tr><tr><td align="left">git push origin master</td><td align="center">推送到远程master分支</td></tr><tr><td align="left">git clone <a href="mailto:git@github.com" target="_blank" rel="noopener">git@github.com</a>:githubname/Repositoryname.git</td><td align="center">clone到本地</td></tr><tr><td align="left">git branch bra</td><td align="center">创建bra分支</td></tr><tr><td align="left">git checkout bra</td><td align="center">切换到bra分支</td></tr><tr><td align="left">git checkout -b bra</td><td align="center">等效于上面两条指令</td></tr><tr><td align="left">git branch</td><td align="center">查看分支，当前分支用*标识，切换分支后提交到当前分支</td></tr><tr><td align="left">git checkout master</td><td align="center">切换到master分支</td></tr><tr><td align="left">git merge</td><td align="center">合并指定分支到当前分支</td></tr><tr><td align="left">git branch -d bra</td><td align="center">删除bra分支</td></tr><tr><td align="left">git switch -c bra</td><td align="center">创建并切换分支</td></tr><tr><td align="left">git switch master</td><td align="center">切换到master分支</td></tr></tbody></table>]]></content>
+    
+    <summary type="html">
+    
+      &lt;center&gt;写在前面&lt;/center&gt;
+    
+    </summary>
+    
+      <category term="Git" scheme="http://silencejql.coding.me/categories/Git/"/>
+    
+    
+  </entry>
   
   <entry>
     <title>IDMDownload</title>
@@ -401,7 +421,7 @@ Google Chrome 利用IDM下载器下载资源，可下载百度网盘资源
     <published>2019-07-22T06:38:12.000Z</published>
     <updated>2019-08-21T08:09:18.288Z</updated>
     
-    <content type="html"><![CDATA[<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script><div id="hbe-security">  <div class="hbe-input-container">  <input type="password" class="hbe-form-control" id="pass" placeholder="Enter password to read！" />    <label for="pass">Enter password to read！</label>    <div class="bottom-line"></div>  </div></div><div id="decryptionError" style="display: none;">Incorrect Password!</div><div id="noContentError" style="display: none;">No content to display!</div><div id="encrypt-blog" style="display:none">U2FsdGVkX1+a8QiHv2AdZVsNDJ8FkUWuVWYWPoecmno=</div><script src="/lib/crypto-js.js"></script><script src="/lib/blog-encrypt.js"></script><link href="/css/blog-encrypt.css" rel="stylesheet" type="text/css">]]></content>
+    <content type="html"><![CDATA[<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script><div id="hbe-security">  <div class="hbe-input-container">  <input type="password" class="hbe-form-control" id="pass" placeholder="Enter password to read！" />    <label for="pass">Enter password to read！</label>    <div class="bottom-line"></div>  </div></div><div id="decryptionError" style="display: none;">Incorrect Password!</div><div id="noContentError" style="display: none;">No content to display!</div><div id="encrypt-blog" style="display:none">U2FsdGVkX1/ECQOGpnYlU0TtUSh77WfDNXrgOo9iahQ=</div><script src="/lib/crypto-js.js"></script><script src="/lib/blog-encrypt.js"></script><link href="/css/blog-encrypt.css" rel="stylesheet" type="text/css">]]></content>
     
     <summary type="html">
     
@@ -465,28 +485,6 @@ Google Chrome 利用IDM下载器下载资源，可下载百度网盘资源
       <category term="int" scheme="http://silencejql.coding.me/tags/int/"/>
     
       <category term="String" scheme="http://silencejql.coding.me/tags/String/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>RGB颜色</title>
-    <link href="http://silencejql.coding.me/RGB%E9%A2%9C%E8%89%B2.html"/>
-    <id>http://silencejql.coding.me/RGB颜色.html</id>
-    <published>2019-07-05T06:20:25.000Z</published>
-    <updated>2019-08-21T08:07:23.940Z</updated>
-    
-    <content type="html"><![CDATA[<p><img src="RGB%E9%A2%9C%E8%89%B2/RGB1.png" alt></p><p><img src="RGB%E9%A2%9C%E8%89%B2/RGB2.png" alt></p><p><img src="RGB%E9%A2%9C%E8%89%B2/RGB3.png" alt></p>]]></content>
-    
-    <summary type="html">
-    
-      RGB颜色对照表
-    
-    </summary>
-    
-      <category term="RGB" scheme="http://silencejql.coding.me/categories/RGB/"/>
-    
-    
-      <category term="RGB颜色表" scheme="http://silencejql.coding.me/tags/RGB%E9%A2%9C%E8%89%B2%E8%A1%A8/"/>
     
   </entry>
   
