@@ -1,7 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>http://silencejql.coding.me/C#%E8%B0%83%E7%94%A8SQL%E5%AD%98%E5%82%A8%E8%BF%87%E7%A8%8B.html</loc>
+    <loc>http://silencejql.coding.me/CSharp%E8%B0%83%E7%94%A8SQL%E5%AD%98%E5%82%A8%E8%BF%87%E7%A8%8B.html</loc>
+    <lastmod>2019-12-17</lastmod>
+  </url>  <url>
+    <loc>http://silencejql.coding.me/CSharp%20Static.html</loc>
+    <lastmod>2019-12-17</lastmod>
+  </url>  <url>
+    <loc>http://silencejql.coding.me/CSharp%20XML.html</loc>
+    <lastmod>2019-12-17</lastmod>
+  </url>  <url>
+    <loc>http://silencejql.coding.me/CSharp%E5%B8%B8%E8%AF%86.html</loc>
     <lastmod>2019-12-17</lastmod>
   </url>  <url>
     <loc>http://silencejql.coding.me/%E4%B8%8A%E6%B1%BD%E9%80%9A%E7%94%A8%E4%BA%94%E8%8F%B1.html</loc>
@@ -52,9 +61,6 @@
     <loc>http://silencejql.coding.me/%E6%B3%9B%E5%9E%8B%E7%9A%84%E7%89%B9%E7%82%B9.html</loc>
     <lastmod>2019-08-21</lastmod>
   </url>  <url>
-    <loc>http://silencejql.coding.me/C#%20XML.html</loc>
-    <lastmod>2019-08-21</lastmod>
-  </url>  <url>
     <loc>http://silencejql.coding.me/%E6%95%B0%E6%8D%AE%E5%BA%93%E8%87%AA%E5%8A%A8%E5%A4%87%E4%BB%BD%E3%80%81%E5%88%A0%E9%99%A4%E6%95%B0%E6%8D%AE.html</loc>
     <lastmod>2019-08-21</lastmod>
   </url>  <url>
@@ -92,12 +98,6 @@
     <lastmod>2019-08-21</lastmod>
   </url>  <url>
     <loc>http://silencejql.coding.me/css%E5%B8%B8%E7%94%A8%E5%B1%9E%E6%80%A7.html</loc>
-    <lastmod>2019-08-21</lastmod>
-  </url>  <url>
-    <loc>http://silencejql.coding.me/C#%20%E5%B8%B8%E8%AF%86.html</loc>
-    <lastmod>2019-08-21</lastmod>
-  </url>  <url>
-    <loc>http://silencejql.coding.me/C#%20Static.html</loc>
     <lastmod>2019-08-21</lastmod>
   </url>
 </urlset>

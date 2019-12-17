@@ -115,18 +115,18 @@
 
 
 
-  <meta name="description" content="静态方法只能访问类的静态成员，不能访问类的非静态成员；非静态方法可以访问类的静态成员，也可以访问类的非静态成员；静态方法不能使用实例来调用，只能使用类名来调用。">
-<meta name="keywords" content="static">
+  <meta name="description" content="C#对XML的操作">
+<meta name="keywords" content="XML">
 <meta property="og:type" content="article">
-<meta property="og:title" content="C# Static">
-<meta property="og:url" content="http://silencejql.coding.me/C# Static.html">
+<meta property="og:title" content="csharp XML">
+<meta property="og:url" content="http://silencejql.coding.me/CSharp XML.html">
 <meta property="og:site_name" content="Silencejql">
-<meta property="og:description" content="静态方法只能访问类的静态成员，不能访问类的非静态成员；非静态方法可以访问类的静态成员，也可以访问类的非静态成员；静态方法不能使用实例来调用，只能使用类名来调用。">
+<meta property="og:description" content="C#对XML的操作">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-08-21T08:05:50.109Z">
+<meta property="og:updated_time" content="2019-12-17T05:04:43.742Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="C# Static">
-<meta name="twitter:description" content="静态方法只能访问类的静态成员，不能访问类的非静态成员；非静态方法可以访问类的静态成员，也可以访问类的非静态成员；静态方法不能使用实例来调用，只能使用类名来调用。">
+<meta name="twitter:title" content="csharp XML">
+<meta name="twitter:description" content="C#对XML的操作">
 
 
 
@@ -136,7 +136,7 @@
 
   
   
-  <link rel="canonical" href="http://silencejql.coding.me/C# Static">
+  <link rel="canonical" href="http://silencejql.coding.me/CSharp XML">
 
 
 
@@ -146,7 +146,7 @@
   };
 </script>
 
-  <title>C# Static | Silencejql</title>
+  <title>csharp XML | Silencejql</title>
   <script src="https://cdn.jsdelivr.net/npm/jquery/dist/jquery.min.js"></script>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome/css/font-awesome.min.css">
   <script src="/live2d-widget/autoload.js"></script>
@@ -396,7 +396,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://silencejql.coding.me/C# Static.html">
+    <link itemprop="mainEntityOfPage" href="http://silencejql.coding.me/CSharp XML.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Justin">
@@ -413,7 +413,7 @@
 
         
         
-          <h2 class="post-title" itemprop="name headline">C# Static
+          <h2 class="post-title" itemprop="name headline">csharp XML
 
               
             
@@ -439,7 +439,7 @@
                 
               
 
-              <time title="创建时间：2019-07-05 10:59:00" itemprop="dateCreated datePublished" datetime="2019-07-05T10:59:00+08:00">2019-07-05</time>
+              <time title="创建时间：2019-07-11 12:56:29" itemprop="dateCreated datePublished" datetime="2019-07-11T12:56:29+08:00">2019-07-11</time>
             
 
             
@@ -455,7 +455,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2019-08-21 16:05:50" itemprop="dateModified" datetime="2019-08-21T16:05:50+08:00">2019-08-21</time>
+                <time title="修改时间：2019-12-17 13:04:43" itemprop="dateModified" datetime="2019-12-17T13:04:43+08:00">2019-12-17</time>
               
             
           </span>
@@ -491,8 +491,8 @@
                 </span>
             
                 <span class="post-meta-item-text">评论数：</span>
-                <a href="/C# Static.html#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count valine-comment-count" data-xid="/C# Static.html" itemprop="commentCount"></span>
+                <a href="/CSharp XML.html#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/CSharp XML.html" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -500,7 +500,7 @@
 
           
           
-            <span id="/C# Static.html" class="leancloud_visitors" data-flag-title="C# Static">
+            <span id="/CSharp XML.html" class="leancloud_visitors" data-flag-title="csharp XML">
               <span class="post-meta-divider">|</span>
               <span class="post-meta-item-icon">
                 <i class="fa fa-eye"></i>
@@ -524,7 +524,7 @@
                 
                   <span class="post-meta-item-text">本文字数：</span>
                 
-                <span title="本文字数">2.4k</span>
+                <span title="本文字数">2.3k</span>
               
               
                 <span class="post-meta-divider">|</span>
@@ -543,6 +543,8 @@
           
 
           
+            <div class="post-description">C#对XML的操作</div>
+          
 
         </div>
       </header>
@@ -557,92 +559,8 @@
       
 
       
-        <p>静态方法只能访问类的静态成员，不能访问类的非静态成员；<br>非静态方法可以访问类的静态成员，也可以访问类的非静态成员；<br>静态方法不能使用实例来调用，只能使用类名来调用。</p>
-<a id="more"></a>
-<h4 id="static"><a href="#static" class="headerlink" title="static"></a>static</h4><h5 id="静态全局变量"><a href="#静态全局变量" class="headerlink" title="静态全局变量"></a>静态全局变量</h5><blockquote>
-<p>特点：</p>
-<blockquote>
-<p>1、该变量在全局数据区分配内存。<br>2、初始化：如果不显式初始化，那么将被隐式初始化为0。</p>
-</blockquote>
-</blockquote>
-<h5 id="静态局部变量"><a href="#静态局部变量" class="headerlink" title="静态局部变量"></a>静态局部变量</h5><blockquote>
-<p>特点：</p>
-<blockquote>
-<p>1、该变量在全局数据区分配内存。<br>2、初始化：如果不显式初始化，那么将被隐式初始化为0。<br>3、<strong>它始终驻留在全局数据区，直到程序运行结束。但其作用域为局部作用域，当定义它的函数或语句块结束时，其作用域随之结束。</strong></p>
-</blockquote>
-</blockquote>
-<h5 id="静态数据成员"><a href="#静态数据成员" class="headerlink" title="静态数据成员"></a>静态数据成员</h5><blockquote>
-<p>内存分配：在程序的全局数据区分配。<br>初始化和定义：</p>
-<blockquote>
-<p>1、静态数据成员定义时要分配空间，所以不能在类声明中定义。<br>2、为了避免在多个使用该类的源文件中，对其重复定义，所以，不能在类的头文件中定义。<br>3、静态数据成员因为程序一开始运行就必需存在，所以其初始化的最佳位置在类的内部实现。</p>
-</blockquote>
-</blockquote>
-<blockquote>
-<p>特点</p>
-<blockquote>
-<p>对相于 public,protected,private 关键字的影响它和普通数据成员一样，因为其空间在全局数据区分配，属于所有本类的对象共享，所以，它不属于特定的类对象，在没产生类对象时其作用域就可见，即在没有产生类的实例时，我们就可以操作它。</p>
-</blockquote>
-</blockquote>
-<blockquote>
-<p>访问形式</p>
-<blockquote>
-<p>类对象名.静态数据成员名</p>
-</blockquote>
-</blockquote>
-<p>静态数据成员，主要用在类的所有实例都拥有的属性上。比如，对于一个存款类，帐号相对于每个实例都是不同的，但每个实例的利息是相同的。所以，应该把利息设为存款类的静态数据成员。这有两个好处，第一，不管定义多少个存款类对象，利息数据成员都共享分配在全局区的内存，所以节省存贮空间。第二，一旦利息需要改变时，只要改变一次，则所有存款类对象的利息全改变过来了，因为它们实际上是共用一个东西。</p>
-<h5 id="静态成员函数"><a href="#静态成员函数" class="headerlink" title="静态成员函数"></a>静态成员函数</h5><blockquote>
-<p>特点：</p>
-<blockquote>
-<p>1、静态成员函数与类相联系，不与类的对象相联系。<br>2、静态成员函数不能访问非静态数据成员。原因很简单，非静态数据成员属于特定的类实例。</p>
-</blockquote>
-</blockquote>
-<blockquote>
-<p>作用：</p>
-<blockquote>
-<p>主要用于对静态数据成员的操作。</p>
-</blockquote>
-</blockquote>
-<blockquote>
-<p>调用形式：</p>
-<blockquote>
-<p>类对象名.静态成员函数名（）</p>
-</blockquote>
-</blockquote>
-<h5 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h5><p>静态方法只能访问类的静态成员，不能访问类的非静态成员；<br>非静态方法可以访问类的静态成员，也可以访问类的非静态成员；<br>静态方法不能使用实例来调用，只能使用类名来调用。</p>
-<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">static</span> <span class="keyword">int</span> i = getNum();</span><br><span class="line"><span class="keyword">int</span> j = getNum();</span><br><span class="line"><span class="keyword">static</span> <span class="keyword">int</span> num = <span class="number">1</span>;</span><br><span class="line"><span class="function"><span class="keyword">static</span> <span class="keyword">int</span> <span class="title">getNum</span>(<span class="params"></span>)</span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">return</span> num;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">static</span> <span class="keyword">void</span> <span class="title">Main</span>(<span class="params"><span class="keyword">string</span>[] args</span>)</span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    Console.WriteLine(<span class="string">"i=&#123;0&#125;"</span>,i);</span><br><span class="line">    Console.WriteLine(<span class="string">"j=&#123;0&#125;"</span>, <span class="keyword">new</span> class1().j);</span><br><span class="line">    Console.Read();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+        <h2 id="XML创建、读取配置"><a href="#XML创建、读取配置" class="headerlink" title="XML创建、读取配置"></a>XML创建、读取配置</h2><figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">static</span> <span class="keyword">public</span> <span class="keyword">void</span> <span class="title">WirteConfig</span>(<span class="params"><span class="keyword">string</span> FileName, <span class="keyword">string</span> KeyName, <span class="keyword">string</span> Value</span>)</span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">try</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">string</span> FilePath = OnlyOneStartUp.UseConfigPath;</span><br><span class="line">        <span class="keyword">string</span> AllFileName = FilePath + <span class="string">"\\"</span> + FileName + <span class="string">".xml"</span>;</span><br><span class="line">        <span class="keyword">if</span> (!Directory.Exists(FilePath))</span><br><span class="line">            Directory.CreateDirectory(FilePath);</span><br><span class="line"></span><br><span class="line">        DataSet ds = <span class="keyword">new</span> DataSet();</span><br><span class="line">        <span class="keyword">if</span> (File.Exists(AllFileName))</span><br><span class="line">            ds.ReadXml(AllFileName);</span><br><span class="line">        <span class="keyword">if</span> (ds.Tables.Count &lt; <span class="number">1</span>)</span><br><span class="line">            ds.Tables.Add();</span><br><span class="line">        <span class="keyword">if</span> (ds.Tables[<span class="number">0</span>].Rows.Count &lt; <span class="number">1</span>)</span><br><span class="line">            ds.Tables[<span class="number">0</span>].Rows.Add();</span><br><span class="line"></span><br><span class="line">        <span class="keyword">if</span> (!ds.Tables[<span class="number">0</span>].Columns.Contains(KeyName))</span><br><span class="line">            ds.Tables[<span class="number">0</span>].Columns.Add(KeyName);</span><br><span class="line">        ds.Tables[<span class="number">0</span>].Rows[<span class="number">0</span>][KeyName] = Value;</span><br><span class="line"></span><br><span class="line">        ds.WriteXml(AllFileName);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">catch</span> (Exception e)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">string</span> sError = <span class="keyword">string</span>.Format(<span class="string">"写入配置信息Error:&#123;0&#125;"</span>, e.Message);</span><br><span class="line">        ErrorOut(MethodInfo.GetCurrentMethod().Name, sError);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment"><span class="doctag">///</span> <span class="doctag">&lt;summary&gt;</span></span></span><br><span class="line"><span class="comment"><span class="doctag">///</span> 读出配置文件</span></span><br><span class="line"><span class="comment"><span class="doctag">///</span> <span class="doctag">&lt;/summary&gt;</span></span></span><br><span class="line"><span class="comment"><span class="doctag">///</span> <span class="doctag">&lt;param name="FileName"&gt;</span>配置文件名称<span class="doctag">&lt;/param&gt;</span></span></span><br><span class="line"><span class="comment"><span class="doctag">///</span> <span class="doctag">&lt;param name="KeyName"&gt;</span>键名<span class="doctag">&lt;/param&gt;</span></span></span><br><span class="line"><span class="comment"><span class="doctag">///</span> <span class="doctag">&lt;param name="Value"&gt;</span>返回的值<span class="doctag">&lt;/param&gt;</span></span></span><br><span class="line"><span class="function"><span class="keyword">static</span> <span class="keyword">public</span> <span class="keyword">bool</span> <span class="title">ReadConfig</span>(<span class="params"><span class="keyword">string</span> FileName, <span class="keyword">string</span> KeyName, <span class="keyword">ref</span> <span class="keyword">string</span> Value</span>)</span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">try</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">string</span> FilePath = OnlyOneStartUp.UseConfigPath;</span><br><span class="line">        <span class="keyword">string</span> AllFileName = FilePath + <span class="string">"\\"</span> + FileName + <span class="string">".xml"</span>;</span><br><span class="line">        <span class="keyword">if</span> (!Directory.Exists(FilePath))</span><br><span class="line">            <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line"></span><br><span class="line">        DataSet ds = <span class="keyword">new</span> DataSet();</span><br><span class="line">        <span class="keyword">if</span> (File.Exists(AllFileName))</span><br><span class="line">            ds.ReadXml(AllFileName);</span><br><span class="line">        <span class="keyword">else</span> <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">        <span class="keyword">if</span> (ds.Tables.Count &lt; <span class="number">1</span>)</span><br><span class="line">            <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">        <span class="keyword">if</span> (ds.Tables[<span class="number">0</span>].Rows.Count &lt; <span class="number">1</span>)</span><br><span class="line">            <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">if</span> (!ds.Tables[<span class="number">0</span>].Columns.Contains(KeyName))</span><br><span class="line">            <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">        Value = Convert.ToString(ds.Tables[<span class="number">0</span>].Rows[<span class="number">0</span>][KeyName]);</span><br><span class="line">        <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">catch</span> (Exception e)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">string</span> sError = <span class="keyword">string</span>.Format(<span class="string">"读取配置信息Error:&#123;0&#125;"</span>, e.Message);</span><br><span class="line">        ErrorOut(MethodInfo.GetCurrentMethod().Name, sError);</span><br><span class="line">        <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">static</span> <span class="keyword">public</span> <span class="keyword">void</span> <span class="title">ReadConfigEx</span>(<span class="params"><span class="keyword">string</span> FileName, <span class="keyword">string</span> KeyName, <span class="keyword">ref</span> <span class="keyword">string</span> Value</span>)</span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (!ReadConfig(FileName, KeyName, <span class="keyword">ref</span> Value))</span><br><span class="line">        WirteConfig(FileName, KeyName, Value);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-<p>分析：<code>Console.WriteLine(&quot;i={0}&quot;,i);</code>这里<code>i</code>是<code>static</code>变量，而且类<code>class1</code>是第一次被引用，要先为<code>class1</code>里面所有的<code>static</code>变量分配内存。尽管现在有超线程技术，但是指令在逻辑还是一条一条的按顺序执行的，所以先为<code>static int i</code>分配内存，并且在该内存中保持<code>int</code>的缺省值<code>0</code>，接着再为<code>static</code> <code>int num</code> 变量分配内存，值当然也为<code>0</code>。</p>
-<p>然后执行第二步，为变量赋值：先为<code>static int i</code>变量赋值，<code>i＝getNum()</code>，看getNum里面的代码，就是<code>return num</code>，这个时候<code>num</code>的值是<code>0</code>，于是<code>i</code>就为<code>0</code>了。然后对变量<code>num</code>赋值，<code>num＝1；</code>这行代码执行后，<code>num</code>就为<code>1</code>了。</p>
-<h5 id="static的优点是什么？为什么要使用static-变量或函数？？"><a href="#static的优点是什么？为什么要使用static-变量或函数？？" class="headerlink" title="static的优点是什么？为什么要使用static 变量或函数？？"></a>static的优点是什么？为什么要使用static 变量或函数？？</h5><p>有一些频繁使用的东西，如果你每次使用都重新<code>new</code>一下，那么这个开销可能会很高，如果使用<code>static</code>，一直放在内存中，那么想用就直接用，而不需要重新<code>new</code>一块空间初始化数据。那么<code>static</code>就是为了实现一个系统的缓存作用的，其生命周期直到应用程序退出结束。</p>
-<p>静态成员包括静态字段和静态属性，静态成员和类相关联，不依赖于对象而存在，只能由类访问，而不能由对象访问；</p>
-<p>静态成员属于类所有，无认创建多少实例对象，静态成员在内存中只有一份；实例成员属于类的实例所有，每创建一个实例对象，实例成员都会在内存中分配一块内存区域。<br>所以静态成员一般用于存放共享的数据段，如数据库连接字符串等。</p>
-<p>一个类如果只包含静态成员和静态方法，则该类可以定义为静态类，给类加上<code>static</code>修饰符；</p>
-<h5 id="静态方法和非静态方法："><a href="#静态方法和非静态方法：" class="headerlink" title="静态方法和非静态方法："></a>静态方法和非静态方法：</h5><p>一、性能上：静态方法和实例方法差别不大。所有方法，不管是静态方法还是实例方法，都是在JIT加载类时分配内存，不同的是静态方法以类名引用，而实例方法对对象实例引用。创建实例时，不会再为类的方法分配内存，所有的实例对象共用一个类的方法代码。因此静态方法和实例方法的调用，在性能上的差别微乎其微。</p>
-<p>二、静态方法只能由类访问；实例方法只能由对象访问。</p>
-<blockquote>
-<p>优点：</p>
-<blockquote>
-<p>1、静态变量在类载入时，就装入内存<br>2、使用时不用 New 就意味的不必 创建类中 所有对象，就可以调用 某个方法</p>
-</blockquote>
-</blockquote>
-<blockquote>
-<p>缺点：</p>
-<blockquote>
-<p>垃圾回收机制 不能 回收 静态变量，静态类变量 会常驻内存</p>
-</blockquote>
-</blockquote>
-<h5 id="c-中静态类的优缺点"><a href="#c-中静态类的优缺点" class="headerlink" title="c#中静态类的优缺点"></a>c#中静态类的优缺点</h5><blockquote>
-<p>缺点：</p>
-<blockquote>
-<p>1、整个类型在程序运行期间只加载一次。 这样是对于那些经常使用的类型来说的，那就不用每次使用前都先加载。效率高些。但是对那些不常用的类型来说。<br>2、如果是静态类型，那就要一直占用相当的内存；一直到程序停止。或者应用程序域被卸载。所以应该只对那些常用的类型定义成静态类型。</p>
-</blockquote>
-</blockquote>
-<blockquote>
-<p>优点：</p>
-<blockquote>
-<p>1、它们仅包含静态成员。<br>2、它们不能被实例化。<br>3、它们是密封的。<br>4、它们不能包含实例构造函数（C# 编程指南）。</p>
-</blockquote>
-</blockquote>
 
       
     </div>
@@ -683,7 +601,7 @@
         
         <div class="post-tags">
           
-            <a href="/tags/static/" rel="tag"># static</a>
+            <a href="/tags/XML/" rel="tag"># XML</a>
           
         </div>
       
@@ -723,8 +641,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/Hexo博客部署到Coding和github.html" rel="next" title="Hexo博客部署到Coding和github">
-                <i class="fa fa-chevron-left"></i> Hexo博客部署到Coding和github
+              <a href="/数据转换.html" rel="next" title="数据转换">
+                <i class="fa fa-chevron-left"></i> 数据转换
               </a>
             
           </div>
@@ -733,8 +651,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/C# 常识.html" rel="prev" title="C# 常识">
-                C# 常识 <i class="fa fa-chevron-right"></i>
+              <a href="/无处安放的矫情.html" rel="prev" title="无处安放的矫情">
+                无处安放的矫情 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -1061,7 +979,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#static"><span class="nav-number">1.</span> <span class="nav-text">static</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#静态全局变量"><span class="nav-number">1.1.</span> <span class="nav-text">静态全局变量</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#静态局部变量"><span class="nav-number">1.2.</span> <span class="nav-text">静态局部变量</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#静态数据成员"><span class="nav-number">1.3.</span> <span class="nav-text">静态数据成员</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#静态成员函数"><span class="nav-number">1.4.</span> <span class="nav-text">静态成员函数</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#总结"><span class="nav-number">1.5.</span> <span class="nav-text">总结</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#static的优点是什么？为什么要使用static-变量或函数？？"><span class="nav-number">1.6.</span> <span class="nav-text">static的优点是什么？为什么要使用static 变量或函数？？</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#静态方法和非静态方法："><span class="nav-number">1.7.</span> <span class="nav-text">静态方法和非静态方法：</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#c-中静态类的优缺点"><span class="nav-number">1.8.</span> <span class="nav-text">c#中静态类的优缺点</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#XML创建、读取配置"><span class="nav-number">1.</span> <span class="nav-text">XML创建、读取配置</span></a></li></ol></div>
             
 
           </div>
