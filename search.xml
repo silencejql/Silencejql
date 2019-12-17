@@ -4,6 +4,12 @@
     <title><![CDATA[C#调用SQL存储过程]]></title>
     <url>%2FC%23%E8%B0%83%E7%94%A8SQL%E5%AD%98%E5%82%A8%E8%BF%87%E7%A8%8B.html</url>
     <content type="text"><![CDATA[写在前面 C# 执行SQLServer数据库中的存储过程，新增数据 123456789存储过程名：SP_Check_Equipotential 参数： @Part2GNDInfo varchar(3000),-- @Part2GND decimal(3,2),-- @Resultflag int output,--1保存成功 0保存失败 @ResultMessage varchar(4000)output--返回success 或 错误信息 返回值： @Resultflag int output,--1保存成功 0保存失败 @ResultMessage varchar(4000)output--返回success 或 错误信息 1234567891011121314151617181920212223SqlConnection DbConnection = new SqlConnection(m_MESConnString);SqlCommand command = new SqlCommand("SP_Check_Equipotential", DbConnection);DbConnection.Open();InitCommand(ref command);command.Parameters["@Part2GNDInfo"].Value = Part2GNDInfo;command.Parameters["@Part2GND"].Value = Convert.ToDecimal(mo2o(dr["步骤一最大值"],true));command.ExecuteNonQuery();int result = command.Parameters["@Resultflag"].Value.zInt32();string ResultMessage = command.Parameters["@ResultMessage"].Value.ToString();private static void InitCommand(ref SqlCommand command)&#123; command.CommandType = CommandType.StoredProcedure; command.Parameters.Add("@Part2GNDInfo", SqlDbType.VarChar, 3000); SqlParameter Part2GND = new SqlParameter("@Part2GND", SqlDbType.Decimal); Part2GND.Precision = 3; Part2GND.Scale = 2; command.Parameters.Add(Part2GND); command.Parameters.Add("@Resultflag", SqlDbType.Int, 1); command.Parameters["@Resultflag"].Direction = ParameterDirection.Output; command.Parameters.Add("@ResultMessage", SqlDbType.VarChar, 4000); command.Parameters["@ResultMessage"].Direction = ParameterDirection.Output;&#125;]]></content>
+      <categories>
+        <category>C#</category>
+      </categories>
+      <tags>
+        <tag>存储过程</tag>
+      </tags>
   </entry>
   <entry>
     <title><![CDATA[上汽通用五菱]]></title>
@@ -201,7 +207,7 @@
   <entry>
     <title><![CDATA[无处安放的矫情]]></title>
     <url>%2F%E6%97%A0%E5%A4%84%E5%AE%89%E6%94%BE%E7%9A%84%E7%9F%AB%E6%83%85.html</url>
-    <content type="text"><![CDATA[Enter password to read！ Incorrect Password! No content to display! U2FsdGVkX1+j+KlvNMnY6aEfeumzJ37uCUz4gucnb/g=]]></content>
+    <content type="text"><![CDATA[Enter password to read！ Incorrect Password! No content to display! U2FsdGVkX19ZNZjhOmqfr5jDlKSDI7PZr/gvvul2QOk=]]></content>
   </entry>
   <entry>
     <title><![CDATA[C# XML]]></title>
@@ -340,7 +346,7 @@
   <entry>
     <title><![CDATA[碎碎念]]></title>
     <url>%2F%E7%A2%8E%E7%A2%8E%E5%BF%B5.html</url>
-    <content type="text"><![CDATA[Enter password to read！ Incorrect Password! No content to display! U2FsdGVkX1/Ail/GV2GpUQZIqHf7LP4mgKGdA2w8GGCjyQGiwK11U7WrxBa9SAnDYLrD53x37pHa66wEcvurNgkwdxLnma8c/pQOqTTLRN6sPhqgjwUFrwKVVjCMSRneJTAvAYTfFOnlm0A5GAHGBm/p9bP0x9GBmeC0zQVTPGwByzgGODR9LPc0m7MX9SE7qpE1pC4G/16JdALMIVE8ymtR1LrzY7S1scR/+y7g+8ozIRzX1YNKfiGrg3XHxjanTAWmOlrkPW38l41WA0UXligzD2Yrr65IgosVdfRT9I9BgyxLCOCcuZekSg+KfUIYk1k26/1Y+4iUkPtXV+A4QrkEOslmeRrgi0968okf20ac/vbVYzbh8zE2fRo0KhJXVBlK7Hez9nuq7oST5S94LBAs4B0M+tPxG24DiYFuWgo2vu4WTJQrz1vdz+OgOzKToKKS38V/MEghhbhqOB8vbdTU4xT3qrn7vSSGbfcwQIgKW1PiL4Tt2DHdyoJStJSDN3lWRvtIoBZTdY1Pzesmc44eRcTWitOXJoA/FnkKH17p8lVNkwGxFZM7rvRg8KSKrMfFln2QxlsDS2Lo8b6jdA09lCIpM9nVdHVPHUnegBvAmH+FcsNFnBLZ6uV3E9qa4xYtEguCWYiVq3vlQ4i+HTXCNGxrW6o/tKii59CCLaovS+pd+73n8puO7+MTwF6/]]></content>
+    <content type="text"><![CDATA[Enter password to read！ Incorrect Password! No content to display! U2FsdGVkX1+rDNDSxUreZ9hzH6/vH8VgtaZfYB5SWr/KmQ7MwNSclhRukfnG2+RriSXxAA6jUWIQcK3JZzg0Clo0eDe9Ag7PbgQiV+IeGHjupdoQwPP34HLUDU6KQdFIpTwiK8xDCAVuSwV0b2+yxrlqPbBglYsgbSIoj9rBEqy4xoGv9B0Fv4i2fdpRTZzTrEUDr9OMpjETHf4CxbCGt0URXD3y0wyf+9GiD9C5GhCj+mpq4n8pLIhV8RBKAmv0GRwi9NGsX5vYp34OU9Qx6kMfQEZRnIBaP0aMwzZQP+pbeJTxLXBgFUxOdJz4rpiX14SPBM3MNZhR8fDyZoogKz29q5bfkS2vMI04MDJTSievMKYjn0v35VUQ5vMO5fH+dWpdS2Vg0xGdFvu3UkFuCkr4kNKXTInQzKu3AxM3+vMvJLcTTK7YQKOV/t5nM95od9Yja2pLcKXCEE2yOo77N+OI5a1+nZquLl0Pxfdp+G/K8z9xVATGtm/Re5R7k6tj90qGxWFCZBuYddkmXEDiRM6qEHGKSy3u89jT+/XUOyhHSsH+AHhMSZcvgMvb3k/L41hkr8Hf1MY90lFkr9uA3XFbkVokhmr7n2Ccek0FaDz/lfVly2v90DhK+el3/jGsXiIHL22ey9/kqP4/s0MQOf7V5XIepazYU8q9wFh9IjYJ2eOxvETP5/9vlmsXlbj2]]></content>
       <categories>
         <category>碎碎念</category>
       </categories>
