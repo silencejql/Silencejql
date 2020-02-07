@@ -124,7 +124,7 @@
 <meta property="og:description" content="C# Rabbit MQ">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="http://silencejql.coding.me/Rabbit%20MQ/%E5%AE%89%E8%A3%85%E6%88%90%E5%8A%9F.png">
-<meta property="og:updated_time" content="2019-10-25T10:01:02.419Z">
+<meta property="og:updated_time" content="2020-02-06T06:00:36.620Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Rabbit MQ">
 <meta name="twitter:description" content="C# Rabbit MQ">
@@ -457,7 +457,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2019-10-25 18:01:02" itemprop="dateModified" datetime="2019-10-25T18:01:02+08:00">2019-10-25</time>
+                <time title="修改时间：2020-02-06 14:00:36" itemprop="dateModified" datetime="2020-02-06T14:00:36+08:00">2020-02-06</time>
               
             
           </span>
@@ -526,7 +526,7 @@
                 
                   <span class="post-meta-item-text">本文字数：</span>
                 
-                <span title="本文字数">7.1k</span>
+                <span title="本文字数">3k</span>
               
               
                 <span class="post-meta-divider">|</span>
@@ -539,7 +539,7 @@
                 
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
-                <span title="阅读时长">6 分钟</span>
+                <span title="阅读时长">3 分钟</span>
               
             </div>
           
@@ -568,8 +568,10 @@
 <h3 id="Rabbit-MQ服务端安装"><a href="#Rabbit-MQ服务端安装" class="headerlink" title="Rabbit MQ服务端安装"></a>Rabbit MQ服务端安装</h3><h4 id="安装-1"><a href="#安装-1" class="headerlink" title="安装"></a>安装</h4><p>软件安装在C盘(第一次安装到D盘后进入命令行程序不能执行，有兴趣可以研究研究)安装包下载地址：<br>链接：<a href="https://pan.baidu.com/s/1NbHfVoGyo_oVAXzaTnZuAw" target="_blank" rel="noopener">https://pan.baidu.com/s/1NbHfVoGyo_oVAXzaTnZuAw</a><br>提取码：9am0</p>
 <h4 id="启用管理工具"><a href="#启用管理工具" class="headerlink" title="启用管理工具"></a>启用管理工具</h4><p>在服务程序中确保RabbitMQ服务已启用<br>安装完成后打开所有程序中的RabbitMQ Command Prompt (sbin dir)<br>输入命令：’rabbitmq-plugins enable rabbitmq_management’<br><img src="Rabbit%20MQ/%E5%AE%89%E8%A3%85%E6%88%90%E5%8A%9F.png" alt><br>打开浏览器输入<a href="http://localhost:15672" target="_blank" rel="noopener">http://localhost:15672</a><br>默认账号、密码均为guest</p>
 <h2 id="C-Producer"><a href="#C-Producer" class="headerlink" title="C# Producer"></a>C# Producer</h2><p>项目中需要引用RabbitMQ.Client.dll下载链接为：<br>链接：<a href="https://pan.baidu.com/s/1aJ-8RVJnJWibeqtPcTn9hw" target="_blank" rel="noopener">https://pan.baidu.com/s/1aJ-8RVJnJWibeqtPcTn9hw</a><br>提取码：9d8n<br>此版本支持.Net4.0，全版本请自行下载<br>下载地址：<a href="http://www.rabbitmq.com/releases/rabbitmq-dotnet-client/" target="_blank" rel="noopener">http://www.rabbitmq.com/releases/rabbitmq-dotnet-client/</a></p>
+<div><div class="fold_hider"><div class="close hider_title">展开/折叠示例</div></div><div class="fold">
 <figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">using</span> RabbitMQ.Client;</span><br><span class="line"><span class="keyword">var</span> factory = <span class="keyword">new</span> ConnectionFactory();</span><br><span class="line">factory.HostName = <span class="string">"localhost"</span>;<span class="comment">//RabbitMQ服务在本地运行127.0.0.1</span></span><br><span class="line">factory.UserName = <span class="string">"guest"</span>;<span class="comment">//用户名</span></span><br><span class="line">factory.Password = <span class="string">"guest"</span>;<span class="comment">//密码</span></span><br><span class="line"><span class="keyword">using</span> (<span class="keyword">var</span> connection = factory.CreateConnection())</span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">using</span> (<span class="keyword">var</span> channel = connection.CreateModel())<span class="comment">//创建一个Channel</span></span><br><span class="line">    &#123;</span><br><span class="line">      <span class="keyword">try</span></span><br><span class="line">      &#123;</span><br><span class="line">          channel.QueueDeclarePassive(mqqueueString);<span class="comment">//判断队列是否存在</span></span><br><span class="line">      &#125;</span><br><span class="line">      <span class="keyword">catch</span> (Exception e)</span><br><span class="line">      &#123;</span><br><span class="line">          Log(mqqueueString + <span class="string">"队列未创建!"</span>);</span><br><span class="line">          <span class="keyword">throw</span> e;</span><br><span class="line">          <span class="comment">//return false;</span></span><br><span class="line">      &#125;</span><br><span class="line">        <span class="comment">/*在创建队列的时候，只有RabbitMQ上该队列不存在，才会去创建。</span></span><br><span class="line"><span class="comment">        消息是以二进制数组的形式传输的，所以如果消息是实体对象的话，需要序列化和然后转化为二进制数组。*/</span></span><br><span class="line">        IBasicProperties properties = channel.CreateBasicProperties();</span><br><span class="line">        properties.ContentType = <span class="string">"application/json"</span>;</span><br><span class="line">        properties.ContentEncoding = <span class="string">"UTF-8"</span>;</span><br><span class="line">        properties.Headers = <span class="keyword">new</span> Dictionary&lt;<span class="keyword">string</span>, <span class="keyword">object</span>&gt;();</span><br><span class="line">        properties.Headers.Add(<span class="string">"srcSystem"</span>, <span class="string">"EQP"</span>);</span><br><span class="line">        properties.Headers.Add(<span class="string">"desSystem"</span>, <span class="string">"IMES"</span>);</span><br><span class="line">        properties.Headers.Add(<span class="string">"msgType"</span>, <span class="string">"EQP_IMES_EM"</span>);</span><br><span class="line">        properties.Headers.Add(<span class="string">"msgID"</span>, msgID);</span><br><span class="line">        channel.ConfirmSelect();</span><br><span class="line">        channel.QueueDeclare(mqqueueString, <span class="literal">true</span>, <span class="literal">false</span>, <span class="literal">false</span>, <span class="literal">null</span>);<span class="comment">//消息队列</span></span><br><span class="line">        <span class="keyword">var</span> body = Encoding.UTF8.GetBytes(msgStr);</span><br><span class="line">        channel.BasicPublish(mqExchange, mqRoutingKey, properties, body); <span class="comment">//开始传递</span></span><br><span class="line">        <span class="keyword">if</span> (channel.WaitForConfirms())</span><br><span class="line">        &#123;</span><br><span class="line">            Log(<span class="string">"数据发送成功"</span>);</span><br><span class="line">            <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">else</span></span><br><span class="line">        &#123;</span><br><span class="line">            Log(<span class="string">"数据发送成功，但未收到确认消息"</span>);</span><br><span class="line">            <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
+</div></div>
 <p>发送成功后可登录网页在Queues中查看到上传的消息队列及内容</p>
 <h3 id="函数说明"><a href="#函数说明" class="headerlink" title="函数说明"></a>函数说明</h3><h4 id="QueueDeclare"><a href="#QueueDeclare" class="headerlink" title="QueueDeclare"></a>QueueDeclare</h4><p>转自<a href="https://blog.csdn.net/vbirdbest/article/details/78670550" target="_blank" rel="noopener">https://blog.csdn.net/vbirdbest/article/details/78670550</a></p>
 <figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">queueDeclare(String queue,</span><br><span class="line">			boolean durable,</span><br><span class="line">			boolean exclusive,</span><br><span class="line">			Map&lt;String, Object&gt; arguments);</span><br></pre></td></tr></table></figure>
@@ -618,8 +620,10 @@
 <h4 id="BasicProperties"><a href="#BasicProperties" class="headerlink" title="BasicProperties"></a>BasicProperties</h4><figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">class</span> <span class="title">BasicProperties</span></span><br><span class="line">&#123;</span><br><span class="line">  <span class="keyword">private</span> String contentType; <span class="comment">//上下文类型</span></span><br><span class="line">  <span class="keyword">private</span> String contentEncoding; <span class="comment">//编码集</span></span><br><span class="line">  <span class="keyword">private</span> Map&lt;String,Object&gt; headers; <span class="comment">//消息头</span></span><br><span class="line">  <span class="keyword">private</span> Integer deliveryMode; <span class="comment">//消息的投递模式</span></span><br><span class="line">  <span class="keyword">private</span> Integer priority; <span class="comment">//优先级</span></span><br><span class="line">  <span class="keyword">private</span> String correlationId; <span class="comment">//</span></span><br><span class="line">  <span class="keyword">private</span> String replyTo; <span class="comment">//</span></span><br><span class="line">  <span class="keyword">private</span> String expiration; <span class="comment">//过期时间</span></span><br><span class="line">  <span class="keyword">private</span> String messageId; <span class="comment">//消息编号</span></span><br><span class="line">  <span class="keyword">private</span> Date timestamp; <span class="comment">//发送消息时的时间戳</span></span><br><span class="line">  <span class="keyword">private</span> String type; <span class="comment">// 消息类型</span></span><br><span class="line">  <span class="keyword">private</span> String userId;</span><br><span class="line">  <span class="keyword">private</span> String appId;</span><br><span class="line">  <span class="keyword">private</span> String clusterId;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 <h2 id="C-Consumer"><a href="#C-Consumer" class="headerlink" title="C# Consumer"></a>C# Consumer</h2><p>编写客户端链接RabbitMQ读取信息</p>
+<div><div class="fold_hider"><div class="close hider_title">展开/折叠示例</div></div><div class="fold">
 <figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">using</span> RabbitMQ.Client;</span><br><span class="line"><span class="keyword">using</span> RabbitMQ.Client.Events;</span><br><span class="line"><span class="keyword">var</span> factory = <span class="keyword">new</span> ConnectionFactory();</span><br><span class="line">factory.HostName = <span class="string">"localhost"</span>;</span><br><span class="line">factory.UserName = <span class="string">"guest"</span>;</span><br><span class="line">factory.Password = <span class="string">"guest"</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">using</span> (<span class="keyword">var</span> connection = factory.CreateConnection())</span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">using</span> (<span class="keyword">var</span> channel = connection.CreateModel())</span><br><span class="line">    &#123;</span><br><span class="line">        channel.QueueDeclare(<span class="string">"hello"</span>, <span class="literal">false</span>, <span class="literal">false</span>, <span class="literal">false</span>, <span class="literal">null</span>);</span><br><span class="line"></span><br><span class="line">        <span class="keyword">var</span> consumer = <span class="keyword">new</span> EventingBasicConsumer(channel);</span><br><span class="line">        channel.BasicConsume(<span class="string">"hello"</span>, <span class="literal">false</span>, consumer);</span><br><span class="line">        consumer.Received += (model, ea) =&gt;</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">var</span> body = ea.Body;</span><br><span class="line">            <span class="keyword">var</span> message = Encoding.UTF8.GetString(body);</span><br><span class="line">            Console.WriteLine(<span class="string">"已接收： &#123;0&#125;"</span>, message);   </span><br><span class="line">        &#125;;</span><br><span class="line">        Console.ReadLine();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
+</div></div>
 <h3 id="函数说明-1"><a href="#函数说明-1" class="headerlink" title="函数说明"></a>函数说明</h3><h4 id="BasicConsume"><a href="#BasicConsume" class="headerlink" title="BasicConsume"></a>BasicConsume</h4><figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="function">String <span class="title">basicConsume</span>(<span class="params">String queue,</span></span></span><br><span class="line"><span class="function"><span class="params">                    Consumer callback</span>)</span></span><br><span class="line"><span class="function"></span></span><br><span class="line"><span class="function">String <span class="title">basicConsume</span>(<span class="params">String queue,</span></span></span><br><span class="line"><span class="function"><span class="params">                    boolean autoAck,</span></span></span><br><span class="line"><span class="function"><span class="params">                    Consumer callback</span>)</span></span><br><span class="line"><span class="function"></span></span><br><span class="line"><span class="function">String <span class="title">basicConsume</span>(<span class="params">String queue,</span></span></span><br><span class="line"><span class="function"><span class="params">                    boolean autoAck,</span></span></span><br><span class="line"><span class="function"><span class="params">                    Map&lt;String, Object&gt; arguments,</span></span></span><br><span class="line"><span class="function"><span class="params">                    Consumer callback</span>)</span></span><br><span class="line"><span class="function"></span></span><br><span class="line"><span class="function">String <span class="title">basicConsume</span>(<span class="params">String queue,</span></span></span><br><span class="line"><span class="function"><span class="params">                    boolean autoAck,</span></span></span><br><span class="line"><span class="function"><span class="params">                    String consumerTag,</span></span></span><br><span class="line"><span class="function"><span class="params">                    Consumer callback</span>)</span></span><br><span class="line"><span class="function"></span></span><br><span class="line"><span class="function">String <span class="title">basicConsume</span>(<span class="params">String queue,</span></span></span><br><span class="line"><span class="function"><span class="params">                    boolean autoAck,</span></span></span><br><span class="line"><span class="function"><span class="params">                    String consumerTag,</span></span></span><br><span class="line"><span class="function"><span class="params">                    boolean noLocal,</span></span></span><br><span class="line"><span class="function"><span class="params">                    boolean exclusive,</span></span></span><br><span class="line"><span class="function"><span class="params">                    Map&lt;String, Object&gt; arguments,</span></span></span><br><span class="line"><span class="function"><span class="params">                    Consumer callback</span>)</span></span><br></pre></td></tr></table></figure>
 
 <p>queue 队列名<br>autoAck 是否自动确认消息,true自动确认,false 不自动要手动调用,建立设置为false<br>consumerTag 消费者标签，用来区分多个消费者<br>noLocal 设置为true，表示 不能将同一个Conenction中生产者发送的消息传递给这个Connection中 的消费者<br>exclusive 是否排他<br>arguments 消费者的参数<br>callback 消费者 DefaultConsumer建立使用，重写其中的方法</p>
@@ -644,7 +648,7 @@
   <p><span>本文标题:</span><a href="/Rabbit MQ.html">Rabbit MQ</a></p>
   <p><span>文章作者:</span><a href="/" title="访问 Justin 的个人博客">Justin</a></p>
   <p><span>发布时间:</span>2019年09月19日 - 18:09</p>
-  <p><span>最后更新:</span>2019年10月25日 - 18:10</p>
+  <p><span>最后更新:</span>2020年02月06日 - 14:02</p>
   <p><span>原始链接:</span><a href="/Rabbit MQ.html" title="Rabbit MQ">http://silencejql.coding.me/Rabbit MQ.html</a>
     <span class="copy-path" title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="http://silencejql.coding.me/Rabbit MQ.html" aria-label="复制成功！"></i></span>
   </p>
@@ -823,7 +827,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">33</span>
+                    <span class="site-state-item-count">35</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
@@ -868,7 +872,11 @@
                     
                       
                     
-                    <span class="site-state-item-count">14</span>
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">16</span>
                     <span class="site-state-item-name">分类</span>
                   </a>
                 </div>
@@ -971,7 +979,11 @@
                     
                       
                     
-                    <span class="site-state-item-count">43</span>
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">45</span>
                     <span class="site-state-item-name">标签</span>
                   </a>
                 </div>
@@ -1110,7 +1122,7 @@
     
       <span class="post-meta-item-text">站点总字数：</span>
     
-    <span title="站点总字数">89k</span>
+    <span title="站点总字数">55k</span>
   
 
   
@@ -1121,7 +1133,7 @@
     
       <span class="post-meta-item-text">站点阅读时长 &asymp;</span>
     
-    <span title="站点阅读时长">1:21</span>
+    <span title="站点阅读时长">50 分钟</span>
   
 </div>
 <!--
@@ -1146,7 +1158,7 @@
 
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">博客全站共20.7k字</span>
+  <span class="post-count">博客全站共22.8k字</span>
 </div>
 -->
 
