@@ -3,7 +3,7 @@
   <entry>
     <title><![CDATA[网络学习随记]]></title>
     <url>%2F%E7%BD%91%E7%BB%9C%E5%AD%A6%E4%B9%A0%E9%9A%8F%E8%AE%B0.html</url>
-    <content type="text"><![CDATA[写在前面 应用层-表示层-会话层---HTTP/FTP/DNS/Telnet... 传输层---TCP/UDP 网络层---IP/ARP/ICMP/RARP 数据链路层 物理层 ## 物理层 -Bit流 ## 数据链路层 帧 交换机 可识别MAC FCS|Data|SIP|DIP|SMAC|DMAC ## 网络层 包 ### 协议 IP、ARP、ICMP、IGMP 路由器 可识别IP Data|SIP|DIP #### ARP ARP广播查询目标MAC地址 ipconfig /all查看网卡MAC arp -a查询局域网内MAC ***ARP欺骗*** arp -s ip mac设置静态MAC(更改网络通讯中IP对应的MAC) 网卡属性中修复可重置 #### ICMP PING-Packet Internet Grope因特网包探索器 ping局域网延迟一般小于10ms TTL数据包生存周期，每过一个路由-1，防止网络回路 ping ip -i n 通过n值查看途经路由器IP 默认TTL： >Linux : 64 Windows : 128 Unix : 255 tracert ip 跟踪数据包路径pathping 跟踪数据包路径，计算丢包情况 路由静态路由 管理员配置路径动态路由 RIP协议 最大15级 传输层netstat -n查看会话netstat -nb查看会话及会话进程 常见应用层协议端口:|:http |TCP:80https |TCP:443ftp |TCP:21RDP |TCP:3389SMTP |TCP:25POP3 |TCP:110Telnet |TCP:23SQL |TCP:1433 |DNS |UDP:53(一般) 其他设置开/关机/登录启动脚本gpedit.msc 展开/折叠示例]]></content>
+    <content type="text"><![CDATA[写在前面 应用层-表示层-会话层---HTTP/FTP/DNS/Telnet... 传输层---TCP/UDP 网络层---IP/ARP/ICMP/RARP 数据链路层 物理层 ## 物理层 -Bit流 ## 数据链路层 帧 交换机 可识别MAC FCS|Data|SIP|DIP|SMAC|DMAC ## 网络层 包 ### 协议 IP、ARP、ICMP、IGMP 路由器 可识别IP Data|SIP|DIP #### ARP ARP广播查询目标MAC地址 ipconfig /all查看网卡MAC arp -a查询局域网内MAC ***ARP欺骗*** arp -s ip mac设置静态MAC(更改网络通讯中IP对应的MAC) 网卡属性中修复可重置 #### ICMP PING-Packet Internet Grope因特网包探索器 ping局域网延迟一般小于10ms TTL数据包生存周期，每过一个路由-1，防止网络回路 ping ip -i n 通过n值查看途经路由器IP 默认TTL： >Linux : 64 Windows : 128 Unix : 255 tracert ip 跟踪数据包路径pathping 跟踪数据包路径，计算丢包情况 路由静态路由 管理员配置路径动态路由 RIP协议 最大15级 传输层netstat -n查看会话netstat -nb查看会话及会话进程netstat -an查看监听端口 端口16位常用端口：01023登机端口：102449151客户端端口：49152~65535常见应用层协议端口:|:http |TCP:80https |TCP:443ftp |TCP:21RDP |TCP:3389 远程桌面SMTP |TCP:25POP3 |TCP:110Telnet |TCP:23SQL |TCP:1433 |DNS |UDP:53(一般) 套接字socket=IP:Port 其他设置开/关机/登录启动脚本gpedit.msc 展开/折叠示例]]></content>
   </entry>
   <entry>
     <title><![CDATA[Python script save somethings]]></title>
@@ -232,7 +232,7 @@
   <entry>
     <title><![CDATA[无处安放的矫情]]></title>
     <url>%2F%E6%97%A0%E5%A4%84%E5%AE%89%E6%94%BE%E7%9A%84%E7%9F%AB%E6%83%85.html</url>
-    <content type="text"><![CDATA[Enter password to read！ Incorrect Password! No content to display! U2FsdGVkX1+8Ssf4kbJMFhR6BQz42aLAzsi97q2KNMs=]]></content>
+    <content type="text"><![CDATA[Enter password to read！ Incorrect Password! No content to display! U2FsdGVkX19Gso0br8yT45A3gcy8Xk3NOzKu6seLlx8=]]></content>
   </entry>
   <entry>
     <title><![CDATA[csharp XML]]></title>
@@ -371,7 +371,7 @@
   <entry>
     <title><![CDATA[碎碎念]]></title>
     <url>%2F%E7%A2%8E%E7%A2%8E%E5%BF%B5.html</url>
-    <content type="text"><![CDATA[Enter password to read！ Incorrect Password! No content to display! U2FsdGVkX1/IQNMDVjpVzcao60fBK9ftvhcwaeDteI4fsId8ZCgRuGnT5ikpj1KnHpvUBM0bDutBITvISr0un5Mq/4SzI96Prz8Jo3QCU6ecB2J2ChadYBAr6yQDlMhK5OQFg5Ex9L1z9BgD/7DF7Ev1+JOqVGQJ4KRVHsCEixO2ecFfaEpGEcky55Nl3My5/3onFDSITie4UEHKB799V8ZoIhkNKOh74OOD+JLxnfqnGsSJx2Ws8B/Srag6S0BR1lcBuVH7cXQsWZ8ncPVpVKSaiWDUYHwqSSXYvt461llTP7fKZCqanLjnPCWLJhMpthJZzGxLSMLjC/duS7ucupPxCw0DJ1rP/uiMqR/8Xl2vIc+fhCOaBP1/+dZDPKfZZTuacKBPTA2A1u7TTW7xX1kC3znEICc5JKcmt3qHNxv4Ng3AzCcLtTe+z2yDtHMq+a7EBsoGfBKPMCgA3nJwsG074a4+WI4ojSXp8R2Pz4q7q/+23zsWnlGLpittl5iOMM+ktl0ptMI1W4uggGXYabCs+ozoAD7DqAj6Pxiiznor8LlDA4T/PHDwx/gmALuy1X4FbBgjcotWeeBZ9kziZ3R82Ze6b2R9ihjrKfSUV5wZHZGEniuOWfkaSTTJuFLMlL1RpiY4WM6fiDx/8UDsVbds6ovVr7f6MpXji6IdJYFK5vhKKNdV4dnetallDqXe]]></content>
+    <content type="text"><![CDATA[Enter password to read！ Incorrect Password! No content to display! U2FsdGVkX1+nl/w6z7ymvnuhOnUhNF1w8YG3pv/BS0++f5ryOeBpKmqGi+Iyu0fhcaEGoSkJVlaHhCMH3KOGpnlujhXDPvQ3s+VaqefrCNUN5BwSG0FDPAaIRdSJILIFeDAE1Yjw0NBUAdbnUX7Fl3y9ukBjeXsdEYqGW850y+4o/GI07HncYOa5gWx0emPyqqC8tmX6cluQGYUWk+rdNPt3nctltcFlfYgnzgzL0HsHEimbxOecSELDNHvg177AffgNGk0A3jvMOEfrVrfwc1WOKxzj8w2UJ9poj3sLhw+OSkYFTPFEzHAaW9tMcJCEsTNEAw3OMLo3OB52Tvd4IVCdcp+VUSnKjStWWazvb2wLKtwL3hILWu4kRays5oe5YeCx+Z9k0agTkwbbZE8HwqyoRP/G1GVuwhs98rd73wqjzGyRrKzRx6XUI45kXZNDkVPfpy/XPrCZ7HEubbyHjVliu3TLP4Y3+2u3tVLVR5lJZ/jJDHYrewddFZjXC4KjGjfvtv9n0HkFqTeoMYMPSjtEHoxev/8EEJ0ofrhlOlg9qj4nR5icaEnK1Q7InvOxaqwAwfHu83Xmm35Z6MYvLSYqqbA06uCJLg3S2/j2cTe4shsNKG6b8+osC4fIGLiqmP8pFVQ73FFIAm5TNyaPow84pWl7Q0nJ27hvk4dIy35tGt5U6t0P15xoDGO8/ecP]]></content>
       <categories>
         <category>碎碎念</category>
       </categories>
