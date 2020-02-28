@@ -122,7 +122,7 @@
 <meta property="og:site_name" content="Silencejql">
 <meta property="og:description" content="写在前面 应用层-表示层-会话层---HTTP/FTP/DNS/Telnet... 传输层---TCP/UDP 网络层---IP/ARP/ICMP/RARP 数据链路层 物理层">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2020-02-28T04:25:18.094Z">
+<meta property="og:updated_time" content="2020-02-28T07:20:53.947Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="网络学习随记">
 <meta name="twitter:description" content="写在前面 应用层-表示层-会话层---HTTP/FTP/DNS/Telnet... 传输层---TCP/UDP 网络层---IP/ARP/ICMP/RARP 数据链路层 物理层">
@@ -454,7 +454,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2020-02-28 12:25:18" itemprop="dateModified" datetime="2020-02-28T12:25:18+08:00">2020-02-28</time>
+                <time title="修改时间：2020-02-28 15:20:53" itemprop="dateModified" datetime="2020-02-28T15:20:53+08:00">2020-02-28</time>
               
             
           </span>
@@ -505,7 +505,7 @@
                 
                   <span class="post-meta-item-text">本文字数：</span>
                 
-                <span title="本文字数">869</span>
+                <span title="本文字数">842</span>
               
               
                 <span class="post-meta-divider">|</span>
@@ -545,37 +545,67 @@
 数据链路层
 物理层
 <a id="more"></a>
-## 物理层
--Bit流  
-## 数据链路层 帧
-交换机 可识别MAC
-FCS|Data|SIP|DIP|SMAC|DMAC
-## 网络层 包
-### 协议
-IP、ARP、ICMP、IGMP
-路由器 可识别IP
-Data|SIP|DIP
-#### ARP
-ARP广播查询目标MAC地址
-ipconfig /all查看网卡MAC
-arp -a查询局域网内MAC
-***ARP欺骗***
-arp -s ip mac设置静态MAC(更改网络通讯中IP对应的MAC)
-网卡属性中修复可重置
-#### ICMP
-PING-Packet Internet Grope因特网包探索器
-ping局域网延迟一般小于10ms
-TTL数据包生存周期，每过一个路由-1，防止网络回路
-ping ip -i n 通过n值查看途经路由器IP
-默认TTL：
->Linux : 64
-Windows : 128
-Unix : 255
 
+<h2 id="物理层"><a href="#物理层" class="headerlink" title="物理层"></a>物理层</h2><p>-Bit流  </p>
+<h2 id="数据链路层-帧"><a href="#数据链路层-帧" class="headerlink" title="数据链路层 帧"></a>数据链路层 帧</h2><p>交换机 可识别MAC<br>FCS|Data|SIP|DIP|SMAC|DMAC</p>
+<h2 id="网络层-包"><a href="#网络层-包" class="headerlink" title="网络层 包"></a>网络层 包</h2><h3 id="协议"><a href="#协议" class="headerlink" title="协议"></a>协议</h3><p>IP、ARP、ICMP、IGMP<br>路由器 可识别IP<br>Data|SIP|DIP</p>
+<h4 id="ARP"><a href="#ARP" class="headerlink" title="ARP"></a>ARP</h4><p>ARP广播查询目标MAC地址<br>ipconfig /all查看网卡MAC<br>arp -a查询局域网内MAC<br><strong><em>ARP欺骗</em></strong><br>arp -s ip mac设置静态MAC(更改网络通讯中IP对应的MAC)<br>网卡属性中修复可重置</p>
+<h4 id="ICMP"><a href="#ICMP" class="headerlink" title="ICMP"></a>ICMP</h4><p>PING-Packet Internet Grope因特网包探索器<br>ping局域网延迟一般小于10ms<br>TTL数据包生存周期，每过一个路由-1，防止网络回路<br>ping ip -i n 通过n值查看途经路由器IP<br>默认TTL：</p>
+<blockquote>
+<p>Linux : 64<br>Windows : 128<br>Unix : 255</p>
+</blockquote>
 <p>tracert ip 跟踪数据包路径<br>pathping 跟踪数据包路径，计算丢包情况</p>
 <h3 id="路由"><a href="#路由" class="headerlink" title="路由"></a>路由</h3><p>静态路由 管理员配置路径<br>动态路由 RIP协议 最大15级</p>
 <h2 id="传输层"><a href="#传输层" class="headerlink" title="传输层"></a>传输层</h2><p>netstat -n查看会话<br>netstat -nb查看会话及会话进程<br>netstat -an查看监听端口</p>
-<h3 id="端口"><a href="#端口" class="headerlink" title="端口"></a>端口</h3><p>16位<br>常用端口：0<del>1023<br>登机端口：1024</del>49151<br>客户端端口：49152~65535<br>常见应用层协议端口<br>:|:<br>http  |TCP:80<br>https  |TCP:443<br>ftp  |TCP:21<br>RDP  |TCP:3389  远程桌面<br>SMTP  |TCP:25<br>POP3  |TCP:110<br>Telnet  |TCP:23<br>SQL  |TCP:1433<br>  |<br>DNS  |UDP:53(一般)</p>
+<h3 id="端口"><a href="#端口" class="headerlink" title="端口"></a>端口</h3><p>16位<br>常用端口：0-1023<br>登机端口：1024-49151<br>客户端端口：49152-65535<br>常见应用层协议端口</p>
+<table>
+<thead>
+<tr>
+<th>协议</th>
+<th>端口</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>http</td>
+<td>TCP:80</td>
+</tr>
+<tr>
+<td>https</td>
+<td>TCP:443</td>
+</tr>
+<tr>
+<td>ftp</td>
+<td>TCP:21</td>
+</tr>
+<tr>
+<td>RDP</td>
+<td>TCP:3389  远程桌面</td>
+</tr>
+<tr>
+<td>SMTP</td>
+<td>TCP:25</td>
+</tr>
+<tr>
+<td>POP3</td>
+<td>TCP:110</td>
+</tr>
+<tr>
+<td>Telnet</td>
+<td>TCP:23</td>
+</tr>
+<tr>
+<td>SQL</td>
+<td>TCP:1433</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>DNS</td>
+<td>UDP:53(一般)</td>
+</tr>
+</tbody></table>
 <h3 id="套接字"><a href="#套接字" class="headerlink" title="套接字"></a>套接字</h3><p>socket=IP:Port</p>
 <h2 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h2><p>设置开/关机/登录启动脚本<br>gpedit.msc</p>
 <div><div class="fold_hider"><div class="close hider_title">展开/折叠示例</div></div><div class="fold">
@@ -602,7 +632,7 @@ Unix : 255
   <p><span>本文标题:</span><a href="/网络学习随记.html">网络学习随记</a></p>
   <p><span>文章作者:</span><a href="/" title="访问 Justin 的个人博客">Justin</a></p>
   <p><span>发布时间:</span>2020年02月27日 - 13:02</p>
-  <p><span>最后更新:</span>2020年02月28日 - 12:02</p>
+  <p><span>最后更新:</span>2020年02月28日 - 15:02</p>
   <p><span>原始链接:</span><a href="/网络学习随记.html" title="网络学习随记">http://silencejql.coding.me/网络学习随记.html</a>
     <span class="copy-path" title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="http://silencejql.coding.me/网络学习随记.html" aria-label="复制成功！"></i></span>
   </p>
@@ -1023,7 +1053,7 @@ Unix : 255
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#路由"><span class="nav-number">1.</span> <span class="nav-text">路由</span></a></li></ol><li class="nav-item nav-level-2"><a class="nav-link" href="#传输层"><span class="nav-number"></span> <span class="nav-text">传输层</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#端口"><span class="nav-number">1.</span> <span class="nav-text">端口</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#套接字"><span class="nav-number">2.</span> <span class="nav-text">套接字</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#其他"><span class="nav-number"></span> <span class="nav-text">其他</span></a></li></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#物理层"><span class="nav-number">1.</span> <span class="nav-text">物理层</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#数据链路层-帧"><span class="nav-number">2.</span> <span class="nav-text">数据链路层 帧</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#网络层-包"><span class="nav-number">3.</span> <span class="nav-text">网络层 包</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#协议"><span class="nav-number">3.1.</span> <span class="nav-text">协议</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#ARP"><span class="nav-number">3.1.1.</span> <span class="nav-text">ARP</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#ICMP"><span class="nav-number">3.1.2.</span> <span class="nav-text">ICMP</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#路由"><span class="nav-number">3.2.</span> <span class="nav-text">路由</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#传输层"><span class="nav-number">4.</span> <span class="nav-text">传输层</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#端口"><span class="nav-number">4.1.</span> <span class="nav-text">端口</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#套接字"><span class="nav-number">4.2.</span> <span class="nav-text">套接字</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#其他"><span class="nav-number">5.</span> <span class="nav-text">其他</span></a></li></ol></div>
             
 
           </div>
