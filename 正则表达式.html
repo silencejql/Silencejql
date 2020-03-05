@@ -123,7 +123,7 @@
 <meta property="og:site_name" content="Silencejql">
 <meta property="og:description" content="常用正则表达式">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2020-02-06T08:38:08.911Z">
+<meta property="og:updated_time" content="2020-03-05T08:07:35.220Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="正则表达式">
 <meta name="twitter:description" content="常用正则表达式">
@@ -455,7 +455,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2020-02-06 16:38:08" itemprop="dateModified" datetime="2020-02-06T16:38:08+08:00">2020-02-06</time>
+                <time title="修改时间：2020-03-05 16:07:35" itemprop="dateModified" datetime="2020-03-05T16:07:35+08:00">2020-03-05</time>
               
             
           </span>
@@ -524,7 +524,7 @@
                 
                   <span class="post-meta-item-text">本文字数：</span>
                 
-                <span title="本文字数">2.3k</span>
+                <span title="本文字数">3.5k</span>
               
               
                 <span class="post-meta-divider">|</span>
@@ -537,7 +537,7 @@
                 
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
-                <span title="阅读时长">2 分钟</span>
+                <span title="阅读时长">3 分钟</span>
               
             </div>
           
@@ -559,7 +559,110 @@
       
 
       
-        <p>re.search 扫描整个字符串并返回第一个成功的匹配<br>re.match只匹配字符串的开始，如果字符串开始不符合正则表达式，则匹配失败，函数返回None；而re.search匹配整个字符串，直到找到一个匹配<br>re.findall在字符串中找到正则表达式所匹配的所有子串，并返回一个列表，如果没有找到匹配的，则返回空列表</p>
+        <h2 id="Re库"><a href="#Re库" class="headerlink" title="Re库"></a>Re库</h2><p>re.search 扫描整个字符串并返回第一个成功的匹配<br>re.search(pattern,string,flag=0)</p>
+<blockquote>
+<p>pattern:正则表达式字符串<br>string:待匹配字符串<br>flag:控制标记</p>
+<blockquote>
+<p>re.I或re.IGNORECASE表示忽略正则表达式的大小写，[A-Z]可匹配大小写<br>re.M或re.MULTILINE正字表达式中的^操作符能将给定字符串的每一行当做匹配开始<br>re.S或re.DOTALL正则表达式中的.操作符能匹配所有字符，默认不能匹配换行符</p>
+</blockquote>
+</blockquote>
+<p>re.match(pattern,string,flag=0)</p>
+<blockquote>
+<p>re.match只匹配字符串的开始，如果字符串开始不符合正则表达式，则匹配失败，函数返回None；而re.search匹配整个字符串，直到找到一个匹配</p>
+</blockquote>
+<p>re.findall在字符串中找到正则表达式所匹配的所有子串，并返回一个列表，如果没有找到匹配的，则返回空列表<br>re.split(pattern,string,maxsplit=0,flag=0)</p>
+<blockquote>
+<p>将字符串按照正则表达式匹配的结果进行分割，返回列表<br>re.split([a],sadfab)返回s,df,b</p>
+</blockquote>
+<p>re.sub(pattern,repl,string,count=0,flag=0)</p>
+<blockquote>
+<p>在一个字符串中替换所有正则表达式所匹配的子串，返回替换后的字符串<br>repl:替换匹配字符串的字符串<br>count:匹配的最大替换次数</p>
+</blockquote>
+<h3 id="Match对象属性"><a href="#Match对象属性" class="headerlink" title="Match对象属性"></a>Match对象属性</h3><blockquote>
+<p>.string:待匹配文本<br>.re:匹配时使用的pattern对象<br>.pos:正则表达式搜索文本的开始位置<br>.endpos:正则表达式搜索文本的结束位置</p>
+</blockquote>
+<h3 id="Match对象方法"><a href="#Match对象方法" class="headerlink" title="Match对象方法"></a>Match对象方法</h3><blockquote>
+<p>.group():group(0)获取匹配后的字符串<br>.start():匹配字符串在原始字符串的开始位置<br>.end():<br>.span():返回(.start(),.end())</p>
+</blockquote>
+<h2 id="常用字符"><a href="#常用字符" class="headerlink" title="常用字符"></a>常用字符</h2><table>
+<thead>
+<tr>
+<th>字符</th>
+<th>描述</th>
+<th>实例</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>.</td>
+<td>任意单个字符</td>
+<td></td>
+</tr>
+<tr>
+<td>[]</td>
+<td>字符集，对单个字符给出取值范围</td>
+<td>[abc]表示a或b或c的单个字符，[a-z]表示a-z的单个字符</td>
+</tr>
+<tr>
+<td>[^]</td>
+<td>非字符集，对单个字符给出排除范围</td>
+<td>[^abc]表示非a或b或c的单个字符</td>
+</tr>
+<tr>
+<td>*</td>
+<td>前一个字符0次或无限次重复</td>
+<td>abc*表示ab、abc、abccccc</td>
+</tr>
+<tr>
+<td>+</td>
+<td>前一个字符的1次或无限次重复</td>
+<td>abc+表示abc、abccc</td>
+</tr>
+<tr>
+<td>?</td>
+<td>前一个字符0次或1次重复</td>
+<td>abc?表示ab或abc</td>
+</tr>
+<tr>
+<td>|</td>
+<td>左右表达式任意一个</td>
+<td>a|b 表示a或b</td>
+</tr>
+<tr>
+<td>{m}</td>
+<td>重复前一个字符m次</td>
+<td>ab{2}cb表示abbcb,注意次数</td>
+</tr>
+<tr>
+<td>{m,n}</td>
+<td>重复前面一个字符m至n次(包含n)</td>
+<td>ab{1,2}c表示abc或abbc</td>
+</tr>
+<tr>
+<td>^</td>
+<td>匹配字符串开头</td>
+<td>^abc表示abc在一个字符串的开头</td>
+</tr>
+<tr>
+<td>$</td>
+<td>匹配字符串结尾</td>
+<td>abc$abc表示abc在一个字符串的结尾</td>
+</tr>
+<tr>
+<td>()</td>
+<td>分组标记，内部只能用|操作符</td>
+<td>(abc)表示abc,(abc</td>
+</tr>
+<tr>
+<td>\d</td>
+<td>数字，等价于[0-9]</td>
+<td></td>
+</tr>
+<tr>
+<td>\w</td>
+<td>单词字符，等价于[A-Za-z0-9]</td>
+<td></td>
+</tr>
+</tbody></table>
 <h3 id="非打印字符"><a href="#非打印字符" class="headerlink" title="非打印字符"></a>非打印字符</h3><p>非打印字符也可以是正则表达式的组成部分。下表列出了表示非打印字符的转义序列：</p>
 <table>
 <thead>
@@ -631,6 +734,14 @@
 <tr>
 <td align="center">[</td>
 <td align="left">标记一个中括号表达式的开始。要匹配 [，请使用 [。</td>
+</tr>
+<tr>
+<td align="center">[]</td>
+<td align="left">[abc]表示a或b或c，[a<del>z]表示a</del>z其中一个</td>
+</tr>
+<tr>
+<td align="center">[^]</td>
+<td align="left">[^abc]表示非a或b或c</td>
 </tr>
 <tr>
 <td align="center">?</td>
@@ -1139,7 +1250,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#非打印字符"><span class="nav-number">1.</span> <span class="nav-text">非打印字符</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#特殊字符"><span class="nav-number">2.</span> <span class="nav-text">特殊字符</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#限定符"><span class="nav-number">3.</span> <span class="nav-text">限定符</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#定位符"><span class="nav-number">4.</span> <span class="nav-text">定位符</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Re库"><span class="nav-number">1.</span> <span class="nav-text">Re库</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Match对象属性"><span class="nav-number">1.1.</span> <span class="nav-text">Match对象属性</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Match对象方法"><span class="nav-number">1.2.</span> <span class="nav-text">Match对象方法</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#常用字符"><span class="nav-number">2.</span> <span class="nav-text">常用字符</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#非打印字符"><span class="nav-number">2.1.</span> <span class="nav-text">非打印字符</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#特殊字符"><span class="nav-number">2.2.</span> <span class="nav-text">特殊字符</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#限定符"><span class="nav-number">2.3.</span> <span class="nav-text">限定符</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#定位符"><span class="nav-number">2.4.</span> <span class="nav-text">定位符</span></a></li></ol></li></ol></div>
             
 
           </div>
@@ -1177,7 +1288,7 @@
     
       <span class="post-meta-item-text">站点总字数：</span>
     
-    <span title="站点总字数">57k</span>
+    <span title="站点总字数">58k</span>
   
 
   
@@ -1188,7 +1299,7 @@
     
       <span class="post-meta-item-text">站点阅读时长 &asymp;</span>
     
-    <span title="站点阅读时长">51 分钟</span>
+    <span title="站点阅读时长">53 分钟</span>
   
 </div>
 <!--
@@ -1213,7 +1324,7 @@
 
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">博客全站共23.8k字</span>
+  <span class="post-count">博客全站共24.5k字</span>
 </div>
 -->
 
