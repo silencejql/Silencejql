@@ -123,7 +123,7 @@
 <meta property="og:site_name" content="Silencejql">
 <meta property="og:description" content="常用正则表达式">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2020-03-05T08:07:35.220Z">
+<meta property="og:updated_time" content="2020-03-12T09:59:53.568Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="正则表达式">
 <meta name="twitter:description" content="常用正则表达式">
@@ -455,7 +455,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2020-03-05 16:07:35" itemprop="dateModified" datetime="2020-03-05T16:07:35+08:00">2020-03-05</time>
+                <time title="修改时间：2020-03-12 17:59:53" itemprop="dateModified" datetime="2020-03-12T17:59:53+08:00">2020-03-12</time>
               
             
           </span>
@@ -524,7 +524,7 @@
                 
                   <span class="post-meta-item-text">本文字数：</span>
                 
-                <span title="本文字数">3.5k</span>
+                <span title="本文字数">3.7k</span>
               
               
                 <span class="post-meta-divider">|</span>
@@ -582,7 +582,7 @@
 <p>.string:待匹配文本<br>.re:匹配时使用的pattern对象<br>.pos:正则表达式搜索文本的开始位置<br>.endpos:正则表达式搜索文本的结束位置</p>
 </blockquote>
 <h3 id="Match对象方法"><a href="#Match对象方法" class="headerlink" title="Match对象方法"></a>Match对象方法</h3><blockquote>
-<p>.group():group(0)获取匹配后的字符串<br>.start():匹配字符串在原始字符串的开始位置<br>.end():<br>.span():返回(.start(),.end())</p>
+<p>.group():group(0)获取匹配后的字符串,group(n)匹配正则表达式中如(\d+)第n个括号所匹配字符串<br>.start():匹配字符串在原始字符串的开始位置<br>.end():<br>.span():返回(.start(),.end())</p>
 </blockquote>
 <h2 id="常用字符"><a href="#常用字符" class="headerlink" title="常用字符"></a>常用字符</h2><table>
 <thead>
@@ -824,6 +824,10 @@
 </tr>
 </tbody></table>
 <p><strong>注意</strong>：不能将限定符与定位符一起使用。由于在紧靠换行或者单词边界的前面或后面不能有一个以上位置，因此不允许诸如 ^* 之类的表达式。<br>若要匹配一行文本开始处的文本，请在正则表达式的开始使用 ^ 字符。不要将 ^ 的这种用法与中括号表达式内的用法混淆。<br>若要匹配一行文本的结束处的文本，请在正则表达式的结束处使用 $ 字符。</p>
+<h2 id="环视"><a href="#环视" class="headerlink" title="环视"></a>环视</h2><p>环视又叫预搜索和零宽断言<br>环视只占用逻辑位置 不占用物理位置<br>环视 | 含义<br>:|:<br>(?=exp)  | 肯定顺序环视，子表达式能匹配右侧的文本<br>(?!exp)  |      否定顺序环视，子表达式不能匹配右侧的文本<br>(?&lt;=exp)  |  肯定逆序环视，子表达式能匹配左侧的文本<br>(?&lt;!exp)  |  否定逆序环视，子表达式不能匹配左侧的文本</p>
+<p>示例：<br>下列环视正则匹配均输出”AAA”</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> re</span><br><span class="line"></span><br><span class="line">print(re.findall(<span class="string">"(?&lt;=B)AAA"</span>,<span class="string">"BAAA"</span>))</span><br><span class="line">print(re.findall(<span class="string">"(?&lt;!B)AAA"</span>,<span class="string">"CAAA"</span>))<span class="comment">#这里使用(?&lt;!B)、(?&lt;!=B)均可</span></span><br><span class="line">print(re.findall(<span class="string">"AAA(?=B)"</span>,<span class="string">"AAAB"</span>))</span><br><span class="line">print(re.findall(<span class="string">"AAA(?!B)"</span>,<span class="string">"AAAC"</span>))<span class="comment">#这里使用(?!B)、(?!=B)均可</span></span><br></pre></td></tr></table></figure>
+
 
       
     </div>
@@ -1250,7 +1254,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Re库"><span class="nav-number">1.</span> <span class="nav-text">Re库</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Match对象属性"><span class="nav-number">1.1.</span> <span class="nav-text">Match对象属性</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Match对象方法"><span class="nav-number">1.2.</span> <span class="nav-text">Match对象方法</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#常用字符"><span class="nav-number">2.</span> <span class="nav-text">常用字符</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#非打印字符"><span class="nav-number">2.1.</span> <span class="nav-text">非打印字符</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#特殊字符"><span class="nav-number">2.2.</span> <span class="nav-text">特殊字符</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#限定符"><span class="nav-number">2.3.</span> <span class="nav-text">限定符</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#定位符"><span class="nav-number">2.4.</span> <span class="nav-text">定位符</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Re库"><span class="nav-number">1.</span> <span class="nav-text">Re库</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Match对象属性"><span class="nav-number">1.1.</span> <span class="nav-text">Match对象属性</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Match对象方法"><span class="nav-number">1.2.</span> <span class="nav-text">Match对象方法</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#常用字符"><span class="nav-number">2.</span> <span class="nav-text">常用字符</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#非打印字符"><span class="nav-number">2.1.</span> <span class="nav-text">非打印字符</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#特殊字符"><span class="nav-number">2.2.</span> <span class="nav-text">特殊字符</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#限定符"><span class="nav-number">2.3.</span> <span class="nav-text">限定符</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#定位符"><span class="nav-number">2.4.</span> <span class="nav-text">定位符</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#环视"><span class="nav-number">3.</span> <span class="nav-text">环视</span></a></li></ol></div>
             
 
           </div>
@@ -1324,7 +1328,7 @@
 
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">博客全站共24.5k字</span>
+  <span class="post-count">博客全站共24.9k字</span>
 </div>
 -->
 
