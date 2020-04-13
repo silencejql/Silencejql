@@ -2,7 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>http://silencejql.gitee.io/%E6%95%B0%E6%8D%AE%E5%BA%93%E9%93%BE%E6%8E%A5%E5%AD%97%E7%AC%A6%E4%B8%B2%E6%B1%87%E6%80%BB.html</loc>
-    <lastmod>2020-04-04</lastmod>
+    <lastmod>2020-04-13</lastmod>
+  </url>  <url>
+    <loc>http://silencejql.gitee.io/lambda%20Expressions.html</loc>
+    <lastmod>2020-04-10</lastmod>
+  </url>  <url>
+    <loc>http://silencejql.gitee.io/CSharp%E5%9F%BA%E7%A1%80.html</loc>
+    <lastmod>2020-04-10</lastmod>
   </url>  <url>
     <loc>http://silencejql.gitee.io/%E5%B7%A5%E4%BD%9C%E6%97%A5%E5%BF%97.html</loc>
     <lastmod>2020-04-04</lastmod>
@@ -44,9 +50,6 @@
     <lastmod>2019-12-17</lastmod>
   </url>  <url>
     <loc>http://silencejql.gitee.io/CSharp%20XML.html</loc>
-    <lastmod>2019-12-17</lastmod>
-  </url>  <url>
-    <loc>http://silencejql.gitee.io/CSharp%E5%B8%B8%E8%AF%86.html</loc>
     <lastmod>2019-12-17</lastmod>
   </url>  <url>
     <loc>http://silencejql.gitee.io/%E4%B8%8A%E6%B1%BD%E9%80%9A%E7%94%A8%E4%BA%94%E8%8F%B1.html</loc>
