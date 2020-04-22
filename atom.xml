@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://silencejql.gitee.io/"/>
-  <updated>2020-04-10T04:08:22.731Z</updated>
+  <updated>2020-04-22T06:44:11.890Z</updated>
   <id>http://silencejql.gitee.io/</id>
   
   <author>
@@ -15,6 +15,24 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>VCU</title>
+    <link href="http://silencejql.gitee.io/VCU.html"/>
+    <id>http://silencejql.gitee.io/VCU.html</id>
+    <published>2020-04-22T04:13:02.000Z</published>
+    <updated>2020-04-22T06:44:11.890Z</updated>
+    
+    <content type="html"><![CDATA[<center>写在前面</center><a id="more"></a><h2 id="协议需求"><a href="#协议需求" class="headerlink" title="协议需求"></a>协议需求</h2><p>CANID：</p><h3 id="静态"><a href="#静态" class="headerlink" title="静态"></a>静态</h3><p>预充截止电压PreChargeVoltageGetTest：      (D01E- Battery External Voltage电池包外侧总电压)<br>绝缘电阻InsulationResistanceGetTest：      (D01C- Battery Insulation Resistance电池包的绝缘值)<br>电池静态温度BatteryTemperatureRiseTestT1：  (D02B- Battery Average Temperature电池温升)</p><h3 id="动态"><a href="#动态" class="headerlink" title="动态"></a>动态</h3><p>MCU转速MCUSpeedGetTest：                   (电机当前转速D034- Motor Actual Speed)<br>MCU温度MCUTempretureGetTest：D061         (MCU温度D02E- Inverter Actual Temperature)<br>电机温度MotorTempretureGetTest：C952        (电机温度D036- Motor Actual Temperature)<br>放电电流BatteryTotalCurrentTest：D030        (充电电流D027- Battery Total Current充电时电流为负值)<br>电池温升BatteryTemperatureRiseTestT2：D047    (D02B- Battery Average Temperature电池温升)<br>车速传感器SpeedSensorGetTest：<br>判断制动踏板ReadBrakeStatus：<br>刹车回馈电流FeedbackCurrentGetTest：D030     (D027- Battery Total Current回馈电流)</p><p>MCU转速与实际车速差值PreChargeVoltageGetTest：</p><div><div class="fold_hider"><div class="close hider_title">展开/折叠示例</div></div><div class="fold"></div></div>]]></content>
+    
+    <summary type="html">
+    
+      &lt;center&gt;写在前面&lt;/center&gt;
+    
+    </summary>
+    
+    
+  </entry>
   
   <entry>
     <title>lambda Expressions</title>
@@ -442,37 +460,6 @@ Google Chrome 利用IDM下载器下载资源，可下载百度网盘资源
       <category term="诊断指令" scheme="http://silencejql.gitee.io/tags/%E8%AF%8A%E6%96%AD%E6%8C%87%E4%BB%A4/"/>
     
       <category term="CAN" scheme="http://silencejql.gitee.io/tags/CAN/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>工作-BBK</title>
-    <link href="http://silencejql.gitee.io/%E5%B7%A5%E4%BD%9C-BBK.html"/>
-    <id>http://silencejql.gitee.io/工作-BBK.html</id>
-    <published>2019-08-07T08:28:57.000Z</published>
-    <updated>2019-12-17T05:19:17.580Z</updated>
-    
-    <content type="html"><![CDATA[<br><a href="/现场软件备份路径.html" title="现场软件备份路径">现场软件备份路径</a><br><a href="/现场问题整理.html" title="现场问题整理">现场问题整理</a><br><br><a href="/现场软件安装包下载.html" title="现场软件安装包下载">现场软件安装包下载</a>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        
-&lt;br&gt;
-&lt;a href=&quot;/现场软件备份路径.html&quot; title=&quot;现场软件备份路径&quot;&gt;现场软件备份路径&lt;/a&gt;
-&lt;br&gt;
-&lt;a href=&quot;/现场问题整理.html&quot; title=&quot;现场问题整理&quot;&gt;现场问题整理&lt;/a&gt;
-&lt;br&gt;
-
-&lt;br&gt;
-&lt;a href=&quot;/现场软件
-      
-    
-    </summary>
-    
-      <category term="工作" scheme="http://silencejql.gitee.io/categories/%E5%B7%A5%E4%BD%9C/"/>
-    
     
   </entry>
   
