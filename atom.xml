@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://silencejql.gitee.io/"/>
-  <updated>2020-05-09T02:36:16.050Z</updated>
+  <updated>2020-05-14T01:53:50.751Z</updated>
   <id>https://silencejql.gitee.io/</id>
   
   <author>
@@ -15,6 +15,24 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>BBKTimeLock</title>
+    <link href="https://silencejql.gitee.io/BBKTimeLock.html"/>
+    <id>https://silencejql.gitee.io/BBKTimeLock.html</id>
+    <published>2020-05-11T08:04:37.000Z</published>
+    <updated>2020-05-14T01:53:50.751Z</updated>
+    
+    <content type="html"><![CDATA[<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script><div id="hbe-security">  <div class="hbe-input-container">  <input type="password" class="hbe-form-control" id="pass" placeholder="Enter password to read！" />    <label for="pass">Enter password to read！</label>    <div class="bottom-line"></div>  </div></div><div id="decryptionError" style="display: none;">Incorrect Password!</div><div id="noContentError" style="display: none;">No content to display!</div><div id="encrypt-blog" style="display:none">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</div><script src="/lib/crypto-js.js"></script><script src="/lib/blog-encrypt.js"></script><link href="/css/blog-encrypt.css" rel="stylesheet" type="text/css">]]></content>
+    
+    <summary type="html">
+    
+      交钱！
+    
+    </summary>
+    
+    
+  </entry>
   
   <entry>
     <title>BBK软件设置密码方法</title>
@@ -433,28 +451,6 @@ Google Chrome 利用IDM下载器下载资源，可下载百度网盘资源
     
     
       <category term="链接字符串" scheme="https://silencejql.gitee.io/tags/%E9%93%BE%E6%8E%A5%E5%AD%97%E7%AC%A6%E4%B8%B2/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>现场软件安装包下载</title>
-    <link href="https://silencejql.gitee.io/%E7%8E%B0%E5%9C%BA%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85%E5%8C%85%E4%B8%8B%E8%BD%BD.html"/>
-    <id>https://silencejql.gitee.io/现场软件安装包下载.html</id>
-    <published>2019-08-08T03:19:57.000Z</published>
-    <updated>2019-08-21T08:10:02.088Z</updated>
-    
-    <content type="html"><![CDATA[<h4 id="百度网盘下载推荐用ENFI下载器"><a href="#百度网盘下载推荐用ENFI下载器" class="headerlink" title="百度网盘下载推荐用ENFI下载器"></a>百度网盘下载推荐用ENFI下载器</h4><p>链接：<a href="https://www.enfi.cloud/#/index" target="_blank" rel="noopener">https://www.enfi.cloud/#/index</a></p><h4 id="串口调试助手"><a href="#串口调试助手" class="headerlink" title="串口调试助手"></a>串口调试助手</h4><p>链接：<a href="https://pan.baidu.com/s/1KAisgybEesC8fMTwJ-oK3w" target="_blank" rel="noopener">https://pan.baidu.com/s/1KAisgybEesC8fMTwJ-oK3w</a><br>提取码：au8d</p><h4 id="Socktools"><a href="#Socktools" class="headerlink" title="Socktools"></a>Socktools</h4><p>链接：<a href="https://pan.baidu.com/s/1lXWZWLjt9LE4xxCjK873-Q" target="_blank" rel="noopener">https://pan.baidu.com/s/1lXWZWLjt9LE4xxCjK873-Q</a><br>提取码：v5qn</p><h4 id="NetFramework4-0"><a href="#NetFramework4-0" class="headerlink" title=".NetFramework4.0"></a>.NetFramework4.0</h4><p>链接：<a href="https://pan.baidu.com/s/1Hwdt4rEToEK4Ao4ljvmURA" target="_blank" rel="noopener">https://pan.baidu.com/s/1Hwdt4rEToEK4Ao4ljvmURA</a><br>提取码：wlfc</p><h4 id="虚拟串口"><a href="#虚拟串口" class="headerlink" title="虚拟串口"></a>虚拟串口</h4><p>链接：<a href="https://pan.baidu.com/s/1FrqtaKrp74EPmyvVqNOu6g" target="_blank" rel="noopener">https://pan.baidu.com/s/1FrqtaKrp74EPmyvVqNOu6g</a><br>提取码：wkv3</p><h4 id="VisualStudio2010"><a href="#VisualStudio2010" class="headerlink" title="VisualStudio2010"></a>VisualStudio2010</h4><p>链接：<a href="https://pan.baidu.com/s/1Z-EUIWWsJmUN22KS8QNKcg" target="_blank" rel="noopener">https://pan.baidu.com/s/1Z-EUIWWsJmUN22KS8QNKcg</a><br>提取码：rwpn</p><h4 id="SQLServer2008"><a href="#SQLServer2008" class="headerlink" title="SQLServer2008"></a>SQLServer2008</h4><p>链接：<a href="https://pan.baidu.com/s/15hGavjba8ewaFxlyd_K-dw" target="_blank" rel="noopener">https://pan.baidu.com/s/15hGavjba8ewaFxlyd_K-dw</a><br>提取码：xdxa</p><h4 id="KepServer5-2"><a href="#KepServer5-2" class="headerlink" title="KepServer5.2"></a>KepServer5.2</h4><p>链接：<a href="https://pan.baidu.com/s/1zmX5Myqts5zzG3DTjairdg" target="_blank" rel="noopener">https://pan.baidu.com/s/1zmX5Myqts5zzG3DTjairdg</a><br>提取码：7dwx</p><h4 id="Postgresql9-5-3"><a href="#Postgresql9-5-3" class="headerlink" title="Postgresql9.5.3"></a>Postgresql9.5.3</h4><p>链接：<a href="https://pan.baidu.com/s/1NA4aNTu9CGmAEYd9aeo-Gg" target="_blank" rel="noopener">https://pan.baidu.com/s/1NA4aNTu9CGmAEYd9aeo-Gg</a><br>提取码：l9h6</p><h4 id="Setup-Npgsql-2-2-3-0-r2-net40"><a href="#Setup-Npgsql-2-2-3-0-r2-net40" class="headerlink" title="Setup_Npgsql-2.2.3.0-r2-net40"></a>Setup_Npgsql-2.2.3.0-r2-net40</h4><p>链接：<a href="https://pan.baidu.com/s/1wLBTi8vgJUCvlqO8HvorOQ" target="_blank" rel="noopener">https://pan.baidu.com/s/1wLBTi8vgJUCvlqO8HvorOQ</a><br>提取码：yv4h</p><h4 id="Orical-10g-Client"><a href="#Orical-10g-Client" class="headerlink" title="Orical 10g Client"></a>Orical 10g Client</h4><p>链接：<a href="https://pan.baidu.com/s/1btHhUl-ataDjq6J7KAWfuA" target="_blank" rel="noopener">https://pan.baidu.com/s/1btHhUl-ataDjq6J7KAWfuA</a><br>提取码：ks71</p><h4 id="psqlodbc-x86"><a href="#psqlodbc-x86" class="headerlink" title="psqlodbc_x86"></a>psqlodbc_x86</h4><p>链接：<a href="https://pan.baidu.com/s/19FKNrVT4CxO5yHyvhVayOw" target="_blank" rel="noopener">https://pan.baidu.com/s/19FKNrVT4CxO5yHyvhVayOw</a><br>提取码：9yud</p>]]></content>
-    
-    <summary type="html">
-    
-      现场设备软件安装包分享
-    
-    </summary>
-    
-      <category term="工作" scheme="https://silencejql.gitee.io/categories/%E5%B7%A5%E4%BD%9C/"/>
-    
-    
-      <category term="安装包" scheme="https://silencejql.gitee.io/tags/%E5%AE%89%E8%A3%85%E5%8C%85/"/>
     
   </entry>
   
