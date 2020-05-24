@@ -5,9 +5,9 @@
   
   <link href="/atom.xml" rel="self"/>
   
-  <link href="https://silencejql.gitee.io/"/>
+  <link href="http://silencejql.gitee.io/"/>
   <updated>2020-05-24T02:58:59.424Z</updated>
-  <id>https://silencejql.gitee.io/</id>
+  <id>http://silencejql.gitee.io/</id>
   
   <author>
     <name>Justin</name>
@@ -18,8 +18,8 @@
   
   <entry>
     <title>BBK检测线联网</title>
-    <link href="https://silencejql.gitee.io/BBK%E6%A3%80%E6%B5%8B%E7%BA%BF%E8%81%94%E7%BD%91.html"/>
-    <id>https://silencejql.gitee.io/BBK检测线联网.html</id>
+    <link href="http://silencejql.gitee.io/BBK%E6%A3%80%E6%B5%8B%E7%BA%BF%E8%81%94%E7%BD%91.html"/>
+    <id>http://silencejql.gitee.io/BBK检测线联网.html</id>
     <published>2020-05-24T01:50:22.000Z</published>
     <updated>2020-05-24T02:58:59.424Z</updated>
     
@@ -32,19 +32,19 @@
     
     </summary>
     
-      <category term="工作" scheme="https://silencejql.gitee.io/categories/%E5%B7%A5%E4%BD%9C/"/>
+      <category term="工作" scheme="http://silencejql.gitee.io/categories/%E5%B7%A5%E4%BD%9C/"/>
     
     
   </entry>
   
   <entry>
     <title>BBKTimeLock</title>
-    <link href="https://silencejql.gitee.io/BBKTimeLock.html"/>
-    <id>https://silencejql.gitee.io/BBKTimeLock.html</id>
+    <link href="http://silencejql.gitee.io/BBKTimeLock.html"/>
+    <id>http://silencejql.gitee.io/BBKTimeLock.html</id>
     <published>2020-05-11T08:04:37.000Z</published>
     <updated>2020-05-14T01:56:15.676Z</updated>
     
-    <content type="html"><![CDATA[<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script><div id="hbe-security">  <div class="hbe-input-container">  <input type="password" class="hbe-form-control" id="pass" placeholder="Enter password to read！" />    <label for="pass">Enter password to read！</label>    <div class="bottom-line"></div>  </div></div><div id="decryptionError" style="display: none;">Incorrect Password!</div><div id="noContentError" style="display: none;">No content to display!</div><div id="encrypt-blog" style="display:none">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</div><script src="/lib/crypto-js.js"></script><script src="/lib/blog-encrypt.js"></script><link href="/css/blog-encrypt.css" rel="stylesheet" type="text/css">]]></content>
+    <content type="html"><![CDATA[<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script><div id="hbe-security">  <div class="hbe-input-container">  <input type="password" class="hbe-form-control" id="pass" placeholder="Enter password to read！" />    <label for="pass">Enter password to read！</label>    <div class="bottom-line"></div>  </div></div><div id="decryptionError" style="display: none;">Incorrect Password!</div><div id="noContentError" style="display: none;">No content to display!</div><div id="encrypt-blog" style="display:none">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</div><script src="/lib/crypto-js.js"></script><script src="/lib/blog-encrypt.js"></script><link href="/css/blog-encrypt.css" rel="stylesheet" type="text/css">]]></content>
     
     <summary type="html">
     
@@ -57,8 +57,8 @@
   
   <entry>
     <title>BBK软件设置密码方法</title>
-    <link href="https://silencejql.gitee.io/BBK%E8%BD%AF%E4%BB%B6%E8%AE%BE%E7%BD%AE%E5%AF%86%E7%A0%81%E6%96%B9%E6%B3%95.html"/>
-    <id>https://silencejql.gitee.io/BBK软件设置密码方法.html</id>
+    <link href="http://silencejql.gitee.io/BBK%E8%BD%AF%E4%BB%B6%E8%AE%BE%E7%BD%AE%E5%AF%86%E7%A0%81%E6%96%B9%E6%B3%95.html"/>
+    <id>http://silencejql.gitee.io/BBK软件设置密码方法.html</id>
     <published>2020-05-09T02:15:29.000Z</published>
     <updated>2020-05-09T02:36:16.050Z</updated>
     
@@ -76,8 +76,8 @@ BBK软件设置密码方法
   
   <entry>
     <title>VCU</title>
-    <link href="https://silencejql.gitee.io/VCU.html"/>
-    <id>https://silencejql.gitee.io/VCU.html</id>
+    <link href="http://silencejql.gitee.io/VCU.html"/>
+    <id>http://silencejql.gitee.io/VCU.html</id>
     <published>2020-04-22T04:13:02.000Z</published>
     <updated>2020-04-22T06:44:11.890Z</updated>
     
@@ -94,8 +94,8 @@ BBK软件设置密码方法
   
   <entry>
     <title>lambda Expressions</title>
-    <link href="https://silencejql.gitee.io/lambda%20Expressions.html"/>
-    <id>https://silencejql.gitee.io/lambda Expressions.html</id>
+    <link href="http://silencejql.gitee.io/lambda%20Expressions.html"/>
+    <id>http://silencejql.gitee.io/lambda Expressions.html</id>
     <published>2020-04-10T03:57:41.000Z</published>
     <updated>2020-04-10T04:08:22.731Z</updated>
     
@@ -112,8 +112,8 @@ BBK软件设置密码方法
   
   <entry>
     <title>工作日志</title>
-    <link href="https://silencejql.gitee.io/%E5%B7%A5%E4%BD%9C%E6%97%A5%E5%BF%97.html"/>
-    <id>https://silencejql.gitee.io/工作日志.html</id>
+    <link href="http://silencejql.gitee.io/%E5%B7%A5%E4%BD%9C%E6%97%A5%E5%BF%97.html"/>
+    <id>http://silencejql.gitee.io/工作日志.html</id>
     <published>2020-03-23T01:53:06.000Z</published>
     <updated>2020-04-04T02:35:22.471Z</updated>
     
@@ -126,15 +126,15 @@ BBK软件设置密码方法
     
     </summary>
     
-      <category term="工作" scheme="https://silencejql.gitee.io/categories/%E5%B7%A5%E4%BD%9C/"/>
+      <category term="工作" scheme="http://silencejql.gitee.io/categories/%E5%B7%A5%E4%BD%9C/"/>
     
     
   </entry>
   
   <entry>
     <title>Python爬虫基础</title>
-    <link href="https://silencejql.gitee.io/Python%E7%88%AC%E8%99%AB%E5%9F%BA%E7%A1%80.html"/>
-    <id>https://silencejql.gitee.io/Python爬虫基础.html</id>
+    <link href="http://silencejql.gitee.io/Python%E7%88%AC%E8%99%AB%E5%9F%BA%E7%A1%80.html"/>
+    <id>http://silencejql.gitee.io/Python爬虫基础.html</id>
     <published>2020-03-05T04:04:12.000Z</published>
     <updated>2020-03-07T07:44:15.929Z</updated>
     
@@ -154,8 +154,8 @@ BBK软件设置密码方法
   
   <entry>
     <title>网络学习随记</title>
-    <link href="https://silencejql.gitee.io/%E7%BD%91%E7%BB%9C%E5%AD%A6%E4%B9%A0%E9%9A%8F%E8%AE%B0.html"/>
-    <id>https://silencejql.gitee.io/网络学习随记.html</id>
+    <link href="http://silencejql.gitee.io/%E7%BD%91%E7%BB%9C%E5%AD%A6%E4%B9%A0%E9%9A%8F%E8%AE%B0.html"/>
+    <id>http://silencejql.gitee.io/网络学习随记.html</id>
     <published>2020-02-27T05:54:46.000Z</published>
     <updated>2020-02-28T07:20:53.947Z</updated>
     
@@ -177,8 +177,8 @@ BBK软件设置密码方法
   
   <entry>
     <title>Python script save somethings</title>
-    <link href="https://silencejql.gitee.io/Python%20script%20save%20somethings.html"/>
-    <id>https://silencejql.gitee.io/Python script save somethings.html</id>
+    <link href="http://silencejql.gitee.io/Python%20script%20save%20somethings.html"/>
+    <id>http://silencejql.gitee.io/Python script save somethings.html</id>
     <published>2020-02-07T03:41:22.000Z</published>
     <updated>2020-03-07T11:18:50.274Z</updated>
     
@@ -190,15 +190,15 @@ BBK软件设置密码方法
     
     </summary>
     
-      <category term="Python3" scheme="https://silencejql.gitee.io/categories/Python3/"/>
+      <category term="Python3" scheme="http://silencejql.gitee.io/categories/Python3/"/>
     
     
   </entry>
   
   <entry>
     <title>Python learning - Script</title>
-    <link href="https://silencejql.gitee.io/Python%20learning%20-%20Script.html"/>
-    <id>https://silencejql.gitee.io/Python learning - Script.html</id>
+    <link href="http://silencejql.gitee.io/Python%20learning%20-%20Script.html"/>
+    <id>http://silencejql.gitee.io/Python learning - Script.html</id>
     <published>2020-02-06T05:02:00.000Z</published>
     <updated>2020-02-07T06:03:05.565Z</updated>
     
@@ -210,19 +210,19 @@ BBK软件设置密码方法
     
     </summary>
     
-      <category term="Python" scheme="https://silencejql.gitee.io/categories/Python/"/>
+      <category term="Python" scheme="http://silencejql.gitee.io/categories/Python/"/>
     
     
-      <category term="Python3" scheme="https://silencejql.gitee.io/tags/Python3/"/>
+      <category term="Python3" scheme="http://silencejql.gitee.io/tags/Python3/"/>
     
-      <category term="Script" scheme="https://silencejql.gitee.io/tags/Script/"/>
+      <category term="Script" scheme="http://silencejql.gitee.io/tags/Script/"/>
     
   </entry>
   
   <entry>
     <title>CSharp调用SQL存储过程</title>
-    <link href="https://silencejql.gitee.io/CSharp%E8%B0%83%E7%94%A8SQL%E5%AD%98%E5%82%A8%E8%BF%87%E7%A8%8B.html"/>
-    <id>https://silencejql.gitee.io/CSharp调用SQL存储过程.html</id>
+    <link href="http://silencejql.gitee.io/CSharp%E8%B0%83%E7%94%A8SQL%E5%AD%98%E5%82%A8%E8%BF%87%E7%A8%8B.html"/>
+    <id>http://silencejql.gitee.io/CSharp调用SQL存储过程.html</id>
     <published>2019-12-17T04:33:09.000Z</published>
     <updated>2020-02-06T05:59:24.514Z</updated>
     
@@ -235,17 +235,17 @@ C# 执行SQLServer数据库中的存储过程，新增数据
     
     </summary>
     
-      <category term="C#" scheme="https://silencejql.gitee.io/categories/C/"/>
+      <category term="C#" scheme="http://silencejql.gitee.io/categories/C/"/>
     
     
-      <category term="存储过程" scheme="https://silencejql.gitee.io/tags/%E5%AD%98%E5%82%A8%E8%BF%87%E7%A8%8B/"/>
+      <category term="存储过程" scheme="http://silencejql.gitee.io/tags/%E5%AD%98%E5%82%A8%E8%BF%87%E7%A8%8B/"/>
     
   </entry>
   
   <entry>
     <title>上汽通用五菱</title>
-    <link href="https://silencejql.gitee.io/%E4%B8%8A%E6%B1%BD%E9%80%9A%E7%94%A8%E4%BA%94%E8%8F%B1.html"/>
-    <id>https://silencejql.gitee.io/上汽通用五菱.html</id>
+    <link href="http://silencejql.gitee.io/%E4%B8%8A%E6%B1%BD%E9%80%9A%E7%94%A8%E4%BA%94%E8%8F%B1.html"/>
+    <id>http://silencejql.gitee.io/上汽通用五菱.html</id>
     <published>2019-11-27T02:12:23.000Z</published>
     <updated>2019-11-27T02:28:54.393Z</updated>
     
@@ -257,19 +257,19 @@ C# 执行SQLServer数据库中的存储过程，新增数据
     
     </summary>
     
-      <category term="现场" scheme="https://silencejql.gitee.io/categories/%E7%8E%B0%E5%9C%BA/"/>
+      <category term="现场" scheme="http://silencejql.gitee.io/categories/%E7%8E%B0%E5%9C%BA/"/>
     
     
-      <category term="上汽" scheme="https://silencejql.gitee.io/tags/%E4%B8%8A%E6%B1%BD/"/>
+      <category term="上汽" scheme="http://silencejql.gitee.io/tags/%E4%B8%8A%E6%B1%BD/"/>
     
-      <category term="五菱" scheme="https://silencejql.gitee.io/tags/%E4%BA%94%E8%8F%B1/"/>
+      <category term="五菱" scheme="http://silencejql.gitee.io/tags/%E4%BA%94%E8%8F%B1/"/>
     
   </entry>
   
   <entry>
     <title>git command</title>
-    <link href="https://silencejql.gitee.io/git%20command.html"/>
-    <id>https://silencejql.gitee.io/git command.html</id>
+    <link href="http://silencejql.gitee.io/git%20command.html"/>
+    <id>http://silencejql.gitee.io/git command.html</id>
     <published>2019-11-20T10:10:47.000Z</published>
     <updated>2019-11-21T09:03:51.435Z</updated>
     
@@ -281,15 +281,15 @@ C# 执行SQLServer数据库中的存储过程，新增数据
     
     </summary>
     
-      <category term="Git" scheme="https://silencejql.gitee.io/categories/Git/"/>
+      <category term="Git" scheme="http://silencejql.gitee.io/categories/Git/"/>
     
     
   </entry>
   
   <entry>
     <title>IDMDownload</title>
-    <link href="https://silencejql.gitee.io/IDMDownload.html"/>
-    <id>https://silencejql.gitee.io/IDMDownload.html</id>
+    <link href="http://silencejql.gitee.io/IDMDownload.html"/>
+    <id>http://silencejql.gitee.io/IDMDownload.html</id>
     <published>2019-11-14T04:57:46.000Z</published>
     <updated>2019-11-14T05:08:58.815Z</updated>
     
@@ -307,8 +307,8 @@ Google Chrome 利用IDM下载器下载资源，可下载百度网盘资源
   
   <entry>
     <title>IBMMQ错误代码</title>
-    <link href="https://silencejql.gitee.io/IBMMQ%E9%94%99%E8%AF%AF%E4%BB%A3%E7%A0%81.html"/>
-    <id>https://silencejql.gitee.io/IBMMQ错误代码.html</id>
+    <link href="http://silencejql.gitee.io/IBMMQ%E9%94%99%E8%AF%AF%E4%BB%A3%E7%A0%81.html"/>
+    <id>http://silencejql.gitee.io/IBMMQ错误代码.html</id>
     <published>2019-11-07T04:47:13.000Z</published>
     <updated>2019-11-14T07:02:01.712Z</updated>
     
@@ -320,19 +320,19 @@ Google Chrome 利用IDM下载器下载资源，可下载百度网盘资源
     
     </summary>
     
-      <category term="MQ" scheme="https://silencejql.gitee.io/categories/MQ/"/>
+      <category term="MQ" scheme="http://silencejql.gitee.io/categories/MQ/"/>
     
     
-      <category term="IBMMQ" scheme="https://silencejql.gitee.io/tags/IBMMQ/"/>
+      <category term="IBMMQ" scheme="http://silencejql.gitee.io/tags/IBMMQ/"/>
     
-      <category term="ErrorCode" scheme="https://silencejql.gitee.io/tags/ErrorCode/"/>
+      <category term="ErrorCode" scheme="http://silencejql.gitee.io/tags/ErrorCode/"/>
     
   </entry>
   
   <entry>
     <title>现场工作代码路径说明</title>
-    <link href="https://silencejql.gitee.io/%E7%8E%B0%E5%9C%BA%E5%B7%A5%E4%BD%9C%E4%BB%A3%E7%A0%81%E8%B7%AF%E5%BE%84%E8%AF%B4%E6%98%8E.html"/>
-    <id>https://silencejql.gitee.io/现场工作代码路径说明.html</id>
+    <link href="http://silencejql.gitee.io/%E7%8E%B0%E5%9C%BA%E5%B7%A5%E4%BD%9C%E4%BB%A3%E7%A0%81%E8%B7%AF%E5%BE%84%E8%AF%B4%E6%98%8E.html"/>
+    <id>http://silencejql.gitee.io/现场工作代码路径说明.html</id>
     <published>2019-11-03T02:16:22.000Z</published>
     <updated>2019-11-20T09:37:57.731Z</updated>
     
@@ -345,15 +345,15 @@ Google Chrome 利用IDM下载器下载资源，可下载百度网盘资源
     
     </summary>
     
-      <category term="工作" scheme="https://silencejql.gitee.io/categories/%E5%B7%A5%E4%BD%9C/"/>
+      <category term="工作" scheme="http://silencejql.gitee.io/categories/%E5%B7%A5%E4%BD%9C/"/>
     
     
   </entry>
   
   <entry>
     <title>ETP指令说明</title>
-    <link href="https://silencejql.gitee.io/ETP%E6%8C%87%E4%BB%A4%E8%AF%B4%E6%98%8E.html"/>
-    <id>https://silencejql.gitee.io/ETP指令说明.html</id>
+    <link href="http://silencejql.gitee.io/ETP%E6%8C%87%E4%BB%A4%E8%AF%B4%E6%98%8E.html"/>
+    <id>http://silencejql.gitee.io/ETP指令说明.html</id>
     <published>2019-10-25T10:14:02.000Z</published>
     <updated>2019-10-28T02:11:29.793Z</updated>
     
@@ -368,19 +368,19 @@ Google Chrome 利用IDM下载器下载资源，可下载百度网盘资源
     
     </summary>
     
-      <category term="工作" scheme="https://silencejql.gitee.io/categories/%E5%B7%A5%E4%BD%9C/"/>
+      <category term="工作" scheme="http://silencejql.gitee.io/categories/%E5%B7%A5%E4%BD%9C/"/>
     
     
-      <category term="ISO15031-5" scheme="https://silencejql.gitee.io/tags/ISO15031-5/"/>
+      <category term="ISO15031-5" scheme="http://silencejql.gitee.io/tags/ISO15031-5/"/>
     
-      <category term="15765-4" scheme="https://silencejql.gitee.io/tags/15765-4/"/>
+      <category term="15765-4" scheme="http://silencejql.gitee.io/tags/15765-4/"/>
     
   </entry>
   
   <entry>
     <title>Rabbit MQ</title>
-    <link href="https://silencejql.gitee.io/Rabbit%20MQ.html"/>
-    <id>https://silencejql.gitee.io/Rabbit MQ.html</id>
+    <link href="http://silencejql.gitee.io/Rabbit%20MQ.html"/>
+    <id>http://silencejql.gitee.io/Rabbit MQ.html</id>
     <published>2019-09-19T10:38:53.000Z</published>
     <updated>2020-02-06T06:00:36.620Z</updated>
     
@@ -392,19 +392,19 @@ Google Chrome 利用IDM下载器下载资源，可下载百度网盘资源
     
     </summary>
     
-      <category term="MQ" scheme="https://silencejql.gitee.io/categories/MQ/"/>
+      <category term="MQ" scheme="http://silencejql.gitee.io/categories/MQ/"/>
     
     
-      <category term="C#" scheme="https://silencejql.gitee.io/tags/C/"/>
+      <category term="C#" scheme="http://silencejql.gitee.io/tags/C/"/>
     
-      <category term="Rabbit MQ" scheme="https://silencejql.gitee.io/tags/Rabbit-MQ/"/>
+      <category term="Rabbit MQ" scheme="http://silencejql.gitee.io/tags/Rabbit-MQ/"/>
     
   </entry>
   
   <entry>
     <title>IBM MQ</title>
-    <link href="https://silencejql.gitee.io/IBM%20MQ.html"/>
-    <id>https://silencejql.gitee.io/IBM MQ.html</id>
+    <link href="http://silencejql.gitee.io/IBM%20MQ.html"/>
+    <id>http://silencejql.gitee.io/IBM MQ.html</id>
     <published>2019-09-12T11:48:12.000Z</published>
     <updated>2020-02-06T06:01:14.687Z</updated>
     
@@ -416,19 +416,19 @@ Google Chrome 利用IDM下载器下载资源，可下载百度网盘资源
     
     </summary>
     
-      <category term="MQ" scheme="https://silencejql.gitee.io/categories/MQ/"/>
+      <category term="MQ" scheme="http://silencejql.gitee.io/categories/MQ/"/>
     
     
-      <category term="C#" scheme="https://silencejql.gitee.io/tags/C/"/>
+      <category term="C#" scheme="http://silencejql.gitee.io/tags/C/"/>
     
-      <category term="IBMMQ" scheme="https://silencejql.gitee.io/tags/IBMMQ/"/>
+      <category term="IBMMQ" scheme="http://silencejql.gitee.io/tags/IBMMQ/"/>
     
   </entry>
   
   <entry>
     <title>数据库自动备份、删除数据</title>
-    <link href="https://silencejql.gitee.io/%E6%95%B0%E6%8D%AE%E5%BA%93%E8%87%AA%E5%8A%A8%E5%A4%87%E4%BB%BD%E3%80%81%E5%88%A0%E9%99%A4%E6%95%B0%E6%8D%AE.html"/>
-    <id>https://silencejql.gitee.io/数据库自动备份、删除数据.html</id>
+    <link href="http://silencejql.gitee.io/%E6%95%B0%E6%8D%AE%E5%BA%93%E8%87%AA%E5%8A%A8%E5%A4%87%E4%BB%BD%E3%80%81%E5%88%A0%E9%99%A4%E6%95%B0%E6%8D%AE.html"/>
+    <id>http://silencejql.gitee.io/数据库自动备份、删除数据.html</id>
     <published>2019-08-20T09:28:08.000Z</published>
     <updated>2019-08-21T08:10:52.810Z</updated>
     
@@ -440,14 +440,14 @@ Google Chrome 利用IDM下载器下载资源，可下载百度网盘资源
     
     </summary>
     
-      <category term="工作" scheme="https://silencejql.gitee.io/categories/%E5%B7%A5%E4%BD%9C/"/>
+      <category term="工作" scheme="http://silencejql.gitee.io/categories/%E5%B7%A5%E4%BD%9C/"/>
     
-      <category term="数据库" scheme="https://silencejql.gitee.io/categories/%E5%B7%A5%E4%BD%9C/%E6%95%B0%E6%8D%AE%E5%BA%93/"/>
+      <category term="数据库" scheme="http://silencejql.gitee.io/categories/%E5%B7%A5%E4%BD%9C/%E6%95%B0%E6%8D%AE%E5%BA%93/"/>
     
     
-      <category term="Postgresql" scheme="https://silencejql.gitee.io/tags/Postgresql/"/>
+      <category term="Postgresql" scheme="http://silencejql.gitee.io/tags/Postgresql/"/>
     
-      <category term="shell" scheme="https://silencejql.gitee.io/tags/shell/"/>
+      <category term="shell" scheme="http://silencejql.gitee.io/tags/shell/"/>
     
   </entry>
   
