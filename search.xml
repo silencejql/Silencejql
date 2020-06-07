@@ -3,7 +3,7 @@
   <entry>
     <title><![CDATA[动态EV(ETP)测试]]></title>
     <url>%2F%E5%8A%A8%E6%80%81EV(ETP)%E6%B5%8B%E8%AF%95.html</url>
-    <content type="text"><![CDATA[说明 动态EV或ETP工位简单说明 新版本ETP测试工况分四部分：加速、匀速、滑行、制动 测试内容除了基本电流电压等BMS数据读取还包括各阶段的效率及能量消耗率的计算等 ## 程序配置 最新程序增加是否为同轴滚筒的配置：在EvDynamicTestCurve.xml中isCoaxial配置为true表示为同轴滚筒 非同轴滚筒计算时F为左右滚筒的合力 ## 计算方法 加速、匀速过程中电能转化为动能，效率计算公式为 **Fvt/UIt** 滑行、制动过程中动能转化为电能，效率计算公式为 **UIt/Fvt** 其中F、v、U、I均为各阶段的平均值 ### 能量消耗率 C = E/D 单位为(kW*h)/100km 程序中的计算公式为：整个过程中的平均100*UIt/d ## 说明 由于I为负数时表示放电加速所以计算时简单处理为 I为负：效率 = Fvt/UIt I为正：效率 = UIt/Fvt]]></content>
+    <content type="text"><![CDATA[说明 动态EV或ETP工位简单说明 新版本ETP测试工况分四部分：加速、匀速、滑行、制动测试内容除了基本电流电压等BMS数据读取还包括各阶段的效率及能量消耗率的计算等 程序配置最新程序增加是否为同轴滚筒的配置：在EvDynamicTestCurve.xml中isCoaxial配置为true表示为同轴滚筒非同轴滚筒计算时F为左右滚筒的合力 计算方法加速、匀速过程中电能转化为动能，效率计算公式为 Fvt/UIt滑行、制动过程中动能转化为电能，效率计算公式为 UIt/Fvt其中F、v、U、I均为各阶段的平均值 能量消耗率C = E/D 单位为(kWh)/100km程序中的计算公式为：整个过程中的平均100UIt/d 说明由于I为负数时表示放电加速所以计算时简单处理为I为负：效率 = Fvt/UItI为正：效率 = UIt/Fvt]]></content>
       <categories>
         <category>工作</category>
       </categories>
