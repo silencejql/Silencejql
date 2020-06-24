@@ -122,7 +122,7 @@
 <meta property="og:site_name" content="Silencejql">
 <meta property="og:description" content="简介 记录刷题过程中遇到问题及新知识">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2020-06-23T10:25:27.064Z">
+<meta property="og:updated_time" content="2020-06-23T10:29:42.659Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="刷题记">
 <meta name="twitter:description" content="简介 记录刷题过程中遇到问题及新知识">
@@ -454,7 +454,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2020-06-23 18:25:27" itemprop="dateModified" datetime="2020-06-23T18:25:27+08:00">2020-06-23</time>
+                <time title="修改时间：2020-06-23 18:29:42" itemprop="dateModified" datetime="2020-06-23T18:29:42+08:00">2020-06-23</time>
               
             
           </span>
@@ -545,7 +545,7 @@
 <h2 id="System-Collections"><a href="#System-Collections" class="headerlink" title="System.Collections"></a>System.Collections</h2><h3 id="ArrayList"><a href="#ArrayList" class="headerlink" title="ArrayList"></a>ArrayList</h3><p>在C#中，数组由于是固定长度的，由于这种限制不方便，所以出现了ArrayList<br>ArrayList是可变长数组，可以将任意多的数据Add到ArrayList里面。其内部维护的数组，当长度不足时，会自动扩容为原来的两倍。<br>但是ArrayList也有一个缺点，就是存入ArrayList里面的数据都是Object类型的，所以如果将值类型存入和取出的时候会发生装箱、拆箱操作(就是值类型与引用类型之间的转换)，这个会影响程序性能。在.Net 2.0泛型出现以后，就提供了List<t>。</t></p>
 <h3 id="List"><a href="#List" class="headerlink" title="List"></a>List<t></t></h3><p>List<t>是ArrayList的泛型版本，它不再需要装箱拆箱，直接取，直接用，它基本与ArrayList一致，不过在使用的时候要先设置好它的类型，而设置好类型之后，不是这种类型的数据，是不允许Add进去的<br>就性能来说，如果要存进数组的只有一种数据，那么无疑List<t>是最优选择<br><strong>List存储的数据是有序并且可以重复的。 采用链表存储数据</strong></t></t></p>
 <div><div class="fold_hider"><div class="close hider_title">展开/折叠示例</div></div><div class="fold">
-<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">List&lt;<span class="keyword">int</span>&gt; ListInt = <span class="keyword">new</span> List&lt;<span class="keyword">int</span>&gt;();</span><br><span class="line"><span class="comment">// 属性</span></span><br><span class="line">Count</span><br><span class="line"><span class="comment">// 方法</span></span><br><span class="line">Add(T)</span><br><span class="line">AddRange(IEnumerable&lt;T&gt;)</span><br><span class="line">Clear()</span><br><span class="line">Contains(T)</span><br><span class="line">IndexOf(T)	<span class="comment">//搜索指定的对象，并返回整个 List&lt;T&gt; 中第一个匹配项的从零开始的索引</span></span><br><span class="line">LastIndexOf(T)	<span class="comment">//搜索指定对象并返回整个 List&lt;T&gt; 中最后一个匹配项的从零开始索引</span></span><br><span class="line">IndexOf(T, Int32)	<span class="comment">//搜索指定对象并返回 List&lt;T&gt; 中从指定索引到最后一个元素这部分元素中第一个匹配项的从零开始索引</span></span><br><span class="line">IndexOf(T, Int32, Int32)	<span class="comment">//搜索指定对象并返回 List&lt;T&gt; 中从指定索引开始并包含指定元素数的这部分元素中第一个匹配项的从零开始索引</span></span><br><span class="line">Insert(Int32, T)	<span class="comment">//将元素插入到 List&lt;T&gt; 中的指定索引处</span></span><br><span class="line">Remove(T) <span class="comment">//从 List&lt;T&gt; 中删除特定对象的第一个匹配项</span></span><br><span class="line">Reverse()	<span class="comment">//将整个 List&lt;T&gt; 中元素的顺序反转</span></span><br><span class="line">Reverse(Int32, Int32)	<span class="comment">//将指定范围中元素的顺序反转</span></span><br><span class="line">Sort()	<span class="comment">//使用默认比较器对整个 List&lt;T&gt; 中的元素进行排序</span></span><br><span class="line">ToArray()	<span class="comment">//将 List&lt;T&gt; 的元素复制到新数组中</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">List&lt;<span class="keyword">int</span>&gt; ListInt = <span class="keyword">new</span> List&lt;<span class="keyword">int</span>&gt;();</span><br><span class="line"><span class="comment">// 属性</span></span><br><span class="line">Count</span><br><span class="line"><span class="comment">// 方法</span></span><br><span class="line">Add(T)</span><br><span class="line">AddRange(IEnumerable&lt;T&gt;)</span><br><span class="line">Clear()</span><br><span class="line">Contains(T)</span><br><span class="line">Find(Predicate&lt;T&gt;)	<span class="comment">//搜索与指定谓词所定义的条件相匹配的元素，并返回整个 List&lt;T&gt; 中的第一个匹配元素</span></span><br><span class="line">FindAll(Predicate&lt;T&gt;)	<span class="comment">//检索与指定谓词定义的条件匹配的所有元素 返回List&lt;&gt;</span></span><br><span class="line">IndexOf(T)	<span class="comment">//搜索指定的对象，并返回整个 List&lt;T&gt; 中第一个匹配项的从零开始的索引</span></span><br><span class="line">LastIndexOf(T)	<span class="comment">//搜索指定对象并返回整个 List&lt;T&gt; 中最后一个匹配项的从零开始索引</span></span><br><span class="line">IndexOf(T, Int32)	<span class="comment">//搜索指定对象并返回 List&lt;T&gt; 中从指定索引到最后一个元素这部分元素中第一个匹配项的从零开始索引</span></span><br><span class="line">IndexOf(T, Int32, Int32)	<span class="comment">//搜索指定对象并返回 List&lt;T&gt; 中从指定索引开始并包含指定元素数的这部分元素中第一个匹配项的从零开始索引</span></span><br><span class="line">Insert(Int32, T)	<span class="comment">//将元素插入到 List&lt;T&gt; 中的指定索引处</span></span><br><span class="line">Remove(T) <span class="comment">//从 List&lt;T&gt; 中删除特定对象的第一个匹配项</span></span><br><span class="line">Reverse()	<span class="comment">//将整个 List&lt;T&gt; 中元素的顺序反转</span></span><br><span class="line">Reverse(Int32, Int32)	<span class="comment">//将指定范围中元素的顺序反转</span></span><br><span class="line">Sort()	<span class="comment">//使用默认比较器对整个 List&lt;T&gt; 中的元素进行排序</span></span><br><span class="line">ToArray()	<span class="comment">//将 List&lt;T&gt; 的元素复制到新数组中</span></span><br></pre></td></tr></table></figure>
 
 </div></div>
 <h3 id="HashTable"><a href="#HashTable" class="headerlink" title="HashTable"></a>HashTable</h3><p>HashTable是一种根据key查找非常快的键值数据结构，不能有重复key，而且由于其特点，其长度总是一个素数，所以扩容后容量会比2倍大一点点，加载因子为0.72f。<br>当要大量使用key来查找value的时候，HashTable无疑是最有选择，HashTable与ArrayList一样，是非泛型的，value存进去是object,存取会发生装箱、拆箱，所以出现了Dictionary&lt;T,T&gt;</p>
@@ -691,6 +691,10 @@
 
           <div class="post-nav-prev post-nav-item">
             
+              <a href="/JSON字符串.html" rel="prev" title="JSON字符串">
+                JSON字符串 <i class="fa fa-chevron-right"></i>
+              </a>
+            
           </div>
         </div>
       
@@ -766,7 +770,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">49</span>
+                    <span class="site-state-item-count">51</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
@@ -1063,7 +1067,7 @@
     
       <span class="post-meta-item-text">站点总字数：</span>
     
-    <span title="站点总字数">67k</span>
+    <span title="站点总字数">68k</span>
   
 
   
@@ -1074,7 +1078,7 @@
     
       <span class="post-meta-item-text">站点阅读时长 &asymp;</span>
     
-    <span title="站点阅读时长">1:01</span>
+    <span title="站点阅读时长">1:02</span>
   
 </div>
 <!--
@@ -1099,7 +1103,7 @@
 
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">博客全站共31.6k字</span>
+  <span class="post-count">博客全站共35.9k字</span>
 </div>
 -->
 
