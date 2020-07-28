@@ -2,6 +2,13 @@
 <urlset xmlns="https://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://silencejql.github.io/%E5%B7%A5%E4%BD%9C%E6%97%A5%E5%BF%97.html</loc>
+    
+    <lastmod>2020-07-28T06:33:17.118Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://silencejql.github.io/CSharp%E5%9F%BA%E7%A1%80.html</loc>
     
     <lastmod>2020-07-28T05:33:27.524Z</lastmod>
@@ -117,13 +124,6 @@
     <loc>https://silencejql.github.io/lambda%20Expressions.html</loc>
     
     <lastmod>2020-04-10T04:08:22.731Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://silencejql.github.io/%E5%B7%A5%E4%BD%9C%E6%97%A5%E5%BF%97.html</loc>
-    
-    <lastmod>2020-04-04T02:35:22.471Z</lastmod>
     
   </url>
   

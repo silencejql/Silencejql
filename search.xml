@@ -90,7 +90,7 @@
   <entry>
     <title><![CDATA[工作日志]]></title>
     <url>%2F%E5%B7%A5%E4%BD%9C%E6%97%A5%E5%BF%97.html</url>
-    <content type="text"><![CDATA[写在前面 记录所有项目工作日志以便查询，年份、项目号分类 2020March3郑州日产登录工位偶发卡死现象处理1、更改原有C++程序，在更新登录表处增加try…catch…2、用新程序替换，程序中UDP更新服务器表格应在程序处理前 解决方式：更新登录表数据增加超时时间为0解决 金华零跑MES 展开/折叠示例]]></content>
+    <content type="text"><![CDATA[写在前面 记录所有项目工作日志以便查询，年份、项目号分类 2020March3郑州日产登录工位偶发卡死现象处理1、更改原有C++程序，在更新登录表处增加try…catch…2、用新程序替换，程序中UDP更新服务器表格应在程序处理前 解决方式：更新登录表数据增加超时时间为0解决 金华零跑MES 7月青岛五菱双轴制动台改单轴测试小轴距E50ABS现场制动台车型获取说明:扫完VIN后通过桌面上小黄车的软件从MES获取车型信息包括轴距、ABS类型等，调用的测试流程在SpecialNeed中进行判断赋值，车型库不需要手动维护，MES下载后自动维护。现场更新不兼容程序有： CANCmdLib.dllCanCmdOpraLib.dll 更改后100V车型K线通讯出现指令数据丢失MBKDeviceWithOPC.dll 更新后无法控制滚筒转动 E50ABS程序中读取DTC无法判断五菱现场的当前故障码]]></content>
       <categories>
         <category>工作</category>
       </categories>

@@ -307,9 +307,9 @@ BBK软件设置密码方法
     <link href="https://silencejql.github.io/%E5%B7%A5%E4%BD%9C%E6%97%A5%E5%BF%97.html"/>
     <id>https://silencejql.github.io/工作日志.html</id>
     <published>2020-03-23T01:53:06.000Z</published>
-    <updated>2020-04-04T02:35:22.471Z</updated>
+    <updated>2020-07-28T06:33:17.118Z</updated>
     
-    <content type="html"><![CDATA[<center>写在前面</center>记录所有项目工作日志以便查询，年份、项目号分类<a id="more"></a><h2 id="2020"><a href="#2020" class="headerlink" title="2020"></a>2020</h2><h3 id="March3"><a href="#March3" class="headerlink" title="March3"></a>March3</h3><p>郑州日产登录工位偶发卡死现象处理<br>1、更改原有C++程序，在更新登录表处增加try…catch…<br>2、用新程序替换，程序中UDP更新服务器表格应在程序处理前</p><p>解决方式：更新登录表数据增加超时时间为0解决</p><p>金华零跑MES</p><div><div class="fold_hider"><div class="close hider_title">展开/折叠示例</div></div><div class="fold"></div></div>]]></content>
+    <content type="html"><![CDATA[<center>写在前面</center>记录所有项目工作日志以便查询，年份、项目号分类<a id="more"></a><h2 id="2020"><a href="#2020" class="headerlink" title="2020"></a>2020</h2><h3 id="March3"><a href="#March3" class="headerlink" title="March3"></a>March3</h3><p>郑州日产登录工位偶发卡死现象处理<br>1、更改原有C++程序，在更新登录表处增加try…catch…<br>2、用新程序替换，程序中UDP更新服务器表格应在程序处理前</p><p>解决方式：更新登录表数据增加超时时间为0解决</p><p>金华零跑MES</p><h3 id="7月"><a href="#7月" class="headerlink" title="7月"></a>7月</h3><h4 id="青岛五菱"><a href="#青岛五菱" class="headerlink" title="青岛五菱"></a>青岛五菱</h4><p>双轴制动台改单轴测试小轴距E50ABS<br>现场制动台车型获取说明:扫完VIN后通过桌面上小黄车的软件从MES获取车型信息包括轴距、<strong>ABS类型</strong>等，调用的测试流程在SpecialNeed中进行判断赋值，车型库不需要手动维护，MES下载后自动维护。<br>现场更新不兼容程序有：</p><blockquote><p>CANCmdLib.dll<br>CanCmdOpraLib.dll 更改后100V车型K线通讯出现指令数据丢失<br>MBKDeviceWithOPC.dll 更新后无法控制滚筒转动</p></blockquote><p>E50ABS程序中读取DTC无法判断五菱现场的当前故障码</p>]]></content>
     
     <summary type="html">
     
