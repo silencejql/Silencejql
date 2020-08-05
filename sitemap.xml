@@ -2,16 +2,37 @@
 <urlset xmlns="https://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://silencejql.github.io/%E5%B7%A5%E4%BD%9C%E6%97%A5%E5%BF%97.html</loc>
+    <loc>https://silencejql.github.io/%E5%88%B7%E7%BD%91%E8%AF%BE%E9%9A%8F%E8%AE%B0.html</loc>
     
-    <lastmod>2020-07-28T06:33:17.118Z</lastmod>
+    <lastmod>2020-08-05T02:31:36.184Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://silencejql.github.io/Visual%20Studio%20Code%E9%85%8D%E7%BD%AE%E8%AE%B0%E5%BD%95.html</loc>
+    
+    <lastmod>2020-07-28T07:46:55.762Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://silencejql.github.io/Python%20learning%20-%20Script.html</loc>
+    
+    <lastmod>2020-07-28T07:20:27.095Z</lastmod>
     
   </url>
   
   <url>
     <loc>https://silencejql.github.io/CSharp%E5%9F%BA%E7%A1%80.html</loc>
     
-    <lastmod>2020-07-28T05:33:27.524Z</lastmod>
+    <lastmod>2020-07-28T07:17:26.207Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://silencejql.github.io/%E5%B7%A5%E4%BD%9C%E6%97%A5%E5%BF%97.html</loc>
+    
+    <lastmod>2020-07-28T06:33:17.118Z</lastmod>
     
   </url>
   
@@ -152,13 +173,6 @@
     <loc>https://silencejql.github.io/%E7%BD%91%E7%BB%9C%E5%AD%A6%E4%B9%A0%E9%9A%8F%E8%AE%B0.html</loc>
     
     <lastmod>2020-02-28T07:20:53.947Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://silencejql.github.io/Python%20learning%20-%20Script.html</loc>
-    
-    <lastmod>2020-02-07T06:03:05.565Z</lastmod>
     
   </url>
   
