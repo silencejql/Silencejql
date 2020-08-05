@@ -123,7 +123,7 @@
 <meta property="og:site_name" content="Silencejql">
 <meta property="og:description" content="写在前面">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2020-08-05T02:31:36.184Z">
+<meta property="og:updated_time" content="2020-08-05T03:25:28.426Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="刷网课随记">
 <meta name="twitter:description" content="写在前面">
@@ -455,7 +455,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2020-08-05 10:31:36" itemprop="dateModified" datetime="2020-08-05T10:31:36+08:00">2020-08-05</time>
+                <time title="修改时间：2020-08-05 11:25:28" itemprop="dateModified" datetime="2020-08-05T11:25:28+08:00">2020-08-05</time>
               
             
           </span>
@@ -506,7 +506,7 @@
                 
                   <span class="post-meta-item-text">本文字数：</span>
                 
-                <span title="本文字数">81</span>
+                <span title="本文字数">150</span>
               
               
                 <span class="post-meta-divider">|</span>
@@ -543,6 +543,7 @@
 
 <a id="more"></a>
 
+<h2 id="视频播放参数"><a href="#视频播放参数" class="headerlink" title="视频播放参数"></a>视频播放参数</h2><h3 id="倍速播放"><a href="#倍速播放" class="headerlink" title="倍速播放"></a>倍速播放</h3><p><code>document.querySelector(&#39;video&#39;).playbackRate = 4.0</code></p>
 <h2 id="下载视频课程"><a href="#下载视频课程" class="headerlink" title="下载视频课程"></a>下载视频课程</h2><h3 id="模拟登录"><a href="#模拟登录" class="headerlink" title="模拟登录"></a>模拟登录</h3><h4 id="Webdriver"><a href="#Webdriver" class="headerlink" title="Webdriver"></a>Webdriver</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">option = webdriver.ChromeOptions()</span><br><span class="line">driver = webdriver.Chrome(chrome_options=option)</span><br><span class="line">driver.get(<span class="string">"https://www.bjjnts.cn/login"</span>)</span><br><span class="line">driver.find_element_by_name(<span class="string">"username"</span>).send_keys(<span class="string">"uesrname"</span>) <span class="comment">#元素赋值模拟输入</span></span><br><span class="line">driver.find_element_by_name(<span class="string">"password"</span>).send_keys(<span class="string">"password"</span>)</span><br><span class="line">driver.find_element_by_xpath(<span class="string">"//button[@class='login_btn' and @type='submit']"</span>).click() <span class="comment">#登录按钮点击事件</span></span><br><span class="line">driver.get(url)</span><br><span class="line"><span class="keyword">return</span>  driver.page_source</span><br></pre></td></tr></table></figure>
 
 <h4 id="Cookie"><a href="#Cookie" class="headerlink" title="Cookie"></a>Cookie</h4><p>通过抓包拿到cookie，再将cookie放到header中请求即可</p>
@@ -571,7 +572,7 @@
   <p><span>本文标题:</span><a href="/刷网课随记.html">刷网课随记</a></p>
   <p><span>文章作者:</span><a href="/" title="访问 Justin 的个人博客">Justin</a></p>
   <p><span>发布时间:</span>2020年08月03日 - 11:08</p>
-  <p><span>最后更新:</span>2020年08月05日 - 10:08</p>
+  <p><span>最后更新:</span>2020年08月05日 - 11:08</p>
   <p><span>原始链接:</span><a href="/刷网课随记.html" title="刷网课随记">https://silencejql.github.io/刷网课随记.html</a>
     <span class="copy-path" title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="https://silencejql.github.io/刷网课随记.html" aria-label="复制成功！"></i></span>
   </p>
@@ -1007,7 +1008,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#下载视频课程"><span class="nav-number">1.</span> <span class="nav-text">下载视频课程</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#模拟登录"><span class="nav-number">1.1.</span> <span class="nav-text">模拟登录</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Webdriver"><span class="nav-number">1.1.1.</span> <span class="nav-text">Webdriver</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Cookie"><span class="nav-number">1.1.2.</span> <span class="nav-text">Cookie</span></a></li></ol></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#视频播放参数"><span class="nav-number">1.</span> <span class="nav-text">视频播放参数</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#倍速播放"><span class="nav-number">1.1.</span> <span class="nav-text">倍速播放</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#下载视频课程"><span class="nav-number">2.</span> <span class="nav-text">下载视频课程</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#模拟登录"><span class="nav-number">2.1.</span> <span class="nav-text">模拟登录</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Webdriver"><span class="nav-number">2.1.1.</span> <span class="nav-text">Webdriver</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Cookie"><span class="nav-number">2.1.2.</span> <span class="nav-text">Cookie</span></a></li></ol></li></ol></li></ol></div>
             
 
           </div>
