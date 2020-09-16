@@ -3,7 +3,7 @@
   <entry>
     <title><![CDATA[新增ABS]]></title>
     <url>%2F%E6%96%B0%E5%A2%9EABS.html</url>
-    <content type="text"><![CDATA[写在前面 前面啥也没有 准备文件 1、RBABS_xxx.dll 其中包含ABS通讯指令 软件更改0、备份程序1、替换BBK\Bin文件夹下的 RBABS_xxx.dll 文件2、新增车型信息如图新增该车型相关车型信息，复制其他车型更改即可3、新增ABS标准上图为DVT中动态ABS标准，制动台更改静态ABS标准Identity为该ABS的标识ABS类型内容咨询软件工程师4、新增ZTS复制其他车型后更改ZTS更改车型参数更改动态ABS标准5、配置串口复制其他CAN或K线配置，更改KeyName为3中的ABS类型说明：该步骤若为提前更改，测试中会自动创建并使用默认串口号导致通讯失败，依据其他车型的配置更改串口号等即可。 6、更改Config\ABSValveTestConfig中当前ABS类型文件中的增减压时间等进行优化]]></content>
+    <content type="text"><![CDATA[写在前面 前面啥也没有 准备文件 1、RBABS_xxx.dll 其中包含ABS通讯指令 软件更改0、备份程序1、替换BBK\Bin文件夹下的 RBABS_xxx.dll 文件2、新增车型信息如图新增该车型相关车型信息，复制其他车型更改即可3、新增ABS标准上图为DVT中动态ABS标准，制动台更改静态ABS标准Identity为该ABS的标识ABS类型内容咨询软件工程师4、新增ZTS复制其他车型后更改ZTS更改车型参数更改动态ABS标准5、配置串口复制其他CAN或K线配置，更改KeyName为3中的ABS类型Param1为串口号、Param3为输出LOG的文件名说明：该步骤若未提前更改，测试中会自动创建并使用默认串口号导致通讯失败，依据其他车型的配置更改串口号等即可。 6、更改Config\ABSValveTestConfig中当前ABS类型文件中的增减压时间等进行优化]]></content>
   </entry>
   <entry>
     <title><![CDATA[中牟日产打印更改]]></title>
