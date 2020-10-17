@@ -122,7 +122,7 @@
 <meta property="og:site_name" content="Silencejql">
 <meta property="og:description" content="写在前面 记录所有项目工作日志以便查询，年份、项目号分类">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2020-09-16T05:59:26.845Z">
+<meta property="og:updated_time" content="2020-10-17T09:41:43.710Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="工作日志">
 <meta name="twitter:description" content="写在前面 记录所有项目工作日志以便查询，年份、项目号分类">
@@ -454,7 +454,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2020-09-16 13:59:26" itemprop="dateModified" datetime="2020-09-16T13:59:26+08:00">2020-09-16</time>
+                <time title="修改时间：2020-10-17 17:41:43" itemprop="dateModified" datetime="2020-10-17T17:41:43+08:00">2020-10-17</time>
               
             
           </span>
@@ -523,7 +523,7 @@
                 
                   <span class="post-meta-item-text">本文字数：</span>
                 
-                <span title="本文字数">608</span>
+                <span title="本文字数">794</span>
               
               
                 <span class="post-meta-divider">|</span>
@@ -574,6 +574,11 @@
 <h4 id="长春一汽轿车"><a href="#长春一汽轿车" class="headerlink" title="长春一汽轿车"></a>长春一汽轿车</h4><p>新增E111ESP标定和动态测试，跟205、141程序一样。</p>
 <p>更改4线服务器线号<br>更改3线转毂线号，速度表主键丢失导致</p>
 <h4 id="一汽红旗"><a href="#一汽红旗" class="headerlink" title="一汽红旗"></a>一汽红旗</h4><p>更新绝缘检测程序，提升20s测试节拍<br>调试HUD，测试完成传结果给手持，更改测试项判断修正界面显示整体合格</p>
+<h3 id="10月"><a href="#10月" class="headerlink" title="10月"></a>10月</h3><h4 id="十堰小康老厂"><a href="#十堰小康老厂" class="headerlink" title="十堰小康老厂"></a>十堰小康老厂</h4><p>四轮工位增加ACC标定<br>1017 - 流程调试完成，测试过程中左上反馈的角度与实际相反，标定顺序没问题标靶面对车的一面先低头、再平、再抬头。<br>     - 垂直合格范围-3~-1度存在疑问。<br>角度计算在RBABS_ShiYXiaoKang.ADASCalculate中的AEBCalculate(ECU回复指令;是否需要调整;调整圈数)</p>
+<div><div class="fold_hider"><div class="close hider_title">展开/折叠示例</div></div><div class="fold">
+<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> xState <span class="title">AEBCalculate</span>(<span class="params"><span class="keyword">string</span> sPara</span>)</span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">try</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">string</span>[] SepPara;</span><br><span class="line">        XmlFO.SepParams(sPara, <span class="number">3</span>, <span class="keyword">out</span> SepPara);</span><br><span class="line"></span><br><span class="line">        <span class="keyword">byte</span>[] bRecv = StringToBytes(SepPara[<span class="number">0</span>]);</span><br><span class="line"></span><br><span class="line">        <span class="keyword">byte</span>[] tmpBytes = <span class="keyword">new</span> <span class="keyword">byte</span>[] &#123; bRecv[<span class="number">4</span>], bRecv[<span class="number">3</span>] &#125;;</span><br><span class="line">        Int16 iHorizontal = BitConverter.ToInt16(tmpBytes, <span class="number">0</span>);</span><br><span class="line">        <span class="keyword">double</span> dHorizontal = (iHorizontal * <span class="number">0.01</span>);</span><br><span class="line">        XmlFO.LogOut(<span class="string">"ACCCalculate"</span>, <span class="string">"dHorizontal:"</span> + dHorizontal);</span><br><span class="line">        <span class="keyword">double</span> dHorTurns = dHorizontal / <span class="number">0.5359</span>;</span><br><span class="line"></span><br><span class="line">        tmpBytes = <span class="keyword">new</span> <span class="keyword">byte</span>[] &#123; bRecv[<span class="number">6</span>], bRecv[<span class="number">5</span>] &#125;;</span><br><span class="line">        Int16 iVertical = BitConverter.ToInt16(tmpBytes, <span class="number">0</span>);</span><br><span class="line">        <span class="keyword">double</span> dVertical = (iVertical * <span class="number">0.01</span>);</span><br><span class="line">        XmlFO.LogOut(<span class="string">"ACCCalculate"</span>, <span class="string">"dVertical:"</span> + dVertical);</span><br><span class="line">        <span class="keyword">double</span> dVerTurns = (<span class="number">-2</span> - dVertical) / <span class="number">0.7729</span>;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">string</span> adjustTips = <span class="keyword">string</span>.Empty;</span><br><span class="line">        <span class="keyword">if</span> (dVertical &lt; <span class="number">-3</span> || dVertical &gt; <span class="number">-1</span></span><br><span class="line">            || dHorizontal &lt; <span class="number">-0.3</span> || dHorizontal &gt; <span class="number">0.3</span>)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="comment">// Res</span></span><br><span class="line">            XmlFO.ListObject[SepPara[<span class="number">1</span>]].xValue = <span class="string">"Y"</span>;</span><br><span class="line">            adjustTips = <span class="string">"左上："</span> + (dHorTurns &gt; <span class="number">0</span> ? <span class="string">"逆时针："</span> + dHorTurns.ToString(<span class="string">"0.00"</span>) + <span class="string">"圈"</span> :</span><br><span class="line">                <span class="string">"顺时针："</span> + (-dHorTurns).ToString(<span class="string">"0.00"</span>) + <span class="string">"圈"</span>);</span><br><span class="line">            adjustTips += <span class="string">"右下："</span> + (dVerTurns &gt; <span class="number">0</span> ? <span class="string">"逆时针："</span> + dVerTurns.ToString(<span class="string">"0.00"</span>) + <span class="string">"圈"</span> :</span><br><span class="line">                <span class="string">"顺时针："</span> + (-dVerTurns).ToString(<span class="string">"0.00"</span>) + <span class="string">"圈"</span>);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">else</span></span><br><span class="line">        &#123;</span><br><span class="line">            XmlFO.ListObject[SepPara[<span class="number">1</span>]].xValue = <span class="string">"N"</span>;</span><br><span class="line">            adjustTips = <span class="string">"水平角度："</span> + dHorizontal.ToString(<span class="string">"0.00"</span>);</span><br><span class="line">            adjustTips += <span class="string">"垂直角度："</span> + dVertical.ToString(<span class="string">"0.00"</span>);</span><br><span class="line">            adjustTips += <span class="string">"; 不需要调整"</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        XmlFO.ListObject[SepPara[<span class="number">2</span>]].xValue = adjustTips;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">return</span> xState.xTrue;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">catch</span> (Exception e)</span><br><span class="line">    &#123;</span><br><span class="line">        xErrorOutException(e);</span><br><span class="line">        <span class="keyword">return</span> xState.xFalse;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+</div></div>
 
       
     </div>
@@ -595,7 +600,7 @@
   <p><span>本文标题:</span><a href="/工作日志.html">工作日志</a></p>
   <p><span>文章作者:</span><a href="/" title="访问 Justin 的个人博客">Justin</a></p>
   <p><span>发布时间:</span>2020年03月23日 - 09:03</p>
-  <p><span>最后更新:</span>2020年09月16日 - 13:09</p>
+  <p><span>最后更新:</span>2020年10月17日 - 17:10</p>
   <p><span>原始链接:</span><a href="/工作日志.html" title="工作日志">http://silencejql.gitee.io/工作日志.html</a>
     <span class="copy-path" title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="http://silencejql.gitee.io/工作日志.html" aria-label="复制成功！"></i></span>
   </p>
@@ -1032,7 +1037,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#2020"><span class="nav-number">1.</span> <span class="nav-text">2020</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#March3"><span class="nav-number">1.1.</span> <span class="nav-text">March3</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#7月"><span class="nav-number">1.2.</span> <span class="nav-text">7月</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#青岛五菱"><span class="nav-number">1.2.1.</span> <span class="nav-text">青岛五菱</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#8月"><span class="nav-number">1.3.</span> <span class="nav-text">8月</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#郑州日产"><span class="nav-number">1.3.1.</span> <span class="nav-text">郑州日产</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#中牟日产"><span class="nav-number">1.3.2.</span> <span class="nav-text">中牟日产</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#9月"><span class="nav-number">1.4.</span> <span class="nav-text">9月</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#十堰小康"><span class="nav-number">1.4.1.</span> <span class="nav-text">十堰小康</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#长春一汽轿车"><span class="nav-number">1.4.2.</span> <span class="nav-text">长春一汽轿车</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#一汽红旗"><span class="nav-number">1.4.3.</span> <span class="nav-text">一汽红旗</span></a></li></ol></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#2020"><span class="nav-number">1.</span> <span class="nav-text">2020</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#March3"><span class="nav-number">1.1.</span> <span class="nav-text">March3</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#7月"><span class="nav-number">1.2.</span> <span class="nav-text">7月</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#青岛五菱"><span class="nav-number">1.2.1.</span> <span class="nav-text">青岛五菱</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#8月"><span class="nav-number">1.3.</span> <span class="nav-text">8月</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#郑州日产"><span class="nav-number">1.3.1.</span> <span class="nav-text">郑州日产</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#中牟日产"><span class="nav-number">1.3.2.</span> <span class="nav-text">中牟日产</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#9月"><span class="nav-number">1.4.</span> <span class="nav-text">9月</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#十堰小康"><span class="nav-number">1.4.1.</span> <span class="nav-text">十堰小康</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#长春一汽轿车"><span class="nav-number">1.4.2.</span> <span class="nav-text">长春一汽轿车</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#一汽红旗"><span class="nav-number">1.4.3.</span> <span class="nav-text">一汽红旗</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#10月"><span class="nav-number">1.5.</span> <span class="nav-text">10月</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#十堰小康老厂"><span class="nav-number">1.5.1.</span> <span class="nav-text">十堰小康老厂</span></a></li></ol></li></ol></li></ol></div>
             
 
           </div>
@@ -1081,7 +1086,7 @@
     
       <span class="post-meta-item-text">站点阅读时长 &asymp;</span>
     
-    <span title="站点阅读时长">1:05</span>
+    <span title="站点阅读时长">1:06</span>
   
 </div>
 <!--
@@ -1106,7 +1111,7 @@
 
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">博客全站共41.8k字</span>
+  <span class="post-count">博客全站共42.2k字</span>
 </div>
 -->
 
