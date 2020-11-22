@@ -122,7 +122,7 @@
 <meta property="og:site_name" content="Silencejql">
 <meta property="og:description" content="写在前面 记录所有项目工作日志以便查询，年份、项目号分类">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2020-11-13T07:29:57.907Z">
+<meta property="og:updated_time" content="2020-11-22T07:50:43.258Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="工作日志">
 <meta name="twitter:description" content="写在前面 记录所有项目工作日志以便查询，年份、项目号分类">
@@ -454,7 +454,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2020-11-13 15:29:57" itemprop="dateModified" datetime="2020-11-13T15:29:57+08:00">2020-11-13</time>
+                <time title="修改时间：2020-11-22 15:50:43" itemprop="dateModified" datetime="2020-11-22T15:50:43+08:00">2020-11-22</time>
               
             
           </span>
@@ -523,7 +523,7 @@
                 
                   <span class="post-meta-item-text">本文字数：</span>
                 
-                <span title="本文字数">911</span>
+                <span title="本文字数">1.6k</span>
               
               
                 <span class="post-meta-divider">|</span>
@@ -580,7 +580,14 @@
 
 </div></div>
 
-<h4 id="武汉东风雷诺"><a href="#武汉东风雷诺" class="headerlink" title="武汉东风雷诺"></a>武汉东风雷诺</h4><h3 id="11月"><a href="#11月" class="headerlink" title="11月"></a>11月</h3><h4 id="西安比亚迪"><a href="#西安比亚迪" class="headerlink" title="西安比亚迪"></a>西安比亚迪</h4><p>IPB升级，参考长沙比亚迪：四轮标定包括SAS、内部传感器、VPC<br>转毂做IPB泄漏检查和动态(ESC)，泄漏检查结果上传到福瑞数据库</p>
+<h4 id="武汉东风雷诺"><a href="#武汉东风雷诺" class="headerlink" title="武汉东风雷诺"></a>武汉东风雷诺</h4><p>卡规侧滑 Modbus读取<br>卡规：192.168.100.17 : 502<br>侧滑：192.168.100.18 : 502</p>
+<p>03读取保持寄存器，地址为 C0<br>卡规：0x0B, 0x03, 0x00, 0x00, 0x00, 0x06, 0xFF, 0x03, 0x00, 0xC0, 0x00, 0x02<br>侧滑: 0x0B, 0x03, 0x00, 0x00, 0x00, 0x06, 0xFF, 0x03, 0x00, 0xC0, 0x00, 0x02<br>      0x0B, 0x01, 0x00, 0x00, 0x00, 0x06, 0xFF, 0x03, 0x00, 0x00, 0x00, 0x01<br>      0x0F, 0x03, 0x00, 0x00, 0x00, 0x06, 0xFF, 0x03, 0x01, 0x80, 0x00, 0x01<br>      0x0F, 0x01, 0x00, 0x00, 0x00, 0x06, 0xFF, 0x06, 0x01, 0x80, 0x00, 0x00// 0xXX</p>
+<p>四轮卡规读取：配置文件为MeasToolAnalogLeveler-LH.dat，二进制文件直接转换<br>公式为：<code>swaAngle = (AI - swaB) / (AI &gt; swaB ? positiveK : negativeK);</code></p>
+<p>侧滑模拟量计算公式(来自fori源代码)：</p>
+<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> AI = RvBuf[<span class="number">9</span>] * <span class="number">256</span> + RvBuf[<span class="number">10</span>];</span><br><span class="line"><span class="keyword">if</span> ((RvBuf[<span class="number">9</span>] &amp; <span class="number">0x80</span>) == <span class="number">0x80</span>)</span><br><span class="line">    AI = AI - <span class="number">65535</span> - <span class="number">1</span>;</span><br><span class="line"><span class="keyword">if</span> (AI &gt; <span class="number">0</span>)</span><br><span class="line">&#123;</span><br><span class="line">    AI = (AI &amp; <span class="number">0xFFF0</span>) &gt;&gt; <span class="number">4</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">else</span></span><br><span class="line">&#123;</span><br><span class="line">    AI = System.Math.Abs(AI);</span><br><span class="line">    AI = -(((Int16)AI &amp; <span class="number">0xFFF0</span>) &gt;&gt; <span class="number">4</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>更新侧滑软件，更新为Edison给的方式；<br>转毂在RBDVTEx基础上更改，新增RBDVTForiH</p>
+<h3 id="11月"><a href="#11月" class="headerlink" title="11月"></a>11月</h3><h4 id="西安比亚迪"><a href="#西安比亚迪" class="headerlink" title="西安比亚迪"></a>西安比亚迪</h4><p>IPB升级，参考长沙比亚迪：四轮标定包括SAS、内部传感器、VPC<br>转毂做IPB泄漏检查和动态(ESC)，泄漏检查结果上传到福瑞数据库</p>
 <h4 id="长春一汽轿车-1"><a href="#长春一汽轿车-1" class="headerlink" title="长春一汽轿车"></a>长春一汽轿车</h4><p>速度表无法上传：access数据库主键丢失</p>
 
       
@@ -603,7 +610,7 @@
   <p><span>本文标题:</span><a href="/工作日志.html">工作日志</a></p>
   <p><span>文章作者:</span><a href="/" title="访问 Justin 的个人博客">Justin</a></p>
   <p><span>发布时间:</span>2020年03月23日 - 09:03</p>
-  <p><span>最后更新:</span>2020年11月13日 - 15:11</p>
+  <p><span>最后更新:</span>2020年11月22日 - 15:11</p>
   <p><span>原始链接:</span><a href="/工作日志.html" title="工作日志">https://silencejql.gitee.io/工作日志.html</a>
     <span class="copy-path" title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="https://silencejql.gitee.io/工作日志.html" aria-label="复制成功！"></i></span>
   </p>
@@ -1091,7 +1098,7 @@
     
       <span class="post-meta-item-text">站点阅读时长 &asymp;</span>
     
-    <span title="站点阅读时长">1:08</span>
+    <span title="站点阅读时长">1:09</span>
   
 </div>
 <!--
@@ -1116,7 +1123,7 @@
 
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">博客全站共44.9k字</span>
+  <span class="post-count">博客全站共45.1k字</span>
 </div>
 -->
 
