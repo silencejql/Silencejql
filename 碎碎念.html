@@ -570,7 +570,7 @@
 <div id="decryptionError" style="display: none;">Incorrect Password!</div>
 <div id="noContentError" style="display: none;">No content to display!</div>
 <div id="encrypt-blog" style="display:none">
-U2FsdGVkX1+ttoUn0TE6M/beRNkU2w/u+pn1hps/yMyrSzLIjADFwo0COJ/jsjY1x7CahE0aiwKHFNWSoJ5/q2VtNX0Acl8nU9qUBxgQxIJ5W/A8zwwbW70f2rUGcDoYelcYAOuD9VRnhICWEGbX0WdEp77adoqHFmFy4mCDTbqDScZULPA4gwEVZw4gPFrEBjvb1nECJ4F0oF/sHhEOdcyecTjuN1XaSonBweNX/xT5n8WFvrorp+cSC0WmWTF+C4qBp5nCENSqt8QgJtdfZh6pv1kdmYT1c1pzw5g7heD7MYXK//stL7OKC1TJ+Xus9OcWq7X9wwAwNu2IBdnBImwqkqfPYr/GyeBBawn9dYh01XG9HWxYJUzPwHi/i6GpMN+LAxWZJraw1XIPKAkAhRdpOST72R8p28cdwzQ4YSXuhNdlHMZsrQhi0zh/XwAvqQrezXpENqTEGH3sIwhfBdBpSap2JbL6APWtYrEl1cUdrS9XhqCwPYHoPPHhARgIY8vb2CD3/RWRH1nv3wlojK6eX8QZo54WmZpRrNjZypz3WkDAQCdXN5qsxdm+1+rL/EmtGcisIbTY94nhhC/jnU+btAPc+50IGZTX1qLvrrbdGsqo8tOTvpcO8Ff4418Alp6mATBoiVXLAGNdzeRm4JTvHNAGH+vIBbAR3waVg2TlH/qg7etktDUCUntBLklS
+U2FsdGVkX1+0ldRZSbvafrwQOzEnKBlFuP6cGKIzp7S23PF8iyrZy+znx0n1EXUXx+YYgQOv8UkpPAUAC+QC8wNPZ17mZJ50nt0YAmbRFZRO7CDHbY99CV5iNuBeGmMO+SmKkZfzYDTYLwagaHtDRt+Hqv3RduDOpm8eptokBBhRuWzRqJtDRxeXi3kU4yJiZxZxSrVzfjWrX7A1laDEVi1g9zCepiIGLr1NNbBsX9HEqTp6cd//O7DtJ3OblJGZQ72VyOwFff7Jrp1WkOcm22OE9kn45jYbQ826yu+In0TNes3tExs1+9iVOI/03zQtYtetJxVRdTby5eNQp7MAGqRuvF4ZO3Y3n6iBOU+byXAPcAJvpNVbRbvYe7cp80+Vf/6sMuI0tLYjfuDN5PMcMigNMvaCGPRVB9fbIuqbONTcZiSmUYTZ3ExO357bEhMQKMvDEGmCSaxKw7fEg/F7ac6uJYqbthV2yS4OUiIMNMDP9/b4onH5fsgE3y1bVvzgJ6+iCaLr6ToHvBP11OfSvunegFSDFbXHYCUgqea5Hb1fPmdfaM6ZIn8SzndymDB/u6DhFvCEwKgWj8/iWKDHLFUb0dhMObXe3DgWMA/AdyI+Dd66LCnnm31SobLzzmkaac/pE26QLjLsvIpZ3FaA5RtO0wsP4+RCc90Jkaar7atx9ChBXSpZWnPAc4JE3cka
 </div>
 <script src="/lib/crypto-js.js"></script><script src="/lib/blog-encrypt.js"></script><link href="/css/blog-encrypt.css" rel="stylesheet" type="text/css">
       
@@ -1690,6 +1690,9 @@ U2FsdGVkX1+ttoUn0TE6M/beRNkU2w/u+pn1hps/yMyrSzLIjADFwo0COJ/jsjY1x7CahE0aiwKHFNWS
       ta.setSelectionRange(0, code.length);
       ta.readOnly = false;
       var result = document.execCommand('copy');
+      
+        if (result) $(this).text('复制成功');
+        else $(this).text('复制失败');
       
       ta.blur(); // For iOS
       $(this).blur();

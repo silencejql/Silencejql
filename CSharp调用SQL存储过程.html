@@ -1715,6 +1715,9 @@ C# 执行SQLServer数据库中的存储过程，新增数据
       ta.readOnly = false;
       var result = document.execCommand('copy');
       
+        if (result) $(this).text('复制成功');
+        else $(this).text('复制失败');
+      
       ta.blur(); // For iOS
       $(this).blur();
       if (selected) {

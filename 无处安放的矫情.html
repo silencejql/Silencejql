@@ -549,7 +549,7 @@
 <div id="decryptionError" style="display: none;">Incorrect Password!</div>
 <div id="noContentError" style="display: none;">No content to display!</div>
 <div id="encrypt-blog" style="display:none">
-U2FsdGVkX1+oARYflZy48ATvCW01sAWf/AFi96ysTsc=
+U2FsdGVkX19GXPfMVymt7dc6FnH+xBVblEXiaTtzHzI=
 </div>
 <script src="/lib/crypto-js.js"></script><script src="/lib/blog-encrypt.js"></script><link href="/css/blog-encrypt.css" rel="stylesheet" type="text/css">
       
@@ -1660,6 +1660,9 @@ U2FsdGVkX1+oARYflZy48ATvCW01sAWf/AFi96ysTsc=
       ta.setSelectionRange(0, code.length);
       ta.readOnly = false;
       var result = document.execCommand('copy');
+      
+        if (result) $(this).text('复制成功');
+        else $(this).text('复制失败');
       
       ta.blur(); // For iOS
       $(this).blur();
