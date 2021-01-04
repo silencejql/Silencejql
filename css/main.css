@@ -1826,9 +1826,9 @@ pre .javascript .function {
 }
 .my_post_copyright {
   width: 95%;
-  max-width: 45em;
-  margin: 2.8em auto 0;
-  padding: 0.5em 1em;
+  max-width: 85em;
+  margin: 0 auto;
+  padding: 2.5em 1em;
   border: 1px solid #d3d3d3;
   font-size: 0.83rem;
   line-height: 1.6em;
@@ -1836,11 +1836,12 @@ pre .javascript .function {
   background: rgba(255,255,255,0.4);
 }
 .my_post_copyright p {
-  margin: 0;
+  margin: 0.3;
 }
 .my_post_copyright span {
+  margin: 0.3;
   display: inline-block;
-  width: 5.2em;
+  width: 10.2em;
   color: #b5b5b5;
   font-weight: bold;
 }
@@ -2107,7 +2108,7 @@ img:hover {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #ff4eff;
+  background: #f2d12f;
 }
 .feed-link,
 .chat {
