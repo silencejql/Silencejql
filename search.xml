@@ -269,8 +269,8 @@
       </categories>
   </entry>
   <entry>
-    <title><![CDATA[ETP指令说明]]></title>
-    <url>%2FETP%E6%8C%87%E4%BB%A4%E8%AF%B4%E6%98%8E.html</url>
+    <title><![CDATA[国六排放指令说明]]></title>
+    <url>%2F%E5%9B%BD%E5%85%AD%E6%8E%92%E6%94%BE%E6%8C%87%E4%BB%A4%E8%AF%B4%E6%98%8E.html</url>
     <content type="text"><![CDATA[写在前面 &emsp; 国六排放测试过程中常用通讯指令说明 详细资料请参考ISO15031-5或J1979-DA ISO15031-515765-4Service 01请求当前动力系统诊断数据01后最多可以读取6个PID(Parameter Identification)请求：01 PID PID PID PID PID PID回复：41 PID Data PID Data PID Data PID Data PID Data PID Data PID PID 说明 数据长度（byte） 计算 00 查看支持的PID 01 清除故障诊断码后的监视器状态 4 04 负载值 1 y=x/255 05 冷却液温度 1 y=x-40 0B 进气歧管绝对压力 1 y=x 0C 发动机转速 2 y=x/4 0D 车速 1 y=x 10 空气流量 2 y=x/100 11 节气门位置 1 y=x/255 44 Commanded Equivalence Ratio 2 y=2x/65535 5C 油温 1 y=x-40 6A 6E 78 尾气温度 7A 83 NOx传感器 85 NOx控制系统 PID 00请求：01 00回复： 41 00 A B C D //PID 01~2041 20 A B C D //PID 21~4041 40 A B C D //PID 41~6041 60 A B C D //PID 61~8041 80 A B C D //PID 81~A041 A0 A B C D //PID A1~C041 C0 A B C D //PID C1~E041 E0 A B C D //PID E1~FF 41 00 A B C DData A bit7 ~ Data D bit0 表示是否支持PID 01~20 如：41 00 90 39 00 00Data A = 90 = 1001 0000bit7 = 1; bit4 = 1表示支持 PID 01、PID 04Data B = 39 = 0011 1001bit5 = bit4 = bit3 = bit0 = 1表示支持 PID 0B、PID 0C、PID 0D、PID 10 Service 09PID PID 说明 数据长度（byte） 计算 02 VIN 17 04 Cal.ID 06 Cal.CVN 08 IPT ISO27145Service 2222 F4 对应 ISO15031的01服务22 F8 对应 ISO15031的09服务]]></content>
       <categories>
         <category>工作</category>
