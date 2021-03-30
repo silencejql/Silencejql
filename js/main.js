@@ -1,113 +1,152 @@
-/**
- * Sets up Justified Gallery.
- */
-if (!!$.prototype.justifiedGallery) {
-  var options = {
-    rowHeight: 140,
-    margins: 4,
-    lastRow: "justify"
-  };
-  $(".article-gallery").justifiedGallery(options);
-}
+$(function () {
 
-$(document).ready(function() {
+	$('.post__main img').on('click', function () {
+		var $img = $(this);
 
-  /**
-   * Shows the responsive navigation menu on mobile.
-   */
-  $("#header > #nav > ul > .icon").click(function() {
-    $("#header > #nav > ul").toggleClass("responsive");
-  });
+		$.fancybox.open([{
+			src: $img.attr('src'),
+			type: 'image'
+		}]);
+	});
 
+	$('[data-fancybox]').fancybox({
+		// closeClickOutside: false,
+		image: {
+			protect: true
+		}
+	});
 
-  /**
-   * Controls the different versions of  the menu in blog post articles 
-   * for Desktop, tablet and mobile.
-   */
-  if ($(".post").length) {
-    var menu = $("#menu");
-    var nav = $("#menu > #nav");
-    var menuIcon = $("#menu-icon, #menu-icon-tablet");
+	// key bind
 
-    /**
-     * Display the menu on hi-res laptops and desktops.
-     */
-    if ($(document).width() >= 1440) {
-      menu.css("visibility", "visible");
-      menuIcon.addClass("active");
-    }
+	// j  down
+	// k  top
+	// t  page top
+	// b  page bottom
 
-    /**
-     * Display the menu if the menu icon is clicked.
-     */
-    menuIcon.click(function() {
-      if (menu.css("visibility") === "hidden") {
-        menu.css("visibility", "visible");
-        menuIcon.addClass("active");
-      } else {
-        menu.css("visibility", "hidden");
-        menuIcon.removeClass("active");
-      }
-      return false;
-    });
+	// i  go index
+	var $body = $('html');
+	var unTriggerEles = [
+		'.veditor',
+		'.vnick',
+		'.vmail',
+		'.vlink',
+	];
 
-    /**
-     * Add a scroll listener to the menu to hide/show the navigation links.
-     */
-    if (menu.length) {
-      $(window).on("scroll", function() {
-        var topDistance = menu.offset().top;
+	var isKeydown = false;
+	$body.on('keydown', function (e) {
+		// console.log(e.which, 'key down', e.target);
 
-        // hide only the navigation links on desktop
-        if (!nav.is(":visible") && topDistance < 50) {
-          nav.show();
-        } else if (nav.is(":visible") && topDistance > 100) {
-          nav.hide();
-        }
+		// 有些 input 或者 textarea 不应该触发这些快捷键
+		var $tar = $(e.target);
+		var needTrigger = true;
+		for (var i = 0; i < unTriggerEles.length; i++) {
+			if ($tar.is(unTriggerEles[i])) {
+				needTrigger = false;
+				break;
+			}
+		}
 
-        // on tablet, hide the navigation icon as well and show a "scroll to top
-        // icon" instead
-        if ( ! $( "#menu-icon" ).is(":visible") && topDistance < 50 ) {
-          $("#menu-icon-tablet").show();
-          $("#top-icon-tablet").hide();
-        } else if (! $( "#menu-icon" ).is(":visible") && topDistance > 100) {
-          $("#menu-icon-tablet").hide();
-          $("#top-icon-tablet").show();
-        }
-      });
-    }
+		if (!needTrigger) {
+			return;
+		}
 
-    /**
-     * Show mobile navigation menu after scrolling upwards,
-     * hide it again after scrolling downwards.
-     */
-    if ($( "#footer-post").length) {
-      var lastScrollTop = 0;
-      $(window).on("scroll", function() {
-        var topDistance = $(window).scrollTop();
+		switch (e.which) {
+			case 74: // j down
+				if (!isKeydown) {
+					isKeydown = true;
+					requestAnimationFrame(function animate() {
+						var curTop = window.scrollY;
+						window.scrollTo(0, curTop + 15);
 
-        if (topDistance > lastScrollTop){
-          // downscroll -> show menu
-          $("#footer-post").hide();
-        } else {
-          // upscroll -> hide menu
-          $("#footer-post").show();
-        }
-        lastScrollTop = topDistance;
+						if (isKeydown) {
+							requestAnimationFrame(animate);
+						}
+					});
+				}
 
-        // close all submenu"s on scroll
-        $("#nav-footer").hide();
-        $("#toc-footer").hide();
-        $("#share-footer").hide();
+				break;
 
-        // show a "navigation" icon when close to the top of the page, 
-        // otherwise show a "scroll to the top" icon
-        if (topDistance < 50) {
-          $("#actions-footer > #top").hide();
-        } else if (topDistance > 100) {
-          $("#actions-footer > #top").show();
-        }
-      });
-    }
-  }
+			case 75: // k up
+				if (!isKeydown) {
+					isKeydown = true;
+					requestAnimationFrame(function animate() {
+						var curTop = window.scrollY;
+						window.scrollTo(0, curTop - 15);
+
+						if (isKeydown) {
+							requestAnimationFrame(animate);
+						}
+					});
+				}
+
+				break;
+
+			case 191: // shift + / = ? show help modal
+				break;
+
+				// 16 shift
+			case 84: // t
+				window.scrollToTop(1);
+				break;
+
+			case 66: // b
+				window.scrollToBottom();
+				break;
+
+			case 78: // n half
+				window.scrollPageDown(1);
+				break;
+
+			case 77: // m
+				window.scrollPageUp(1);
+				break;
+		}
+
+	});
+
+	$body.on('keyup', function (e) {
+		isKeydown = false;
+	});
+
+	// print hint
+
+	var comments = [
+		'',
+		'                    .::::.            快捷键：',
+		'                  .::::::::.            j：下移',
+		'                 :::::::::::            k：上移',
+		"             ..:::::::::::'             t：移到最顶",
+		"           '::::::::::::'               b：移到最底",
+		'             .::::::::::                n：下移很多',
+		"        '::::::::::::::..               m：上移很多",
+		'             ..::::::::::::.',
+		'           ``::::::::::::::::',
+		"            ::::``:::::::::'        .:::.",
+		"           ::::'   ':::::'       .::::::::.",
+		"         .::::'      ::::     .:::::::'::::.",
+		"        .:::'       :::::  .::::::::'  ':::::.",
+		"       .::'        :::::::::::::::'      ':::::.",
+		"      .::'        :::::::::::::::'          ':::.",
+		"  ...:::          :::::::::::::'              ``::.",
+		" ```` ':.         '::::::::::'                  ::::..",
+		"                    ':::::'                    ':'````..",
+		''
+	];
+
+	comments.forEach(function (item) {
+		console.log('%c' + item, 'color: #399c9c');
+	});
+
+	$('.btn-reward').on('click', function (e) {
+		e.preventDefault();
+
+		var $reward = $('.reward-wrapper');
+		$reward.slideToggle();
+	});
+
+	$('body').addClass('queue-in');
+	setTimeout(function() {
+		$('body').css({ opacity: 1}).removeClass('queue-in');
+	}, 500);
+
 });
